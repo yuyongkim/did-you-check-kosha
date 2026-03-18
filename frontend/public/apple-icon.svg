@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="EPC Maintenance AI apple icon">
+  <defs>
+    <linearGradient id="bg" x1="24" y1="18" x2="156" y2="162" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4F8FC" />
+      <stop offset="1" stop-color="#E8F0FA" />
+    </linearGradient>
+  </defs>
+
+  <rect width="180" height="180" rx="40" fill="url(#bg)" />
+  <rect x="2" y="2" width="176" height="176" rx="38" fill="none" stroke="#CAD8E6" stroke-width="4" />
+
+  <rect x="50" y="34" width="24" height="112" rx="8" fill="#24364B" />
+  <rect x="72" y="34" width="60" height="24" rx="8" fill="#0073E6" />
+  <rect x="72" y="78" width="50" height="24" rx="8" fill="#24364B" />
+  <rect x="72" y="122" width="60" height="24" rx="8" fill="#0073E6" />
+</svg>

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MultiAgentConfig",
+  "type": "object",
+  "required": [
+    "system",
+    "models",
+    "timeouts",
+    "verification",
+    "logging",
+    "security",
+    "agents",
+    "workflows"
+  ],
+  "properties": {
+    "system": {"type": "object"},
+    "models": {"type": "object"},
+    "timeouts": {"type": "object"},
+    "verification": {"type": "object"},
+    "logging": {"type": "object"},
+    "security": {"type": "object"},
+    "agents": {"type": "object"},
+    "workflows": {"type": "object"}
+  }
+}

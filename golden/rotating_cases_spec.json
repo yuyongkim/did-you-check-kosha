@@ -1,0 +1,1078 @@
+{
+  "dataset_id": "ROTATING_CASES_SPEC_V1",
+  "discipline": "rotating",
+  "total_cases": 30,
+  "ratio_policy": {
+    "standard": 0.6,
+    "boundary": 0.25,
+    "failure_mode": 0.15
+  },
+  "cases": [
+    {
+      "case_id": "ROT-GOLD-001",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 5.297,
+        "nozzle_load_ratio": 0.987,
+        "bearing_temperature_C": 85.2,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 6.22,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-002",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 5.616,
+        "nozzle_load_ratio": 0.959,
+        "bearing_temperature_C": 64.5,
+        "speed_rpm": 1800
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 9.325,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-003",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 4.102,
+        "nozzle_load_ratio": 0.596,
+        "bearing_temperature_C": 83.0,
+        "speed_rpm": 1800
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 6.55,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-004",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 4.332,
+        "nozzle_load_ratio": 1.267,
+        "bearing_temperature_C": 83.7,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 6.445,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION",
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-005",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 1.595,
+        "nozzle_load_ratio": 0.423,
+        "bearing_temperature_C": 67.5,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 8.875,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-006",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 3.182,
+        "nozzle_load_ratio": 1.044,
+        "bearing_temperature_C": 58.0,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 10.0,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-007",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 1.56,
+        "nozzle_load_ratio": 1.095,
+        "bearing_temperature_C": 89.0,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 5.65,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-008",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 5.379,
+        "nozzle_load_ratio": 0.909,
+        "bearing_temperature_C": 56.6,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 10.0,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-009",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 4.638,
+        "nozzle_load_ratio": 0.462,
+        "bearing_temperature_C": 80.9,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 6.865,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-010",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 5.523,
+        "nozzle_load_ratio": 0.495,
+        "bearing_temperature_C": 93.4,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 4.99,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-011",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 4.89,
+        "nozzle_load_ratio": 0.792,
+        "bearing_temperature_C": 84.4,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 6.34,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-012",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 4.388,
+        "nozzle_load_ratio": 1.228,
+        "bearing_temperature_C": 86.0,
+        "speed_rpm": 1800
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 6.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-013",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 5.542,
+        "nozzle_load_ratio": 0.933,
+        "bearing_temperature_C": 67.9,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 8.815,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-014",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 2.534,
+        "nozzle_load_ratio": 0.806,
+        "bearing_temperature_C": 85.0,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 6.25,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-015",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 2.85,
+        "nozzle_load_ratio": 0.845,
+        "bearing_temperature_C": 68.0,
+        "speed_rpm": 1800
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 8.8,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-016",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 2.952,
+        "nozzle_load_ratio": 0.633,
+        "bearing_temperature_C": 66.2,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 9.07,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-017",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 4.057,
+        "nozzle_load_ratio": 0.865,
+        "bearing_temperature_C": 62.6,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 9.61,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-018",
+      "discipline": "rotating",
+      "category": "standard",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 3.687,
+        "nozzle_load_ratio": 1.082,
+        "bearing_temperature_C": 82.6,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 6.61,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-019",
+      "discipline": "rotating",
+      "category": "boundary",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 3.465,
+        "nozzle_load_ratio": 0.416,
+        "bearing_temperature_C": 66.8,
+        "speed_rpm": 1800
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 8.98,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-020",
+      "discipline": "rotating",
+      "category": "boundary",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 2.684,
+        "nozzle_load_ratio": 0.923,
+        "bearing_temperature_C": 73.9,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 7.915,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-021",
+      "discipline": "rotating",
+      "category": "boundary",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 3.34,
+        "nozzle_load_ratio": 1.071,
+        "bearing_temperature_C": 68.2,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 8.77,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-022",
+      "discipline": "rotating",
+      "category": "boundary",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 2.49,
+        "nozzle_load_ratio": 0.626,
+        "bearing_temperature_C": 59.8,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-023",
+      "discipline": "rotating",
+      "category": "boundary",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 1.658,
+        "nozzle_load_ratio": 0.882,
+        "bearing_temperature_C": 85.5,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 6.175,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-024",
+      "discipline": "rotating",
+      "category": "boundary",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 2.19,
+        "nozzle_load_ratio": 0.836,
+        "bearing_temperature_C": 84.0,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "OK",
+        "bearing_health_index": 6.4,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "ROT-GOLD-025",
+      "discipline": "rotating",
+      "category": "boundary",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 6.393,
+        "nozzle_load_ratio": 1.149,
+        "bearing_temperature_C": 66.8,
+        "speed_rpm": 1800
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 8.98,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION",
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-026",
+      "discipline": "rotating",
+      "category": "boundary",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 2.662,
+        "nozzle_load_ratio": 1.037,
+        "bearing_temperature_C": 60.1,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "OK",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 9.985,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-027",
+      "discipline": "rotating",
+      "category": "failure_mode",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 7.54,
+        "nozzle_load_ratio": 1.32,
+        "bearing_temperature_C": 60.1,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 9.985,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION",
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-028",
+      "discipline": "rotating",
+      "category": "failure_mode",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 4.68,
+        "nozzle_load_ratio": 1.568,
+        "bearing_temperature_C": 62.4,
+        "speed_rpm": 1800
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 9.64,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION",
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-029",
+      "discipline": "rotating",
+      "category": "failure_mode",
+      "subtype": "pump",
+      "inputs": {
+        "machine_type": "pump",
+        "vibration_mm_per_s": 6.703,
+        "nozzle_load_ratio": 1.079,
+        "bearing_temperature_C": 58.0,
+        "speed_rpm": 1500
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 10.0,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION",
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "ROT-GOLD-030",
+      "discipline": "rotating",
+      "category": "failure_mode",
+      "subtype": "compressor",
+      "inputs": {
+        "machine_type": "compressor",
+        "vibration_mm_per_s": 5.957,
+        "nozzle_load_ratio": 1.378,
+        "bearing_temperature_C": 77.3,
+        "speed_rpm": 3000
+      },
+      "expected_outputs": {
+        "vibration_status": "ALARM",
+        "nozzle_load_status": "EXCEEDED",
+        "bearing_health_index": 7.405,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "API 610/617 acceptance context",
+        "API 670 monitoring context",
+        "piping coupling check requirement"
+      ],
+      "standards_referenced": [
+        "API 610",
+        "API 617",
+        "API 670"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "piping_nozzle_load_transfer_check"
+      ],
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION",
+        "PHY.ALLOWABLE_STRESS_EXCEEDED"
+      ]
+    }
+  ]
+}

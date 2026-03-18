@@ -1,0 +1,43 @@
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+Copyright (C) 2026 Yuyong Kim
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+---
+
+ADDITIONAL TERMS — Commercial Use
+
+If you use this software as part of a commercial product or service
+(including SaaS, internal enterprise tooling, or consulting deliverables)
+without releasing your complete corresponding source code under the AGPL,
+you must obtain a commercial license from the author.
+
+Contact: https://www.linkedin.com/in/yuyongkim/
+
+---
+
+REGULATORY DATA NOTICE
+
+The KOSHA regulatory corpus included in this repository
+(datasets/kosha/normalized/, datasets/kosha_rag/rag_eval_queries.json)
+was collected from KOSHA's public APIs and is subject to KOSHA's
+terms of use. This data is provided for research and educational purposes.
+Commercial redistribution of the raw corpus data requires separate
+clearance from KOSHA (https://www.kosha.or.kr).
+
+The engineering calculation engines implement publicly documented
+international standards (ASME, API, IEEE, IEC, AISC, ACI).
+The proprietary text of those standards is NOT included in this repository.

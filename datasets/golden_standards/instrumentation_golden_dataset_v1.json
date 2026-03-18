@@ -1,0 +1,2012 @@
+{
+  "dataset_id": "INSTRUMENTATION_GOLDEN_V1",
+  "generated_at": "2026-02-26T00:00:00Z",
+  "total_cases": 30,
+  "category_distribution": {
+    "standard": 18,
+    "boundary": 7,
+    "failure_mode": 5
+  },
+  "cases": [
+    {
+      "case_id": "INS-GOLD-001",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 8.87829338834209e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 6.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.04943
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.14663
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.24383
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.34103
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 6.413662021599244,
+        "cv_required": 39.60252477947501,
+        "cv_rated": 122.12914081253575,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.00108,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 0.14662999999999998,
+        "pfdavg": 0.00019470097400634204,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 880.1574074074074,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.3242676114479803,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-002",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 6.222154756167825e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.06598
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.1346
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.20322
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.27184
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 6.936666837515984,
+        "cv_required": 43.96825540750427,
+        "cv_rated": 88.34438823671141,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0007624444444444446,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 0.20322,
+        "pfdavg": 0.00013651407535032208,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1880.819003206062,
+        "inspection_interval_days": 180.0,
+        "cv_margin_ratio": 0.4976915487794766,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-003",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 5.070889490946171e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 6.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.0403
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.14402
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.24775
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.35147
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 11.964492944342563,
+        "cv_required": 51.499416391193456,
+        "cv_rated": 116.73328046093133,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.001152488888888889,
+        "drift_r_squared": 0.9999999996282067,
+        "predicted_drift_pct": 0.14402299999999998,
+        "pfdavg": 0.0002222570863881707,
+        "sil_target": 2,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 832.7203925803092,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.4411716709051918,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-004",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 2.9263143759295476e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.0342
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.09517
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.15615
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.21712
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 6.394907641156163,
+        "cv_required": 33.02062058629954,
+        "cv_rated": 123.62161554525952,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0006774888888888889,
+        "drift_r_squared": 0.9999999989241032,
+        "predicted_drift_pct": 0.095173,
+        "pfdavg": 6.420333740789428e-05,
+        "sil_target": 2,
+        "sil_achieved": 4,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1425.5599107816447,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.2671104114005876,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-005",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 9.099133442967876e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.05365
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.16942
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.28518
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.40094
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 7.18551192171407,
+        "cv_required": 37.03934744721301,
+        "cv_rated": 127.22803290084484,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0012862555555555556,
+        "drift_r_squared": 0.9999999995522746,
+        "predicted_drift_pct": 0.16941599999999998,
+        "pfdavg": 0.0003989060101397117,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 735.7379300812868,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.29112567885160673,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-006",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 3.086086854953797e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.05253
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.14886
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.24519
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.34153
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 10.22969855318192,
+        "cv_required": 34.46853670255492,
+        "cv_rated": 102.25320845554276,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0010703666666666669,
+        "drift_r_squared": 0.9999999993534515,
+        "predicted_drift_pct": 0.245194,
+        "pfdavg": 0.00013529404772117445,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1352.3141602566097,
+        "inspection_interval_days": 180.0,
+        "cv_margin_ratio": 0.3370900260556715,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-007",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 2.87147367315548e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 6.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.03903
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.13405
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.22907
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.32408
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 7.662297009953713,
+        "cv_required": 48.41717602123869,
+        "cv_rated": 122.54070192868171,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0010557444444444443,
+        "drift_r_squared": 0.9999999993354179,
+        "predicted_drift_pct": 0.229066,
+        "pfdavg": 6.297141765229967e-05,
+        "sil_target": 2,
+        "sil_achieved": 4,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1383.8273151120327,
+        "inspection_interval_days": 180.0,
+        "cv_margin_ratio": 0.3951109734087971,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-008",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 8.88013515836016e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.06957
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.22211
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.37466
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.5272
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 11.604373100153964,
+        "cv_required": 51.32264206447309,
+        "cv_rated": 99.93226906816642,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.001694933333333333,
+        "drift_r_squared": 0.9999999998281024,
+        "predicted_drift_pct": 0.222113,
+        "pfdavg": 0.00038930512534250943,
+        "sil_target": 2,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 843.945287916929,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.5135742692829737,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-009",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 7.741394960671038e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 6.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.05686
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.18184
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.30682
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.4318
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 10.437838360198947,
+        "cv_required": 30.433683561302736,
+        "cv_rated": 114.4083941476426,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0013886666666666667,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 0.18184,
+        "pfdavg": 0.00016976879148751587,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1039.227076332213,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.26600918392428835,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-010",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 7.666978865642143e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.05076
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.11093
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.17111
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.23129
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 11.580663403224495,
+        "cv_required": 35.499807744246716,
+        "cv_rated": 95.46915641702834,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0006686333333333333,
+        "drift_r_squared": 0.9999999983431234,
+        "predicted_drift_pct": 0.110934,
+        "pfdavg": 0.00033612035346975154,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 2167.470462136697,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.37184583038710917,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-011",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 7.982705942656131e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.03789
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.12771
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.21752
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.30734
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 9.548594992163459,
+        "cv_required": 48.69935160317047,
+        "cv_rated": 103.71894945685726,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0009979555555555556,
+        "drift_r_squared": 0.9999999995041474,
+        "predicted_drift_pct": 0.217523,
+        "pfdavg": 0.0001751405683818755,
+        "sil_target": 2,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1465.1043243965441,
+        "inspection_interval_days": 180.0,
+        "cv_margin_ratio": 0.46953186334988245,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-012",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 7.343148116410111e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.04995
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.13865
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.22735
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.31606
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 6.7815409354426635,
+        "cv_required": 47.237269253698,
+        "cv_rated": 97.54942444378804,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0009855888888888888,
+        "drift_r_squared": 0.9999999992374389,
+        "predicted_drift_pct": 0.13865100000000002,
+        "pfdavg": 0.00016110866967403782,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 963.943496837762,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.4842393435229138,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-013",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 9.781817523399048e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 6.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.04151
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.12602
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.21053
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.29504
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 8.513414575835387,
+        "cv_required": 40.234400633753,
+        "cv_rated": 94.28540231730018,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0009390000000000002,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 0.21053000000000002,
+        "pfdavg": 0.00021451525828814112,
+        "sil_target": 2,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1553.2374866879657,
+        "inspection_interval_days": 180.0,
+        "cv_margin_ratio": 0.4267299035151966,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-014",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 7.491056309507728e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 6.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.0673
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.19151
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.31571
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.43992
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 11.749864470063699,
+        "cv_required": 32.626306445997606,
+        "cv_rated": 97.70433063916585,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0013800666666666664,
+        "drift_r_squared": 0.9999999997407165,
+        "predicted_drift_pct": 0.191507,
+        "pfdavg": 0.00032833299804572373,
+        "sil_target": 2,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1038.1375295879427,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.3339289694997306,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-015",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 4.021290194251969e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.03647
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.09072
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.14498
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.19924
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 7.9483223345725325,
+        "cv_required": 55.81866214539219,
+        "cv_rated": 124.25301492015113,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0006028555555555556,
+        "drift_r_squared": 0.9999999979618334,
+        "predicted_drift_pct": 0.144981,
+        "pfdavg": 0.00017629336211600632,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 2427.6677663711594,
+        "inspection_interval_days": 180.0,
+        "cv_margin_ratio": 0.44923386511999736,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-016",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 8.287495119911112e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 6.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.06971
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.16574
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.26177
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.3578
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 8.023492869991394,
+        "cv_required": 41.53087489743905,
+        "cv_rated": 86.6653740986545,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.001067,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 0.16574,
+        "pfdavg": 0.00036324091110570404,
+        "sil_target": 2,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 871.8744142455483,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.47920954971200924,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-017",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 8.182918963323872e-08,
+        "proof_test_interval_hours": 4380.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.02187
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.11805
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.21424
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.31043
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 7.852774067328995,
+        "cv_required": 31.379470289394177,
+        "cv_rated": 86.55332201421479,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0010687444444444445,
+        "drift_r_squared": 0.9999999993514873,
+        "predicted_drift_pct": 0.118054,
+        "pfdavg": 0.00017953324205532574,
+        "sil_target": 1,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 915.2169212055683,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.36254495563140465,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-018",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 4.529008130902226e-08,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 90.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.05531
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.12978
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.20424
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 0.27871
+          }
+        ],
+        "tolerance_pct": 1.5,
+        "sensor_mtbf_years": 9.921678738016148,
+        "cv_required": 42.18321896059086,
+        "cv_rated": 92.92259518750464,
+        "uncertainty_components_pct": [
+          0.2,
+          0.3,
+          0.1
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0008274,
+        "drift_r_squared": 0.9999999992786535,
+        "predicted_drift_pct": 0.12977699999999998,
+        "pfdavg": 0.0001985517164587536,
+        "sil_target": 2,
+        "sil_achieved": 3,
+        "combined_uncertainty_pct": 0.37416573867739417,
+        "calibration_interval_optimal_days": 1746.0587382160986,
+        "inspection_interval_days": 90.0,
+        "cv_margin_ratio": 0.4539608356339068,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-019",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 3,
+        "failure_rate_per_hour": 1.1366173669644393e-06,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.09264
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.43455
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.77646
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 1.11837
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 6.548257877954993,
+        "cv_required": 78.05695282646121,
+        "cv_rated": 93.73780970619498,
+        "uncertainty_components_pct": [
+          0.25,
+          0.35,
+          0.15
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0037990000000000007,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 0.77646,
+        "pfdavg": 0.004982930536772102,
+        "sil_target": 3,
+        "sil_achieved": 2,
+        "combined_uncertainty_pct": 0.45552167895721496,
+        "calibration_interval_optimal_days": 238.84180047380886,
+        "inspection_interval_days": 180.0,
+        "cv_margin_ratio": 0.8327157746817136,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-020",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 3,
+        "failure_rate_per_hour": 8.170350384297869e-07,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 270.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.08438
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.5313
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.97821
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 1.42513
+          }
+        ],
+        "tolerance_pct": 0.8,
+        "sensor_mtbf_years": 6.697115066447689,
+        "cv_required": 73.87094229189488,
+        "cv_rated": 100.75037323709198,
+        "uncertainty_components_pct": [
+          0.25,
+          0.35,
+          0.15
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.004965733333333333,
+        "drift_r_squared": 0.9999999999799734,
+        "predicted_drift_pct": 1.425129,
+        "pfdavg": 0.0035818816084761855,
+        "sil_target": 3,
+        "sil_achieved": 2,
+        "combined_uncertainty_pct": 0.45552167895721496,
+        "calibration_interval_optimal_days": 144.11144376124375,
+        "inspection_interval_days": 144.11144376124375,
+        "cv_margin_ratio": 0.7332076290978816,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-021",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 3.946225280618012e-07,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.09063
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.55235
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 1.01407
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 1.47579
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 5.882164546379171,
+        "cv_required": 89.774060385974,
+        "cv_rated": 97.20628781779362,
+        "uncertainty_components_pct": [
+          0.25,
+          0.35,
+          0.15
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.005130222222222223,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 1.0140699999999998,
+        "pfdavg": 0.0017300251630229363,
+        "sil_target": 2,
+        "sil_achieved": 2,
+        "combined_uncertainty_pct": 0.45552167895721496,
+        "calibration_interval_optimal_days": 177.25742874469375,
+        "inspection_interval_days": 177.25742874469375,
+        "cv_margin_ratio": 0.9235417008645489,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CONTROL_VALVE_CAPACITY_LOW",
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-022",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 9.90293718180465e-07,
+        "proof_test_interval_hours": 13140.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 270.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.07678
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.47792
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.87906
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 1.2802
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 6.137278225523392,
+        "cv_required": 75.53244622542502,
+        "cv_rated": 101.40970400215552,
+        "uncertainty_components_pct": [
+          0.25,
+          0.35,
+          0.15
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0044571111111111105,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 1.2802,
+        "pfdavg": 0.006510190903318377,
+        "sil_target": 2,
+        "sil_achieved": 2,
+        "combined_uncertainty_pct": 0.45552167895721496,
+        "calibration_interval_optimal_days": 207.13416762227652,
+        "inspection_interval_days": 207.13416762227652,
+        "cv_margin_ratio": 0.744824639502148,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-023",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 3.399447935237018e-07,
+        "proof_test_interval_hours": 13140.0,
+        "mttr_hours": 12.0,
+        "calibration_interval_days": 270.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.09409
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.60593
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 1.11776
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 1.6296
+          }
+        ],
+        "tolerance_pct": 0.8,
+        "sensor_mtbf_years": 5.297762353819233,
+        "cv_required": 78.05544925799539,
+        "cv_rated": 105.01833438700088,
+        "uncertainty_components_pct": [
+          0.25,
+          0.35,
+          0.15
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.0056870666666666665,
+        "drift_r_squared": 0.9999999999847314,
+        "predicted_drift_pct": 1.6295989999999998,
+        "pfdavg": 0.0022354769622118633,
+        "sil_target": 2,
+        "sil_achieved": 2,
+        "combined_uncertainty_pct": 0.45552167895721496,
+        "calibration_interval_optimal_days": 124.12532529951001,
+        "inspection_interval_days": 124.12532529951001,
+        "cv_margin_ratio": 0.7432554488091088,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-024",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 7.809543085123326e-07,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 12.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.0733
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.57247
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 1.07164
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 1.57081
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 5.153183039929403,
+        "cv_required": 88.94307760697036,
+        "cv_rated": 101.19309231094331,
+        "uncertainty_components_pct": [
+          0.25,
+          0.35,
+          0.15
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.005546333333333334,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 1.07164,
+        "pfdavg": 0.0034252655971350908,
+        "sil_target": 1,
+        "sil_achieved": 2,
+        "combined_uncertainty_pct": 0.45552167895721496,
+        "calibration_interval_optimal_days": 167.08335837490233,
+        "inspection_interval_days": 167.08335837490233,
+        "cv_margin_ratio": 0.8789441608688916,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.DRIFT_RATE_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-025",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "sil_target": 3,
+        "failure_rate_per_hour": 9.232532737937564e-07,
+        "proof_test_interval_hours": 13140.0,
+        "mttr_hours": 12.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.0801
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 0.46074
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 0.84137
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 1.222
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 5.50799858696542,
+        "cv_required": 85.29047491285732,
+        "cv_rated": 91.94239023696554,
+        "uncertainty_components_pct": [
+          0.25,
+          0.35,
+          0.15
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.004229255555555556,
+        "drift_r_squared": 0.9999999999585868,
+        "predicted_drift_pct": 0.8413690000000001,
+        "pfdavg": 0.006071313528467742,
+        "sil_target": 3,
+        "sil_achieved": 2,
+        "combined_uncertainty_pct": 0.45552167895721496,
+        "calibration_interval_optimal_days": 217.50801953587836,
+        "inspection_interval_days": 180.0,
+        "cv_margin_ratio": 0.927651268289153,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CONTROL_VALVE_CAPACITY_LOW",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-026",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "sil_target": 2,
+        "failure_rate_per_hour": 7.128085031676405e-06,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 8.0,
+        "calibration_interval_days": 270.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.1412
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 1.78121
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 3.42122
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 5.06122
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 4.225182823881452,
+        "cv_required": 121.56132084823776,
+        "cv_rated": 116.1304361050254,
+        "uncertainty_components_pct": [
+          0.4,
+          0.5,
+          0.2
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.018222299999999997,
+        "drift_r_squared": 0.9999999999977692,
+        "predicted_drift_pct": 5.061223,
+        "pfdavg": 0.03124952477886936,
+        "sil_target": 2,
+        "sil_achieved": 1,
+        "combined_uncertainty_pct": 0.6708203932499369,
+        "calibration_interval_optimal_days": 47.12895737640144,
+        "inspection_interval_days": 47.12895737640144,
+        "cv_margin_ratio": 1.0467653866235447,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CONTROL_VALVE_CAPACITY_LOW",
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [
+        "PHY.SENSOR_MTBF_LOW"
+      ],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-027",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "sil_target": 3,
+        "failure_rate_per_hour": 1.006244319593292e-05,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 12.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.08367
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 1.30881
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 2.53396
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 3.7591
+          }
+        ],
+        "tolerance_pct": 0.8,
+        "sensor_mtbf_years": 2.3214882651793247,
+        "cv_required": 128.42246848050164,
+        "cv_rated": 115.39266058184838,
+        "uncertainty_components_pct": [
+          0.4,
+          0.5,
+          0.2
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.013612711111111111,
+        "drift_r_squared": 0.999999999997335,
+        "predicted_drift_pct": 2.533957,
+        "pfdavg": 0.04413387585736179,
+        "sil_target": 3,
+        "sil_achieved": 1,
+        "combined_uncertainty_pct": 0.6708203932499369,
+        "calibration_interval_optimal_days": 52.62221420502405,
+        "inspection_interval_days": 52.62221420502405,
+        "cv_margin_ratio": 1.112917128636714,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CONTROL_VALVE_CAPACITY_LOW",
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [
+        "PHY.SENSOR_MTBF_LOW"
+      ],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-028",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 3.6529886135800673e-06,
+        "proof_test_interval_hours": 8760.0,
+        "mttr_hours": 12.0,
+        "calibration_interval_days": 270.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.13668
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 1.68517
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 3.23366
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 4.78215
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 2.193566710450961,
+        "cv_required": 103.43389766563344,
+        "cv_rated": 99.4801112628064,
+        "uncertainty_components_pct": [
+          0.4,
+          0.5,
+          0.2
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.017205444444444443,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 4.78215,
+        "pfdavg": 0.016022008059162176,
+        "sil_target": 1,
+        "sil_achieved": 1,
+        "combined_uncertainty_pct": 0.6708203932499369,
+        "calibration_interval_optimal_days": 50.1771403108835,
+        "inspection_interval_days": 50.1771403108835,
+        "cv_margin_ratio": 1.0397444911614737,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CONTROL_VALVE_CAPACITY_LOW",
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [
+        "PHY.SENSOR_MTBF_LOW"
+      ],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-029",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "sil_target": 1,
+        "failure_rate_per_hour": 1.9373496090131728e-05,
+        "proof_test_interval_hours": 17520.0,
+        "mttr_hours": 12.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.09297
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 1.74999
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 3.40702
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 5.06405
+          }
+        ],
+        "tolerance_pct": 1.0,
+        "sensor_mtbf_years": 4.408014027505919,
+        "cv_required": 125.52029586614907,
+        "cv_rated": 102.41038522616967,
+        "uncertainty_components_pct": [
+          0.4,
+          0.5,
+          0.2
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.018411411111111112,
+        "drift_r_squared": 0.9999999999978147,
+        "predicted_drift_pct": 3.407021,
+        "pfdavg": 0.16982806672609474,
+        "sil_target": 1,
+        "sil_achieved": 0,
+        "combined_uncertainty_pct": 0.6708203932499369,
+        "calibration_interval_optimal_days": 49.26471928339129,
+        "inspection_interval_days": 49.26471928339129,
+        "cv_margin_ratio": 1.2256598350737768,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CONTROL_VALVE_CAPACITY_LOW",
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [
+        "PHY.SENSOR_MTBF_LOW"
+      ],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    },
+    {
+      "case_id": "INS-GOLD-030",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "sil_target": 3,
+        "failure_rate_per_hour": 1.595006852776357e-05,
+        "proof_test_interval_hours": 17520.0,
+        "mttr_hours": 12.0,
+        "calibration_interval_days": 180.0,
+        "calibration_history": [
+          {
+            "days_since_ref": 0.0,
+            "error_pct": 0.0872
+          },
+          {
+            "days_since_ref": 90.0,
+            "error_pct": 1.07849
+          },
+          {
+            "days_since_ref": 180.0,
+            "error_pct": 2.06978
+          },
+          {
+            "days_since_ref": 270.0,
+            "error_pct": 3.06107
+          }
+        ],
+        "tolerance_pct": 0.8,
+        "sensor_mtbf_years": 3.230700125528312,
+        "cv_required": 112.88504934029683,
+        "cv_rated": 100.31116588819333,
+        "uncertainty_components_pct": [
+          0.4,
+          0.5,
+          0.2
+        ]
+      },
+      "expected_outputs": {
+        "drift_rate_pct_per_day": 0.011014333333333334,
+        "drift_r_squared": 1.0,
+        "predicted_drift_pct": 2.06978,
+        "pfdavg": 0.13981830071437545,
+        "sil_target": 3,
+        "sil_achieved": 0,
+        "combined_uncertainty_pct": 0.6708203932499369,
+        "calibration_interval_optimal_days": 64.71567351632721,
+        "inspection_interval_days": 64.71567351632721,
+        "cv_margin_ratio": 1.1253487918395677,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CONTROL_VALVE_CAPACITY_LOW",
+        "PHY.DRIFT_RATE_EXCEEDED",
+        "PHY.SIL_TARGET_NOT_MET"
+      ],
+      "expected_warnings": [
+        "PHY.SENSOR_MTBF_LOW"
+      ],
+      "validation_points": [
+        "IEC 61511 SIL check context",
+        "ISO GUM drift/uncertainty context",
+        "Control valve capacity margin check"
+      ],
+      "standards_referenced": [
+        "IEC 61511",
+        "ISA-TR84.00.02",
+        "ISA 5.1",
+        "ISO GUM"
+      ]
+    }
+  ]
+}

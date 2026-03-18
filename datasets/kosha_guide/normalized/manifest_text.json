@@ -1,0 +1,28 @@
+{
+  "generated_at_utc": "2026-03-01T04:07:46.927684+00:00",
+  "duration_sec": 57.73,
+  "inputs": {
+    "files_dir": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\files",
+    "guides_json": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\guides.json",
+    "max_files": 0,
+    "chunk_size": 1200,
+    "chunk_overlap": 200
+  },
+  "totals": {
+    "pdf_files_seen": 1039,
+    "parsed_ok": 1037,
+    "parsed_error": 2,
+    "missing_meta": 0,
+    "page_rows": 20842,
+    "doc_rows": 1037,
+    "chunk_rows": 13084,
+    "total_pages": 20842,
+    "total_chars": 12770210
+  },
+  "outputs": {
+    "guide_pages": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\normalized\\guide_pages.jsonl.gz",
+    "guide_documents_text": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\normalized\\guide_documents_text.json",
+    "guide_chunks": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\normalized\\guide_chunks.jsonl.gz",
+    "parse_log": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\normalized\\parse_log.json"
+  }
+}

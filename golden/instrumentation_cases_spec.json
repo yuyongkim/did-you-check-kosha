@@ -1,0 +1,36 @@
+{
+  "dataset_id": "INSTRUMENTATION_CASES_SPEC_V1",
+  "discipline": "instrumentation",
+  "total_cases": 30,
+  "ratio_policy": {
+    "standard": 0.6,
+    "boundary": 0.25,
+    "failure_mode": 0.15
+  },
+  "source_runtime_dataset": "datasets/golden_standards/instrumentation_golden_dataset_v1.json",
+  "required_fields": {
+    "inputs": [
+      "sil_target",
+      "failure_rate_per_hour",
+      "proof_test_interval_hours",
+      "mttr_hours",
+      "calibration_interval_days",
+      "calibration_history",
+      "tolerance_pct",
+      "sensor_mtbf_years",
+      "cv_required",
+      "cv_rated"
+    ],
+    "expected_outputs": [
+      "drift_rate_pct_per_day",
+      "drift_r_squared",
+      "predicted_drift_pct",
+      "pfdavg",
+      "sil_target",
+      "sil_achieved",
+      "inspection_interval_days",
+      "status"
+    ]
+  }
+}
+

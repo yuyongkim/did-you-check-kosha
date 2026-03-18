@@ -1,0 +1,41 @@
+{
+  "discipline": "civil",
+  "red_flags": [
+    {
+      "code": "PHY.CIVIL_SUBSTANTIAL_DAMAGE",
+      "severity": "critical",
+      "blocking": true,
+      "auto_action": "terminate_workflow"
+    },
+    {
+      "code": "PHY.CIVIL_FLEXURE_OVERSTRESS",
+      "severity": "high",
+      "blocking": true,
+      "auto_action": "strict_revalidation"
+    },
+    {
+      "code": "PHY.CIVIL_CARBONATION_CORROSION_INITIATED",
+      "severity": "high",
+      "blocking": true,
+      "auto_action": "strict_revalidation"
+    },
+    {
+      "code": "PHY.CIVIL_CRACK_WIDTH_EXCEEDED",
+      "severity": "high",
+      "blocking": true,
+      "auto_action": "strict_revalidation"
+    },
+    {
+      "code": "PHY.CIVIL_SPALLING_SEVERE",
+      "severity": "high",
+      "blocking": true,
+      "auto_action": "strict_revalidation"
+    },
+    {
+      "code": "PHY.CIVIL_FOUNDATION_SETTLEMENT_HIGH",
+      "severity": "high",
+      "blocking": true,
+      "auto_action": "strict_revalidation"
+    }
+  ]
+}

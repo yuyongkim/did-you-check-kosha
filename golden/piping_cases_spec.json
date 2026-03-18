@@ -1,0 +1,2658 @@
+{
+  "dataset_id": "PIPING_CASES_SPEC_V1",
+  "discipline": "piping",
+  "total_cases": 50,
+  "ratio_policy": {
+    "standard": 0.6,
+    "boundary": 0.25,
+    "failure_mode": 0.15
+  },
+  "cases": [
+    {
+      "case_id": "PIP-GOLD-001",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS4",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 4,
+        "design_pressure_MPa": 1.475,
+        "design_temperature_C": 94.8,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.232
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.101
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.571
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.266,
+        "CR_long": 0.4261,
+        "CR_short": 0.506,
+        "CR_selected": 0.506,
+        "RL_years": 6.532,
+        "inspection_interval_years": 3.266,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-002",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS4",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 4,
+        "design_pressure_MPa": 12.219,
+        "design_temperature_C": -24.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.937
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.99
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.684
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 7.848,
+        "CR_long": 0.1894,
+        "CR_short": 0.4612,
+        "CR_selected": 0.4612,
+        "RL_years": -4.692,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-003",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS6",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 6,
+        "design_pressure_MPa": 14.604,
+        "design_temperature_C": 303.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 12.195
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 10.739
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.405
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 12.672,
+        "CR_long": 0.2911,
+        "CR_short": 0.2669,
+        "CR_selected": 0.2911,
+        "RL_years": -11.223,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-004",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 14.265,
+        "design_temperature_C": 126.7,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 9.555
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 6.905
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.395
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 12.413,
+        "CR_long": 0.5299,
+        "CR_short": 0.302,
+        "CR_selected": 0.5299,
+        "RL_years": -13.244,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-005",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS10",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 10,
+        "design_pressure_MPa": 2.838,
+        "design_temperature_C": 375.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 14.037
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 11.74
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.051
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.974,
+        "CR_long": 0.4594,
+        "CR_short": 0.5378,
+        "CR_selected": 0.5378,
+        "RL_years": 11.3,
+        "inspection_interval_years": 5.65,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-006",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS4",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 4,
+        "design_pressure_MPa": 19.489,
+        "design_temperature_C": 145.5,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 13.52
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 11.171
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 8.816
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 11.625,
+        "CR_long": 0.4698,
+        "CR_short": 0.4711,
+        "CR_selected": 0.4711,
+        "RL_years": -5.963,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-007",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-53 Gr.B-NPS12",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 12,
+        "design_pressure_MPa": 4.653,
+        "design_temperature_C": -5.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 14.613
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 12.396
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 8.941
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.917,
+        "CR_long": 0.4433,
+        "CR_short": 0.6911,
+        "CR_selected": 0.6911,
+        "RL_years": 7.27,
+        "inspection_interval_years": 3.635,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-008",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS4",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 4,
+        "design_pressure_MPa": 8.222,
+        "design_temperature_C": 182.2,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.341
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 15.559
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 13.993
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.772,
+        "CR_long": 0.1564,
+        "CR_short": 0.3132,
+        "CR_selected": 0.3132,
+        "RL_years": 26.248,
+        "inspection_interval_years": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-009",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS8",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 8,
+        "design_pressure_MPa": 14.335,
+        "design_temperature_C": 294.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.714
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 6.822
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.72
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.948,
+        "CR_long": 0.3784,
+        "CR_short": 0.4205,
+        "CR_selected": 0.4205,
+        "RL_years": -10.055,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-010",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 9.783,
+        "design_temperature_C": 92.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 17.254
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 15.237
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 14.078
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.984,
+        "CR_long": 0.4034,
+        "CR_short": 0.2318,
+        "CR_selected": 0.4034,
+        "RL_years": 12.628,
+        "inspection_interval_years": 6.314,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-011",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-53 Gr.B-NPS4",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 4,
+        "design_pressure_MPa": 5.352,
+        "design_temperature_C": -24.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 11.155
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 10.126
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 8.993
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.281,
+        "CR_long": 0.2058,
+        "CR_short": 0.2266,
+        "CR_selected": 0.2266,
+        "RL_years": 20.794,
+        "inspection_interval_years": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-012",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS8",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 8,
+        "design_pressure_MPa": 5.04,
+        "design_temperature_C": 204.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.847
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.937
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 14.008
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.119,
+        "CR_long": 0.3821,
+        "CR_short": 0.1857,
+        "CR_selected": 0.3821,
+        "RL_years": 25.881,
+        "inspection_interval_years": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-013",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 15.155,
+        "design_temperature_C": 224.1,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.47
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.063
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 11.812
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 13.094,
+        "CR_long": 0.2814,
+        "CR_short": 0.4501,
+        "CR_selected": 0.4501,
+        "RL_years": -2.848,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-014",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-53 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 19.949,
+        "design_temperature_C": 27.8,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 12.935
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 10.759
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 7.676
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 16.761,
+        "CR_long": 0.4352,
+        "CR_short": 0.6167,
+        "CR_selected": 0.6167,
+        "RL_years": -14.732,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-015",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 16.05,
+        "design_temperature_C": 166.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.635
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.338
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 3.849
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 13.778,
+        "CR_long": 0.2594,
+        "CR_short": 0.6977,
+        "CR_selected": 0.6977,
+        "RL_years": -14.231,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-016",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS8",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 8,
+        "design_pressure_MPa": 19.45,
+        "design_temperature_C": 381.8,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.115
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 6.021
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 3.476
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 11.605,
+        "CR_long": 0.4187,
+        "CR_short": 0.509,
+        "CR_selected": 0.509,
+        "RL_years": -15.971,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-017",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS8",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 8,
+        "design_pressure_MPa": 15.603,
+        "design_temperature_C": 126.7,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.935
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 10.164
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.654
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 9.606,
+        "CR_long": 0.1543,
+        "CR_short": 0.1019,
+        "CR_selected": 0.1543,
+        "RL_years": 0.311,
+        "inspection_interval_years": 0.155,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-018",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS8",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 8,
+        "design_pressure_MPa": 19.466,
+        "design_temperature_C": 333.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 13.077
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 12.427
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 10.051
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 11.613,
+        "CR_long": 0.13,
+        "CR_short": 0.4752,
+        "CR_selected": 0.4752,
+        "RL_years": -3.287,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-019",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS12",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 12,
+        "design_pressure_MPa": 12.57,
+        "design_temperature_C": 34.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.625
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.957
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 11.121
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.031,
+        "CR_long": 0.3335,
+        "CR_short": 0.5672,
+        "CR_selected": 0.5672,
+        "RL_years": 5.448,
+        "inspection_interval_years": 2.724,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-020",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS4",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 4,
+        "design_pressure_MPa": 12.38,
+        "design_temperature_C": 199.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 9.119
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.866
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.41
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 7.932,
+        "CR_long": 0.2506,
+        "CR_short": 0.6912,
+        "CR_selected": 0.6912,
+        "RL_years": -5.095,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-021",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-53 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 2.101,
+        "design_temperature_C": 390.2,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 17.469
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 16.867
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 14.909
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.107,
+        "CR_long": 0.1203,
+        "CR_short": 0.3916,
+        "CR_selected": 0.3916,
+        "RL_years": 30.138,
+        "inspection_interval_years": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-022",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS12",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 12,
+        "design_pressure_MPa": 15.551,
+        "design_temperature_C": 22.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 12.753
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 11.061
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.766
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 9.579,
+        "CR_long": 0.3384,
+        "CR_short": 0.259,
+        "CR_selected": 0.3384,
+        "RL_years": 0.553,
+        "inspection_interval_years": 0.277,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-023",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS10",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 10,
+        "design_pressure_MPa": 19.323,
+        "design_temperature_C": 415.2,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.553
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.532
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 10.893
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 11.539,
+        "CR_long": 0.4042,
+        "CR_short": 0.5278,
+        "CR_selected": 0.5278,
+        "RL_years": -1.224,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-024",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-53 Gr.B-NPS8",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 8,
+        "design_pressure_MPa": 9.324,
+        "design_temperature_C": 213.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 9.21
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.282
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 6.768
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 6.344,
+        "CR_long": 0.1856,
+        "CR_short": 0.3029,
+        "CR_selected": 0.3029,
+        "RL_years": 1.4,
+        "inspection_interval_years": 0.7,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-025",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS12",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 12,
+        "design_pressure_MPa": 5.372,
+        "design_temperature_C": 67.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.71
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 6.827
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.64
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.291,
+        "CR_long": 0.3766,
+        "CR_short": 0.2374,
+        "CR_selected": 0.3766,
+        "RL_years": 3.582,
+        "inspection_interval_years": 1.791,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-026",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS8",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 8,
+        "design_pressure_MPa": 2.346,
+        "design_temperature_C": 76.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 14.69
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.787
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 12.89
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.719,
+        "CR_long": 0.1807,
+        "CR_short": 0.1794,
+        "CR_selected": 0.1807,
+        "RL_years": 56.287,
+        "inspection_interval_years": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-027",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-312 TP304-NPS12",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 12,
+        "design_pressure_MPa": 9.981,
+        "design_temperature_C": 344.5,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.075
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 15.227
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 14.436
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 6.686,
+        "CR_long": 0.1695,
+        "CR_short": 0.1582,
+        "CR_selected": 0.1695,
+        "RL_years": 45.723,
+        "inspection_interval_years": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-028",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-53 Gr.B-NPS8",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 8,
+        "design_pressure_MPa": 9.048,
+        "design_temperature_C": 188.8,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.291
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.309
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.856
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 6.201,
+        "CR_long": 0.3965,
+        "CR_short": 0.6905,
+        "CR_selected": 0.6905,
+        "RL_years": 5.293,
+        "inspection_interval_years": 2.647,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-029",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-106 Gr.B-NPS4",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 4,
+        "design_pressure_MPa": 8.65,
+        "design_temperature_C": 126.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.617
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 15.633
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 14.562
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.994,
+        "CR_long": 0.1969,
+        "CR_short": 0.2141,
+        "CR_selected": 0.2141,
+        "RL_years": 40.019,
+        "inspection_interval_years": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-030",
+      "discipline": "piping",
+      "category": "standard",
+      "subtype": "SA-53 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 9.016,
+        "design_temperature_C": 96.5,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.498
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.928
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 6.098
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.397,
+        "CR_long": 0.5139,
+        "CR_short": 0.3659,
+        "CR_selected": 0.5139,
+        "RL_years": -4.474,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-031",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-312 TP304-NPS4",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 4,
+        "design_pressure_MPa": 1.961,
+        "design_temperature_C": 449.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.36
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.683
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 10.404
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.519,
+        "CR_long": 0.5354,
+        "CR_short": 0.6558,
+        "CR_selected": 0.6558,
+        "RL_years": 12.023,
+        "inspection_interval_years": 6.011,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-032",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-106 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 8.722,
+        "design_temperature_C": 195.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.647
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.126
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 13.132
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.172,
+        "CR_long": 0.5041,
+        "CR_short": 0.1988,
+        "CR_selected": 0.5041,
+        "RL_years": 9.839,
+        "inspection_interval_years": 4.92,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-033",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-106 Gr.B-NPS10",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 10,
+        "design_pressure_MPa": 6.039,
+        "design_temperature_C": 344.2,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 12.55
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 11.156
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 7.784
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.638,
+        "CR_long": 0.2788,
+        "CR_short": 0.6744,
+        "CR_selected": 0.6744,
+        "RL_years": 4.665,
+        "inspection_interval_years": 2.333,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-034",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-312 TP304-NPS10",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 10,
+        "design_pressure_MPa": 3.941,
+        "design_temperature_C": 105.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 17.687
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 15.926
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 13.8
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.548,
+        "CR_long": 0.3522,
+        "CR_short": 0.4253,
+        "CR_selected": 0.4253,
+        "RL_years": 24.105,
+        "inspection_interval_years": 10.0,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-035",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-312 TP304-NPS8",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 8,
+        "design_pressure_MPa": 2.086,
+        "design_temperature_C": 246.2,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 13.029
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 10.625
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.652
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.584,
+        "CR_long": 0.4808,
+        "CR_short": 0.1945,
+        "CR_selected": 0.4808,
+        "RL_years": 14.7,
+        "inspection_interval_years": 7.35,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-036",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-312 TP304-NPS4",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 4,
+        "design_pressure_MPa": 17.176,
+        "design_temperature_C": -6.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.68
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 6.255
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.543
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 10.424,
+        "CR_long": 0.4851,
+        "CR_short": 0.3423,
+        "CR_selected": 0.4851,
+        "RL_years": -12.123,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-037",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-312 TP304-NPS6",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 6,
+        "design_pressure_MPa": 11.999,
+        "design_temperature_C": -20.5,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.82
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 6.875
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.679
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 10.679,
+        "CR_long": 0.389,
+        "CR_short": 0.4391,
+        "CR_selected": 0.4391,
+        "RL_years": -13.664,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-038",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-53 Gr.B-NPS8",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 8,
+        "design_pressure_MPa": 4.881,
+        "design_temperature_C": 310.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.387
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.057
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 6.542
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.036,
+        "CR_long": 0.266,
+        "CR_short": 0.503,
+        "CR_selected": 0.503,
+        "RL_years": 4.982,
+        "inspection_interval_years": 2.491,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-039",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-53 Gr.B-NPS10",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 10,
+        "design_pressure_MPa": 7.007,
+        "design_temperature_C": 328.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.725
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.248
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 3.752
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.14,
+        "CR_long": 0.2954,
+        "CR_short": 0.6991,
+        "CR_selected": 0.6991,
+        "RL_years": -1.985,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-040",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-106 Gr.B-NPS4",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 4,
+        "design_pressure_MPa": 11.215,
+        "design_temperature_C": 207.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 9.325
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.105
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 7.399
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 7.327,
+        "CR_long": 0.244,
+        "CR_short": 0.1413,
+        "CR_selected": 0.244,
+        "RL_years": 0.295,
+        "inspection_interval_years": 0.147,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-041",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-106 Gr.B-NPS8",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 8,
+        "design_pressure_MPa": 6.415,
+        "design_temperature_C": 174.7,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 13.432
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 12.321
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 8.869
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.833,
+        "CR_long": 0.2222,
+        "CR_short": 0.6903,
+        "CR_selected": 0.6903,
+        "RL_years": 5.847,
+        "inspection_interval_years": 2.924,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-042",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-312 TP304-NPS12",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 12,
+        "design_pressure_MPa": 1.149,
+        "design_temperature_C": 360.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.994
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.035
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.718
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.097,
+        "CR_long": 0.3918,
+        "CR_short": 0.6634,
+        "CR_selected": 0.6634,
+        "RL_years": 5.458,
+        "inspection_interval_years": 2.729,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-043",
+      "discipline": "piping",
+      "category": "boundary",
+      "subtype": "SA-106 Gr.B-NPS8",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 8,
+        "design_pressure_MPa": 3.193,
+        "design_temperature_C": 12.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 13.532
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 12.492
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 10.178
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.159,
+        "CR_long": 0.208,
+        "CR_short": 0.4629,
+        "CR_selected": 0.4629,
+        "RL_years": 15.163,
+        "inspection_interval_years": 7.582,
+        "status": "NORMAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "normal",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-044",
+      "discipline": "piping",
+      "category": "failure_mode",
+      "subtype": "SA-312 TP304-NPS8",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 8,
+        "design_pressure_MPa": 4.868,
+        "design_temperature_C": 270.8,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.64
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.092
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.076
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.029,
+        "CR_long": 0.3096,
+        "CR_short": 0.6432,
+        "CR_selected": 0.6432,
+        "RL_years": 0.073,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-045",
+      "discipline": "piping",
+      "category": "failure_mode",
+      "subtype": "SA-106 Gr.B-NPS4",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 4,
+        "design_pressure_MPa": 13.051,
+        "design_temperature_C": 366.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.441
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.257
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.564
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.281,
+        "CR_long": 0.2368,
+        "CR_short": 0.1785,
+        "CR_selected": 0.2368,
+        "RL_years": -15.697,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-046",
+      "discipline": "piping",
+      "category": "failure_mode",
+      "subtype": "SA-53 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 15.083,
+        "design_temperature_C": 230.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 12.277
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 11.854
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.328
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 13.038,
+        "CR_long": 0.0845,
+        "CR_short": 0.1451,
+        "CR_selected": 0.1451,
+        "RL_years": -25.569,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-047",
+      "discipline": "piping",
+      "category": "failure_mode",
+      "subtype": "SA-312 TP304-NPS6",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "NPS": 6,
+        "design_pressure_MPa": 11.366,
+        "design_temperature_C": 369.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 13.825
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.077
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 10.394
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 10.195,
+        "CR_long": 0.1496,
+        "CR_short": 0.1765,
+        "CR_selected": 0.1765,
+        "RL_years": 1.127,
+        "inspection_interval_years": 0.564,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-048",
+      "discipline": "piping",
+      "category": "failure_mode",
+      "subtype": "SA-53 Gr.B-NPS8",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "NPS": 8,
+        "design_pressure_MPa": 18.081,
+        "design_temperature_C": 350.1,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.607
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.095
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 11.165
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 10.894,
+        "CR_long": 0.5025,
+        "CR_short": 0.226,
+        "CR_selected": 0.5025,
+        "RL_years": 0.539,
+        "inspection_interval_years": 0.27,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-049",
+      "discipline": "piping",
+      "category": "failure_mode",
+      "subtype": "SA-106 Gr.B-NPS4",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 4,
+        "design_pressure_MPa": 7.72,
+        "design_temperature_C": 234.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.747
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.059
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.51
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.511,
+        "CR_long": 0.5377,
+        "CR_short": 0.5497,
+        "CR_selected": 0.5497,
+        "RL_years": 7.275,
+        "inspection_interval_years": 3.638,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-050",
+      "discipline": "piping",
+      "category": "failure_mode",
+      "subtype": "SA-106 Gr.B-NPS6",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "NPS": 6,
+        "design_pressure_MPa": 19.548,
+        "design_temperature_C": 357.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.814
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 16.356
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 11.847
+          }
+        ],
+        "CA_mm": 1.5
+      },
+      "expected_outputs": {
+        "t_min_mm": 16.454,
+        "CR_long": 0.0916,
+        "CR_short": 0.5419,
+        "CR_selected": 0.5419,
+        "RL_years": -8.502,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "validation_points": [
+        "ASME B31.3 thickness equation context",
+        "API 570 corrosion and RL context",
+        "Layer-3 red-flag evaluation"
+      ],
+      "standards_referenced": [
+        "ASME B31.3 Para 304.1.2",
+        "ASME B31.3 Table A-1",
+        "API 570 Section 7"
+      ],
+      "criticality_level": "safety",
+      "cross_discipline_checks": [
+        "vessel_nozzle_interface_check",
+        "rotating_nozzle_load_coupling_check"
+      ],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    }
+  ]
+}

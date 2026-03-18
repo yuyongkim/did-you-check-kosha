@@ -1,0 +1,32 @@
+{
+  "dataset_id": "CIVIL_CASES_SPEC_V1",
+  "discipline": "civil",
+  "total_cases": 25,
+  "ratio_policy": {
+    "standard": 0.6,
+    "boundary": 0.25,
+    "failure_mode": 0.15
+  },
+  "source_runtime_dataset": "datasets/golden_standards/civil_golden_dataset_v1.json",
+  "required_fields": {
+    "inputs": [
+      "element_type",
+      "fc_mpa",
+      "fy_mpa",
+      "width_mm",
+      "effective_depth_mm",
+      "rebar_area_mm2",
+      "demand_moment_knm",
+      "service_years",
+      "cover_thickness_mm"
+    ],
+    "expected_outputs": [
+      "phi_mn_knm",
+      "dc_ratio",
+      "carbonation_depth_mm",
+      "substantial_damage",
+      "inspection_interval_years",
+      "status"
+    ]
+  }
+}

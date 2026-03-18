@@ -1,0 +1,2577 @@
+{
+  "dataset_id": "PIPING_GOLDEN_V1",
+  "total_cases": 50,
+  "critical_cases": 10,
+  "passed_cases": 50,
+  "passed_critical_cases": 10,
+  "overall_accuracy": 1.0,
+  "critical_accuracy": 1.0,
+  "standard_reference_accuracy": 1.0,
+  "red_flag_detection_accuracy": 1.0,
+  "success_criteria": {
+    "overall_accuracy_target": 0.99,
+    "critical_accuracy_target": 1.0,
+    "standard_reference_accuracy_target": 1.0,
+    "red_flag_detection_accuracy_target": 1.0
+  },
+  "per_case": [
+    {
+      "case_id": "PIP-GOLD-001",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.8676405780267835,
+          "actual": 2.8676405780267835,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.17272635505064324,
+          "actual": 0.17272635505064324,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2479981527093594,
+          "actual": 0.2479981527093594,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2479981527093594,
+          "actual": 0.2479981527093594,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 35.48356842918174,
+          "actual": 35.48356842918174,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-002",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 3.030654163988482,
+          "actual": 3.030654163988482,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.13558143991240076,
+          "actual": 0.13558143991240076,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.10525677339901486,
+          "actual": 0.10525677339901486,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.13558143991240076,
+          "actual": 0.13558143991240076,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 72.27645496568617,
+          "actual": 72.27645496568617,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-003",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.536470127694999,
+          "actual": 2.536470127694999,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.17042666986038904,
+          "actual": 0.17042666986038904,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.13184585385878514,
+          "actual": 0.13184585385878514,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.17042666986038904,
+          "actual": 0.17042666986038904,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 96.53436217337493,
+          "actual": 96.53436217337493,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-004",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.577698918658469,
+          "actual": 2.577698918658469,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.1075352792225568,
+          "actual": 0.1075352792225568,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.11925102627257814,
+          "actual": 0.11925102627257814,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.11925102627257814,
+          "actual": 0.11925102627257814,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 98.21970885658448,
+          "actual": 98.21970885658448,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-005",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.973239026355917,
+          "actual": 2.973239026355917,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.17737571858746246,
+          "actual": 0.17737571858746246,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2103136288998357,
+          "actual": 0.2103136288998357,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2103136288998357,
+          "actual": 0.2103136288998357,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 80.75444783339645,
+          "actual": 80.75444783339645,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-006",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.575281607916648,
+          "actual": 2.575281607916648,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.25416520667944137,
+          "actual": 0.25416520667944137,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.29687807881773387,
+          "actual": 0.29687807881773387,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.29687807881773387,
+          "actual": 0.29687807881773387,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 45.4587905103258,
+          "actual": 45.4587905103258,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-007",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.7561490517043916,
+          "actual": 2.7561490517043916,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.1423805091705447,
+          "actual": 0.1423805091705447,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.14184174876847294,
+          "actual": 0.14184174876847294,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.1423805091705447,
+          "actual": 0.1423805091705447,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 80.54368547424781,
+          "actual": 80.54368547424781,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-008",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 4.041395102478473,
+          "actual": 4.041395102478473,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.1562786066246921,
+          "actual": 0.1562786066246921,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.1539367816091953,
+          "actual": 0.1539367816091953,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.1562786066246921,
+          "actual": 0.1562786066246921,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 56.58871094723616,
+          "actual": 56.58871094723616,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-009",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 3.5377866518091996,
+          "actual": 3.5377866518091996,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.24031710238160411,
+          "actual": 0.24031710238160411,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2608928571428571,
+          "actual": 0.2608928571428571,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2608928571428571,
+          "actual": 0.2608928571428571,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 25.365636379102323,
+          "actual": 25.365636379102323,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-010",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.317710133817652,
+          "actual": 2.317710133817652,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.18227504790583088,
+          "actual": 0.18227504790583088,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.23100513136288997,
+          "actual": 0.23100513136288997,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.23100513136288997,
+          "actual": 0.23100513136288997,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 71.96069528026429,
+          "actual": 71.96069528026429,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-011",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.278198514558486,
+          "actual": 2.278198514558486,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.17077662195455792,
+          "actual": 0.17077662195455792,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.21681096059113306,
+          "actual": 0.21681096059113306,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.21681096059113306,
+          "actual": 0.21681096059113306,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 62.85568519361494,
+          "actual": 62.85568519361494,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-012",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.558712518347662,
+          "actual": 2.558712518347662,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.10243597727894879,
+          "actual": 0.10243597727894879,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.10935509031198698,
+          "actual": 0.10935509031198698,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.10935509031198698,
+          "actual": 0.10935509031198698,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 123.55883428108916,
+          "actual": 123.55883428108916,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-013",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.9183167120293403,
+          "actual": 2.9183167120293403,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.18227504790583088,
+          "actual": 0.18227504790583088,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.21911001642036126,
+          "actual": 0.21911001642036126,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.21911001642036126,
+          "actual": 0.21911001642036126,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 60.34723333963436,
+          "actual": 60.34723333963436,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-014",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 4.447686061893714,
+          "actual": 4.447686061893714,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.20162239939775534,
+          "actual": 0.20162239939775534,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2073148604269292,
+          "actual": 0.2073148604269292,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2073148604269292,
+          "actual": 0.2073148604269292,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 61.465993860086336,
+          "actual": 61.465993860086336,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-015",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.3068158678806516,
+          "actual": 2.3068158678806516,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.22331942923624412,
+          "actual": 0.22331942923624412,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.24379987684729063,
+          "actual": 0.24379987684729063,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.24379987684729063,
+          "actual": 0.24379987684729063,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 30.728826564633295,
+          "actual": 30.728826564633295,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-016",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 4.998958838909678,
+          "actual": 4.998958838909678,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.2051719134957569,
+          "actual": 0.2051719134957569,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.22170894909688013,
+          "actual": 0.22170894909688013,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.22170894909688013,
+          "actual": 0.22170894909688013,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 35.78133040368985,
+          "actual": 35.78133040368985,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-017",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.5866960429653654,
+          "actual": 2.5866960429653654,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.12243323980290163,
+          "actual": 0.12243323980290163,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.16473234811165877,
+          "actual": 0.16473234811165877,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.16473234811165877,
+          "actual": 0.16473234811165877,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 81.90743416034447,
+          "actual": 81.90743416034447,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-018",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 3.9237490377912043,
+          "actual": 3.9237490377912043,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.1826749931563099,
+          "actual": 0.1826749931563099,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2754868637110017,
+          "actual": 0.2754868637110017,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2754868637110017,
+          "actual": 0.2754868637110017,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 33.8464449324537,
+          "actual": 33.8464449324537,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-019",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 3.45835618664554,
+          "actual": 3.45835618664554,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.1679270120448947,
+          "actual": 0.1679270120448947,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.12564839901477812,
+          "actual": 0.12564839901477812,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.1679270120448947,
+          "actual": 0.1679270120448947,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 86.15733488717379,
+          "actual": 86.15733488717379,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-020",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 3.3731017255040054,
+          "actual": 3.3731017255040054,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.2444665343553241,
+          "actual": 0.2444665343553241,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2509969211822656,
+          "actual": 0.2509969211822656,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2509969211822656,
+          "actual": 0.2509969211822656,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 63.05216095859502,
+          "actual": 63.05216095859502,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-021",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 26.840747330960856,
+          "actual": 26.840747330960856,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.3244055912948262,
+          "actual": 0.3244055912948262,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.41922783251231516,
+          "actual": 0.41922783251231516,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.41922783251231516,
+          "actual": 0.41922783251231516,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -46.22128071707079,
+          "actual": -46.22128071707079,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-022",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 1.775941386948373,
+          "actual": 1.775941386948373,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.19347351491924442,
+          "actual": 0.19347351491924442,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2358031609195402,
+          "actual": 0.2358031609195402,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2358031609195402,
+          "actual": 0.2358031609195402,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 18.379985222210305,
+          "actual": 18.379985222210305,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 9.19,
+          "actual": 9.19,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-023",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 23.857142857142858,
+          "actual": 23.857142857142858,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.24621629482617022,
+          "actual": 0.24621629482617022,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.4391196633825943,
+          "actual": 0.4391196633825943,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.4391196633825943,
+          "actual": 0.4391196633825943,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -36.82741677421286,
+          "actual": -36.82741677421286,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-024",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 15.682584269662922,
+          "actual": 15.682584269662922,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.262864015877361,
+          "actual": 0.262864015877361,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.08896346469622338,
+          "actual": 0.08896346469622338,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.262864015877361,
+          "actual": 0.262864015877361,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -25.631443874791653,
+          "actual": -25.631443874791653,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-025",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 71.6892523364486,
+          "actual": 71.6892523364486,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.13458157678620314,
+          "actual": 0.13458157678620314,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.12274958949096895,
+          "actual": 0.12274958949096895,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.13458157678620314,
+          "actual": 0.13458157678620314,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -464.5899819986244,
+          "actual": -464.5899819986244,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-026",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 22.559000394321767,
+          "actual": 22.559000394321767,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.2840111209964413,
+          "actual": 0.2840111209964413,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.15463649425287362,
+          "actual": 0.15463649425287362,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2840111209964413,
+          "actual": 0.2840111209964413,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -50.59133017013726,
+          "actual": -50.59133017013726,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-027",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 1.7345741599073001,
+          "actual": 1.7345741599073001,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.37999798111141525,
+          "actual": 0.37999798111141525,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.5248844417077175,
+          "actual": 0.5248844417077175,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.5248844417077175,
+          "actual": 0.5248844417077175,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 6.78039880266539,
+          "actual": 6.78039880266539,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 3.0,
+          "actual": 3.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-028",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 18.6734693877551,
+          "actual": 18.6734693877551,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.36325027374760466,
+          "actual": 0.36325027374760466,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.5236849343185551,
+          "actual": 0.5236849343185551,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.5236849343185551,
+          "actual": 0.5236849343185551,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -24.813525339742974,
+          "actual": -24.813525339742974,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-029",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 21.418181818181818,
+          "actual": 21.418181818181818,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.26691346153846157,
+          "actual": 0.26691346153846157,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.281884236453202,
+          "actual": 0.281884236453202,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.281884236453202,
+          "actual": 0.281884236453202,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -55.80901584325937,
+          "actual": -55.80901584325937,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-030",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 56.12326869806094,
+          "actual": 56.12326869806094,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.28911042294004935,
+          "actual": 0.28911042294004935,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.49419704433497524,
+          "actual": 0.49419704433497524,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.49419704433497524,
+          "actual": 0.49419704433497524,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -96.27691877859665,
+          "actual": -96.27691877859665,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-031",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 18.278374233128837,
+          "actual": 18.278374233128837,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.5046809129482617,
+          "actual": 0.5046809129482617,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.5095907224958949,
+          "actual": 0.5095907224958949,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.5095907224958949,
+          "actual": 0.5095907224958949,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -30.608630700207634,
+          "actual": -30.608630700207634,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-032",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 1.6671498321635643,
+          "actual": 1.6671498321635643,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.3960457842868875,
+          "actual": 0.3960457842868875,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.525384236453202,
+          "actual": 0.525384236453202,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.525384236453202,
+          "actual": 0.525384236453202,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 7.044082998797939,
+          "actual": 7.044082998797939,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 3.0,
+          "actual": 3.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-033",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 27.428994082840237,
+          "actual": 27.428994082840237,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.3446028264440187,
+          "actual": 0.3446028264440187,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.1958195812807883,
+          "actual": 0.1958195812807883,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.3446028264440187,
+          "actual": 0.3446028264440187,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -62.88542176644231,
+          "actual": -62.88542176644231,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-034",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 29.724119902405018,
+          "actual": 29.724119902405018,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.42969117848343824,
+          "actual": 0.42969117848343824,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.4806026272577996,
+          "actual": 0.4806026272577996,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.4806026272577996,
+          "actual": 0.4806026272577996,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -48.66103216256498,
+          "actual": -48.66103216256498,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-035",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 84.74532710280374,
+          "actual": 84.74532710280374,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.3830975568026279,
+          "actual": 0.3830975568026279,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.5825607553366173,
+          "actual": 0.5825607553366173,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.5825607553366173,
+          "actual": 0.5825607553366173,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -137.97672837807,
+          "actual": -137.97672837807,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-036",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 5.19655408043733,
+          "actual": 5.19655408043733,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": -0.109984943881741,
+          "actual": -0.109984943881741,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": -0.09995894909688013,
+          "actual": -0.09995894909688013,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": -0.09995894909688013,
+          "actual": -0.09995894909688013,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": Infinity,
+          "actual": Infinity,
+          "relative_error": NaN
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ],
+      "actual_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-037",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 35.398482469911045,
+          "actual": 35.398482469911045,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.20997125650150558,
+          "actual": 0.20997125650150558,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2199096880131362,
+          "actual": 0.2199096880131362,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2199096880131362,
+          "actual": 0.2199096880131362,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -140.96005842207083,
+          "actual": -140.96005842207083,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-038",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 8.613636363636363,
+          "actual": 8.613636363636363,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.21996988776348209,
+          "actual": 0.21996988776348209,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.23990147783251234,
+          "actual": 0.23990147783251234,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.23990147783251234,
+          "actual": 0.23990147783251234,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -3.3915437745006525,
+          "actual": -3.3915437745006525,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-039",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.014748930421076,
+          "actual": 2.014748930421076,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.009998631261976601,
+          "actual": 0.009998631261976601,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.009995894909688155,
+          "actual": 0.009995894909688155,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.009998631261976601,
+          "actual": 0.009998631261976601,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 1788.7699427014609,
+          "actual": 1788.7699427014609,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-040",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 5.19655408043733,
+          "actual": 5.19655408043733,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": -0.109984943881741,
+          "actual": -0.109984943881741,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": -0.09995894909688013,
+          "actual": -0.09995894909688013,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": -0.09995894909688013,
+          "actual": -0.09995894909688013,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": Infinity,
+          "actual": Infinity,
+          "relative_error": NaN
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ],
+      "actual_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-041",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 35.398482469911045,
+          "actual": 35.398482469911045,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.20997125650150558,
+          "actual": 0.20997125650150558,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2199096880131362,
+          "actual": 0.2199096880131362,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2199096880131362,
+          "actual": 0.2199096880131362,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -140.96005842207083,
+          "actual": -140.96005842207083,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-042",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 8.613636363636363,
+          "actual": 8.613636363636363,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.21996988776348209,
+          "actual": 0.21996988776348209,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.23990147783251234,
+          "actual": 0.23990147783251234,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.23990147783251234,
+          "actual": 0.23990147783251234,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -3.3915437745006525,
+          "actual": -3.3915437745006525,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-043",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 2.014748930421076,
+          "actual": 2.014748930421076,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.009998631261976601,
+          "actual": 0.009998631261976601,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.009995894909688155,
+          "actual": 0.009995894909688155,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.009998631261976601,
+          "actual": 0.009998631261976601,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 1788.7699427014609,
+          "actual": 1788.7699427014609,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-044",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 5.19655408043733,
+          "actual": 5.19655408043733,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": -0.109984943881741,
+          "actual": -0.109984943881741,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": -0.09995894909688013,
+          "actual": -0.09995894909688013,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": -0.09995894909688013,
+          "actual": -0.09995894909688013,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": Infinity,
+          "actual": Infinity,
+          "relative_error": NaN
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ],
+      "actual_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-045",
+      "critical": true,
+      "tolerance": 0.01,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 35.398482469911045,
+          "actual": 35.398482469911045,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.20997125650150558,
+          "actual": 0.20997125650150558,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.2199096880131362,
+          "actual": 0.2199096880131362,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.2199096880131362,
+          "actual": 0.2199096880131362,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": -140.96005842207083,
+          "actual": -140.96005842207083,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 0.0,
+          "actual": 0.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "actual_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-046",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 8.281123864646332,
+          "actual": 8.281123864646332,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.344502840131399,
+          "actual": 0.344502840131399,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.3761455254515601,
+          "actual": 0.3761455254515601,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.3761455254515601,
+          "actual": 0.3761455254515601,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 7.258829231255296,
+          "actual": 7.258829231255296,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 3.629,
+          "actual": 3.629,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ],
+      "actual_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-047",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 5.591820370356778,
+          "actual": 5.591820370356778,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.3850472898987135,
+          "actual": 0.3850472898987135,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.45361371100164205,
+          "actual": 0.45361371100164205,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.45361371100164205,
+          "actual": 0.45361371100164205,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 13.324508239173003,
+          "actual": 13.324508239173003,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 6.662,
+          "actual": 6.662,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-048",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 4.935165272664167,
+          "actual": 4.935165272664167,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.3723990213523133,
+          "actual": 0.3723990213523133,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.428524014778325,
+          "actual": 0.428524014778325,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.428524014778325,
+          "actual": 0.428524014778325,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 17.059335008604968,
+          "actual": 17.059335008604968,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 8.53,
+          "actual": 8.53,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ],
+      "actual_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    },
+    {
+      "case_id": "PIP-GOLD-049",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 8.566139653710419,
+          "actual": 8.566139653710419,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.3298048521762935,
+          "actual": 0.3298048521762935,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.47210611658456475,
+          "actual": 0.47210611658456475,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.47210611658456475,
+          "actual": 0.47210611658456475,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 20.36271085796791,
+          "actual": 20.36271085796791,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 10.0,
+          "actual": 10.0,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [],
+      "actual_red_flags": []
+    },
+    {
+      "case_id": "PIP-GOLD-050",
+      "critical": false,
+      "tolerance": 0.03,
+      "case_pass": true,
+      "numeric_ok": true,
+      "references_ok": true,
+      "red_flags_match": true,
+      "comparisons": {
+        "t_min_mm": {
+          "passed": true,
+          "expected": 5.967249138766541,
+          "actual": 5.967249138766541,
+          "relative_error": 0.0
+        },
+        "CR_long_term": {
+          "passed": true,
+          "expected": 0.3562512318642211,
+          "actual": 0.3562512318642211,
+          "relative_error": 0.0
+        },
+        "CR_short_term": {
+          "passed": true,
+          "expected": 0.4880995484400656,
+          "actual": 0.4880995484400656,
+          "relative_error": 0.0
+        },
+        "CR_selected": {
+          "passed": true,
+          "expected": 0.4880995484400656,
+          "actual": 0.4880995484400656,
+          "relative_error": 0.0
+        },
+        "RL_years": {
+          "passed": true,
+          "expected": 14.074487229477542,
+          "actual": 14.074487229477542,
+          "relative_error": 0.0
+        },
+        "inspection_interval_years": {
+          "passed": true,
+          "expected": 7.037,
+          "actual": 7.037,
+          "relative_error": 0.0
+        }
+      },
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ],
+      "actual_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1027 @@
+{
+  "dataset_id": "VESSEL_GOLDEN_V1",
+  "generated_at": "2026-02-26T00:00:00Z",
+  "total_cases": 30,
+  "category_distribution": {
+    "standard": 18,
+    "boundary": 7,
+    "failure_mode": 5
+  },
+  "cases": [
+    {
+      "case_id": "VES-GOLD-001",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 1.858,
+        "design_temperature_c": 217.3,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 44.821,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.2189
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 14.995603396805121,
+        "remaining_life_years": 136.25124076379566,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.2189
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-002",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 2.796,
+        "design_temperature_c": 189.6,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 43.36,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.2421
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 21.59752619291325,
+        "remaining_life_years": 89.89043290824762,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.2421
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-003",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 2.182,
+        "design_temperature_c": 90.4,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 35.652,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1144
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 11.52981671758696,
+        "remaining_life_years": 210.85824547563845,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1144
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-004",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 1.386,
+        "design_temperature_c": 149.6,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 35.685,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1073
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 9.704653013029573,
+        "remaining_life_years": 242.12811730634138,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1073
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-005",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 1.56,
+        "design_temperature_c": 91.1,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 32.534,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1116
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 9.926667566951663,
+        "remaining_life_years": 202.57466337856928,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1116
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-006",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 3.965,
+        "design_temperature_c": 226.4,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 50.189,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1686
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 21.362573367954383,
+        "remaining_life_years": 170.97524692790995,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1686
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-007",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 1.991,
+        "design_temperature_c": 199.5,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 27.916,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.112
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 13.656017075815448,
+        "remaining_life_years": 127.32127610879064,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.112
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-008",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 1.15,
+        "design_temperature_c": 186.5,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 44.828,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1106
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 8.441370568588788,
+        "remaining_life_years": 328.9930328337361,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1106
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-009",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 1.891,
+        "design_temperature_c": 241.9,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 25.282,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.245
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 15.43551391905562,
+        "remaining_life_years": 40.189739105895434,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.245
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-010",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 2.074,
+        "design_temperature_c": 196.1,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 27.377,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1803
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 13.420950418943237,
+        "remaining_life_years": 77.40460111512348,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1803
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-011",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 2.761,
+        "design_temperature_c": 106.4,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 27.907,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1026
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 14.352281772662176,
+        "remaining_life_years": 132.11226342434526,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1026
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-012",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 1.356,
+        "design_temperature_c": 175.8,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 50.154,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.2286
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 11.091959730746051,
+        "remaining_life_years": 170.87506679463672,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.2286
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-013",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 1.261,
+        "design_temperature_c": 86.0,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 30.014,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.2403
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 8.277465598718678,
+        "remaining_life_years": 90.45582355922313,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.2403
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-014",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 1.781,
+        "design_temperature_c": 185.5,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 34.757,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1279
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 14.19794945821607,
+        "remaining_life_years": 160.7431629537445,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1279
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-015",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 3.35,
+        "design_temperature_c": 113.8,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 53.723,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1333
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 17.200181216021996,
+        "remaining_life_years": 273.98963828940737,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1333
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-016",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 3.33,
+        "design_temperature_c": 256.4,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 25.881,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1752
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 22.655572873430803,
+        "remaining_life_years": 18.40997218361414,
+        "inspection_interval_years": 9.205,
+        "corrosion_rate_selected_mm_per_year": 0.1752
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-017",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 1.082,
+        "design_temperature_c": 178.2,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 32.168,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1195
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 7.621761958511201,
+        "remaining_life_years": 205.40784971957154,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1195
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-018",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 1.464,
+        "design_temperature_c": 81.1,
+        "inside_radius_mm": 600.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 41.553,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1623
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 8.165890092494536,
+        "remaining_life_years": 205.7123222890047,
+        "inspection_interval_years": 10.0,
+        "corrosion_rate_selected_mm_per_year": 0.1623
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-019",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 5.551,
+        "design_temperature_c": 302.9,
+        "inside_radius_mm": 900.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 20.538,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.2244
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 45.52977445305395,
+        "remaining_life_years": -111.37154390844007,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.2244
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-020",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 6.246,
+        "design_temperature_c": 330.3,
+        "inside_radius_mm": 750.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 18.149,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1954
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 43.65280289819079,
+        "remaining_life_years": -130.52099743188737,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.1954
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-021",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 7.196,
+        "design_temperature_c": 354.7,
+        "inside_radius_mm": 1200.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 24.525,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.2377
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 80.82871182709955,
+        "remaining_life_years": -236.86879186831953,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.2377
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-022",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 4.34,
+        "design_temperature_c": 445.9,
+        "inside_radius_mm": 900.0,
+        "joint_efficiency": 0.7,
+        "t_current_mm": 15.909,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.2768
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 57.12589096129116,
+        "remaining_life_years": -148.90495289483803,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.2768
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-023",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 4.794,
+        "design_temperature_c": 396.2,
+        "inside_radius_mm": 900.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 35.718,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.3079
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 48.99162627944836,
+        "remaining_life_years": -43.110186032635134,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.3079
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-024",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 8.072,
+        "design_temperature_c": 422.0,
+        "inside_radius_mm": 1200.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 25.469,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.2778
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 113.83760660962263,
+        "remaining_life_years": -318.1015356717877,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.2778
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-025",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 6.684,
+        "design_temperature_c": 439.9,
+        "inside_radius_mm": 1200.0,
+        "joint_efficiency": 1.0,
+        "t_current_mm": 27.766,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.1842
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 77.17534927955197,
+        "remaining_life_years": -268.237509660977,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.1842
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-026",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 14.392,
+        "design_temperature_c": 422.2,
+        "inside_radius_mm": 900.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 8.314,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.447
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 154.12865169068917,
+        "remaining_life_years": -326.2072744758147,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.447
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-027",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-516-70",
+        "design_pressure_mpa": 10.05,
+        "design_temperature_c": 381.2,
+        "inside_radius_mm": 1200.0,
+        "joint_efficiency": 0.7,
+        "t_current_mm": 8.972,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.3184
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 169.25349416896645,
+        "remaining_life_years": -503.3966525407237,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.3184
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-028",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 13.552,
+        "design_temperature_c": 384.6,
+        "inside_radius_mm": 900.0,
+        "joint_efficiency": 0.7,
+        "t_current_mm": 9.582,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.323
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 176.6824817518248,
+        "remaining_life_years": -517.3389527920273,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.323
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-029",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 13.586,
+        "design_temperature_c": 370.8,
+        "inside_radius_mm": 1200.0,
+        "joint_efficiency": 0.6,
+        "t_current_mm": 8.366,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.3426
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 277.475542871072,
+        "remaining_life_years": -785.4919523382137,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.3426
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    },
+    {
+      "case_id": "VES-GOLD-030",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-240-304",
+        "design_pressure_mpa": 10.411,
+        "design_temperature_c": 367.3,
+        "inside_radius_mm": 1200.0,
+        "joint_efficiency": 0.85,
+        "t_current_mm": 12.374,
+        "corrosion_allowance_mm": 1.5,
+        "assumed_corrosion_rate_mm_per_year": 0.4397
+      },
+      "expected_outputs": {
+        "t_required_shell_mm": 141.55978763226736,
+        "remaining_life_years": -293.8043839714973,
+        "inspection_interval_years": 0.0,
+        "corrosion_rate_selected_mm_per_year": 0.4397
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME VIII UG-27 shell thickness",
+        "API 510 interval policy",
+        "Layer-3 vessel physics checks"
+      ],
+      "standards_referenced": [
+        "ASME Section VIII Div.1 UG-27",
+        "API 510",
+        "API 579-1 Level 1 context"
+      ]
+    }
+  ]
+}

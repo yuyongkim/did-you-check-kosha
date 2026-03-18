@@ -1,0 +1,1440 @@
+{
+  "dataset_id": "ELECTRICAL_GOLDEN_V1",
+  "generated_at": "2026-02-26T00:00:00Z",
+  "total_cases": 30,
+  "category_distribution": {
+    "standard": 18,
+    "boundary": 7,
+    "failure_mode": 5
+  },
+  "cases": [
+    {
+      "case_id": "ELE-GOLD-001",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 15.848,
+        "clearing_time_sec": 0.116,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 40.0,
+        "voltage_drop_percent": 1.565,
+        "thd_voltage_percent": 4.179,
+        "dga_score": 7.253,
+        "oil_quality_score": 8.777,
+        "insulation_score": 9.104,
+        "load_factor_score": 8.467,
+        "motor_current_thd_percent": 3.818,
+        "power_factor": 0.97
+      },
+      "expected_outputs": {
+        "transformer_health_index": 8.247,
+        "arc_flash_energy_cal_cm2": 1.639104,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 1.565,
+        "fault_current_ka": 15.848,
+        "breaker_interrupt_rating_ka": 40.0,
+        "thd_voltage_percent": 4.179,
+        "motor_current_thd_percent": 3.818,
+        "power_factor": 0.97,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-002",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 4.16,
+        "bolted_fault_current_ka": 11.89,
+        "clearing_time_sec": 0.191,
+        "working_distance_mm": 750.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 2.133,
+        "thd_voltage_percent": 5.816,
+        "dga_score": 8.578,
+        "oil_quality_score": 7.165,
+        "insulation_score": 7.898,
+        "load_factor_score": 8.111,
+        "motor_current_thd_percent": 4.584,
+        "power_factor": 0.897
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.99535,
+        "arc_flash_energy_cal_cm2": 1.640748,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 2.133,
+        "fault_current_ka": 11.89,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 5.816,
+        "motor_current_thd_percent": 4.584,
+        "power_factor": 0.897,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-003",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 14.992,
+        "clearing_time_sec": 0.182,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 25.0,
+        "voltage_drop_percent": 2.734,
+        "thd_voltage_percent": 2.096,
+        "dga_score": 7.723,
+        "oil_quality_score": 8.725,
+        "insulation_score": 8.538,
+        "load_factor_score": 8.65,
+        "motor_current_thd_percent": 3.486,
+        "power_factor": 0.934
+      },
+      "expected_outputs": {
+        "transformer_health_index": 8.3219,
+        "arc_flash_energy_cal_cm2": 2.473922,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 2.734,
+        "fault_current_ka": 14.992,
+        "breaker_interrupt_rating_ka": 25.0,
+        "thd_voltage_percent": 2.096,
+        "motor_current_thd_percent": 3.486,
+        "power_factor": 0.934,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-004",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 20.249,
+        "clearing_time_sec": 0.193,
+        "working_distance_mm": 750.0,
+        "breaker_interrupt_rating_ka": 40.0,
+        "voltage_drop_percent": 3.279,
+        "thd_voltage_percent": 2.269,
+        "dga_score": 9.001,
+        "oil_quality_score": 9.006,
+        "insulation_score": 7.773,
+        "load_factor_score": 7.941,
+        "motor_current_thd_percent": 2.047,
+        "power_factor": 0.93
+      },
+      "expected_outputs": {
+        "transformer_health_index": 8.54465,
+        "arc_flash_energy_cal_cm2": 2.404756,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 3.279,
+        "fault_current_ka": 20.249,
+        "breaker_interrupt_rating_ka": 40.0,
+        "thd_voltage_percent": 2.269,
+        "motor_current_thd_percent": 2.047,
+        "power_factor": 0.93,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-005",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 15.936,
+        "clearing_time_sec": 0.109,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 50.0,
+        "voltage_drop_percent": 1.93,
+        "thd_voltage_percent": 4.05,
+        "dga_score": 7.19,
+        "oil_quality_score": 7.846,
+        "insulation_score": 8.942,
+        "load_factor_score": 7.909,
+        "motor_current_thd_percent": 2.081,
+        "power_factor": 0.966
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.8482,
+        "arc_flash_energy_cal_cm2": 1.546212,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 1.93,
+        "fault_current_ka": 15.936,
+        "breaker_interrupt_rating_ka": 50.0,
+        "thd_voltage_percent": 4.05,
+        "motor_current_thd_percent": 2.081,
+        "power_factor": 0.966,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-006",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 18.824,
+        "clearing_time_sec": 0.188,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 40.0,
+        "voltage_drop_percent": 2.004,
+        "thd_voltage_percent": 2.045,
+        "dga_score": 7.615,
+        "oil_quality_score": 7.883,
+        "insulation_score": 8.908,
+        "load_factor_score": 6.507,
+        "motor_current_thd_percent": 4.562,
+        "power_factor": 0.951
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.719,
+        "arc_flash_energy_cal_cm2": 3.007613,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 2.004,
+        "fault_current_ka": 18.824,
+        "breaker_interrupt_rating_ka": 40.0,
+        "thd_voltage_percent": 2.045,
+        "motor_current_thd_percent": 4.562,
+        "power_factor": 0.951,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-007",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 13.897,
+        "clearing_time_sec": 0.141,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 40.0,
+        "voltage_drop_percent": 4.415,
+        "thd_voltage_percent": 4.902,
+        "dga_score": 8.141,
+        "oil_quality_score": 8.459,
+        "insulation_score": 8.086,
+        "load_factor_score": 6.842,
+        "motor_current_thd_percent": 2.064,
+        "power_factor": 0.977
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.9497,
+        "arc_flash_energy_cal_cm2": 1.819712,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 4.415,
+        "fault_current_ka": 13.897,
+        "breaker_interrupt_rating_ka": 40.0,
+        "thd_voltage_percent": 4.902,
+        "motor_current_thd_percent": 2.064,
+        "power_factor": 0.977,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-008",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 11.331,
+        "clearing_time_sec": 0.165,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 25.0,
+        "voltage_drop_percent": 1.694,
+        "thd_voltage_percent": 2.595,
+        "dga_score": 7.863,
+        "oil_quality_score": 8.326,
+        "insulation_score": 7.182,
+        "load_factor_score": 8.1,
+        "motor_current_thd_percent": 4.113,
+        "power_factor": 0.925
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.88995,
+        "arc_flash_energy_cal_cm2": 2.870273,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 1.694,
+        "fault_current_ka": 11.331,
+        "breaker_interrupt_rating_ka": 25.0,
+        "thd_voltage_percent": 2.595,
+        "motor_current_thd_percent": 4.113,
+        "power_factor": 0.925,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-009",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 19.095,
+        "clearing_time_sec": 0.119,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 50.0,
+        "voltage_drop_percent": 1.989,
+        "thd_voltage_percent": 4.365,
+        "dga_score": 7.066,
+        "oil_quality_score": 7.706,
+        "insulation_score": 8.41,
+        "load_factor_score": 8.735,
+        "motor_current_thd_percent": 3.162,
+        "power_factor": 0.912
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.8286,
+        "arc_flash_energy_cal_cm2": 1.923995,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 1.989,
+        "fault_current_ka": 19.095,
+        "breaker_interrupt_rating_ka": 50.0,
+        "thd_voltage_percent": 4.365,
+        "motor_current_thd_percent": 3.162,
+        "power_factor": 0.912,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-010",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 22.407,
+        "clearing_time_sec": 0.11,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 25.0,
+        "voltage_drop_percent": 3.543,
+        "thd_voltage_percent": 4.657,
+        "dga_score": 8.909,
+        "oil_quality_score": 8.409,
+        "insulation_score": 9.016,
+        "load_factor_score": 7.999,
+        "motor_current_thd_percent": 3.646,
+        "power_factor": 0.886
+      },
+      "expected_outputs": {
+        "transformer_health_index": 8.6234,
+        "arc_flash_energy_cal_cm2": 2.00713,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 3.543,
+        "fault_current_ka": 22.407,
+        "breaker_interrupt_rating_ka": 25.0,
+        "thd_voltage_percent": 4.657,
+        "motor_current_thd_percent": 3.646,
+        "power_factor": 0.886,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-011",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 13.209,
+        "clearing_time_sec": 0.112,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 25.0,
+        "voltage_drop_percent": 3.364,
+        "thd_voltage_percent": 3.666,
+        "dga_score": 8.436,
+        "oil_quality_score": 8.79,
+        "insulation_score": 9.072,
+        "load_factor_score": 8.347,
+        "motor_current_thd_percent": 4.348,
+        "power_factor": 0.918
+      },
+      "expected_outputs": {
+        "transformer_health_index": 8.6339,
+        "arc_flash_energy_cal_cm2": 2.151606,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 3.364,
+        "fault_current_ka": 13.209,
+        "breaker_interrupt_rating_ka": 25.0,
+        "thd_voltage_percent": 3.666,
+        "motor_current_thd_percent": 4.348,
+        "power_factor": 0.918,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-012",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 4.16,
+        "bolted_fault_current_ka": 20.039,
+        "clearing_time_sec": 0.137,
+        "working_distance_mm": 750.0,
+        "breaker_interrupt_rating_ka": 50.0,
+        "voltage_drop_percent": 3.732,
+        "thd_voltage_percent": 3.7,
+        "dga_score": 7.096,
+        "oil_quality_score": 7.541,
+        "insulation_score": 7.839,
+        "load_factor_score": 6.692,
+        "motor_current_thd_percent": 4.67,
+        "power_factor": 0.907
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.27505,
+        "arc_flash_energy_cal_cm2": 1.693685,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 3.732,
+        "fault_current_ka": 20.039,
+        "breaker_interrupt_rating_ka": 50.0,
+        "thd_voltage_percent": 3.7,
+        "motor_current_thd_percent": 4.67,
+        "power_factor": 0.907,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-013",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 12.069,
+        "clearing_time_sec": 0.126,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 50.0,
+        "voltage_drop_percent": 2.484,
+        "thd_voltage_percent": 2.602,
+        "dga_score": 7.147,
+        "oil_quality_score": 8.352,
+        "insulation_score": 8.637,
+        "load_factor_score": 7.898,
+        "motor_current_thd_percent": 4.235,
+        "power_factor": 0.965
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.89645,
+        "arc_flash_energy_cal_cm2": 2.281722,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 2.484,
+        "fault_current_ka": 12.069,
+        "breaker_interrupt_rating_ka": 50.0,
+        "thd_voltage_percent": 2.602,
+        "motor_current_thd_percent": 4.235,
+        "power_factor": 0.965,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-014",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 19.341,
+        "clearing_time_sec": 0.168,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 25.0,
+        "voltage_drop_percent": 3.669,
+        "thd_voltage_percent": 6.386,
+        "dga_score": 8.439,
+        "oil_quality_score": 7.611,
+        "insulation_score": 8.905,
+        "load_factor_score": 8.04,
+        "motor_current_thd_percent": 3.756,
+        "power_factor": 0.895
+      },
+      "expected_outputs": {
+        "transformer_health_index": 8.2454,
+        "arc_flash_energy_cal_cm2": 4.223122,
+        "ppe_category": "CAT2",
+        "voltage_drop_percent": 3.669,
+        "fault_current_ka": 19.341,
+        "breaker_interrupt_rating_ka": 25.0,
+        "thd_voltage_percent": 6.386,
+        "motor_current_thd_percent": 3.756,
+        "power_factor": 0.895,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-015",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 20.379,
+        "clearing_time_sec": 0.136,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 50.0,
+        "voltage_drop_percent": 2.176,
+        "thd_voltage_percent": 2.94,
+        "dga_score": 7.213,
+        "oil_quality_score": 7.102,
+        "insulation_score": 8.076,
+        "load_factor_score": 7.912,
+        "motor_current_thd_percent": 3.549,
+        "power_factor": 0.913
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.49765,
+        "arc_flash_energy_cal_cm2": 2.308445,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 2.176,
+        "fault_current_ka": 20.379,
+        "breaker_interrupt_rating_ka": 50.0,
+        "thd_voltage_percent": 2.94,
+        "motor_current_thd_percent": 3.549,
+        "power_factor": 0.913,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-016",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 20.82,
+        "clearing_time_sec": 0.117,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 25.0,
+        "voltage_drop_percent": 3.929,
+        "thd_voltage_percent": 6.038,
+        "dga_score": 7.277,
+        "oil_quality_score": 8.177,
+        "insulation_score": 7.519,
+        "load_factor_score": 6.722,
+        "motor_current_thd_percent": 4.596,
+        "power_factor": 0.946
+      },
+      "expected_outputs": {
+        "transformer_health_index": 7.4394,
+        "arc_flash_energy_cal_cm2": 2.018324,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 3.929,
+        "fault_current_ka": 20.82,
+        "breaker_interrupt_rating_ka": 25.0,
+        "thd_voltage_percent": 6.038,
+        "motor_current_thd_percent": 4.596,
+        "power_factor": 0.946,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-017",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 17.421,
+        "clearing_time_sec": 0.201,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 25.0,
+        "voltage_drop_percent": 1.743,
+        "thd_voltage_percent": 4.601,
+        "dga_score": 8.952,
+        "oil_quality_score": 7.765,
+        "insulation_score": 9.071,
+        "load_factor_score": 7.275,
+        "motor_current_thd_percent": 4.705,
+        "power_factor": 0.973
+      },
+      "expected_outputs": {
+        "transformer_health_index": 8.34365,
+        "arc_flash_energy_cal_cm2": 3.038601,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 1.743,
+        "fault_current_ka": 17.421,
+        "breaker_interrupt_rating_ka": 25.0,
+        "thd_voltage_percent": 4.601,
+        "motor_current_thd_percent": 4.705,
+        "power_factor": 0.973,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-018",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 11.672,
+        "clearing_time_sec": 0.219,
+        "working_distance_mm": 750.0,
+        "breaker_interrupt_rating_ka": 50.0,
+        "voltage_drop_percent": 3.402,
+        "thd_voltage_percent": 5.127,
+        "dga_score": 7.908,
+        "oil_quality_score": 7.868,
+        "insulation_score": 8.916,
+        "load_factor_score": 7.934,
+        "motor_current_thd_percent": 2.064,
+        "power_factor": 0.884
+      },
+      "expected_outputs": {
+        "transformer_health_index": 8.1048,
+        "arc_flash_energy_cal_cm2": 1.859176,
+        "ppe_category": "CAT1",
+        "voltage_drop_percent": 3.402,
+        "fault_current_ka": 11.672,
+        "breaker_interrupt_rating_ka": 50.0,
+        "thd_voltage_percent": 5.127,
+        "motor_current_thd_percent": 2.064,
+        "power_factor": 0.884,
+        "inspection_interval_years": 2.0,
+        "status": "NORMAL"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-019",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 33.059,
+        "clearing_time_sec": 0.307,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 40.0,
+        "voltage_drop_percent": 5.621,
+        "thd_voltage_percent": 7.764,
+        "dga_score": 5.342,
+        "oil_quality_score": 5.287,
+        "insulation_score": 5.176,
+        "load_factor_score": 6.682,
+        "motor_current_thd_percent": 6.252,
+        "power_factor": 0.864
+      },
+      "expected_outputs": {
+        "transformer_health_index": 5.56305,
+        "arc_flash_energy_cal_cm2": 7.654071,
+        "ppe_category": "CAT2",
+        "voltage_drop_percent": 5.621,
+        "fault_current_ka": 33.059,
+        "breaker_interrupt_rating_ka": 40.0,
+        "thd_voltage_percent": 7.764,
+        "motor_current_thd_percent": 6.252,
+        "power_factor": 0.864,
+        "inspection_interval_years": 1.0,
+        "status": "WARNING"
+      },
+      "expected_red_flags": [
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-020",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 26.274,
+        "clearing_time_sec": 0.261,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 5.361,
+        "thd_voltage_percent": 7.633,
+        "dga_score": 4.726,
+        "oil_quality_score": 6.434,
+        "insulation_score": 6.295,
+        "load_factor_score": 6.435,
+        "motor_current_thd_percent": 5.287,
+        "power_factor": 0.879
+      },
+      "expected_outputs": {
+        "transformer_health_index": 5.8086,
+        "arc_flash_energy_cal_cm2": 8.309902,
+        "ppe_category": "CAT3",
+        "voltage_drop_percent": 5.361,
+        "fault_current_ka": 26.274,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 7.633,
+        "motor_current_thd_percent": 5.287,
+        "power_factor": 0.879,
+        "inspection_interval_years": 1.0,
+        "status": "WARNING"
+      },
+      "expected_red_flags": [
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-021",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 26.26,
+        "clearing_time_sec": 0.197,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 5.705,
+        "thd_voltage_percent": 7.314,
+        "dga_score": 5.936,
+        "oil_quality_score": 6.104,
+        "insulation_score": 5.376,
+        "load_factor_score": 5.677,
+        "motor_current_thd_percent": 6.027,
+        "power_factor": 0.878
+      },
+      "expected_outputs": {
+        "transformer_health_index": 5.8142,
+        "arc_flash_energy_cal_cm2": 4.070961,
+        "ppe_category": "CAT2",
+        "voltage_drop_percent": 5.705,
+        "fault_current_ka": 26.26,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 7.314,
+        "motor_current_thd_percent": 6.027,
+        "power_factor": 0.878,
+        "inspection_interval_years": 1.0,
+        "status": "WARNING"
+      },
+      "expected_red_flags": [
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-022",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 23.16,
+        "clearing_time_sec": 0.196,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 6.081,
+        "thd_voltage_percent": 7.654,
+        "dga_score": 4.669,
+        "oil_quality_score": 4.846,
+        "insulation_score": 4.551,
+        "load_factor_score": 5.725,
+        "motor_current_thd_percent": 5.771,
+        "power_factor": 0.843
+      },
+      "expected_outputs": {
+        "transformer_health_index": 4.90085,
+        "arc_flash_energy_cal_cm2": 5.65046,
+        "ppe_category": "CAT2",
+        "voltage_drop_percent": 6.081,
+        "fault_current_ka": 23.16,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 7.654,
+        "motor_current_thd_percent": 5.771,
+        "power_factor": 0.843,
+        "inspection_interval_years": 0.5,
+        "status": "WARNING"
+      },
+      "expected_red_flags": [
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-023",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 40.526,
+        "clearing_time_sec": 0.194,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 4.677,
+        "thd_voltage_percent": 7.986,
+        "dga_score": 5.446,
+        "oil_quality_score": 6.643,
+        "insulation_score": 6.645,
+        "load_factor_score": 5.653,
+        "motor_current_thd_percent": 5.728,
+        "power_factor": 0.849
+      },
+      "expected_outputs": {
+        "transformer_health_index": 6.02645,
+        "arc_flash_energy_cal_cm2": 8.849103,
+        "ppe_category": "CAT3",
+        "voltage_drop_percent": 4.677,
+        "fault_current_ka": 40.526,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 7.986,
+        "motor_current_thd_percent": 5.728,
+        "power_factor": 0.849,
+        "inspection_interval_years": 1.0,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.BREAKER_INTERRUPT_RATING_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-024",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 26.634,
+        "clearing_time_sec": 0.332,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 6.175,
+        "thd_voltage_percent": 8.174,
+        "dga_score": 4.756,
+        "oil_quality_score": 5.875,
+        "insulation_score": 6.551,
+        "load_factor_score": 6.314,
+        "motor_current_thd_percent": 5.181,
+        "power_factor": 0.876
+      },
+      "expected_outputs": {
+        "transformer_health_index": 5.70635,
+        "arc_flash_energy_cal_cm2": 6.938633,
+        "ppe_category": "CAT2",
+        "voltage_drop_percent": 6.175,
+        "fault_current_ka": 26.634,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 8.174,
+        "motor_current_thd_percent": 5.181,
+        "power_factor": 0.876,
+        "inspection_interval_years": 1.0,
+        "status": "WARNING"
+      },
+      "expected_red_flags": [
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [
+        "PHY.HARMONIC_DISTORTION_EXCEEDED"
+      ],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-025",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 24.272,
+        "clearing_time_sec": 0.247,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 5.828,
+        "thd_voltage_percent": 7.299,
+        "dga_score": 6.782,
+        "oil_quality_score": 4.796,
+        "insulation_score": 4.505,
+        "load_factor_score": 5.525,
+        "motor_current_thd_percent": 6.048,
+        "power_factor": 0.878
+      },
+      "expected_outputs": {
+        "transformer_health_index": 5.5787,
+        "arc_flash_energy_cal_cm2": 7.386208,
+        "ppe_category": "CAT2",
+        "voltage_drop_percent": 5.828,
+        "fault_current_ka": 24.272,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 7.299,
+        "motor_current_thd_percent": 6.048,
+        "power_factor": 0.878,
+        "inspection_interval_years": 1.0,
+        "status": "WARNING"
+      },
+      "expected_red_flags": [
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-026",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "system_voltage_kv": 13.8,
+        "bolted_fault_current_ka": 68.557,
+        "clearing_time_sec": 0.687,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 5.82,
+        "thd_voltage_percent": 10.734,
+        "dga_score": 2.765,
+        "oil_quality_score": 2.73,
+        "insulation_score": 1.868,
+        "load_factor_score": 3.132,
+        "motor_current_thd_percent": 7.543,
+        "power_factor": 0.728
+      },
+      "expected_outputs": {
+        "transformer_health_index": 2.65025,
+        "arc_flash_energy_cal_cm2": 32.433526,
+        "ppe_category": "CAT4",
+        "voltage_drop_percent": 5.82,
+        "fault_current_ka": 68.557,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 10.734,
+        "motor_current_thd_percent": 7.543,
+        "power_factor": 0.728,
+        "inspection_interval_years": 0.25,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.BREAKER_INTERRUPT_RATING_EXCEEDED",
+        "PHY.TRANSFORMER_HEALTH_CRITICAL",
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [
+        "PHY.HARMONIC_DISTORTION_EXCEEDED"
+      ],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-027",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 64.865,
+        "clearing_time_sec": 0.631,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 40.0,
+        "voltage_drop_percent": 7.883,
+        "thd_voltage_percent": 9.746,
+        "dga_score": 2.569,
+        "oil_quality_score": 3.053,
+        "insulation_score": 3.03,
+        "load_factor_score": 2.87,
+        "motor_current_thd_percent": 8.984,
+        "power_factor": 0.777
+      },
+      "expected_outputs": {
+        "transformer_health_index": 2.8424,
+        "arc_flash_energy_cal_cm2": 43.626533,
+        "ppe_category": "PROHIBITED",
+        "voltage_drop_percent": 7.883,
+        "fault_current_ka": 64.865,
+        "breaker_interrupt_rating_ka": 40.0,
+        "thd_voltage_percent": 9.746,
+        "motor_current_thd_percent": 8.984,
+        "power_factor": 0.777,
+        "inspection_interval_years": 0.25,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.ARC_FLASH_ENERGY_EXCEEDED",
+        "PHY.BREAKER_INTERRUPT_RATING_EXCEEDED",
+        "PHY.TRANSFORMER_HEALTH_CRITICAL",
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [
+        "PHY.HARMONIC_DISTORTION_EXCEEDED"
+      ],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-028",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 51.047,
+        "clearing_time_sec": 0.607,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 6.113,
+        "thd_voltage_percent": 11.154,
+        "dga_score": 2.999,
+        "oil_quality_score": 2.97,
+        "insulation_score": 2.939,
+        "load_factor_score": 1.722,
+        "motor_current_thd_percent": 6.537,
+        "power_factor": 0.734
+      },
+      "expected_outputs": {
+        "transformer_health_index": 2.72435,
+        "arc_flash_energy_cal_cm2": 33.860265,
+        "ppe_category": "CAT4",
+        "voltage_drop_percent": 6.113,
+        "fault_current_ka": 51.047,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 11.154,
+        "motor_current_thd_percent": 6.537,
+        "power_factor": 0.734,
+        "inspection_interval_years": 0.25,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.BREAKER_INTERRUPT_RATING_EXCEEDED",
+        "PHY.TRANSFORMER_HEALTH_CRITICAL",
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [
+        "PHY.HARMONIC_DISTORTION_EXCEEDED"
+      ],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-029",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 70.084,
+        "clearing_time_sec": 0.661,
+        "working_distance_mm": 455.0,
+        "breaker_interrupt_rating_ka": 40.0,
+        "voltage_drop_percent": 8.117,
+        "thd_voltage_percent": 10.659,
+        "dga_score": 1.547,
+        "oil_quality_score": 2.361,
+        "insulation_score": 2.917,
+        "load_factor_score": 1.52,
+        "motor_current_thd_percent": 6.993,
+        "power_factor": 0.795
+      },
+      "expected_outputs": {
+        "transformer_health_index": 2.0191,
+        "arc_flash_energy_cal_cm2": 49.035049,
+        "ppe_category": "PROHIBITED",
+        "voltage_drop_percent": 8.117,
+        "fault_current_ka": 70.084,
+        "breaker_interrupt_rating_ka": 40.0,
+        "thd_voltage_percent": 10.659,
+        "motor_current_thd_percent": 6.993,
+        "power_factor": 0.795,
+        "inspection_interval_years": 0.25,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.ARC_FLASH_ENERGY_EXCEEDED",
+        "PHY.BREAKER_INTERRUPT_RATING_EXCEEDED",
+        "PHY.TRANSFORMER_HEALTH_CRITICAL",
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [
+        "PHY.HARMONIC_DISTORTION_EXCEEDED"
+      ],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    },
+    {
+      "case_id": "ELE-GOLD-030",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "system_voltage_kv": 6.6,
+        "bolted_fault_current_ka": 53.083,
+        "clearing_time_sec": 0.507,
+        "working_distance_mm": 610.0,
+        "breaker_interrupt_rating_ka": 31.5,
+        "voltage_drop_percent": 6.858,
+        "thd_voltage_percent": 12.396,
+        "dga_score": 1.808,
+        "oil_quality_score": 2.334,
+        "insulation_score": 2.064,
+        "load_factor_score": 3.117,
+        "motor_current_thd_percent": 8.288,
+        "power_factor": 0.701
+      },
+      "expected_outputs": {
+        "transformer_health_index": 2.2525,
+        "arc_flash_energy_cal_cm2": 19.011938,
+        "ppe_category": "CAT3",
+        "voltage_drop_percent": 6.858,
+        "fault_current_ka": 53.083,
+        "breaker_interrupt_rating_ka": 31.5,
+        "thd_voltage_percent": 12.396,
+        "motor_current_thd_percent": 8.288,
+        "power_factor": 0.701,
+        "inspection_interval_years": 0.25,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.BREAKER_INTERRUPT_RATING_EXCEEDED",
+        "PHY.TRANSFORMER_HEALTH_CRITICAL",
+        "PHY.VOLTAGE_DROP_EXCEEDED"
+      ],
+      "expected_warnings": [
+        "PHY.HARMONIC_DISTORTION_EXCEEDED"
+      ],
+      "validation_points": [
+        "IEEE C57.104 health index context",
+        "IEEE 1584 arc-flash context",
+        "NFPA 70E safety categorization context"
+      ],
+      "standards_referenced": [
+        "IEEE C57.104",
+        "IEEE 1584-2018",
+        "IEEE 3002",
+        "NFPA 70E"
+      ]
+    }
+  ]
+}

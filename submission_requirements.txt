@@ -1,0 +1,8 @@
+# Submission / benchmark environment
+# Core API runtime
+fastapi>=0.111,<1.0
+uvicorn>=0.30,<1.0
+
+# Optional PDF parsing dependencies for rebuilding guide text from raw PDFs
+PyMuPDF>=1.24,<2.0
+PyPDF2>=3,<4

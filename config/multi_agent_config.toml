@@ -1,0 +1,69 @@
+﻿# Multi-Agent Config (Design TOML)
+
+[system]
+verification_layers = 4
+consensus_threshold = 0.99
+max_calculation_time_sec = 30
+traceability_required = true
+
+[models]
+default = "gpt-5.3-codex"
+fast_lookup = "gpt-5.3-codex-spark"
+
+[agents.orchestrator]
+role = "Chief Verification Engineer"
+reasoning_effort = "high"
+
+[agents.piping_agent]
+standards = ["ASME B31.3", "API 570", "API 510"]
+
+[agents.vessel_agent]
+standards = ["ASME VIII", "API 510", "API 579-1"]
+
+[agents.rotating_agent]
+standards = ["API 610", "API 617", "API 670"]
+
+[agents.electrical_agent]
+standards = ["IEEE 3000", "IEEE C57.104", "IEEE 1584", "NFPA 70E"]
+
+[agents.instrumentation_agent]
+standards = ["ISA 5.1", "IEC 61511", "ISO GUM", "ISA-TR84.00.02"]
+
+[agents.steel_agent]
+standards = ["AISC 360"]
+
+[agents.civil_agent]
+standards = ["ACI 318", "ACI 562"]
+
+[agents.standards_checker_agent]
+mode = "strict"
+
+[agents.physics_validator_agent]
+mode = "conservative"
+
+[agents.reverse_verifier_agent]
+deviation_warn_percent = 2.0
+deviation_escalate_percent = 5.0
+
+[verification]
+maker_k = 2
+maker_n = 3
+input_validation_required = true
+red_flag_auto_escalation = true
+
+[workflows.standard]
+steps = [
+  "input_validation",
+  "discipline_decomposition",
+  "standards_lookup",
+  "calculation",
+  "maker_consensus",
+  "physics_standards_check",
+  "reverse_verification",
+  "cross_discipline_check",
+  "final_report"
+]
+
+[workflows.emergency]
+fast_track = true
+escalation_required = true

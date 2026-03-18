@@ -1,0 +1,1473 @@
+# Changelog
+
+All notable documentation and architecture changes are recorded here.
+
+## 2026-03-15 - v0.63 - RAG ablation source pack v2 with real RAG core and service layers
+- Built an expanded second-pass source pack after identifying that the first pack still exposed only the thin `scripts/kosha_rag_local.py` wrapper without the actual RAG core implementation.
+- Added the actual RAG core and its contract file:
+  - `src/rag/local_kosha_rag.py`
+  - `src/rag/contracts.py`
+- Added backend service layers so `service.evaluate()` behavior can be inspected directly for ablation design:
+  - `src/piping/service.py`
+  - `src/vessel/service.py`
+  - `src/rotating/service.py`
+  - `src/electrical/service.py`
+  - `src/instrumentation/service.py`
+  - `src/steel/service.py`
+  - `src/civil/service.py`
+- Added API dispatch context:
+  - `src/api/server.py`
+- Created the expanded pack:
+  - `exports/rag_ablation_source_pack_v2_20260315_002600/`
+  - `exports/rag_ablation_source_pack_v2_20260315_002600.zip`
+- Export summary:
+  - files copied: `29`
+  - zip size: `72628` bytes
+
+## 2026-03-15 - v0.62 - RAG ablation source-code pack export
+- Created a source-code-oriented export pack for the RAG ablation handoff instead of a brief-only package:
+  - `exports/rag_ablation_source_pack_20260315_002310/`
+  - `exports/rag_ablation_source_pack_20260315_002310.zip`
+- Included:
+  - `scripts/kosha_rag_local.py`
+  - `src/cross_discipline/validator.py`
+  - benchmark scripts
+  - shared and seven-discipline `verification.py` files
+  - supporting context docs and API spec
+  - `FILE_LIST.md` manifest
+- Export summary:
+  - files copied: `19`
+  - zip size: `30018` bytes
+
+## 2026-03-15 - v0.61 - RAG ablation upload brief and single-file zip export
+- Added a single copy-ready Markdown brief for sharing the recommended upload order for RAG ablation analysis:
+  - `docs/publication/RAG_ABLATION_UPLOAD_BRIEF.md`
+- The brief includes:
+  - upload priority order
+  - exact file paths
+  - rationale for the order
+  - receiver checklist
+  - copy-ready handoff message
+- Created a zip package containing the single brief file for external sharing:
+  - `exports/rag_ablation_upload_brief_20260315.zip`
+
+## 2026-03-14 - v0.60 - Non-piping service verification and backend-default UI activation
+- Verified that the non-piping discipline backend services are actually executable through the Python API path:
+  - vessel
+  - rotating
+  - electrical
+  - instrumentation
+  - steel
+  - civil
+- Evidence collected by:
+  - running unit tests:
+    - `tests.test_vessel_service`
+    - `tests.test_rotating_service`
+    - `tests.test_electrical_service`
+    - `tests.test_instrumentation_service`
+    - `tests.test_steel_service`
+    - `tests.test_civil_service`
+  - issuing successful `POST /api/calculate/{discipline}` calls through FastAPI `TestClient`
+- Confirmed that the main practical gap was frontend defaulting to mock mode even when a backend prefix is configured.
+- Updated frontend workbench state to prefer real backend mode when `NEXT_PUBLIC_BACKEND_API_PREFIX` is set, unless `NEXT_PUBLIC_API_MODE=mock` explicitly forces mock mode:
+  - `frontend/store/workbench-store.ts`
+
+## 2026-03-14 - v0.59 - Publication docs corrected for local RAG and KOSHA validation layer
+- Corrected the publication package to explicitly include the platform's regulatory-support layer:
+  - local KOSHA corpus sync
+  - KOSHA guide ingestion and parsing
+  - local RAG retrieval
+  - optional local LLM answer generation path
+- Updated core manuscript planning files:
+  - `docs/SYSTEM_OVERVIEW.md`
+  - `docs/publication/README.md`
+  - `docs/publication/TITLE_ABSTRACT_OPTIONS.md`
+  - `docs/publication/PAPER_OUTLINE_AND_SOURCE_MAP.md`
+  - `docs/publication/VENUE_AND_STYLE_GUIDE.md`
+  - `docs/publication/MANUSCRIPT_SKELETON.md`
+- Rebuilt the curated paper-topic Markdown bundle to include the missing evidence docs:
+  - `README.md`
+  - `docs/KOSHA_DATA_SYNC_GUIDE.md`
+  - `outputs/api_specification.md`
+  - `exports/paper_topics_md_bundle_20260314_234100/`
+  - `exports/paper_topics_md_bundle_20260314_234100.zip`
+- Updated export summary:
+  - markdown files copied: `18`
+  - zip size: `29043` bytes
+
+## 2026-03-14 - v0.58 - Curated paper-topic markdown bundle export
+- Created a curated Markdown-only bundle for the three paper-topic planning tracks and their cited evidence files:
+  - `exports/paper_topics_md_bundle_20260314_233056/`
+- Created a zip package for the curated paper-topic bundle:
+  - `exports/paper_topics_md_bundle_20260314_233056.zip`
+- Included files:
+  - publication package docs
+  - system overview and discipline expansion docs
+  - verification and golden dataset docs
+  - benchmark and report markdowns
+  - `COMPLETION_REPORT_20260314.md`
+- Export summary:
+  - markdown files copied: `15`
+  - zip size: `23818` bytes
+
+## 2026-03-14 - v0.57 - Markdown bundle export package
+- Collected all repository Markdown files into a single export bundle while preserving relative paths:
+  - `exports/markdown_bundle_20260314_232814/`
+- Created a zip package for the collected Markdown bundle:
+  - `exports/markdown_bundle_20260314_232814.zip`
+- Export summary:
+  - markdown files copied: `1511`
+  - zip size: `2912409` bytes
+
+## 2026-03-14 - v0.56 - Publication package for paper drafting
+- Added a dedicated publication package under `docs/publication/`:
+  - `docs/publication/README.md`
+  - `docs/publication/TITLE_ABSTRACT_OPTIONS.md`
+  - `docs/publication/PAPER_OUTLINE_AND_SOURCE_MAP.md`
+  - `docs/publication/VENUE_AND_STYLE_GUIDE.md`
+  - `docs/publication/MANUSCRIPT_SKELETON.md`
+- Covered all three requested paper-planning tracks:
+  - title and abstract options
+  - outline with file-to-section source mapping
+  - submission style guidance with a recommended path
+- Updated the docs hub to include a paper-preparation reading route:
+  - `docs/README.md`
+
+## 2026-03-14 - v0.55 - Detailed discipline expansion guide split out from summary matrix
+- Added one integrated detailed document so the discipline expansion logic is readable beyond the summary table:
+  - `docs/DISCIPLINE_EXPANSION_GUIDE.md`
+- Kept `docs/SYSTEM_OVERVIEW.md` as the summary layer and linked the new detailed guide from it:
+  - `docs/SYSTEM_OVERVIEW.md`
+- Updated the docs hub reading order to include the detailed guide:
+  - `docs/README.md`
+
+## 2026-03-14 - v0.54 - Unified discipline expansion framework consolidated into system overview
+- Folded the multi-discipline expansion approach into one canonical root document instead of separate planning fragments:
+  - `docs/SYSTEM_OVERVIEW.md`
+- Added a shared discipline expansion lens:
+  - basis
+  - decisions
+  - outputs
+  - validation
+- Added a seven-discipline expansion matrix covering piping, vessel, rotating, electrical, instrumentation, steel, and civil:
+  - `docs/SYSTEM_OVERVIEW.md`
+- Updated the docs hub wording to point readers to the unified expansion framework:
+  - `docs/README.md`
+
+## 2026-03-14 - v0.53 - Root overview consolidation and vessel doc compaction
+- Added a single consolidated root overview document:
+  - `docs/SYSTEM_OVERVIEW.md`
+- Simplified root-level overview/navigation docs into lightweight compatibility pages:
+  - `docs/architecture_overview.md`
+  - `docs/DISCIPLINE_DOCUMENT_MAP.md`
+  - `docs/DOCS_NAVIGATION_GUIDELINE.md`
+- Updated documentation hub and output pack to point to the consolidated overview:
+  - `docs/README.md`
+  - `outputs/user_guide.md`
+- Collapsed vessel documentation from the previous split-file baseline into a compact 4-file structure:
+  - `docs/vessel/README.md`
+  - `docs/vessel/ENGINEERING_MODEL.md`
+  - `docs/vessel/EXECUTION_CONTRACT.md`
+  - `docs/vessel/INTERFACES_AND_VALIDATION.md`
+- Removed superseded vessel split files:
+  - `docs/vessel/ARCHITECTURE.md`
+  - `docs/vessel/FACTOR_TAXONOMY.md`
+  - `docs/vessel/DELIVERABLES.md`
+  - `docs/vessel/INPUT_OUTPUT_SCHEMA.md`
+  - `docs/vessel/VERIFICATION_RULES.md`
+  - `docs/vessel/CROSS_DISCIPLINE_INTERFACES.md`
+  - `docs/vessel/GOLDEN_CASES.md`
+
+## 2026-03-14 - v0.52 - Piping ISO decision expansion and all-discipline doc skeleton baseline
+- Extended piping architecture baseline to include construction-facing ISO decision logic:
+  - `docs/architecture_overview.md`
+  - `agents/piping_agent.md`
+- Added canonical discipline document map and standardized folder skeletons for all seven disciplines:
+  - `docs/DISCIPLINE_DOCUMENT_MAP.md`
+  - `docs/piping/*.md` (new baseline files)
+  - `docs/vessel/*.md`
+  - `docs/rotating/*.md`
+  - `docs/electrical/*.md`
+  - `docs/instrumentation/*.md`
+  - `docs/steel/*.md`
+  - `docs/civil/*.md`
+- Updated docs hub navigation to point to the new discipline map and discipline folders:
+  - `docs/README.md`
+- Added mandatory completion history for this documentation round:
+  - `docs/revisions/CHANGELOG.md`
+  - `docs/revisions/DELIVERY_LOG.md`
+
+## 2026-03-03 - v0.51 - Regulatory panel scoring path optimization (implementation-focused)
+- Applied implementation-first improvement to local regulatory snapshot path (accuracy/latency support) with minimal modular split:
+  - extracted scoring/token/snippet utilities to:
+    - `frontend/lib/kosha/local-snapshot-scoring.ts`
+  - refactored local snapshot loader/search to use pre-indexed normalized search fields:
+    - `frontend/lib/kosha/local-snapshot.ts`
+- Added dedicated unit coverage for new scoring utility behaviors:
+  - `frontend/tests/unit/kosha-local-snapshot-scoring.test.ts`
+- Revalidated full implementation gate after changes:
+  - `python scripts/run_quality_gate.py --profile implementation` (PASS)
+
+## 2026-03-03 - v0.50 - Implementation-first gate and E2E reliability hardening
+- Added implementation-completion checklist and aligned project direction to “implementation first, modularization as a means”:
+  - `docs/plans/IMPLEMENTATION_COMPLETION_CHECKLIST_V0.1.md`
+  - `docs/plans/PROJECT_MODULARIZATION_MASTER_PLAN_V0.1.md` (purpose/scope wording updated)
+- Extended quality gate profiles with implementation artifact checks:
+  - `scripts/run_quality_gate.py`
+  - new profile: `--profile implementation`
+  - checks added for proposal/docx, dataset manifests, and required 6 screenshots.
+- Hardened backend smoke path against fixed-port conflicts by making host/port configurable and spawning API server with explicit env:
+  - `scripts/smoke_backend_api.py`
+  - `scripts/run_quality_gate.py` backend smoke now uses isolated `127.0.0.1:18000`.
+- Updated Playwright backend integration to use configurable backend port and env propagation:
+  - `frontend/playwright.config.ts`
+  - `frontend/tests/e2e/backend-mode-seven.spec.ts`
+- Fixed frontend unit regression in KOSHA crosswalk ID mapping:
+  - `frontend/lib/kosha/crosswalk.ts`
+  - `frontend/tests/unit/kosha-crosswalk.test.ts` now passes.
+- Stabilized smoke E2E navigation selector by href-based routing assertion:
+  - `frontend/tests/e2e/workbench-smoke.spec.ts`
+- Verification rerun passed:
+  - `python scripts/run_quality_gate.py --profile fast`
+  - `python scripts/run_quality_gate.py --profile implementation`
+
+## 2026-03-01 - v0.49 - All-discipline sample submission reports
+- Added full sample submission report set for all disciplines under `docs/reports/`:
+  - `SAMPLE_PIPING_REPORT_SUBMISSION_V0.1.*`
+  - `SAMPLE_VESSEL_REPORT_SUBMISSION_V0.1.*`
+  - `SAMPLE_ROTATING_REPORT_SUBMISSION_V0.1.*`
+  - `SAMPLE_ELECTRICAL_REPORT_SUBMISSION_V0.1.*`
+  - `SAMPLE_INSTRUMENTATION_REPORT_SUBMISSION_V0.1.*`
+  - `SAMPLE_STEEL_REPORT_SUBMISSION_V0.1.*`
+  - `SAMPLE_CIVIL_REPORT_SUBMISSION_V0.1.*`
+- Added reports pack index:
+  - `docs/reports/README.md`
+  - `docs/i18n/en/reports/README.md`
+  - `docs/i18n/ko/reports/README.md`
+- Updated docs hub links to include all-discipline sample pack:
+  - `docs/README.md`
+  - `docs/i18n/en/README.md`
+  - `docs/i18n/ko/README.md`
+- Regenerated bilingual index to include new reports:
+  - `docs/BILINGUAL_INDEX.md`
+  - `docs/i18n/en/BILINGUAL_INDEX.md`
+
+## 2026-03-01 - v0.48 - Sample filled report package (piping)
+- Added fully filled sample submission report under `docs/reports/`:
+  - `docs/reports/SAMPLE_PIPING_REPORT_SUBMISSION_V0.1.md`
+  - `docs/i18n/en/reports/SAMPLE_PIPING_REPORT_SUBMISSION_V0.1.md`
+  - `docs/i18n/ko/reports/SAMPLE_PIPING_REPORT_SUBMISSION_V0.1.md`
+- Updated hub/user-guide links to point to the sample:
+  - `docs/README.md`
+  - `docs/i18n/en/README.md`
+  - `docs/i18n/ko/README.md`
+- Regenerated bilingual index after adding report sample:
+  - `docs/BILINGUAL_INDEX.md`
+  - `docs/i18n/en/BILINGUAL_INDEX.md`
+
+## 2026-03-01 - v0.47 - Docs navigation and report submission pack
+- Expanded `docs/README.md` with practical reading routes, role-based order, and report workflow.
+- Added new docs navigation guideline:
+  - `docs/DOCS_NAVIGATION_GUIDELINE.md`
+  - `docs/i18n/en/DOCS_NAVIGATION_GUIDELINE.md`
+  - `docs/i18n/ko/DOCS_NAVIGATION_GUIDELINE.md`
+- Added formal report submission template set:
+  - `docs/REPORT_SUBMISSION_TEMPLATE.md`
+  - `docs/i18n/en/REPORT_SUBMISSION_TEMPLATE.md`
+  - `docs/i18n/ko/REPORT_SUBMISSION_TEMPLATE.md`
+- Updated user guides with new cross-links:
+  - `docs/i18n/en/README.md`
+  - `docs/i18n/ko/README.md`
+- Regenerated bilingual mapping index:
+  - `docs/BILINGUAL_INDEX.md`
+  - `docs/i18n/en/BILINGUAL_INDEX.md`
+
+## 2026-03-01 - v0.46 - Full docs bilingual companion rollout
+- Expanded bilingual documentation coverage across all canonical `docs/**/*.md` files (excluding backups):
+  - ensured each canonical source now has `*.en.md` and `*.ko.md` companion files.
+- Added bilingual map index:
+  - `docs/BILINGUAL_INDEX.md`
+  - `docs/i18n/en/BILINGUAL_INDEX.md`
+  - `docs/i18n/ko/BILINGUAL_INDEX.md`
+- Added/updated bilingual links in hub and user guides:
+  - `docs/README.md`
+  - `docs/i18n/en/README.md`
+  - `docs/i18n/ko/README.md`
+- Added Korean companion templates with section map + source linkage for large spec/plan/revision docs to keep full-coverage navigation practical.
+
+## 2026-03-01 - v0.45 - Bilingual docs pack and piping NDE guide
+- Added bilingual user guides under `docs/`:
+  - `docs/i18n/en/README.md`
+  - `docs/i18n/ko/README.md`
+- Added bilingual piping NDE recommendation guides:
+  - `docs/i18n/en/piping/NDE_RECOMMENDATIONS.md`
+  - `docs/i18n/ko/piping/NDE_RECOMMENDATIONS.md`
+- Updated documentation hub entry links:
+  - `docs/README.md`
+- Frontend update aligned with guide content:
+  - piping cross-section visual centered and enlarged
+  - material-based NDE recommendations surfaced in piping panel
+  - file: `frontend/components/visualization/piping-visuals.tsx`
+
+## 2026-02-28 - v0.44 - Completion logging automation
+- Added one-step completion logger for changelog and delivery log; updated policy/docs to mandate use.
+
+## 2026-02-27 - v0.43 - Mandatory final Markdown history rule
+- Added mandatory completion-history policy requiring final Markdown updates at task close:
+  - `docs/revisions/CHANGELOG.md`
+  - `docs/revisions/DELIVERY_LOG.md`
+- Added dedicated delivery log file with entry template:
+  - `docs/revisions/DELIVERY_LOG.md`
+- Updated governance and planning docs to enforce rule:
+  - `docs/revisions/REVISION_POLICY.md`
+  - `docs/README.md`
+  - `docs/plans/PROJECT_PLAN_V0.1.md`
+  - `docs/plans/FRONTEND_RELEASE_CHECKLIST_V0.1.md`
+
+## 2026-02-27 - v0.42 - 100-point hardening wave (form engine + discipline presets)
+- Added shared form-engine upgrades:
+  - field metadata support (`unit`, `placeholder`),
+  - robust select defaulting to prevent false `required` blocking,
+  - stronger field-level validation messages,
+  - auto range helper text,
+  - quick preset framework for all disciplines.
+- Added preset packs across all seven disciplines (4 presets each) to avoid single-template behavior and support rapid scenario switching.
+- Expanded domain option coverage in multiple modules:
+  - rotating machine classes,
+  - electrical equipment classes,
+  - instrumentation instrument classes,
+  - steel grades,
+  - civil exposure classes,
+  - piping fluid classes and large-bore NPS map,
+  - vessel material list extension.
+- Improved UX/traceability:
+  - glossary and text integrity cleanup,
+  - formula trace readability hardening,
+  - red-flag taxonomy mapping with human-readable explanations in blocked/flags panels.
+- Added and maintained test coverage for glossary helpers and pin I/O helpers.
+- Verification rerun passed:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+  - `npm --prefix frontend run build`
+
+## 2026-02-27 - v0.41 - Frontend reliability and domain-depth sprint (30-item batch)
+- Stabilized glossary/tooltip UX:
+  - robust `(?)` term help popover (hover/click/outside-close),
+  - glossary pin ordering controls (`Up`/`Down`),
+  - import/export/clear pin feedback messaging,
+  - pinned items resolved against full discipline set (not lost by search filter),
+  - glossary result counters (`filtered/total`) added.
+- Fixed UI text corruption and navigation labels:
+  - top bar glossary button text normalized,
+  - sidebar glossary shortcut text normalized,
+  - home page explanatory sections rewritten with clean content.
+- Improved calculation readability and blocked-state explainability:
+  - formula trace renderer normalized (removed corrupted symbols),
+  - expanded formula hints,
+  - new red-flag taxonomy dictionary and code-to-meaning rendering in:
+    - blocked banner,
+    - flags panel.
+- Expanded domain input coverage across disciplines:
+  - piping: added steam fluid subtypes, extended NPS-to-OD table, richer field helpers,
+  - vessel: added additional alloy/stainless entries and conditional dimension-field visibility by vessel type,
+  - rotating: expanded machine types (`recip_compressor`, `expander`) and steam screening note,
+  - electrical: expanded equipment types (`generator`, `inverter`, `cable_feeder`),
+  - instrumentation: expanded instrument types (`pressure_switch`, `thermocouple`, `radar_level`, `coriolis_meter`),
+  - steel: expanded grade options and grade-based default Fy mapping,
+  - civil: expanded exposure environment options and factors.
+- Glossary semantic coverage expanded:
+  - added explicit term definitions for UG-27/UG-28/UG-37, B31.3 Para 304.1.2, Table A-1.
+- Added new unit tests:
+  - `frontend/tests/unit/glossary-pins.test.ts`
+  - `frontend/tests/unit/glossary.test.ts`
+- Verification rerun passed:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+  - `npm --prefix frontend run build`
+
+## 2026-02-27 - v0.40 - Glossary pin/favorites support
+- Added glossary pin/favorites feature with local persistence.
+- Users can pin/unpin standards and terms directly from Top 10 blocks.
+- Added pinned sections:
+  - `Pinned Standards`
+  - `Pinned Terms`
+- Pins are stored in browser localStorage (`epc_glossary_pins_v1`).
+- Files:
+  - `frontend/lib/glossary-pins.ts`
+  - `frontend/app/glossary/page.tsx`
+
+## 2026-02-27 - v0.39 - Glossary Top 10 key sections
+- Added dedicated `Top 10 Key Standards` block to glossary page.
+- Added dedicated `Top 10 Key Terms` block to glossary page.
+- Top 10 blocks follow current discipline filter and search query.
+- File:
+  - `frontend/app/glossary/page.tsx`
+
+## 2026-02-27 - v0.38 - Glossary frequency-first ordering
+- Updated glossary ordering from pure alphabetical to usage-priority-first.
+- Added discipline-aware priority maps for:
+  - engineering terms
+  - standards code entries
+- Within each discipline tab, high-frequency field terms and core standards now appear first.
+- Files:
+  - `frontend/lib/glossary.ts`
+  - `frontend/lib/standards.ts`
+  - `frontend/app/glossary/page.tsx`
+
+## 2026-02-27 - v0.37 - Glossary discipline tabs and filtering
+- Added discipline-aware filtering to glossary data models.
+- Added tab-style filters on `/glossary`:
+  - All, Common, Piping, Vessel, Rotating, Electrical, Instrumentation, Steel, Civil
+- Standards glossary entries now include discipline tags.
+- Engineering term entries now infer discipline and support filtered retrieval.
+- Files:
+  - `frontend/lib/glossary-types.ts`
+  - `frontend/lib/glossary.ts`
+  - `frontend/lib/standards.ts`
+  - `frontend/app/glossary/page.tsx`
+
+## 2026-02-27 - v0.36 - Centralized glossary access (frontend + docs)
+- Added dedicated frontend glossary page:
+  - route: `/glossary`
+  - includes searchable standards-code quick guide and engineering term definitions.
+- Added quick navigation to glossary:
+  - top bar button: `용어집`
+  - sidebar shortcut: `용어집 / 코드설명`
+  - home page quick-access link.
+- Added shared standards glossary dictionary and engineering glossary list API:
+  - `frontend/lib/standards.ts`
+  - `frontend/lib/glossary.ts`
+- Added documentation glossary baseline:
+  - `docs/glossary/ENGINEERING_TERMS_V0.1.md`
+  - `docs/README.md` structure updated.
+
+## 2026-02-27 - v0.35 - Standards reference readability upgrade (UG labels)
+- Added frontend standards formatter to reduce raw code-only labels.
+- UG code references now display with engineering meaning:
+  - UG-27 -> internal pressure shell-thickness context
+  - UG-28 -> external pressure buckling context
+  - UG-37 -> nozzle/opening reinforcement context
+- Applied to:
+  - standards reference panel
+  - calculation trace reference line
+  - markdown export reference section
+- Files:
+  - `frontend/lib/standards.ts`
+  - `frontend/components/verification/standards-reference-panel.tsx`
+  - `frontend/components/results/calculation-trace-card.tsx`
+  - `frontend/lib/exporters.ts`
+
+## 2026-02-27 - v0.34 - Vessel external-pressure and nozzle-screening depth step
+- Added screening-level UG-28 / UG-37 context to Static Equipment workflow.
+- Backend vessel input model expanded with:
+  - `external_pressure_mpa`
+  - `reinforcement_pad_thickness_mm`
+  - `reinforcement_pad_width_mm`
+- Added vessel screening module:
+  - `src/vessel/screening.py`
+  - conservative external-pressure capacity screen
+  - nozzle reinforcement index screen
+- Added warning/blocking taxonomy entries:
+  - `PHY.VESSEL_EXTERNAL_PRESSURE_REVIEW`
+  - `PHY.VESSEL_EXTERNAL_PRESSURE_RISK`
+  - `PHY.VESSEL_NOZZLE_REINFORCEMENT_REVIEW`
+  - `PHY.VESSEL_NOZZLE_REINFORCEMENT_RISK`
+- Surfaced new final metrics:
+  - `external_pressure_allowable_screen_mpa`
+  - `external_pressure_utilization`
+  - `nozzle_opening_ratio`
+  - `nozzle_reinforcement_index`
+- Frontend VES module expanded with new inputs and visual outputs.
+- Added backend unit coverage for external-pressure and nozzle-screening behaviors.
+
+## 2026-02-27 - v0.33 - Vessel dimension context expansion (height/length/head/nozzle)
+- Expanded Static Equipment (VES) from radius-only input to include practical geometry context:
+  - `shell_length_mm`, `straight_shell_height_mm`, `head_type`, `head_depth_mm`, `nozzle_od_mm`.
+- Added backend dimension-aware context metrics in vessel final results:
+  - `diameter_mm`, `governing_span_mm`, `slenderness_ld_ratio`,
+  - `shell_surface_area_m2`, `estimated_internal_volume_m3`,
+  - `head_depth_mm_used`, `span_source`.
+- Added non-blocking quality/screening warnings for dimension completeness and high L/D:
+  - `DATA.VESSEL_DIMENSION_CONTEXT_MISSING`
+  - `PHY.VESSEL_HIGH_LD_RATIO`
+- Upgraded vessel visual panel to use live dimension data and dynamic schematic scaling:
+  - geometry annotations now reflect D/L(or H)/L-D from form values.
+- Files:
+  - `src/vessel/models.py`
+  - `src/vessel/service.py`
+  - `src/shared/red_flags.py`
+  - `tests/test_vessel_service.py`
+  - `frontend/lib/mock/vessel.ts`
+  - `frontend/components/visualization/vessel-visuals.tsx`
+  - `frontend/lib/glossary.ts`
+
+## 2026-02-27 - v0.32 - Vessel type live schematic switching
+- Enabled live visual switching in Static Equipment workbench:
+  - vessel schematic now updates immediately when `vessel_type` changes in input form (no run required).
+- Added form-to-visual preview data flow:
+  - `DisciplineForm` now emits live values via `onValuesChange`.
+  - `DisciplineWorkbench` stores preview input and passes it to visual panel.
+  - input snapshot now reflects live form state instead of fixed sample.
+- Added vessel-type-specific schematic variants:
+  - Horizontal Drum
+  - Vertical Vessel
+  - Column / Tower
+  - Heat Exchanger Shell
+  - Reactor
+- Files:
+  - `frontend/components/forms/discipline-form.tsx`
+  - `frontend/components/workbench/discipline-workbench.tsx`
+  - `frontend/components/visualization/visual-engineering-panel.tsx`
+  - `frontend/components/visualization/vessel-visuals.tsx`
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+
+## 2026-02-27 - v0.31 - Formula readability upgrade in calculation trace
+- Improved formula presentation in trace panel for engineering readability:
+  - operator normalization (`*` -> `×`, spacing normalization, comparison symbols)
+  - semicolon-based multi-line equation splitting
+  - variable subscript rendering for `_` tokens (example: `t_min`, `cr_selected`)
+  - concise formula hint line for common expressions
+- File:
+  - `frontend/components/results/calculation-trace-card.tsx`
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+
+## 2026-02-27 - v0.30 - Term help tooltip visibility hardening
+- Addressed issue where `(?)` term help appeared empty or not visible in some environments.
+- Replaced browser-native `title`-only UX with inline tooltip layer that is visible on:
+  - hover
+  - keyboard focus
+  - click/focus on touch workflows
+- Tooltip now renders:
+  - term label (accent header)
+  - term description (multi-line body)
+- File:
+  - `frontend/components/ui/term-help.tsx`
+
+## 2026-02-27 - v0.29 - CSS drop root-cause fix (.next collision hardening)
+- Investigated recurring "unstyled page / CSS disappears" symptom.
+- Reproduced condition:
+  - HTML rendered (`200`) but `/_next/static/css/app/layout.css` and app chunks returned `404`.
+  - Root cause: dev server artifacts were colliding with production build artifacts in shared `.next` directory when `dev` and `build/start` workflows overlapped.
+- Implemented prevention:
+  - `frontend/next.config.mjs`
+  - split Next.js dist dirs by mode:
+    - development (`next dev`) -> `.next-dev`
+    - production (`next build/start`) -> `.next`
+- Updated troubleshooting docs:
+  - `frontend/README.md`
+  - clear both `.next` and `.next-dev` during recovery.
+  - added explicit root-cause note about concurrent dev/build artifact collision.
+- Added convenience recovery scripts:
+  - `frontend/package.json`
+  - `clean:cache` and `dev:fresh`
+- Verification:
+  - runtime probe on isolated dev port confirmed static assets `200`:
+    - `/_next/static/css/app/layout.css?...`
+    - `/_next/static/chunks/main-app.js?...`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run test:unit`
+
+## 2026-02-27 - v0.28 - Piping temperature profile model (pattern-level exception handling)
+- Replaced single hard temperature threshold behavior with profile-based envelope logic to handle repeated high-temperature field patterns.
+- Added piping temperature profile options across frontend and backend:
+  - `strict_process`
+  - `high_temp_managed`
+  - `legacy_power_steam`
+- New behavior:
+  - above conservative soft limit but within profile hard limit -> warning:
+    - `STD.TEMPERATURE_OVERRIDE_REVIEW_REQUIRED`
+  - above hard limit -> blocking red flag:
+    - `PHY.TEMPERATURE_LIMIT_EXCEEDED`
+- Backend updates:
+  - `src/piping/models.py` (new `temperature_profile` input field)
+  - `src/piping/constants.py` (profile envelope matrix)
+  - `src/piping/standards.py` (temperature window resolver)
+  - `src/piping/service.py` (Layer 3 profile-based evaluation + recommendations)
+  - `src/shared/red_flags.py` (registered non-blocking review flag)
+  - `tests/test_piping_service.py` (strict vs legacy profile behavior tests)
+- Frontend updates:
+  - `frontend/lib/mock/piping.constants.ts`
+  - `frontend/lib/mock/piping.config.ts`
+  - `frontend/lib/mock/piping.ts`
+  - `frontend/components/visualization/piping-visuals.tsx` (Temp Envelope visibility)
+  - `frontend/lib/glossary.ts` (new terms)
+- Documentation updates:
+  - `docs/standards_index.md`
+  - `docs/verification_layers.md`
+- Validation reruns:
+  - `python -m unittest tests/test_piping_service.py tests/test_red_flags.py`
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+
+## 2026-02-27 - v0.27 - Piping trace formula visibility and timeline label clarity
+- Added discipline-specific calculation trace formulas instead of generic placeholder text:
+  - `frontend/lib/mock/step-templates.ts` (new)
+  - `frontend/lib/mock-data.ts` (wired to template mapping)
+- Improved trace readability:
+  - formula line now rendered in monospace formula box
+  - `frontend/components/results/calculation-trace-card.tsx`
+- Clarified piping trend chart labels:
+  - uses inspection date labels (`YY-MM`) when available
+  - falls back to `T1/T2/T3` sequence only when date is missing
+  - added explicit note explaining label meaning
+  - `frontend/components/visualization/piping-visuals.tsx`
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+
+## 2026-02-27 - v0.26 - Glossary hardening and full tooltip coverage
+- Fixed glossary availability issue by restoring missing frontend glossary module:
+  - `frontend/lib/glossary.ts`
+- Rebuilt glossary with full cross-discipline term coverage for:
+  - input fields
+  - primary result metrics
+  - verification layer names
+  - summary terms (`confidence`, `execution_time_sec`, `references`)
+- Added resilient fallback logic:
+  - normalized key matching (supports exact and normalized variants)
+  - auto label generation for unknown keys
+  - auto definition generation by unit/term pattern
+- Fixed corrupted tooltip fallback text encoding:
+  - `frontend/components/ui/term-help.tsx`
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+
+## 2026-02-27 - v0.25 - Per-term help tooltip rollout for frontend
+- Added per-term help icon `(?)` UX for core frontend terms.
+- New glossary system:
+  - `frontend/lib/glossary.ts`
+  - centralized term labels + Korean descriptions for input/metric/verification terminology.
+- New reusable help icon component:
+  - `frontend/components/ui/term-help.tsx`
+  - uses tooltip title/aria text for quick explanation on hover.
+- Applied to key surfaces:
+  - input form labels and checkbox rows:
+    - `frontend/components/forms/discipline-form.tsx`
+  - calculation summary metrics and top summary stats:
+    - `frontend/components/results/result-summary-card.tsx`
+  - verification layer names:
+    - `frontend/components/verification/verification-panel.tsx`
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+
+## 2026-02-27 - v0.24 - Intro page quick usage guidance
+- Added concise onboarding guidance directly on dashboard intro page:
+  - `When To Use` (3 practical use cases)
+  - `How To Use (Quick 3 Steps)` (project/asset -> run -> verify/export)
+- File:
+  - `frontend/app/page.tsx`
+
+## 2026-02-27 - v0.23 - Frontend readability + hero + dynamic piping visuals
+- Improved chart readability and hover-number contrast:
+  - added shared chart theme module for tooltip/axis styling:
+    - `frontend/components/visualization/chart-theme.ts`
+  - applied high-contrast tooltip style and axis tick style across chart components:
+    - `frontend/components/charts/discipline-chart.tsx`
+    - `frontend/components/visualization/piping-visuals.tsx`
+    - `frontend/components/visualization/vessel-visuals.tsx`
+    - `frontend/components/visualization/rotating-visuals.tsx`
+    - `frontend/components/visualization/electrical-visuals.tsx`
+    - `frontend/components/visualization/instrumentation-visuals.tsx`
+    - `frontend/components/visualization/civil-visuals.tsx`
+- Expanded hero section content:
+  - added three value pillars (traceability, 4-layer verification, safety-first blocking)
+  - file: `frontend/app/page.tsx`
+- Expanded discipline hero context:
+  - added Focus/Core Checks/Output briefing cards per discipline
+  - file: `frontend/components/workbench/discipline-workbench.tsx`
+- Piping visual context upgraded to respond to calculation outcomes:
+  - dynamic ring color based on risk band
+  - dynamic API 570 point spread based on corrosion rate
+  - fluid context, utilization, and limit-year forecast messaging
+  - replaced broken unreadable note text with clear guidance
+  - file: `frontend/components/visualization/piping-visuals.tsx`
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+
+## 2026-02-27 - v0.22 - Rotating steam-turbine domain split (steam-state aware)
+- Addressed template-overgeneralization concern for rotating discipline by adding steam-turbine specific logic.
+- Backend rotating updates:
+  - added steam state inputs to rotating payload model:
+    - `steam_pressure_bar`, `steam_temperature_c`, `steam_quality_x`,
+    - `inlet_enthalpy_kj_per_kg`, `outlet_enthalpy_kj_per_kg`
+  - added steam-state screening module:
+    - `src/rotating/steam_state.py`
+  - added steam-specific layer checks and outputs:
+    - steam-table-required guardrail
+    - wetness/erosion risk
+    - phase-change boundary risk
+    - enthalpy consistency check
+  - files:
+    - `src/rotating/models.py`
+    - `src/rotating/constants.py`
+    - `src/rotating/service.py`
+    - `src/rotating/verification.py`
+- Red-flag taxonomy expansion:
+  - `PHY.STEAM_WETNESS_EROSION_RISK`
+  - `PHY.STEAM_PHASE_CHANGE_RISK`
+  - `STD.STEAM_TABLE_LOOKUP_REQUIRED`
+  - `LOG.STEAM_STATE_INCONSISTENT`
+  - file: `src/shared/red_flags.py`
+- Frontend rotating updates:
+  - conditional steam turbine form fields (not shown for non-steam machines)
+  - steam-phase metrics in result model
+  - steam-specific visualization panel content
+  - files:
+    - `frontend/lib/types.ts`
+    - `frontend/components/forms/discipline-form.tsx`
+    - `frontend/lib/mock/rotating.ts`
+    - `frontend/components/visualization/rotating-visuals.tsx`
+- Documentation updates:
+  - `docs/standards_index.md`
+  - `docs/verification_layers.md`
+  - `docs/plans/PROJECT_PLAN_V0.1.md`
+  - `docs/plans/FRONTEND_EXECUTION_PLAN_V0.1.md`
+
+## 2026-02-27 - v0.21 - Frontend unstyled page recovery playbook
+- Investigated user-reported unstyled UI symptom (plain HTML with default browser styles).
+- Confirmed root cause pattern: `/_next/static/*` assets returning `404`, so CSS/JS hydration failed.
+- Recovery procedure validated and documented:
+  - stop Node dev processes
+  - delete `frontend/.next`
+  - restart `npm run dev`
+  - hard-refresh browser
+- Documentation update:
+  - `frontend/README.md` troubleshooting section now includes explicit `/_next/static/* 404` recovery steps.
+
+## 2026-02-27 - v0.20 - Next.js icon-route chunk error hardening
+- Fixed intermittent dev/runtime error:
+  - `Cannot find module './948.js'` from `.next/server/app/icon.svg/route.js`
+- Root-cause hardening:
+  - removed Next special metadata route files:
+    - `frontend/app/icon.svg`
+    - `frontend/app/apple-icon.svg`
+  - moved favicon assets to static public serving:
+    - `frontend/public/icon.svg`
+    - `frontend/public/apple-icon.svg`
+  - metadata already points to `/icon.svg` and `/apple-icon.svg`, now served as static files.
+- Recovery validation:
+  - stopped running dev server, cleared `frontend/.next`, rebuilt and restarted dev.
+  - checked `http://localhost:3000` and `http://localhost:3000/icon.svg` return `200`.
+  - re-ran:
+    - `npm --prefix frontend run typecheck`
+    - `npm --prefix frontend run lint`
+    - `npm --prefix frontend run build`
+    - `npm --prefix frontend run test:e2e`
+
+## 2026-02-27 - v0.19 - Multi-discipline material/type catalog expansion
+- Expanded non-piping discipline catalogs to broaden usable engineering selections while keeping frontend/backend aligned.
+- Vessel:
+  - frontend/backend material tables expanded:
+    - `frontend/lib/mock/vessel.ts`
+    - `src/vessel/constants.py`
+  - added vessel category field (`vessel_type`) and extended joint-efficiency set:
+    - `frontend/lib/mock/vessel.ts`
+    - `src/vessel/models.py`
+    - `src/vessel/service.py`
+- Rotating:
+  - expanded machine types (`steam_turbine`, `gas_turbine`, `blower`, `fan`, `gearbox`) in frontend/backend:
+    - `frontend/lib/mock/rotating.ts`
+    - `src/rotating/constants.py`
+    - `src/rotating/models.py`
+- Electrical:
+  - added equipment type selector and equipment-dependent weighting:
+    - `frontend/lib/mock/electrical.ts`
+    - `src/electrical/constants.py`
+    - `src/electrical/models.py`
+    - `src/electrical/service.py`
+- Instrumentation:
+  - added instrument type + SIF voting architecture and corresponding drift/PFD weighting:
+    - `frontend/lib/mock/instrumentation.ts`
+    - `src/instrumentation/constants.py`
+    - `src/instrumentation/models.py`
+    - `src/instrumentation/service.py`
+- Steel:
+  - expanded member types and added steel-grade tagging:
+    - `frontend/lib/mock/steel.ts`
+    - `src/steel/models.py`
+    - `src/steel/service.py`
+- Civil:
+  - expanded element types and added exposure environment factor:
+    - `frontend/lib/mock/civil.ts`
+    - `src/civil/constants.py`
+    - `src/civil/models.py`
+    - `src/civil/service.py`
+- Regression tests added for expanded catalogs:
+  - `tests/test_vessel_service.py`
+  - `tests/test_rotating_service.py`
+  - `tests/test_steel_service.py`
+  - `tests/test_civil_service.py`
+- Docs updates:
+  - `docs/standards_index.md`
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+  - `npm --prefix frontend run build`
+  - `python -m unittest discover -s tests -p "test_*.py"`
+
+## 2026-02-27 - v0.18 - Blocked-cause visibility + piping fluid-type support
+- Improved blocked-state UX to reduce confusion:
+  - `frontend/components/results/blocked-banner.tsx`
+  - shows top red-flag codes directly in the banner (`Blocked Output`) for immediate cause tracing.
+- Disabled demo-only forced-block toggle by default:
+  - `frontend/components/forms/discipline-form.tsx`
+  - `force_blocked` checkbox now appears only when `NEXT_PUBLIC_ENABLE_DEMO_BLOCKED=true`.
+- Added piping fluid-specific input and corrosion-severity weighting:
+  - frontend:
+    - `frontend/lib/mock/piping.constants.ts` (`PIPING_FLUID_OPTIONS`, `PIPING_FLUID_CORROSION_FACTOR`)
+    - `frontend/lib/mock/piping.config.ts` (`fluid_type` select field)
+    - `frontend/lib/mock/piping.ts` (fluid factor applied to corrosion rates/RL path)
+  - backend:
+    - `src/piping/models.py` (`fluid_type` payload field)
+    - `src/piping/constants.py` (`FLUID_CORROSION_FACTOR`, `SERVICE_CORROSION_FACTOR`)
+    - `src/piping/service.py` (service/fluid/coating factors applied to CR calculations)
+- Docs sync:
+  - `docs/standards_index.md`
+  - `docs/verification_layers.md`
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+  - `npm --prefix frontend run build`
+  - `python -m unittest tests/test_piping_service.py tests/test_api_server_adapter.py`
+  - `python -m unittest discover -s tests -p "test_*.py"`
+
+## 2026-02-27 - v0.17 - Frontend favicon and apple-touch icon added
+- Added branded app icons for browser tab/bookmark/home-screen usage:
+  - `frontend/app/icon.svg`
+  - `frontend/app/apple-icon.svg`
+- Wired icon metadata in root layout:
+  - `frontend/app/layout.tsx`
+  - set `metadata.icons.icon`, `metadata.icons.apple`, and `metadata.icons.shortcut`
+
+## 2026-02-27 - v0.16 - Select registration fix for required-blocking form issue
+- Fixed frontend `select` component registration with React Hook Form:
+  - `frontend/components/ui/select.tsx`
+  - converted to `React.forwardRef` and attached native `<select ref={ref}>`
+- Result:
+  - resolved case where `material` select could be treated as missing (`required`) and prevented run/next-step.
+- Validation reruns:
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run test:unit`
+  - `npm --prefix frontend run test:e2e`
+
+## 2026-02-27 - v0.15 - Piping material DB expansion and grouped selector
+- Expanded piping material catalog in frontend and backend to support grouped engineering selection:
+  - Carbon Steel (CS), Low Alloy Steel, Stainless Steel (SUS), Duplex Stainless, Nickel Alloy
+- Frontend updates:
+  - `frontend/lib/mock/piping.constants.ts`
+    - expanded material/stress/temperature/chloride maps
+    - added `PIPING_MATERIAL_OPTION_GROUPS` for grouped dropdown UX
+  - `frontend/lib/mock/piping.config.ts`
+    - material input switched from flat `options` to grouped `optionGroups`
+  - `frontend/lib/mock/piping.ts`
+    - material-group fallback logic expanded for the new family set
+  - `frontend/tests/unit/discipline-configs.test.ts`
+    - added assertion for piping grouped material selector coverage
+- Backend updates:
+  - `src/piping/constants.py`
+    - expanded allowable stress table and material groups to match frontend catalog
+    - expanded material temperature limits and hydrotest chloride limits by family
+  - `tests/test_piping_service.py`
+    - added low-alloy support regression test (`SA-335 P22`)
+- Documentation updates:
+  - `docs/standards_index.md`
+    - piping material coverage and chloride guardrails updated for expanded families
+
+## 2026-02-27 - v0.14 - Visual Engineering Context integration (seven disciplines)
+- Added discipline-specific visual context components and routing panel:
+  - `frontend/components/visualization/visual-engineering-panel.tsx`
+  - `frontend/components/visualization/visual-section-card.tsx`
+  - `frontend/components/visualization/utils.ts`
+  - `frontend/components/visualization/piping-visuals.tsx`
+  - `frontend/components/visualization/vessel-visuals.tsx`
+  - `frontend/components/visualization/rotating-visuals.tsx`
+  - `frontend/components/visualization/electrical-visuals.tsx`
+  - `frontend/components/visualization/instrumentation-visuals.tsx`
+  - `frontend/components/visualization/steel-visuals.tsx`
+  - `frontend/components/visualization/civil-visuals.tsx`
+- Replaced center-pane single generic chart with discipline-aware visual packs:
+  - `frontend/components/workbench/discipline-workbench.tsx`
+- Added frontend visual context specification:
+  - `docs/specs/frontend/06_VISUAL_ENGINEERING_CONTEXT_V0.1.md`
+  - `docs/specs/frontend/README.md` (index update)
+- Updated execution/project plans for visual context track:
+  - `docs/plans/FRONTEND_EXECUTION_PLAN_V0.1.md`
+  - `docs/plans/PROJECT_PLAN_V0.1.md`
+- Added frontend troubleshooting note for Next.js dev-cache runtime module errors:
+  - `frontend/README.md`
+
+## 2026-02-27 - v0.13 - CI/profile hardening + Playwright failure forensics
+- Upgraded quality gate runner with explicit profiles:
+  - `scripts/run_quality_gate.py`
+  - `--profile fast` (backend tests/smoke + frontend lint/typecheck/unit)
+  - `--profile strict` (fast + frontend backend-mode E2E + full E2E + build)
+  - legacy compatibility retained: `--skip-e2e` maps to `fast`.
+- Hardened CI workflow execution strategy:
+  - `.github/workflows/quality-gate.yml`
+  - matrix profiles (`fast`, `strict`)
+  - pull requests run fast profile, pushes run both fast + strict.
+- Added Playwright failure forensics outputs and artifact upload:
+  - `frontend/playwright.config.ts`
+    - html reporter enabled (`open: never`)
+    - `outputDir` fixed to `test-results/playwright`
+    - failure screenshot/video retention enabled
+  - CI uploads on strict-job failure:
+    - `frontend/test-results`
+    - `frontend/playwright-report`
+- Updated execution docs to reflect profile-based operation:
+  - `README.md`
+  - `frontend/README.md`
+
+## 2026-02-27 - v0.12 - Full-stack quality gate automation (local + CI)
+- Added Python dependency manifest for API/CI consistency:
+  - `requirements.txt`
+- Added backend runtime smoke checker using seven-discipline sample payloads:
+  - `scripts/smoke_backend_api.py`
+- Added one-command full quality gate runner:
+  - `scripts/run_quality_gate.py`
+  - runs backend unit tests, backend smoke, frontend lint/typecheck/unit/e2e/build
+  - supports fast mode via `--skip-e2e`
+- Added CI workflow to execute the same quality gate on push/PR:
+  - `.github/workflows/quality-gate.yml`
+- Updated run documentation:
+  - `README.md`
+  - `frontend/README.md`
+
+## 2026-02-27 - v0.11 - Seven-discipline backend-mode E2E automation
+- Added Playwright backend-mode regression suite for all discipline routes:
+  - `frontend/tests/e2e/backend-mode-seven.spec.ts`
+  - validates `Backend (external)` mode with `http://localhost:8000` and successful run state for:
+    - piping, vessel, rotating, electrical, instrumentation, steel, civil
+- Extended Playwright startup to include backend API health dependency:
+  - `frontend/playwright.config.ts`
+  - web server list now includes Python API (`/health`) in addition to frontend app server.
+- Added dedicated npm command for backend integration E2E:
+  - `frontend/package.json` -> `test:e2e:backend`
+- Updated frontend test documentation:
+  - `frontend/README.md`
+
+## 2026-02-27 - v0.10 - Backend mode integration fix and guardrail test
+- Fixed vessel frontend form submission blockage in backend mode:
+  - `frontend/lib/mock/vessel.ts`
+  - changed `sampleInput.joint_efficiency` from numeric to string to match select field contract.
+- Added config contract unit test to prevent future sample-input type mismatches:
+  - `frontend/tests/unit/discipline-configs.test.ts`
+  - validates `sampleInput` type compatibility against each discipline form field type.
+- Revalidated backend-mode UI flow across all seven discipline pages:
+  - `/piping`, `/vessel`, `/rotating`, `/electrical`, `/instrumentation`, `/steel`, `/civil`
+  - all returned `SUCCESS` with backend badge enabled and no request error.
+- Verification reruns:
+  - `npm --prefix frontend run test:unit`
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run typecheck`
+  - `python -m unittest tests/test_api_server_adapter.py`
+
+## 2026-02-27 - v0.9 - Frontend mock engine modularization (code length control)
+- Refactored frontend mock calculation engine to reduce monolithic file size and improve debugging:
+  - `frontend/lib/mock-data.ts` rewritten as a thin aggregator layer
+  - discipline logic split into dedicated modules:
+    - `frontend/lib/mock/piping.ts`
+    - `frontend/lib/mock/piping.config.ts`
+    - `frontend/lib/mock/piping.constants.ts`
+    - `frontend/lib/mock/vessel.ts`
+    - `frontend/lib/mock/rotating.ts`
+    - `frontend/lib/mock/electrical.ts`
+    - `frontend/lib/mock/instrumentation.ts`
+    - `frontend/lib/mock/steel.ts`
+    - `frontend/lib/mock/civil.ts`
+  - shared utilities extracted to:
+    - `frontend/lib/mock/shared.ts`
+- Result:
+  - `frontend/lib/mock-data.ts` reduced from monolithic structure to focused routing/orchestration only
+  - domain logic is now isolated per discipline to keep file length manageable
+- Full regression checks after refactor:
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run test:unit`
+  - `npm --prefix frontend run test:e2e`
+  - `npm --prefix frontend run build`
+  - `python -m unittest discover -s tests -p "test_*.py"`
+
+## 2026-02-27 - v0.8 - Seven-discipline frontend depth parity (form + logic)
+- Expanded non-piping discipline form coverage and output metrics in frontend mock engine:
+  - `frontend/lib/mock-data.ts`
+    - vessel: material options, joint efficiency, radius/CA/corrosion controls, stress interpolation, temperature checks
+    - rotating: speed input, machine-specific vibration limits, bearing temp and interval logic
+    - electrical: full HI/arc-flash/short-circuit/power-quality input surface and richer result set
+    - instrumentation: MTTR/calibration/Cv/uncertainty controls with regression-based drift outputs
+    - steel: member metadata, stability inputs, lambda_c/Fcr/phiPn derivation, connection flag handling
+    - civil: element/type geometry and damage-mode inputs with ACI-style damage/carbonation outputs
+- Added shared helper functions in frontend mock calculation layer:
+  - interpolation helper for table values
+  - linear regression helper for instrumentation drift modeling
+  - SIL target lookup helper
+- Frontend QA revalidated after full-discipline expansion:
+  - `npm --prefix frontend run lint`
+  - `npm --prefix frontend run typecheck`
+  - `npm --prefix frontend run test:unit`
+  - `npm --prefix frontend run test:e2e`
+  - `npm --prefix frontend run build`
+
+## 2026-02-27 - v0.7 - Piping frontend/material coverage expansion
+- Expanded piping frontend input and calculation surface to match backend baseline:
+  - `frontend/lib/mock-data.ts`
+    - material options expanded to 5 supported grades
+    - added weld type, service type, corrosion allowance, chloride ppm, and internal coating controls
+    - added piping constants for allowable stress, material groups, weld efficiency, NPS-to-OD, and chloride limits
+    - upgraded piping mock outcome to use stress interpolation, weld efficiency, material temperature checks, chloride checks, and richer outputs
+    - updated piping primary metrics shown in summary cards
+- Added checkbox form-field support in frontend dynamic form renderer:
+  - `frontend/lib/types.ts`
+  - `frontend/components/forms/discipline-form.tsx`
+- Fixed checkbox field rendering structure to avoid invalid nested label markup and client hydration instability:
+  - `frontend/components/forms/discipline-form.tsx`
+- Stabilized Playwright E2E execution by forcing fresh app server per run:
+  - `frontend/playwright.config.ts` (`build+start` web server, `reuseExistingServer: false`)
+- Removed custom dev-origin constraint from frontend Next.js config:
+  - `frontend/next.config.mjs`
+- Strengthened piping documentation detail:
+  - `docs/standards_index.md`
+  - `docs/verification_layers.md`
+
+## 2026-02-27 - v0.6 - Full frontend closure + Python API endpoint integration
+- Implemented production-style Python API server for seven disciplines:
+  - `src/api/server.py`
+  - `src/api/__init__.py`
+  - `scripts/run_api_server.py`
+- Added backend adapter tests for frontend response contract mapping:
+  - `tests/test_api_server_adapter.py`
+- Expanded frontend QA stack with unit/integration/E2E automation:
+  - `frontend/vitest.config.ts`
+  - `frontend/playwright.config.ts`
+  - `frontend/tests/setup.ts`
+  - `frontend/tests/unit/mock-data.test.ts`
+  - `frontend/tests/unit/use-verification.test.ts`
+  - `frontend/tests/integration/api-client.test.ts`
+  - `frontend/tests/e2e/workbench-smoke.spec.ts`
+- Updated frontend scripts and dependencies for complete QA pipeline:
+  - `frontend/package.json` (`test:unit`, `test:e2e`, `qa`)
+  - added Vitest/RTL/Playwright dev dependencies
+- Improved frontend runtime polish:
+  - `frontend/next.config.mjs` (`allowedDevOrigins`)
+  - `frontend/store/workbench-store.ts` (env-backed backend prefix)
+- Finalized docs and release artifacts:
+  - `frontend/README.md`
+  - `README.md`
+  - `docs/plans/FRONTEND_EXECUTION_PLAN_V0.1.md` (completed)
+  - `docs/plans/FRONTEND_RELEASE_CHECKLIST_V0.1.md` (new)
+  - `docs/plans/PROJECT_PLAN_V0.1.md` (status update)
+
+## 2026-02-27 - v0.5 - Frontend MVP hardening and UX completion
+- Upgraded frontend from basic scaffold to feature-complete MVP workbench:
+  - dynamic discipline-aware mock calculation engine
+  - run history tracking (per discipline, confidence, latency, flag counts)
+  - blocked-state banner and calculation trace panel
+  - mobile discipline switch in top bar
+  - settings-driven API mode (`mock` / `backend`) and backend prefix input
+  - one-click JSON/Markdown export for active discipline result
+- Refactored data contracts and state model:
+  - `frontend/lib/types.ts`
+  - `frontend/store/workbench-store.ts`
+  - `frontend/hooks/useCalculation.ts`
+  - `frontend/lib/api.ts`
+  - `frontend/lib/mock-data.ts`
+- Added new modular frontend components:
+  - `frontend/components/results/run-history-panel.tsx`
+  - `frontend/components/results/blocked-banner.tsx`
+  - `frontend/components/results/calculation-trace-card.tsx`
+  - `frontend/components/layout/top-bar.tsx` (rewritten)
+  - `frontend/components/layout/sidebar.tsx` (rewritten)
+  - `frontend/components/workbench/discipline-workbench.tsx` (rewritten)
+  - `frontend/components/charts/discipline-chart.tsx` (rewritten)
+- Added export utility module:
+  - `frontend/lib/exporters.ts`
+- Updated frontend planning and run documentation:
+  - `frontend/README.md`
+  - `docs/plans/FRONTEND_EXECUTION_PLAN_V0.1.md`
+
+## 2026-02-27 - v0.4 - Frontend workbench scaffold and validation
+- Implemented runnable Next.js frontend scaffold under `frontend/`:
+  - `frontend/app/*` (dashboard + 7 discipline routes + mock API route)
+  - `frontend/components/*` (layout, forms, result cards, verification panels, charts, UI primitives)
+  - `frontend/hooks/*`, `frontend/lib/*`, `frontend/store/*`
+  - `frontend/package.json`, `frontend/tsconfig.json`, `frontend/tailwind.config.ts`, `frontend/postcss.config.mjs`
+- Added isolated typecheck config to avoid `.next/types` timing dependency:
+  - `frontend/tsconfig.typecheck.json`
+  - `frontend/package.json` (`typecheck` script update)
+- Added and updated frontend run documentation:
+  - `frontend/README.md`
+  - `README.md` (frontend run + quality checks)
+- Validated frontend build pipeline:
+  - `npm install` (frontend)
+  - `npm run lint` (frontend)
+  - `npm run typecheck` (frontend)
+  - `npm run build` (frontend)
+- Re-ran backend automated test suite after frontend integration:
+  - `python -m unittest discover -s tests -p "test_*.py"` (56 tests, pass)
+
+## 2026-02-27 - v0.2 - Seven-discipline runtime expansion
+- Implemented steel runtime verification engine integration:
+  - `src/steel/*`
+  - `src/agents/specialists/steel_agent.py`
+  - `src/agents/runtime_builder.py` (steel wired to real agent)
+- Implemented civil runtime verification engine:
+  - `src/civil/__init__.py`
+  - `src/civil/constants.py`
+  - `src/civil/models.py`
+  - `src/civil/calculations.py`
+  - `src/civil/verification.py`
+  - `src/civil/service.py`
+  - `src/agents/specialists/civil_agent.py`
+  - `src/agents/runtime_builder.py` (civil wired to real agent)
+- Expanded red-flag registry and taxonomy for steel/civil and structure coupling:
+  - `src/shared/red_flags.py`
+  - `docs/specs/shared/MESSAGE_SCHEMA_AND_RED_FLAG_TAXONOMY_V0.1.md`
+  - `verification/steel_red_flags.json`
+  - `verification/civil_red_flags.json`
+- Expanded cross-discipline validator from 5 to 7 discipline-aware logic:
+  - `src/cross_discipline/validator.py`
+  - `config/cross_discipline_threshold_profiles.json`
+- Added seven-discipline orchestrator pipeline:
+  - `src/orchestrator/seven_pipeline.py`
+  - `examples/mock_seven_pipeline.py`
+  - `scripts/benchmark_seven_pipeline.py`
+- Added steel/civil dataset specs and generators:
+  - `scripts/generate_steel_golden_dataset.py`
+  - `scripts/generate_civil_golden_dataset.py`
+  - `golden/steel_cases_spec.json`
+  - `golden/civil_cases_spec.json`
+- Upgraded runtime/cross benchmarks to include steel/civil datasets:
+  - `scripts/benchmark_all_runtime.py`
+  - `scripts/benchmark_cross_discipline.py`
+- Added and expanded automated test coverage:
+  - `tests/test_steel_service.py`
+  - `tests/test_civil_service.py`
+  - `tests/test_seven_discipline_pipeline.py`
+  - `tests/test_message_dispatch.py` (steel/civil dispatch coverage)
+  - `tests/test_cross_discipline_pipeline.py` (structure coupling coverage)
+- Updated run/user guides for seven-discipline workflows:
+  - `README.md`
+  - `outputs/user_guide.md`
+
+## 2026-02-27 - v0.3 - Frontend planning/specification package
+- Added frontend specification bundle:
+  - `docs/specs/frontend/README.md`
+  - `docs/specs/frontend/00_OVERVIEW_AND_ARCHITECTURE_V0.1.md`
+  - `docs/specs/frontend/01_INFORMATION_ARCHITECTURE_AND_LAYOUT_V0.1.md`
+  - `docs/specs/frontend/02_COMPONENT_SYSTEM_V0.1.md`
+  - `docs/specs/frontend/03_API_INTEGRATION_AND_STATE_V0.1.md`
+  - `docs/specs/frontend/04_QUALITY_SECURITY_OPERATIONS_V0.1.md`
+  - `docs/specs/frontend/05_ROADMAP_V0.1.md`
+- Added frontend execution plan:
+  - `docs/plans/FRONTEND_EXECUTION_PLAN_V0.1.md`
+- Added frontend implementation prompt for Codex/Claude handoff:
+  - `docs/prompts/FRONTEND_IMPLEMENTATION_PROMPT_V0.1.md`
+- Updated spec index and project plan to include frontend planning track:
+  - `docs/specs/README.md`
+  - `docs/plans/PROJECT_PLAN_V0.1.md`
+
+## 2026-02-26 - v0.1 - Initial planning baseline
+- Added docs governance: `docs/README.md`
+- Added revision policy: `docs/revisions/REVISION_POLICY.md`
+- Added integrated execution plan:
+  - `docs/plans/PROJECT_PLAN_V0.1.md`
+- Added specs workspace and draft templates:
+  - `docs/specs/README.md`
+  - `docs/specs/MASTER_ORCHESTRATOR_SPEC_V0.1.md`
+  - `docs/specs/MULTI_AGENT_CONFIG_SPEC_V0.1.md`
+  - `docs/specs/AGENT_PERSONA_TEMPLATE_SPEC_V0.1.md`
+  - `docs/specs/TABLE_AWARE_RAG_SPEC_V0.1.md`
+  - `docs/specs/VERIFICATION_FRAMEWORK_SPEC_V0.1.md`
+- Updated project plan immediate next steps to reflect created spec drafts.
+- Replaced verification placeholder with modular spec package:
+  - `docs/specs/VERIFICATION_FRAMEWORK_SPEC_V0.1.md`
+  - `docs/specs/verification/README.md`
+  - `docs/specs/verification/00_OVERVIEW_AND_ARCHITECTURE_V0.1.md`
+  - `docs/specs/verification/01_FOUR_LAYER_VALIDATION_V0.1.md`
+  - `docs/specs/verification/02_MAKER_MULTI_AGENT_V0.1.md`
+  - `docs/specs/verification/03_GOLDEN_DATASET_V0.1.md`
+  - `docs/specs/verification/04_RUNTIME_MONITORING_QA_V0.1.md`
+  - `docs/specs/verification/05_ROADMAP_AND_OPERATIONS_V0.1.md`
+- Added reusable AI prompt document:
+  - `docs/prompts/VERIFICATION_IMPLEMENTATION_PROMPT_V0.1.md`
+- Locked immediate next-step order in project plan:
+  - `docs/plans/PROJECT_PLAN_V0.1.md` (1 -> 2 -> 4 -> 5 -> 3)
+- Added shared contract specification:
+  - `docs/specs/shared/MESSAGE_SCHEMA_AND_RED_FLAG_TAXONOMY_V0.1.md`
+- Updated specs index to include shared contracts:
+  - `docs/specs/README.md`
+- Filled core spec contents in fixed authoring order:
+  - `docs/specs/MASTER_ORCHESTRATOR_SPEC_V0.1.md`
+  - `docs/specs/MULTI_AGENT_CONFIG_SPEC_V0.1.md`
+  - `docs/specs/TABLE_AWARE_RAG_SPEC_V0.1.md`
+  - `docs/specs/VERIFICATION_FRAMEWORK_SPEC_V0.1.md`
+  - `docs/specs/AGENT_PERSONA_TEMPLATE_SPEC_V0.1.md`
+- Started implementation bootstrap with modular code scaffolding:
+  - `src/orchestrator/*`
+  - `src/workflows/*`
+  - `src/shared/*`
+  - `src/agents/*`
+  - `src/rag/*`
+  - `src/verification/*`
+  - `src/shared/schemas/*.json`
+- Added baseline contract and validation tests:
+  - `tests/test_message_schema.py`
+  - `tests/test_red_flags.py`
+  - `tests/test_state_machine.py`
+  - `tests/test_config_schema.py`
+  - `tests/test_maker.py`
+  - `tests/test_reverse_check.py`
+- Added mock standard workflow runner:
+  - `examples/mock_standard_run.py`
+- Added root developer run guide:
+  - `README.md`
+- Added ignore rules for Python cache artifacts:
+  - `.gitignore`
+- Added sample configuration and validator script:
+  - `configs/sample_config.json`
+  - `scripts/validate_config.py`
+- Added extra contract tests for agent registry and workflow runner:
+  - `tests/test_agent_registry.py`
+  - `tests/test_workflow_runner.py`
+- Added emergency escalation demo script:
+  - `examples/mock_emergency_escalation.py`
+- Updated implementation phase status:
+  - `docs/plans/PROJECT_PLAN_V0.1.md` (Phase 3 set to in progress)
+- Added initial specialist persona files for runtime wiring:
+  - `agents/piping_persona.md`
+  - `agents/static_equipment_persona.md`
+  - `agents/rotating_persona.md`
+  - `agents/electrical_persona.md`
+  - `agents/instrumentation_persona.md`
+  - `agents/steel_persona.md`
+  - `agents/civil_persona.md`
+- Added runtime registry, builder, and config loading utilities:
+  - `src/agents/runtime.py`
+  - `src/agents/runtime_builder.py`
+  - `src/shared/config_loader.py`
+  - `src/shared/message_factory.py`
+- Added mock agent implementations for end-to-end simulation:
+  - `src/agents/support/mock_impl.py`
+  - `src/agents/specialists/mock_impl.py`
+- Added orchestrator message routing:
+  - `src/orchestrator/message_router.py`
+  - `src/orchestrator/orchestrator.py` (message handling + runtime binding)
+- Added E2E and dispatch tests:
+  - `tests/test_config_loader.py`
+  - `tests/test_message_dispatch.py`
+  - `tests/test_e2e_pipeline.py`
+- Added E2E example runner:
+  - `examples/mock_e2e_pipeline.py`
+- Added pipeline service for state + dispatch orchestration:
+  - `src/orchestrator/pipeline.py`
+- Added pipeline service tests and example:
+  - `tests/test_pipeline_service.py`
+  - `examples/mock_pipeline_service.py`
+- Implemented full piping verification engine modules:
+  - `src/piping/constants.py`
+  - `src/piping/models.py`
+  - `src/piping/standards.py`
+  - `src/piping/calculations.py`
+  - `src/piping/verification.py`
+  - `src/piping/service.py`
+  - `src/piping/__init__.py`
+- Integrated real piping specialist runtime path:
+  - `src/agents/specialists/piping_agent.py`
+  - `src/agents/runtime_builder.py` (piping_specialist -> real engine)
+- Expanded red-flag registry for piping safety/compliance cases:
+  - `src/shared/red_flags.py`
+  - `docs/specs/shared/MESSAGE_SCHEMA_AND_RED_FLAG_TAXONOMY_V0.1.md`
+- Added piping golden dataset + benchmark pipeline:
+  - `scripts/generate_piping_golden_dataset.py`
+  - `scripts/benchmark_piping_system.py`
+  - `datasets/golden_standards/piping_golden_dataset_v1.json`
+  - `docs/piping/VERIFICATION_REPORT.json`
+  - `docs/piping/VERIFICATION_REPORT.md`
+- Added piping system docs and agent specs:
+  - `docs/piping/ARCHITECTURE.md`
+  - `docs/piping/USER_GUIDE.md`
+  - `docs/piping/agents/README.md`
+  - `docs/piping/agents/agent_orchestrator_piping.md`
+  - `docs/piping/agents/agent_piping_calculator.md`
+  - `docs/piping/agents/agent_standards_checker.md`
+  - `docs/piping/agents/agent_physics_validator.md`
+- Added piping-focused test coverage:
+  - `tests/test_piping_service.py`
+- Added piping system config seed:
+  - `configs/piping_system_config.json`
+- Added integrated 3-discipline design pack artifacts:
+  - `docs/architecture_overview.md`
+  - `docs/standards_index.md`
+  - `docs/verification_layers.md`
+  - `docs/golden_dataset_spec.md`
+  - `agents/orchestrator.md`
+  - `agents/piping_agent.md`
+  - `agents/vessel_agent.md`
+  - `agents/rotating_agent.md`
+  - `agents/standards_checker_agent.md`
+  - `agents/physics_validator_agent.md`
+  - `agents/reverse_verifier_agent.md`
+  - `config/multi_agent_config.toml`
+  - `config/verification_policies.md`
+  - `golden/piping_cases_spec.json`
+  - `golden/vessel_cases_spec.json`
+  - `golden/rotating_cases_spec.json`
+  - `outputs/verification_report.md`
+  - `outputs/user_guide.md`
+  - `outputs/api_specification.md`
+- Added generation utility for 3-discipline golden specs:
+  - `scripts/generate_three_discipline_specs.py`
+- Implemented vessel runtime verification engine:
+  - `src/vessel/__init__.py`
+  - `src/vessel/constants.py`
+  - `src/vessel/models.py`
+  - `src/vessel/calculations.py`
+  - `src/vessel/verification.py`
+  - `src/vessel/service.py`
+- Implemented rotating runtime verification engine:
+  - `src/rotating/__init__.py`
+  - `src/rotating/constants.py`
+  - `src/rotating/models.py`
+  - `src/rotating/calculations.py`
+  - `src/rotating/verification.py`
+  - `src/rotating/service.py`
+- Added vessel/rotating specialist runtime agents and integrated runtime builder:
+  - `src/agents/specialists/vessel_agent.py`
+  - `src/agents/specialists/rotating_agent.py`
+  - `src/agents/runtime_builder.py`
+- Expanded runtime red-flag registry for vessel/rotating safety cases:
+  - `src/shared/red_flags.py`
+  - `docs/specs/shared/MESSAGE_SCHEMA_AND_RED_FLAG_TAXONOMY_V0.1.md`
+- Added vessel/rotating service and dispatch tests:
+  - `tests/test_vessel_service.py`
+  - `tests/test_rotating_service.py`
+  - `tests/test_message_dispatch.py` (vessel/rotating dispatch coverage)
+- Added vessel/rotating runtime demo scripts:
+  - `examples/mock_vessel_pipeline.py`
+  - `examples/mock_rotating_pipeline.py`
+- Added vessel/rotating runtime golden dataset generators:
+  - `scripts/generate_vessel_golden_dataset.py`
+  - `scripts/generate_rotating_golden_dataset.py`
+  - `datasets/golden_standards/vessel_golden_dataset_v1.json`
+  - `datasets/golden_standards/rotating_golden_dataset_v1.json`
+- Added unified 3-discipline runtime benchmark:
+  - `scripts/benchmark_all_runtime.py`
+  - `outputs/verification_report_runtime.json`
+  - `outputs/verification_report_runtime.md`
+- Updated developer run guide with vessel/rotating commands:
+  - `README.md`
+- Added cross-discipline validator and triple-discipline runtime pipeline:
+  - `src/cross_discipline/__init__.py`
+  - `src/cross_discipline/validator.py`
+  - `src/orchestrator/triple_pipeline.py`
+- Added cross-discipline and triple-pipeline tests:
+  - `tests/test_cross_discipline_pipeline.py`
+- Added cross-discipline runtime benchmark artifacts:
+  - `scripts/benchmark_cross_discipline.py`
+  - `outputs/cross_discipline_report.json`
+  - `outputs/cross_discipline_report.md`
+- Updated run guide with triple-pipeline and cross-discipline commands:
+  - `README.md`
+- Implemented electrical runtime verification engine:
+  - `src/electrical/__init__.py`
+  - `src/electrical/constants.py`
+  - `src/electrical/models.py`
+  - `src/electrical/calculations.py`
+  - `src/electrical/verification.py`
+  - `src/electrical/service.py`
+- Implemented instrumentation runtime verification engine:
+  - `src/instrumentation/__init__.py`
+  - `src/instrumentation/constants.py`
+  - `src/instrumentation/models.py`
+  - `src/instrumentation/calculations.py`
+  - `src/instrumentation/verification.py`
+  - `src/instrumentation/service.py`
+- Added electrical/instrumentation specialist runtime agents and integrated runtime builder:
+  - `src/agents/specialists/electrical_agent.py`
+  - `src/agents/specialists/instrumentation_agent.py`
+  - `src/agents/runtime_builder.py`
+- Expanded red-flag registry and taxonomy for E&I and cross-coupling safety cases:
+  - `src/shared/red_flags.py`
+  - `docs/specs/shared/MESSAGE_SCHEMA_AND_RED_FLAG_TAXONOMY_V0.1.md`
+- Expanded cross-discipline validator to 5-discipline checks:
+  - `src/cross_discipline/validator.py`
+- Added five-discipline orchestrator pipeline:
+  - `src/orchestrator/five_pipeline.py`
+- Added electrical/instrumentation/five-pipeline tests:
+  - `tests/test_electrical_service.py`
+  - `tests/test_instrumentation_service.py`
+  - `tests/test_five_discipline_pipeline.py`
+  - `tests/test_message_dispatch.py` (electrical/instrumentation dispatch coverage)
+  - `tests/test_cross_discipline_pipeline.py` (E&I coupling coverage)
+- Added E&I runtime dataset generators:
+  - `scripts/generate_electrical_golden_dataset.py`
+  - `scripts/generate_instrumentation_golden_dataset.py`
+- Upgraded runtime benchmarks to 5 disciplines and E&I cross-coupling:
+  - `scripts/benchmark_all_runtime.py`
+  - `scripts/benchmark_cross_discipline.py`
+- Added E&I and 5-discipline demo scripts:
+  - `examples/mock_electrical_pipeline.py`
+  - `examples/mock_instrumentation_pipeline.py`
+  - `examples/mock_five_pipeline.py`
+- Updated run guide for E&I and 5-discipline commands:
+  - `README.md`
+- Added E&I standards/reference indexes and verification policy artifacts:
+  - `standards/ieee_standards_index.md`
+  - `standards/iec_isa_standards_index.md`
+  - `verification/electrical_red_flags.json`
+  - `verification/instrumentation_red_flags.json`
+- Added E&I golden spec stubs linked to runtime datasets:
+  - `golden/electrical_cases_spec.json`
+  - `golden/instrumentation_cases_spec.json`
+- Updated integrated output pack for 5-discipline scope:
+  - `outputs/verification_report.md`
+  - `outputs/user_guide.md`
+  - `outputs/api_specification.md`
+- Refactored cross-discipline validator with configurable threshold model:
+  - `src/cross_discipline/validator.py`
+  - `src/cross_discipline/__init__.py`
+- Added threshold profile config for cross-discipline tuning:
+  - `config/cross_discipline_threshold_profiles.json`
+- Upgraded cross-discipline benchmark with profile-based and scenario-set reporting:
+  - `scripts/benchmark_cross_discipline.py`
+- Added five-discipline orchestrator-path benchmark:
+  - `scripts/benchmark_five_pipeline.py`
+  - `outputs/five_pipeline_report.json`
+  - `outputs/five_pipeline_report.md`
+- Added threshold behavior test coverage:
+  - `tests/test_cross_discipline_thresholds.py`
+- Updated runtime policy/user docs for threshold profiles and new benchmarks:
+  - `config/verification_policies.md`
+  - `outputs/user_guide.md`
+  - `README.md`
+- Rebalanced golden dataset generation quality gates (category-consistent severity):
+  - `scripts/generate_vessel_golden_dataset.py`
+  - `scripts/generate_rotating_golden_dataset.py`
+  - `scripts/generate_electrical_golden_dataset.py`
+  - `scripts/generate_instrumentation_golden_dataset.py`
+- Added cross-discipline threshold tuning runner (50-round random search):
+  - `scripts/tune_cross_discipline_thresholds.py`
+  - `outputs/cross_discipline_tuning_report.json`
+  - `outputs/cross_discipline_tuning_report.md`
+- Updated active cross-discipline profile with tuned snapshot:
+  - `config/cross_discipline_threshold_profiles.json`

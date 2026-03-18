@@ -1,0 +1,2432 @@
+{
+  "dataset_id": "PIPING_GOLDEN_V1",
+  "generated_at": "2026-02-26T00:00:00Z",
+  "total_cases": 50,
+  "category_distribution": {
+    "standard": 20,
+    "boundary": 15,
+    "failure_mode": 10,
+    "composite": 5
+  },
+  "cases": [
+    {
+      "case_id": "PIP-GOLD-001",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 4.0,
+        "design_pressure_mpa": 2.802,
+        "design_temperature_c": 111.2,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 13.395
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 12.908
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 11.6675
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.8676405780267835,
+        "CR_long_term": 0.17272635505064324,
+        "CR_short_term": 0.2479981527093594,
+        "CR_selected": 0.2479981527093594,
+        "RL_years": 35.48356842918174,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-002",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 1.939,
+        "design_temperature_c": 57.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 14.186
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.3565
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 12.83
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.030654163988482,
+        "CR_long_term": 0.13558143991240076,
+        "CR_short_term": 0.10525677339901486,
+        "CR_selected": 0.13558143991240076,
+        "RL_years": 72.27645496568617,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-003",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP316",
+        "nps": 4.0,
+        "design_pressure_mpa": 2.013,
+        "design_temperature_c": 119.5,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 20.693
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 19.648
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 18.9885
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.536470127694999,
+        "CR_long_term": 0.17042666986038904,
+        "CR_short_term": 0.13184585385878514,
+        "CR_selected": 0.17042666986038904,
+        "RL_years": 96.53436217337493,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-004",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 6.0,
+        "design_pressure_mpa": 1.22,
+        "design_temperature_c": 289.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.366
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.887
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 14.2905
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.577698918658469,
+        "CR_long_term": 0.1075352792225568,
+        "CR_short_term": 0.11925102627257814,
+        "CR_selected": 0.11925102627257814,
+        "RL_years": 98.21970885658448,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-005",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 4.0,
+        "design_pressure_mpa": 2.77,
+        "design_temperature_c": 184.1,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 21.731
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 21.009
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 19.957
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.973239026355917,
+        "CR_long_term": 0.17737571858746246,
+        "CR_short_term": 0.2103136288998357,
+        "CR_selected": 0.2103136288998357,
+        "RL_years": 80.75444783339645,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-006",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 8.0,
+        "design_pressure_mpa": 1.319,
+        "design_temperature_c": 67.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 18.613
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 17.556
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 16.071
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.575281607916648,
+        "CR_long_term": 0.25416520667944137,
+        "CR_short_term": 0.29687807881773387,
+        "CR_selected": 0.29687807881773387,
+        "RL_years": 45.4587905103258,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "high"
+    },
+    {
+      "case_id": "PIP-GOLD-007",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 1.551,
+        "design_temperature_c": 208.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.648
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.9335
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 14.224
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.7561490517043916,
+        "CR_long_term": 0.1423805091705447,
+        "CR_short_term": 0.14184174876847294,
+        "CR_selected": 0.1423805091705447,
+        "RL_years": 80.54368547424781,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-008",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 2.514,
+        "design_temperature_c": 183.5,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 14.448
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.655
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 12.885
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.041395102478473,
+        "CR_long_term": 0.1562786066246921,
+        "CR_short_term": 0.1539367816091953,
+        "CR_selected": 0.1562786066246921,
+        "RL_years": 56.58871094723616,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-009",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 1.676,
+        "design_temperature_c": 242.1,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 12.559
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 11.4605
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 10.1555
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.5377866518091996,
+        "CR_long_term": 0.24031710238160411,
+        "CR_short_term": 0.2608928571428571,
+        "CR_selected": 0.2608928571428571,
+        "RL_years": 25.365636379102323,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "high"
+    },
+    {
+      "case_id": "PIP-GOLD-010",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 4.0,
+        "design_pressure_mpa": 1.37,
+        "design_temperature_c": 285.7,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 20.764
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 20.0965
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 18.941
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.317710133817652,
+        "CR_long_term": 0.18227504790583088,
+        "CR_short_term": 0.23100513136288997,
+        "CR_selected": 0.23100513136288997,
+        "RL_years": 71.96069528026429,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-011",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP316",
+        "nps": 4.0,
+        "design_pressure_mpa": 1.515,
+        "design_temperature_c": 111.7,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 17.614
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 16.9905
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 15.906
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.278198514558486,
+        "CR_long_term": 0.17077662195455792,
+        "CR_short_term": 0.21681096059113306,
+        "CR_selected": 0.21681096059113306,
+        "RL_years": 62.85568519361494,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-012",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP316",
+        "nps": 6.0,
+        "design_pressure_mpa": 1.392,
+        "design_temperature_c": 299.4,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 17.095
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 16.6175
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 16.0705
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.558712518347662,
+        "CR_long_term": 0.10243597727894879,
+        "CR_short_term": 0.10935509031198698,
+        "CR_selected": 0.10935509031198698,
+        "RL_years": 123.55883428108916,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-013",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 1.232,
+        "design_temperature_c": 220.1,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 17.964
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 17.237
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 16.141
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.9183167120293403,
+        "CR_long_term": 0.18227504790583088,
+        "CR_short_term": 0.21911001642036126,
+        "CR_selected": 0.21911001642036126,
+        "RL_years": 60.34723333963436,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-014",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 8.0,
+        "design_pressure_mpa": 3.124,
+        "design_temperature_c": 52.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 19.207
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 18.2275
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 17.1905
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.447686061893714,
+        "CR_long_term": 0.20162239939775534,
+        "CR_short_term": 0.2073148604269292,
+        "CR_selected": 0.2073148604269292,
+        "RL_years": 61.465993860086336,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-015",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 4.0,
+        "design_pressure_mpa": 1.592,
+        "design_temperature_c": 89.5,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 12.032
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 11.018
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.7985
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.3068158678806516,
+        "CR_long_term": 0.22331942923624412,
+        "CR_short_term": 0.24379987684729063,
+        "CR_selected": 0.24379987684729063,
+        "RL_years": 30.728826564633295,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "high"
+    },
+    {
+      "case_id": "PIP-GOLD-016",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 3.264,
+        "design_temperature_c": 267.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 14.984
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.041
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 12.932
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.998958838909678,
+        "CR_long_term": 0.2051719134957569,
+        "CR_short_term": 0.22170894909688013,
+        "CR_selected": 0.22170894909688013,
+        "RL_years": 35.78133040368985,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "high"
+    },
+    {
+      "case_id": "PIP-GOLD-017",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 4.0,
+        "design_pressure_mpa": 2.256,
+        "design_temperature_c": 244.7,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 17.304
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 16.9035
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 16.0795
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.5866960429653654,
+        "CR_long_term": 0.12243323980290163,
+        "CR_short_term": 0.16473234811165877,
+        "CR_selected": 0.16473234811165877,
+        "RL_years": 81.90743416034447,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-018",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 3.173,
+        "design_temperature_c": 257.9,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.075
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.626
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 13.248
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.9237490377912043,
+        "CR_long_term": 0.1826749931563099,
+        "CR_short_term": 0.2754868637110017,
+        "CR_selected": 0.2754868637110017,
+        "RL_years": 33.8464449324537,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-019",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 2.112,
+        "design_temperature_c": 67.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 19.606
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 18.555
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 17.9265
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.45835618664554,
+        "CR_long_term": 0.1679270120448947,
+        "CR_short_term": 0.12564839901477812,
+        "CR_selected": 0.1679270120448947,
+        "RL_years": 86.15733488717379,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-020",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 2.225,
+        "design_temperature_c": 201.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 21.644
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 20.4545
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 19.199
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 3.3731017255040054,
+        "CR_long_term": 0.2444665343553241,
+        "CR_short_term": 0.2509969211822656,
+        "CR_selected": 0.2509969211822656,
+        "RL_years": 63.05216095859502,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-021",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 19.5,
+        "design_temperature_c": 424.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.708
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.5605
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 7.4635
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 26.840747330960856,
+        "CR_long_term": 0.3244055912948262,
+        "CR_short_term": 0.41922783251231516,
+        "CR_selected": 0.41922783251231516,
+        "RL_years": -46.22128071707079,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-022",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP316",
+        "nps": 12.0,
+        "design_pressure_mpa": 0.2,
+        "design_temperature_c": -49.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.045
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.2895
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 6.11
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 1.775941386948373,
+        "CR_long_term": 0.19347351491924442,
+        "CR_short_term": 0.2358031609195402,
+        "CR_selected": 0.2358031609195402,
+        "RL_years": 18.379985222210305,
+        "inspection_interval_years": 9.19
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "high"
+    },
+    {
+      "case_id": "PIP-GOLD-023",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 20.0,
+        "design_temperature_c": 649.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.148
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.882
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 7.6855
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 23.857142857142858,
+        "CR_long_term": 0.24621629482617022,
+        "CR_short_term": 0.4391196633825943,
+        "CR_selected": 0.4391196633825943,
+        "RL_years": -36.82741677421286,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-024",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 15.0,
+        "design_temperature_c": 420.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 11.574
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.39
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 8.945
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 15.682584269662922,
+        "CR_long_term": 0.262864015877361,
+        "CR_short_term": 0.08896346469622338,
+        "CR_selected": 0.262864015877361,
+        "RL_years": -25.631443874791653,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-025",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 10.0,
+        "design_pressure_mpa": 49.5,
+        "design_temperature_c": 425.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.51
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.778
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.164
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 71.6892523364486,
+        "CR_long_term": 0.13458157678620314,
+        "CR_short_term": 0.12274958949096895,
+        "CR_selected": 0.13458157678620314,
+        "RL_years": -464.5899819986244,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-026",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP316",
+        "nps": 8.0,
+        "design_pressure_mpa": 19.5,
+        "design_temperature_c": 424.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 11.031
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.964
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 8.1905
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 22.559000394321767,
+        "CR_long_term": 0.2840111209964413,
+        "CR_short_term": 0.15463649425287362,
+        "CR_selected": 0.2840111209964413,
+        "RL_years": -50.59133017013726,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-027",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 12.0,
+        "design_pressure_mpa": 0.2,
+        "design_temperature_c": -49.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 9.094
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.919
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.2935
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 1.7345741599073001,
+        "CR_long_term": 0.37999798111141525,
+        "CR_short_term": 0.5248844417077175,
+        "CR_selected": 0.5248844417077175,
+        "RL_years": 6.78039880266539,
+        "inspection_interval_years": 3.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-028",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 20.0,
+        "design_temperature_c": 649.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 9.312
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.2985
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.679
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 18.6734693877551,
+        "CR_long_term": 0.36325027374760466,
+        "CR_short_term": 0.5236849343185551,
+        "CR_selected": 0.5236849343185551,
+        "RL_years": -24.813525339742974,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-029",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 15.0,
+        "design_temperature_c": 420.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.356
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.0965
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.6865
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 21.418181818181818,
+        "CR_long_term": 0.26691346153846157,
+        "CR_short_term": 0.281884236453202,
+        "CR_selected": 0.281884236453202,
+        "RL_years": -55.80901584325937,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-030",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP316",
+        "nps": 8.0,
+        "design_pressure_mpa": 49.5,
+        "design_temperature_c": 425.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 11.435
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 11.0155
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 8.5435
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 56.12326869806094,
+        "CR_long_term": 0.28911042294004935,
+        "CR_short_term": 0.49419704433497524,
+        "CR_selected": 0.49419704433497524,
+        "RL_years": -96.27691877859665,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-031",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 19.5,
+        "design_temperature_c": 424.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 7.728
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 5.2295
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 2.6805
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 18.278374233128837,
+        "CR_long_term": 0.5046809129482617,
+        "CR_short_term": 0.5095907224958949,
+        "CR_selected": 0.5095907224958949,
+        "RL_years": -30.608630700207634,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-032",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-53 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 0.2,
+        "design_temperature_c": -49.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 9.329
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.996
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.368
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 1.6671498321635643,
+        "CR_long_term": 0.3960457842868875,
+        "CR_short_term": 0.525384236453202,
+        "CR_selected": 0.525384236453202,
+        "RL_years": 7.044082998797939,
+        "inspection_interval_years": 3.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-033",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 20.0,
+        "design_temperature_c": 649.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 9.205
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 6.738
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 5.7585
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 27.428994082840237,
+        "CR_long_term": 0.3446028264440187,
+        "CR_short_term": 0.1958195812807883,
+        "CR_selected": 0.3446028264440187,
+        "RL_years": -62.88542176644231,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-034",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 12.0,
+        "design_pressure_mpa": 15.0,
+        "design_temperature_c": 420.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.635
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.7415
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 6.3375
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 29.724119902405018,
+        "CR_long_term": 0.42969117848343824,
+        "CR_short_term": 0.4806026272577996,
+        "CR_selected": 0.4806026272577996,
+        "RL_years": -48.66103216256498,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-035",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 12.0,
+        "design_pressure_mpa": 49.5,
+        "design_temperature_c": 425.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.197
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 7.2795
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.3655
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 84.74532710280374,
+        "CR_long_term": 0.3830975568026279,
+        "CR_short_term": 0.5825607553366173,
+        "CR_selected": 0.5825607553366173,
+        "RL_years": -137.97672837807,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-036",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 4.5,
+        "design_temperature_c": 220.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.0
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.6
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.1
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.19655408043733,
+        "CR_long_term": -0.109984943881741,
+        "CR_short_term": -0.09995894909688013,
+        "CR_selected": -0.09995894909688013,
+        "RL_years": Infinity,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-037",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 12.0,
+        "design_pressure_mpa": 20.0,
+        "design_temperature_c": 300.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 6.5
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 5.5
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.4
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 35.398482469911045,
+        "CR_long_term": 0.20997125650150558,
+        "CR_short_term": 0.2199096880131362,
+        "CR_selected": 0.2199096880131362,
+        "RL_years": -140.96005842207083,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-038",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 6.0,
+        "design_temperature_c": 500.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.0
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.0
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 7.8
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.613636363636363,
+        "CR_long_term": 0.21996988776348209,
+        "CR_short_term": 0.23990147783251234,
+        "CR_selected": 0.23990147783251234,
+        "RL_years": -3.3915437745006525,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-039",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-312 TP316",
+        "nps": 4.0,
+        "design_pressure_mpa": 1.2,
+        "design_temperature_c": 80.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 20.0
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 19.95
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 19.9
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": true
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.014748930421076,
+        "CR_long_term": 0.009998631261976601,
+        "CR_short_term": 0.009995894909688155,
+        "CR_selected": 0.009998631261976601,
+        "RL_years": 1788.7699427014609,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-040",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 4.5,
+        "design_temperature_c": 220.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.0
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.6
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.1
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.19655408043733,
+        "CR_long_term": -0.109984943881741,
+        "CR_short_term": -0.09995894909688013,
+        "CR_selected": -0.09995894909688013,
+        "RL_years": Infinity,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-041",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 12.0,
+        "design_pressure_mpa": 20.0,
+        "design_temperature_c": 300.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 6.5
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 5.5
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.4
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 35.398482469911045,
+        "CR_long_term": 0.20997125650150558,
+        "CR_short_term": 0.2199096880131362,
+        "CR_selected": 0.2199096880131362,
+        "RL_years": -140.96005842207083,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-042",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 6.0,
+        "design_temperature_c": 500.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 10.0
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 9.0
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 7.8
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.613636363636363,
+        "CR_long_term": 0.21996988776348209,
+        "CR_short_term": 0.23990147783251234,
+        "CR_selected": 0.23990147783251234,
+        "RL_years": -3.3915437745006525,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
+        "PHY.TEMPERATURE_LIMIT_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-043",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-312 TP316",
+        "nps": 4.0,
+        "design_pressure_mpa": 1.2,
+        "design_temperature_c": 80.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 20.0
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 19.95
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 19.9
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "seamless",
+        "service_type": "general",
+        "has_internal_coating": true
+      },
+      "expected_outputs": {
+        "t_min_mm": 2.014748930421076,
+        "CR_long_term": 0.009998631261976601,
+        "CR_short_term": 0.009995894909688155,
+        "CR_selected": 0.009998631261976601,
+        "RL_years": 1788.7699427014609,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-044",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 6.0,
+        "design_pressure_mpa": 4.5,
+        "design_temperature_c": 220.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 8.0
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 8.6
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 9.1
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.19655408043733,
+        "CR_long_term": -0.109984943881741,
+        "CR_short_term": -0.09995894909688013,
+        "CR_selected": -0.09995894909688013,
+        "RL_years": Infinity,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [
+        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
+        "PHY.UNREALISTIC_CORROSION_RATE"
+      ],
+      "expected_warnings": [
+        "PHY.UNREALISTIC_REMAINING_LIFE"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-045",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 12.0,
+        "design_pressure_mpa": 20.0,
+        "design_temperature_c": 300.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 6.5
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 5.5
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 4.4
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "general",
+        "has_internal_coating": false
+      },
+      "expected_outputs": {
+        "t_min_mm": 35.398482469911045,
+        "CR_long_term": 0.20997125650150558,
+        "CR_short_term": 0.2199096880131362,
+        "CR_selected": 0.2199096880131362,
+        "RL_years": -140.96005842207083,
+        "inspection_interval_years": 0.0
+      },
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-046",
+      "category": "composite",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 8.0,
+        "design_pressure_mpa": 5.711,
+        "design_temperature_c": 329.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 14.457
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 12.893
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 11.0115
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "sour_chloride_high_temp",
+        "has_internal_coating": false,
+        "chloride_ppm": 60.0
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.281123864646332,
+        "CR_long_term": 0.344502840131399,
+        "CR_short_term": 0.3761455254515601,
+        "CR_selected": 0.3761455254515601,
+        "RL_years": 7.258829231255296,
+        "inspection_interval_years": 3.629
+      },
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-047",
+      "category": "composite",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 4.0,
+        "design_pressure_mpa": 7.804,
+        "design_temperature_c": 196.0,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.487
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 13.905
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 11.636
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "sour_chloride_high_temp",
+        "has_internal_coating": false,
+        "chloride_ppm": 200.0
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.591820370356778,
+        "CR_long_term": 0.3850472898987135,
+        "CR_short_term": 0.45361371100164205,
+        "CR_selected": 0.45361371100164205,
+        "RL_years": 13.324508239173003,
+        "inspection_interval_years": 6.662
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "high"
+    },
+    {
+      "case_id": "PIP-GOLD-048",
+      "category": "composite",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 6.0,
+        "design_pressure_mpa": 3.599,
+        "design_temperature_c": 358.1,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 15.97
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 14.389
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 12.2455
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "smaw",
+        "service_type": "sour_chloride_high_temp",
+        "has_internal_coating": false,
+        "chloride_ppm": 60.0
+      },
+      "expected_outputs": {
+        "t_min_mm": 4.935165272664167,
+        "CR_long_term": 0.3723990213523133,
+        "CR_short_term": 0.428524014778325,
+        "CR_selected": 0.428524014778325,
+        "RL_years": 17.059335008604968,
+        "inspection_interval_years": 8.53
+      },
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    },
+    {
+      "case_id": "PIP-GOLD-049",
+      "category": "composite",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-106 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 5.918,
+        "design_temperature_c": 284.6,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 21.478
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 20.541
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 18.1795
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "sour_chloride_high_temp",
+        "has_internal_coating": false,
+        "chloride_ppm": 200.0
+      },
+      "expected_outputs": {
+        "t_min_mm": 8.566139653710419,
+        "CR_long_term": 0.3298048521762935,
+        "CR_short_term": 0.47210611658456475,
+        "CR_selected": 0.47210611658456475,
+        "RL_years": 20.36271085796791,
+        "inspection_interval_years": 10.0
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "medium"
+    },
+    {
+      "case_id": "PIP-GOLD-050",
+      "category": "composite",
+      "criticality": "normal",
+      "inputs": {
+        "material": "SA-312 TP304",
+        "nps": 6.0,
+        "design_pressure_mpa": 4.979,
+        "design_temperature_c": 314.3,
+        "thickness_history": [
+          {
+            "date": "2015-01-01",
+            "thickness_mm": 16.4
+          },
+          {
+            "date": "2020-01-01",
+            "thickness_mm": 15.2785
+          },
+          {
+            "date": "2025-01-01",
+            "thickness_mm": 12.837
+          }
+        ],
+        "corrosion_allowance_mm": 1.5,
+        "weld_type": "erw",
+        "service_type": "sour_chloride_high_temp",
+        "has_internal_coating": false,
+        "chloride_ppm": 60.0
+      },
+      "expected_outputs": {
+        "t_min_mm": 5.967249138766541,
+        "CR_long_term": 0.3562512318642211,
+        "CR_short_term": 0.4880995484400656,
+        "CR_selected": 0.4880995484400656,
+        "RL_years": 14.074487229477542,
+        "inspection_interval_years": 7.037
+      },
+      "expected_red_flags": [
+        "STD.OUT_OF_SCOPE_APPLICATION"
+      ],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
+      "validation_points": [
+        "ASME B31.3 Para 304.1.2",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 remaining life and corrosion rate method [verify edition]",
+        "API 570 Section 7 [verify edition]"
+      ],
+      "expected_confidence": "low"
+    }
+  ]
+}

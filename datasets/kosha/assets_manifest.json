@@ -1,0 +1,2016 @@
+{
+  "generated_at_utc": "2026-02-28T18:22:27Z",
+  "corpus": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha\\normalized\\retrieval_corpus.jsonl.gz",
+  "out_dir": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha\\assets",
+  "max_items": 200,
+  "dry_run": true,
+  "totals": {
+    "records_with_filepath": 200,
+    "downloaded": 0,
+    "unresolved": 200,
+    "failed": 0,
+    "bytes": 0
+  },
+  "items": [
+    {
+      "source_id": "KOSHA06_28763_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=28763",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_28798_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=28798",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_28810_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=28810",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_28868_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=28868",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_29284_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=29284",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_29285_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=29285",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_29409_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=29409",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30186_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30186",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30193_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30193",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30194_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30194",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30195_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30195",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30196_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30196",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30197_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30197",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30198_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30198",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30199_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30199",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30200_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30200",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30201_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30201",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30202_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30202",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30203_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30203",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30204_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30204",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30205_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30205",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30206_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30206",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30207_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30207",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30208_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30208",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30209_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30209",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30210_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30210",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30211_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30211",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30212_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30212",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30213_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30213",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30214_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30214",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30215_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30215",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30216_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30216",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30217_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30217",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30218_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30218",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30219_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30219",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30220_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30220",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30221_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30221",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30222_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30222",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30223_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30223",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30224_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30224",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30225_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30225",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30227_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30227",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30228_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30228",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30229_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30229",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30230_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30230",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30231_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30231",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30232_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30232",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30233_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30233",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30235_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30235",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30237_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30237",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30238_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30238",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30239_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30239",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30240_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30240",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30241_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30241",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30243_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30243",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30246_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30246",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30247_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30247",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30249_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30249",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30250_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30250",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30251_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30251",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30252_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30252",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30253_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30253",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30254_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30254",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30255_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30255",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30256_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30256",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30257_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30257",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30258_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30258",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30259_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30259",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30260_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30260",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30261_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30261",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30262_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30262",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30263_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30263",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30264_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30264",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30265_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30265",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30266_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30266",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30267_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30267",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30268_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30268",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30269_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30269",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30270_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30270",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30271_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30271",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30272_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30272",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30273_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30273",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30274_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30274",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30275_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30275",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30276_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30276",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30277_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30277",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30278_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30278",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30279_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30279",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30281_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30281",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30282_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30282",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30283_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30283",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30284_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30284",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30285_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30285",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30286_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30286",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30287_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30287",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30288_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30288",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30289_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30289",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30290_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30290",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30291_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30291",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30292_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30292",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30293_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30293",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30294_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30294",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30295_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30295",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30296_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30296",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30297_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30297",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30298_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30298",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30299_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30299",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30300_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30300",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30301_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30301",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30302_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30302",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30303_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30303",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30304_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30304",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30305_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30305",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30306_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30306",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30307_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30307",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30308_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30308",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30309_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30309",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30310_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30310",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30311_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30311",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30312_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30312",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30313_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30313",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30314_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30314",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30315_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30315",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30316_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30316",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30317_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30317",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30319_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30319",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30320_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30320",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30321_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30321",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30322_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30322",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30323_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30323",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30324_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30324",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30325_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30325",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30326_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30326",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30327_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30327",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30328_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30328",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30329_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30329",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30330_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30330",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30331_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30331",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30332_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30332",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30333_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30333",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30334_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30334",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30335_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30335",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30336_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30336",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30337_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30337",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30338_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30338",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30339_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30339",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30340_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30340",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30341_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30341",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30342_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30342",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30344_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30344",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30345_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30345",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30346_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30346",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30347_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30347",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30348_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30348",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30349_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30349",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30350_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30350",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30351_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30351",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30352_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30352",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30353_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30353",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30354_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30354",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30355_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30355",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30357_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30357",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30358_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30358",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30359_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30359",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30360_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30360",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30361_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30361",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30362_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30362",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30363_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30363",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30364_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30364",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30365_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30365",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30366_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30366",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30367_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30367",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30368_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30368",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30369_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30369",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30370_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30370",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30371_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30371",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30372_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30372",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30373_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30373",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30374_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30374",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30375_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30375",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30376_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30376",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30377_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30377",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30378_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30378",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30379_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30379",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30380_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30380",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30381_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30381",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30382_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30382",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30383_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30383",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30384_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30384",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30385_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30385",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30386_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30386",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30387_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30387",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30388_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30388",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30389_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30389",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30390_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30390",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30391_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30391",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30392_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30392",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30393_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30393",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30394_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30394",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    },
+    {
+      "source_id": "KOSHA06_30395_1",
+      "source_category": "6",
+      "source_url": "https://portal.kosha.or.kr/archive/cent-archive/master-arch/master-list1/master-detail1?medSeq=30395",
+      "resolved_url": "",
+      "filename": "",
+      "status": "unresolved",
+      "message": "no downloadable link resolved",
+      "bytes": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "discipline": "steel",
+  "red_flags": [
+    {
+      "code": "PHY.STRUCTURAL_DC_CRITICAL",
+      "severity": "critical",
+      "blocking": true,
+      "auto_action": "terminate_workflow"
+    },
+    {
+      "code": "PHY.STRUCTURAL_DC_OVERSTRESSED",
+      "severity": "high",
+      "blocking": true,
+      "auto_action": "strict_revalidation"
+    },
+    {
+      "code": "PHY.STEEL_CORROSION_SECTION_LOSS_HIGH",
+      "severity": "high",
+      "blocking": true,
+      "auto_action": "strict_revalidation"
+    },
+    {
+      "code": "PHY.STEEL_DEFLECTION_EXCEEDED",
+      "severity": "high",
+      "blocking": true,
+      "auto_action": "strict_revalidation"
+    },
+    {
+      "code": "PHY.CONNECTION_FAILURE_DETECTED",
+      "severity": "critical",
+      "blocking": true,
+      "auto_action": "terminate_workflow"
+    }
+  ]
+}

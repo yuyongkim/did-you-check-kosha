@@ -1,0 +1,90 @@
+{
+  "description": "Curated regulatory retrieval benchmark for the manuscript claims in PAPER_EN_v2.md.",
+  "groups": [
+    {
+      "label": "M-69 remaining life",
+      "discipline": "vessel",
+      "expected_ref_codes": ["M-69-2012"],
+      "queries": [
+        "pressure vessel remaining life assessment",
+        "remaining life assessment for pressure vessel",
+        "vessel remaining life API 579-1",
+        "M-69 pressure vessel remaining life",
+        "압력용기 잔여수명 평가",
+        "압력용기 수명평가 M-69",
+        "pressure vessel 잔여수명 평가",
+        "remaining life documentation pressure vessel",
+        "압력용기 검사 잔여수명",
+        "vessel remaining life guideline"
+      ]
+    },
+    {
+      "label": "C-C-23 RBI",
+      "discipline": "",
+      "expected_ref_codes": ["C-C-23-2026"],
+      "queries": [
+        "risk based inspection vessel",
+        "RBI for vessel reliability",
+        "equipment reliability via RBI",
+        "C-C-23 RBI guideline",
+        "위험기반검사 압력용기",
+        "설비 신뢰성 RBI 규정",
+        "vessel RBI technical regulation",
+        "RBI mandatory review vessel",
+        "위험기반검사 설비 신뢰성",
+        "risk based inspection technical support regulation"
+      ]
+    },
+    {
+      "label": "B-M-18 piping life",
+      "discipline": "piping",
+      "expected_ref_codes": ["B-M-18-2026"],
+      "queries": [
+        "piping life management",
+        "배관 수명관리",
+        "B-M-18 piping guideline",
+        "piping corrosion life management",
+        "배관 잔여수명 관리",
+        "pipe life management regulation",
+        "배관 검사 잔여수명 규정",
+        "piping remaining life management",
+        "배관 수명관리 기술지원규정",
+        "pipe corrosion life guideline"
+      ]
+    },
+    {
+      "label": "C-C-75 corrosion risk",
+      "discipline": "piping",
+      "expected_ref_codes": ["C-C-75-2026"],
+      "queries": [
+        "corrosion risk assessment chemical equipment",
+        "C-C-75 corrosion risk",
+        "chemical equipment corrosion risk assessment",
+        "부식 위험성평가 화학설비",
+        "화학설비 부식 위험성평가",
+        "chemical equipment CCD corrosion risk",
+        "corrosion risk guide for chemical equipment",
+        "부식위험성 평가 규정",
+        "CCD corrosion risk assessment",
+        "chemical equipment corrosion review"
+      ]
+    },
+    {
+      "label": "Article 256 corrosion prevention",
+      "discipline": "",
+      "expected_title_substrings": ["제256조 부식 방지"],
+      "queries": [
+        "Article 256 corrosion prevention",
+        "제256조 부식 방지",
+        "산업안전보건기준에 관한 규칙 제256조",
+        "chemical equipment corrosion prevention rule",
+        "배관 부식 방지 제256조",
+        "rules on occupational safety and health standards article 256",
+        "화학설비 배관 부식 방지 법령",
+        "산업안전보건기준 규칙 부식 방지",
+        "corrosion prevention regulation for chemical equipment piping",
+        "부식 방지 법령 제256조"
+      ]
+    }
+  ]
+}

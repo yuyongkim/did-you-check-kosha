@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EPC Maintenance AI favicon">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4F8FC" />
+      <stop offset="1" stop-color="#E8F0FA" />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="url(#bg)" />
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#CAD8E6" stroke-width="1.5" />
+
+  <rect x="17" y="12" width="10" height="40" rx="3" fill="#24364B" />
+  <rect x="26" y="12" width="22" height="8" rx="3" fill="#0073E6" />
+  <rect x="26" y="28" width="17" height="8" rx="3" fill="#24364B" />
+  <rect x="26" y="44" width="22" height="8" rx="3" fill="#0073E6" />
+</svg>

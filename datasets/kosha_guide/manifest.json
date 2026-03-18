@@ -1,0 +1,30 @@
+{
+  "generated_at_utc": "2026-03-01T04:00:23.488808+00:00",
+  "duration_sec": 13.568,
+  "endpoint": "https://apis.data.go.kr/B552468/koshaguide/getKoshaGuide",
+  "callApiId": "1050",
+  "totals": {
+    "guide_rows": 1039,
+    "rows_with_file_url": 1039
+  },
+  "fetch_stats": {
+    "api_total_count": 1039,
+    "raw_rows": 1039,
+    "dedup_rows": 1039,
+    "duplicate_rows": 0,
+    "pages_fetched": 6
+  },
+  "download": {
+    "enabled": true,
+    "selected_for_download": 3,
+    "downloaded": 0,
+    "skipped": 3,
+    "failed": 0,
+    "bytes": 0
+  },
+  "files": {
+    "guides_json": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\guides.json",
+    "downloads_manifest": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\downloads_manifest.json",
+    "files_dir": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\files"
+  }
+}

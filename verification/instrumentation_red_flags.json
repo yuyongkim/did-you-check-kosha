@@ -1,0 +1,42 @@
+{
+  "discipline": "instrumentation",
+  "version": "v1",
+  "codes": [
+    {
+      "code": "PHY.SIL_TARGET_NOT_MET",
+      "severity": "critical",
+      "blocking": true,
+      "trigger": "pfdavg > sil_target_limit",
+      "recommended_action": "reconfigure_sis_architecture"
+    },
+    {
+      "code": "PHY.DRIFT_RATE_EXCEEDED",
+      "severity": "high",
+      "blocking": true,
+      "trigger": "predicted_drift_pct > tolerance_pct",
+      "recommended_action": "shorten_calibration_interval"
+    },
+    {
+      "code": "LOG.DRIFT_MODEL_LOW_CONFIDENCE",
+      "severity": "medium",
+      "blocking": false,
+      "trigger": "drift_r_squared < 0.3",
+      "recommended_action": "collect_more_calibration_data"
+    },
+    {
+      "code": "PHY.SENSOR_MTBF_LOW",
+      "severity": "medium",
+      "blocking": false,
+      "trigger": "sensor_mtbf_years < 5",
+      "recommended_action": "review_reliability_strategy"
+    },
+    {
+      "code": "PHY.CONTROL_VALVE_CAPACITY_LOW",
+      "severity": "high",
+      "blocking": true,
+      "trigger": "cv_required > 0.9 * cv_rated",
+      "recommended_action": "upgrade_control_valve_capacity"
+    }
+  ]
+}
+

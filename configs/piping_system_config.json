@@ -1,0 +1,26 @@
+﻿{
+  "system": {
+    "verification_layers": 4,
+    "consensus_threshold": 0.99,
+    "max_calculation_time_sec": 30
+  },
+  "agents": {
+    "orchestrator": {
+      "role": "Chief Piping Verification Engineer",
+      "model": "gpt-5.3-codex",
+      "reasoning_effort": "high"
+    },
+    "piping_calculator": {
+      "standards": ["ASME B31.3", "API 570", "API 510"],
+      "critical_failure_mode": "pressure_containment_loss"
+    },
+    "standards_checker": {
+      "knowledge_base": "asme_api_tables.json",
+      "verification_mode": "strict"
+    },
+    "physics_validator": {
+      "red_flag_rules": 200,
+      "sanity_check_level": "conservative"
+    }
+  }
+}

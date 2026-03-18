@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentMessageEnvelope",
+  "type": "object",
+  "required": [
+    "message_id",
+    "message_type",
+    "correlation_id",
+    "trace_id",
+    "from_agent",
+    "to_agent",
+    "timestamp_utc",
+    "priority",
+    "timeout_sec",
+    "payload",
+    "meta"
+  ],
+  "properties": {
+    "message_id": {"type": "string", "format": "uuid"},
+    "message_type": {
+      "type": "string",
+      "enum": [
+        "calculation_request",
+        "spec_lookup_request",
+        "verification_request",
+        "calculation_result",
+        "escalation_event"
+      ]
+    },
+    "correlation_id": {"type": "string", "format": "uuid"},
+    "trace_id": {"type": "string", "format": "uuid"},
+    "from_agent": {"type": "string"},
+    "to_agent": {"type": "string"},
+    "timestamp_utc": {"type": "string"},
+    "priority": {"type": "string", "enum": ["low", "normal", "high", "critical"]},
+    "timeout_sec": {"type": "integer", "minimum": 1, "maximum": 1800},
+    "payload": {"type": "object"},
+    "meta": {"type": "object"}
+  }
+}

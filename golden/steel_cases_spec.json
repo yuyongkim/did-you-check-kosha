@@ -1,0 +1,31 @@
+{
+  "dataset_id": "STEEL_CASES_SPEC_V1",
+  "discipline": "steel",
+  "total_cases": 25,
+  "ratio_policy": {
+    "standard": 0.6,
+    "boundary": 0.25,
+    "failure_mode": 0.15
+  },
+  "source_runtime_dataset": "datasets/golden_standards/steel_golden_dataset_v1.json",
+  "required_fields": {
+    "inputs": [
+      "member_type",
+      "section_label",
+      "length_m",
+      "k_factor",
+      "radius_of_gyration_mm",
+      "yield_strength_mpa",
+      "gross_area_mm2",
+      "corrosion_loss_percent",
+      "axial_demand_kn"
+    ],
+    "expected_outputs": [
+      "phi_pn_kn",
+      "dc_ratio",
+      "deflection_ratio",
+      "inspection_interval_years",
+      "status"
+    ]
+  }
+}

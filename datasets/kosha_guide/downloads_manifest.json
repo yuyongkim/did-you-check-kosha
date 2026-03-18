@@ -1,0 +1,45 @@
+{
+  "generated_at_utc": "2026-03-01T04:00:23.488225+00:00",
+  "out_dir": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide",
+  "download_enabled": true,
+  "max_downloads": 3,
+  "totals": {
+    "selected_for_download": 3,
+    "downloaded": 0,
+    "skipped": 3,
+    "failed": 0,
+    "bytes": 0
+  },
+  "items": [
+    {
+      "tech_gdln_no": "A-1-2018",
+      "tech_gdln_nm": "구리에 대한 작업환경측정,분석 기술지침",
+      "tech_gdln_ofanc_ymd": "2018-11-27",
+      "file_download_url": "https://portal.kosha.or.kr/openapi/v1/file/down/FL00015883045/7",
+      "status": "skipped",
+      "message": "already exists",
+      "filename": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\files\\A-1-2018__구리에 대한 작업환경측정,분석 기술지침.pdf",
+      "bytes": 473059
+    },
+    {
+      "tech_gdln_no": "A-10-2018",
+      "tech_gdln_nm": "알루미늄에 대한 작업환경측정,분석 기술지침",
+      "tech_gdln_ofanc_ymd": "2018-11-27",
+      "file_download_url": "https://portal.kosha.or.kr/openapi/v1/file/down/FL00015883046/3",
+      "status": "skipped",
+      "message": "already exists",
+      "filename": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\files\\A-10-2018__알루미늄에 대한 작업환경측정,분석 기술지침.pdf",
+      "bytes": 240949
+    },
+    {
+      "tech_gdln_no": "A-100-2018",
+      "tech_gdln_nm": "디메틸아닐린에 대한 작업환경측정,분석 기술지침",
+      "tech_gdln_ofanc_ymd": "2018-11-27",
+      "file_download_url": "https://portal.kosha.or.kr/openapi/v1/file/down/FL00015883047/3",
+      "status": "skipped",
+      "message": "already exists",
+      "filename": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha_guide\\files\\A-100-2018__디메틸아닐린에 대한 작업환경측정,분석 기술지침.pdf",
+      "bytes": 230845
+    }
+  ]
+}

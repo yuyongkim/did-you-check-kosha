@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --primary: 202 68% 41%;
+  --secondary: 218 38% 23%;
+
+  --background: 205 44% 97%;
+  --background-dark: 222 47% 11%;
+  --foreground: 218 37% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 218 37% 16%;
+
+  --border: 215 24% 84%;
+  --accent: 28 78% 50%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 207 30% 93%;
+  --muted-foreground: 217 18% 38%;
+
+  --success: 152 62% 35%;
+  --warning: 39 96% 51%;
+  --danger: 0 78% 57%;
+  --destructive: 0 78% 57%;
+
+  --chart-piping: 201 73% 45%;
+  --chart-vessel: 151 63% 38%;
+  --chart-rotating: 30 82% 52%;
+  --chart-electrical: 47 78% 50%;
+  --chart-instrumentation: 186 64% 40%;
+  --chart-steel: 217 60% 47%;
+  --chart-civil: 349 67% 54%;
+  --bg-orb-primary-alpha: 0.08;
+  --bg-orb-accent-alpha: 0.06;
+  --grid-alpha: 0.05;
+}
+
+.dark {
+  color-scheme: dark;
+  --primary: 196 84% 62%;
+  --accent: 30 82% 60%;
+  --secondary: 210 24% 92%;
+  --background: 223 45% 10%;
+  --foreground: 210 33% 95%;
+  --card: 223 34% 14%;
+  --card-foreground: 210 33% 95%;
+  --border: 216 18% 30%;
+  --muted: 223 29% 18%;
+  --muted-foreground: 216 15% 73%;
+  --success: 152 63% 46%;
+  --warning: 38 95% 56%;
+  --danger: 0 85% 66%;
+  --destructive: 0 85% 66%;
+  --bg-orb-primary-alpha: 0.16;
+  --bg-orb-accent-alpha: 0.12;
+  --grid-alpha: 0.04;
+}
+
+html.theme-vivid {
+  --primary: 196 100% 45%;
+  --accent: 22 96% 54%;
+  --chart-piping: 199 100% 48%;
+  --chart-vessel: 148 68% 40%;
+  --chart-rotating: 25 96% 56%;
+  --chart-electrical: 50 95% 55%;
+  --chart-instrumentation: 184 84% 43%;
+  --chart-steel: 220 72% 53%;
+  --chart-civil: 346 80% 57%;
+  --bg-orb-primary-alpha: 0.14;
+  --bg-orb-accent-alpha: 0.11;
+  --grid-alpha: 0.06;
+}
+
+html.dark.theme-vivid {
+  --primary: 192 100% 68%;
+  --accent: 29 98% 66%;
+  --chart-piping: 194 100% 67%;
+  --chart-vessel: 149 70% 52%;
+  --chart-rotating: 29 98% 63%;
+  --chart-electrical: 51 95% 62%;
+  --chart-instrumentation: 186 86% 55%;
+  --chart-steel: 220 80% 66%;
+  --chart-civil: 344 86% 67%;
+  --bg-orb-primary-alpha: 0.22;
+  --bg-orb-accent-alpha: 0.16;
+  --grid-alpha: 0.05;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(circle at 18% 0%, hsl(var(--primary) / var(--bg-orb-primary-alpha)), transparent 48%),
+    radial-gradient(circle at 82% 12%, hsl(var(--accent) / var(--bg-orb-accent-alpha)), transparent 44%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 72%, hsl(205 37% 94%) 100%),
+    linear-gradient(hsl(215 24% 44% / var(--grid-alpha)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(215 24% 44% / var(--grid-alpha)) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px, 24px 24px;
+  line-height: 1.4;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark input,
+.dark select,
+.dark textarea,
+.dark button,
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.dark body {
+  background-image:
+    radial-gradient(circle at 20% -10%, hsl(var(--primary) / var(--bg-orb-primary-alpha)), transparent 52%),
+    radial-gradient(circle at 90% 0%, hsl(var(--accent) / var(--bg-orb-accent-alpha)), transparent 48%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%),
+    linear-gradient(hsl(210 20% 92% / var(--grid-alpha)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(210 20% 92% / var(--grid-alpha)) 1px, transparent 1px);
+}
+
+html[lang="ko"] body {
+  font-family: var(--font-sans), "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display,
+.title-display {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  letter-spacing: -0.016em;
+}
+
+html[lang="ko"] h1,
+html[lang="ko"] h2,
+html[lang="ko"] h3,
+html[lang="ko"] h4,
+html[lang="ko"] .font-display,
+html[lang="ko"] .title-display {
+  letter-spacing: -0.012em;
+  word-break: keep-all;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+pre,
+code,
+.font-data {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(even) {
+  background: hsl(var(--muted));
+}
+
+.surface-panel {
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.94);
+}
+
+.section-kicker {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+

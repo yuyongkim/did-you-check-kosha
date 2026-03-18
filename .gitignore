@@ -1,0 +1,81 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# ── Frontend ──────────────────────────────────────────────────────────────────
+frontend/.env.local
+frontend/.env.*.local
+frontend/node_modules/
+frontend/.next/
+frontend/.next-dev/
+frontend/playwright-report/
+frontend/test-results/
+frontend/*.tsbuildinfo
+frontend/tsconfig*.tsbuildinfo
+frontend/*.pid
+frontend/*.log
+
+# ── Large datasets — NOT committed to git ─────────────────────────────────────
+# SQLite RAG index (133 MB) — rebuild with: python scripts/kosha_rag_local.py build
+datasets/kosha_rag/kosha_local_rag.sqlite3
+
+# KOSHA guide PDFs (536 MB) — rebuild with: python scripts/sync_kosha_guide_api.py --download
+datasets/kosha_guide/files/
+
+# Raw corpus downloads (large JSONL/gz files)
+datasets/kosha/raw/
+datasets/kosha_guide/normalized/guide_pages.jsonl.gz
+datasets/kosha_guide/normalized/guide_chunks.jsonl.gz
+
+# Assets (best-effort downloaded files)
+datasets/kosha/assets/
+
+# ── What IS committed ─────────────────────────────────────────────────────────
+# datasets/golden_standards/          ← 220 golden cases (316 KB, needed for benchmark)
+# datasets/kosha/normalized/law_articles.json     ← law corpus (6 MB, needed for RAG rebuild)
+# datasets/kosha/normalized/retrieval_corpus.jsonl.gz ← retrieval corpus
+# datasets/kosha_rag/rag_eval_queries.json        ← 50 benchmark queries
+
+# ── Outputs & exports ─────────────────────────────────────────────────────────
+# Keep benchmark reports (paper evidence), exclude bulk exports
+exports/
+publication_bundle/
+outputs/*.json
+outputs/tmp_*/
+logs/
+
+# ── Local runtime ─────────────────────────────────────────────────────────────
+frontend-dev.log
+*.pid
+*.log
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# ── Local tooling state ───────────────────────────────────────────────────────
+.omx/
+.claude/
+oh-my-codex/
+docs/backups/
+frontend/backups/
+
+# ── Secrets / env ─────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Standards PDFs (proprietary — do not redistribute) ────────────────────────
+standards/

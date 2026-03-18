@@ -1,0 +1,42 @@
+{
+  "discipline": "electrical",
+  "version": "v1",
+  "codes": [
+    {
+      "code": "PHY.TRANSFORMER_HEALTH_CRITICAL",
+      "severity": "critical",
+      "blocking": true,
+      "trigger": "transformer_health_index < 3.0",
+      "recommended_action": "immediate_asset_review"
+    },
+    {
+      "code": "PHY.ARC_FLASH_ENERGY_EXCEEDED",
+      "severity": "critical",
+      "blocking": true,
+      "trigger": "arc_flash_energy_cal_cm2 > 40",
+      "recommended_action": "prohibit_live_work_and_recalculate"
+    },
+    {
+      "code": "PHY.VOLTAGE_DROP_EXCEEDED",
+      "severity": "high",
+      "blocking": true,
+      "trigger": "voltage_drop_percent > 5",
+      "recommended_action": "review_cable_and_system_design"
+    },
+    {
+      "code": "PHY.BREAKER_INTERRUPT_RATING_EXCEEDED",
+      "severity": "critical",
+      "blocking": true,
+      "trigger": "fault_current_ka > breaker_interrupt_rating_ka",
+      "recommended_action": "upgrade_interrupting_capacity"
+    },
+    {
+      "code": "PHY.HARMONIC_DISTORTION_EXCEEDED",
+      "severity": "medium",
+      "blocking": false,
+      "trigger": "thd_voltage_percent > 8",
+      "recommended_action": "evaluate_harmonic_mitigation"
+    }
+  ]
+}
+

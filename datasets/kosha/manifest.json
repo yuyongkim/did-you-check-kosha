@@ -1,0 +1,103 @@
+{
+  "generated_at_utc": "2026-02-28T18:02:53.662720+00:00",
+  "duration_sec": 207.289,
+  "endpoint": "https://apis.data.go.kr/B552468/srch/smartSearch",
+  "categories": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "11"
+  ],
+  "query": "",
+  "num_rows": 200,
+  "max_pages": 0,
+  "totals": {
+    "rows_all_categories": 18576,
+    "guide_section_rows": 9069,
+    "guide_documents": 1327,
+    "law_articles": 3102,
+    "retrieval_corpus_rows": 18576
+  },
+  "category_stats": {
+    "1": {
+      "api_total_count": 181,
+      "raw_rows": 181,
+      "dedup_rows": 181,
+      "duplicate_rows": 0,
+      "pages_fetched": 1
+    },
+    "2": {
+      "api_total_count": 159,
+      "raw_rows": 159,
+      "dedup_rows": 159,
+      "duplicate_rows": 0,
+      "pages_fetched": 1
+    },
+    "3": {
+      "api_total_count": 384,
+      "raw_rows": 384,
+      "dedup_rows": 384,
+      "duplicate_rows": 0,
+      "pages_fetched": 2
+    },
+    "4": {
+      "api_total_count": 685,
+      "raw_rows": 685,
+      "dedup_rows": 685,
+      "duplicate_rows": 0,
+      "pages_fetched": 4
+    },
+    "5": {
+      "api_total_count": 1650,
+      "raw_rows": 1650,
+      "dedup_rows": 1650,
+      "duplicate_rows": 0,
+      "pages_fetched": 9
+    },
+    "6": {
+      "api_total_count": 6405,
+      "raw_rows": 6669,
+      "dedup_rows": 6405,
+      "duplicate_rows": 264,
+      "pages_fetched": 33
+    },
+    "7": {
+      "api_total_count": 9069,
+      "raw_rows": 9069,
+      "dedup_rows": 9069,
+      "duplicate_rows": 0,
+      "pages_fetched": 46
+    },
+    "8": {
+      "api_total_count": 16,
+      "raw_rows": 16,
+      "dedup_rows": 16,
+      "duplicate_rows": 0,
+      "pages_fetched": 1
+    },
+    "9": {
+      "api_total_count": 13,
+      "raw_rows": 13,
+      "dedup_rows": 13,
+      "duplicate_rows": 0,
+      "pages_fetched": 1
+    },
+    "11": {
+      "api_total_count": 14,
+      "raw_rows": 14,
+      "dedup_rows": 14,
+      "duplicate_rows": 0,
+      "pages_fetched": 1
+    }
+  },
+  "files": {
+    "raw_dir": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha\\raw",
+    "normalized_dir": "C:\\Users\\USER\\Desktop\\EPC engineering\\datasets\\kosha\\normalized"
+  }
+}

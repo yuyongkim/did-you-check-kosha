@@ -1,0 +1,1271 @@
+{
+  "dataset_id": "CIVIL_GOLDEN_V1",
+  "generated_at": "2026-02-27T00:00:00Z",
+  "total_cases": 25,
+  "category_distribution": {
+    "standard": 15,
+    "boundary": 6,
+    "failure_mode": 4
+  },
+  "cases": [
+    {
+      "case_id": "CIV-GOLD-001",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "slab",
+        "fc_mpa": 33.363,
+        "fy_mpa": 446.829,
+        "width_mm": 356.958,
+        "effective_depth_mm": 648.291,
+        "rebar_area_mm2": 2408.5,
+        "demand_moment_knm": 262.774,
+        "lateral_capacity_loss_percent": 6.538,
+        "affected_area_percent": 3.093,
+        "vertical_capacity_loss_percent": 9.682,
+        "carbonation_coeff_mm_sqrt_year": 1.989,
+        "service_years": 14.903,
+        "cover_thickness_mm": 41.747,
+        "crack_width_mm": 0.225,
+        "spalling_area_percent": 5.566,
+        "foundation_settlement_mm": 6.103
+      },
+      "expected_outputs": {
+        "a_mm": 106.31311950539367,
+        "phi_mn_knm": 576.4286993407562,
+        "dc_ratio": 0.4558249012246984,
+        "carbonation_depth_mm": 7.678415934488052,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 293.3854703202593,
+        "crack_width_mm": 0.225,
+        "spalling_area_percent": 5.566,
+        "foundation_settlement_mm": 6.103,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-002",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 31.691,
+        "fy_mpa": 388.798,
+        "width_mm": 262.701,
+        "effective_depth_mm": 574.722,
+        "rebar_area_mm2": 1860.856,
+        "demand_moment_knm": 145.768,
+        "lateral_capacity_loss_percent": 10.472,
+        "affected_area_percent": 5.835,
+        "vertical_capacity_loss_percent": 4.069,
+        "carbonation_coeff_mm_sqrt_year": 1.605,
+        "service_years": 19.783,
+        "cover_thickness_mm": 42.623,
+        "crack_width_mm": 0.199,
+        "spalling_area_percent": 9.358,
+        "foundation_settlement_mm": 6.854
+      },
+      "expected_outputs": {
+        "a_mm": 102.23984777443424,
+        "phi_mn_knm": 340.9421210597123,
+        "dc_ratio": 0.4275030132361121,
+        "carbonation_depth_mm": 7.138732560826186,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 488.78921427191545,
+        "crack_width_mm": 0.199,
+        "spalling_area_percent": 9.358,
+        "foundation_settlement_mm": 6.854,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-003",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 38.733,
+        "fy_mpa": 422.286,
+        "width_mm": 337.499,
+        "effective_depth_mm": 499.989,
+        "rebar_area_mm2": 2871.982,
+        "demand_moment_knm": 289.433,
+        "lateral_capacity_loss_percent": 9.121,
+        "affected_area_percent": 0.532,
+        "vertical_capacity_loss_percent": 1.17,
+        "carbonation_coeff_mm_sqrt_year": 1.887,
+        "service_years": 16.257,
+        "cover_thickness_mm": 49.846,
+        "crack_width_mm": 0.229,
+        "spalling_area_percent": 2.258,
+        "foundation_settlement_mm": 11.83
+      },
+      "expected_outputs": {
+        "a_mm": 109.14801584976085,
+        "phi_mn_knm": 486.17848656095947,
+        "dc_ratio": 0.5952496568350933,
+        "carbonation_depth_mm": 7.6083783839265,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 501.0200548765166,
+        "crack_width_mm": 0.229,
+        "spalling_area_percent": 2.258,
+        "foundation_settlement_mm": 11.83,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-004",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 37.095,
+        "fy_mpa": 418.312,
+        "width_mm": 336.077,
+        "effective_depth_mm": 643.451,
+        "rebar_area_mm2": 2850.531,
+        "demand_moment_knm": 204.461,
+        "lateral_capacity_loss_percent": 13.297,
+        "affected_area_percent": 0.015,
+        "vertical_capacity_loss_percent": 6.987,
+        "carbonation_coeff_mm_sqrt_year": 2.02,
+        "service_years": 13.677,
+        "cover_thickness_mm": 45.273,
+        "crack_width_mm": 0.11,
+        "spalling_area_percent": 7.662,
+        "foundation_settlement_mm": 2.313
+      },
+      "expected_outputs": {
+        "a_mm": 112.52603046153425,
+        "phi_mn_knm": 630.1526419466777,
+        "dc_ratio": 0.32443160093049805,
+        "carbonation_depth_mm": 7.470450508503486,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 350.21878934835894,
+        "crack_width_mm": 0.11,
+        "spalling_area_percent": 7.662,
+        "foundation_settlement_mm": 2.313,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-005",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "slab",
+        "fc_mpa": 43.739,
+        "fy_mpa": 406.752,
+        "width_mm": 376.613,
+        "effective_depth_mm": 592.809,
+        "rebar_area_mm2": 1957.021,
+        "demand_moment_knm": 151.749,
+        "lateral_capacity_loss_percent": 14.041,
+        "affected_area_percent": 13.06,
+        "vertical_capacity_loss_percent": 9.732,
+        "carbonation_coeff_mm_sqrt_year": 2.034,
+        "service_years": 15.967,
+        "cover_thickness_mm": 47.344,
+        "crack_width_mm": 0.261,
+        "spalling_area_percent": 5.764,
+        "foundation_settlement_mm": 9.206
+      },
+      "expected_outputs": {
+        "a_mm": 56.85152262440602,
+        "phi_mn_knm": 404.3354315150637,
+        "dc_ratio": 0.37528584732573916,
+        "carbonation_depth_mm": 8.127605419310166,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 371.73498023965243,
+        "crack_width_mm": 0.261,
+        "spalling_area_percent": 5.764,
+        "foundation_settlement_mm": 9.206,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-006",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "slab",
+        "fc_mpa": 42.686,
+        "fy_mpa": 488.405,
+        "width_mm": 355.898,
+        "effective_depth_mm": 460.347,
+        "rebar_area_mm2": 1751.33,
+        "demand_moment_knm": 125.533,
+        "lateral_capacity_loss_percent": 0.044,
+        "affected_area_percent": 12.856,
+        "vertical_capacity_loss_percent": 4.413,
+        "carbonation_coeff_mm_sqrt_year": 1.309,
+        "service_years": 19.306,
+        "cover_thickness_mm": 48.215,
+        "crack_width_mm": 0.167,
+        "spalling_area_percent": 8.405,
+        "foundation_settlement_mm": 1.159
+      },
+      "expected_outputs": {
+        "a_mm": 66.23966925213728,
+        "phi_mn_knm": 328.88908271531074,
+        "dc_ratio": 0.3816583930734394,
+        "carbonation_depth_mm": 5.751561890999696,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 1052.327732864794,
+        "crack_width_mm": 0.167,
+        "spalling_area_percent": 8.405,
+        "foundation_settlement_mm": 1.159,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-007",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 43.509,
+        "fy_mpa": 390.334,
+        "width_mm": 281.942,
+        "effective_depth_mm": 699.592,
+        "rebar_area_mm2": 1715.609,
+        "demand_moment_knm": 297.323,
+        "lateral_capacity_loss_percent": 10.217,
+        "affected_area_percent": 14.165,
+        "vertical_capacity_loss_percent": 10.241,
+        "carbonation_coeff_mm_sqrt_year": 1.623,
+        "service_years": 13.527,
+        "cover_thickness_mm": 47.15,
+        "crack_width_mm": 0.058,
+        "spalling_area_percent": 6.146,
+        "foundation_settlement_mm": 8.989
+      },
+      "expected_outputs": {
+        "a_mm": 64.2239325063436,
+        "phi_mn_knm": 402.28652588575994,
+        "dc_ratio": 0.7390471513660618,
+        "carbonation_depth_mm": 5.969243082920983,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 643.800945308127,
+        "crack_width_mm": 0.058,
+        "spalling_area_percent": 6.146,
+        "foundation_settlement_mm": 8.989,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-008",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 39.324,
+        "fy_mpa": 390.333,
+        "width_mm": 296.142,
+        "effective_depth_mm": 684.777,
+        "rebar_area_mm2": 2109.335,
+        "demand_moment_knm": 273.705,
+        "lateral_capacity_loss_percent": 9.775,
+        "affected_area_percent": 1.397,
+        "vertical_capacity_loss_percent": 10.476,
+        "carbonation_coeff_mm_sqrt_year": 2.21,
+        "service_years": 20.994,
+        "cover_thickness_mm": 39.801,
+        "crack_width_mm": 0.105,
+        "spalling_area_percent": 3.218,
+        "foundation_settlement_mm": 9.84
+      },
+      "expected_outputs": {
+        "a_mm": 83.17718345098375,
+        "phi_mn_knm": 476.6082401662702,
+        "dc_ratio": 0.5742395913021839,
+        "carbonation_depth_mm": 10.126045397883617,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 180.29993870675634,
+        "crack_width_mm": 0.105,
+        "spalling_area_percent": 3.218,
+        "foundation_settlement_mm": 9.84,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-009",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "slab",
+        "fc_mpa": 38.841,
+        "fy_mpa": 430.626,
+        "width_mm": 258.924,
+        "effective_depth_mm": 590.96,
+        "rebar_area_mm2": 3100.758,
+        "demand_moment_knm": 197.831,
+        "lateral_capacity_loss_percent": 7.614,
+        "affected_area_percent": 14.713,
+        "vertical_capacity_loss_percent": 7.549,
+        "carbonation_coeff_mm_sqrt_year": 1.382,
+        "service_years": 20.981,
+        "cover_thickness_mm": 40.158,
+        "crack_width_mm": 0.071,
+        "spalling_area_percent": 7.603,
+        "foundation_settlement_mm": 6.452
+      },
+      "expected_outputs": {
+        "a_mm": 156.20196199158713,
+        "phi_mn_knm": 616.3233580523236,
+        "dc_ratio": 0.3209368999275553,
+        "carbonation_depth_mm": 6.330253979422942,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 599.1423746875097,
+        "crack_width_mm": 0.071,
+        "spalling_area_percent": 7.603,
+        "foundation_settlement_mm": 6.452,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-010",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "slab",
+        "fc_mpa": 35.738,
+        "fy_mpa": 461.32,
+        "width_mm": 343.457,
+        "effective_depth_mm": 615.097,
+        "rebar_area_mm2": 2865.553,
+        "demand_moment_knm": 216.013,
+        "lateral_capacity_loss_percent": 2.835,
+        "affected_area_percent": 0.299,
+        "vertical_capacity_loss_percent": 5.486,
+        "carbonation_coeff_mm_sqrt_year": 1.464,
+        "service_years": 12.342,
+        "cover_thickness_mm": 41.379,
+        "crack_width_mm": 0.092,
+        "spalling_area_percent": 9.812,
+        "foundation_settlement_mm": 4.03
+      },
+      "expected_outputs": {
+        "a_mm": 126.70366762736666,
+        "phi_mn_knm": 656.4350700663355,
+        "dc_ratio": 0.32903212317359926,
+        "carbonation_depth_mm": 5.1432051516539765,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 612.6231879737655,
+        "crack_width_mm": 0.092,
+        "spalling_area_percent": 9.812,
+        "foundation_settlement_mm": 4.03,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-011",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 28.637,
+        "fy_mpa": 444.143,
+        "width_mm": 427.838,
+        "effective_depth_mm": 604.033,
+        "rebar_area_mm2": 1944.977,
+        "demand_moment_knm": 253.527,
+        "lateral_capacity_loss_percent": 8.239,
+        "affected_area_percent": 10.506,
+        "vertical_capacity_loss_percent": 6.669,
+        "carbonation_coeff_mm_sqrt_year": 2.021,
+        "service_years": 19.049,
+        "cover_thickness_mm": 38.807,
+        "crack_width_mm": 0.273,
+        "spalling_area_percent": 6.187,
+        "foundation_settlement_mm": 4.487
+      },
+      "expected_outputs": {
+        "a_mm": 82.94906424971813,
+        "phi_mn_knm": 437.3684659707732,
+        "dc_ratio": 0.5796218715675759,
+        "carbonation_depth_mm": 8.820686855851985,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 220.1473778122647,
+        "crack_width_mm": 0.273,
+        "spalling_area_percent": 6.187,
+        "foundation_settlement_mm": 4.487,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-012",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "beam",
+        "fc_mpa": 28.897,
+        "fy_mpa": 382.389,
+        "width_mm": 261.858,
+        "effective_depth_mm": 487.318,
+        "rebar_area_mm2": 2218.908,
+        "demand_moment_knm": 128.127,
+        "lateral_capacity_loss_percent": 7.458,
+        "affected_area_percent": 14.747,
+        "vertical_capacity_loss_percent": 10.78,
+        "carbonation_coeff_mm_sqrt_year": 1.338,
+        "service_years": 9.493,
+        "cover_thickness_mm": 43.171,
+        "crack_width_mm": 0.201,
+        "spalling_area_percent": 5.494,
+        "foundation_settlement_mm": 2.65
+      },
+      "expected_outputs": {
+        "a_mm": 131.9189410391749,
+        "phi_mn_knm": 321.76513617209025,
+        "dc_ratio": 0.3981381192862149,
+        "carbonation_depth_mm": 4.122473322169593,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 851.7204558201189,
+        "crack_width_mm": 0.201,
+        "spalling_area_percent": 5.494,
+        "foundation_settlement_mm": 2.65,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-013",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 42.933,
+        "fy_mpa": 421.473,
+        "width_mm": 264.543,
+        "effective_depth_mm": 660.132,
+        "rebar_area_mm2": 2011.193,
+        "demand_moment_knm": 297.399,
+        "lateral_capacity_loss_percent": 10.694,
+        "affected_area_percent": 8.296,
+        "vertical_capacity_loss_percent": 7.114,
+        "carbonation_coeff_mm_sqrt_year": 1.847,
+        "service_years": 12.695,
+        "cover_thickness_mm": 51.568,
+        "crack_width_mm": 0.242,
+        "spalling_area_percent": 2.079,
+        "foundation_settlement_mm": 7.386
+      },
+      "expected_outputs": {
+        "a_mm": 87.80455998135555,
+        "phi_mn_knm": 470.11992336720834,
+        "dc_ratio": 0.6325573969231055,
+        "carbonation_depth_mm": 6.580869034937559,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 593.2569071804875,
+        "crack_width_mm": 0.242,
+        "spalling_area_percent": 2.079,
+        "foundation_settlement_mm": 7.386,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-014",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 36.514,
+        "fy_mpa": 475.785,
+        "width_mm": 438.612,
+        "effective_depth_mm": 637.102,
+        "rebar_area_mm2": 1881.205,
+        "demand_moment_knm": 310.809,
+        "lateral_capacity_loss_percent": 13.371,
+        "affected_area_percent": 6.182,
+        "vertical_capacity_loss_percent": 9.795,
+        "carbonation_coeff_mm_sqrt_year": 1.292,
+        "service_years": 18.995,
+        "cover_thickness_mm": 47.57,
+        "crack_width_mm": 0.254,
+        "spalling_area_percent": 4.276,
+        "foundation_settlement_mm": 8.487
+      },
+      "expected_outputs": {
+        "a_mm": 65.74882925434898,
+        "phi_mn_knm": 486.7320322139246,
+        "dc_ratio": 0.6385281570795768,
+        "carbonation_depth_mm": 5.63095637347689,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 1053.6879608662312,
+        "crack_width_mm": 0.254,
+        "spalling_area_percent": 4.276,
+        "foundation_settlement_mm": 8.487,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-015",
+      "category": "standard",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "slab",
+        "fc_mpa": 41.658,
+        "fy_mpa": 410.721,
+        "width_mm": 266.061,
+        "effective_depth_mm": 551.453,
+        "rebar_area_mm2": 2084.532,
+        "demand_moment_knm": 317.764,
+        "lateral_capacity_loss_percent": 0.936,
+        "affected_area_percent": 16.812,
+        "vertical_capacity_loss_percent": 8.628,
+        "carbonation_coeff_mm_sqrt_year": 2.168,
+        "service_years": 10.482,
+        "cover_thickness_mm": 52.077,
+        "crack_width_mm": 0.257,
+        "spalling_area_percent": 8.58,
+        "foundation_settlement_mm": 8.157
+      },
+      "expected_outputs": {
+        "a_mm": 90.87761372257236,
+        "phi_mn_knm": 389.9066866238029,
+        "dc_ratio": 0.8149013791043633,
+        "carbonation_depth_mm": 7.019098800273437,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 431.93993744219847,
+        "crack_width_mm": 0.257,
+        "spalling_area_percent": 8.58,
+        "foundation_settlement_mm": 8.157,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-016",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "foundation",
+        "fc_mpa": 24.328,
+        "fy_mpa": 404.631,
+        "width_mm": 327.357,
+        "effective_depth_mm": 655.966,
+        "rebar_area_mm2": 2589.232,
+        "demand_moment_knm": 503.594,
+        "lateral_capacity_loss_percent": 29.001,
+        "affected_area_percent": 21.54,
+        "vertical_capacity_loss_percent": 21.567,
+        "carbonation_coeff_mm_sqrt_year": 2.6,
+        "service_years": 32.965,
+        "cover_thickness_mm": 34.005,
+        "crack_width_mm": 0.447,
+        "spalling_area_percent": 12.132,
+        "foundation_settlement_mm": 12.84
+      },
+      "expected_outputs": {
+        "a_mm": 154.7687065934217,
+        "phi_mn_knm": 545.5534175764774,
+        "dc_ratio": 0.9229650207970431,
+        "carbonation_depth_mm": 14.927940246397023,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 53.836421426411036,
+        "crack_width_mm": 0.447,
+        "spalling_area_percent": 12.132,
+        "foundation_settlement_mm": 12.84,
+        "inspection_interval_years": 0.5,
+        "status": "WARNING"
+      },
+      "expected_red_flags": [
+        "PHY.CIVIL_CRACK_WIDTH_EXCEEDED"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-017",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "foundation",
+        "fc_mpa": 31.977,
+        "fy_mpa": 381.297,
+        "width_mm": 345.123,
+        "effective_depth_mm": 533.29,
+        "rebar_area_mm2": 2396.843,
+        "demand_moment_knm": 395.822,
+        "lateral_capacity_loss_percent": 20.131,
+        "affected_area_percent": 33.704,
+        "vertical_capacity_loss_percent": 18.343,
+        "carbonation_coeff_mm_sqrt_year": 3.081,
+        "service_years": 34.277,
+        "cover_thickness_mm": 40.021,
+        "crack_width_mm": 0.397,
+        "spalling_area_percent": 18.25,
+        "foundation_settlement_mm": 16.695
+      },
+      "expected_outputs": {
+        "a_mm": 97.42545219212835,
+        "phi_mn_knm": 398.5735984218247,
+        "dc_ratio": 0.9929966631416997,
+        "carbonation_depth_mm": 18.03819595738443,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 50.907618457867734,
+        "crack_width_mm": 0.397,
+        "spalling_area_percent": 18.25,
+        "foundation_settlement_mm": 16.695,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-018",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "foundation",
+        "fc_mpa": 22.808,
+        "fy_mpa": 393.411,
+        "width_mm": 367.329,
+        "effective_depth_mm": 480.597,
+        "rebar_area_mm2": 2096.997,
+        "demand_moment_knm": 260.642,
+        "lateral_capacity_loss_percent": 33.107,
+        "affected_area_percent": 34.482,
+        "vertical_capacity_loss_percent": 16.388,
+        "carbonation_coeff_mm_sqrt_year": 2.384,
+        "service_years": 25.73,
+        "cover_thickness_mm": 43.194,
+        "crack_width_mm": 0.264,
+        "spalling_area_percent": 14.982,
+        "foundation_settlement_mm": 23.323
+      },
+      "expected_outputs": {
+        "a_mm": 115.84651180661962,
+        "phi_mn_knm": 313.8282885213097,
+        "dc_ratio": 0.8304105515376026,
+        "carbonation_depth_mm": 12.09277978299448,
+        "substantial_damage": true,
+        "damage_mode": "TYPE1_LATERAL",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 170.19325899359,
+        "crack_width_mm": 0.264,
+        "spalling_area_percent": 14.982,
+        "foundation_settlement_mm": 23.323,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CIVIL_SUBSTANTIAL_DAMAGE"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-019",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "beam",
+        "fc_mpa": 33.31,
+        "fy_mpa": 387.078,
+        "width_mm": 266.666,
+        "effective_depth_mm": 463.843,
+        "rebar_area_mm2": 2634.931,
+        "demand_moment_knm": 277.041,
+        "lateral_capacity_loss_percent": 28.298,
+        "affected_area_percent": 32.31,
+        "vertical_capacity_loss_percent": 14.865,
+        "carbonation_coeff_mm_sqrt_year": 2.414,
+        "service_years": 34.419,
+        "cover_thickness_mm": 41.869,
+        "crack_width_mm": 0.349,
+        "spalling_area_percent": 8.957,
+        "foundation_settlement_mm": 24.259
+      },
+      "expected_outputs": {
+        "a_mm": 135.08481441281478,
+        "phi_mn_knm": 363.7767736003678,
+        "dc_ratio": 0.7614390433261944,
+        "carbonation_depth_mm": 14.1623847894343,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 131.73234261518363,
+        "crack_width_mm": 0.349,
+        "spalling_area_percent": 8.957,
+        "foundation_settlement_mm": 24.259,
+        "inspection_interval_years": 2.0,
+        "status": "ACCEPTABLE"
+      },
+      "expected_red_flags": [],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-020",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "foundation",
+        "fc_mpa": 24.713,
+        "fy_mpa": 395.96,
+        "width_mm": 399.831,
+        "effective_depth_mm": 503.37,
+        "rebar_area_mm2": 2237.589,
+        "demand_moment_knm": 441.774,
+        "lateral_capacity_loss_percent": 32.385,
+        "affected_area_percent": 26.961,
+        "vertical_capacity_loss_percent": 14.837,
+        "carbonation_coeff_mm_sqrt_year": 2.216,
+        "service_years": 27.133,
+        "cover_thickness_mm": 40.956,
+        "crack_width_mm": 0.316,
+        "spalling_area_percent": 14.727,
+        "foundation_settlement_mm": 11.998
+      },
+      "expected_outputs": {
+        "a_mm": 105.48987456744152,
+        "phi_mn_knm": 359.32669749191814,
+        "dc_ratio": 1.229305675991994,
+        "carbonation_depth_mm": 11.542999144416498,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 176.1729225852016,
+        "crack_width_mm": 0.316,
+        "spalling_area_percent": 14.727,
+        "foundation_settlement_mm": 11.998,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CIVIL_FLEXURE_OVERSTRESS"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-021",
+      "category": "boundary",
+      "criticality": "normal",
+      "inputs": {
+        "element_type": "beam",
+        "fc_mpa": 31.764,
+        "fy_mpa": 415.198,
+        "width_mm": 444.515,
+        "effective_depth_mm": 678.863,
+        "rebar_area_mm2": 1680.186,
+        "demand_moment_knm": 423.077,
+        "lateral_capacity_loss_percent": 26.434,
+        "affected_area_percent": 21.213,
+        "vertical_capacity_loss_percent": 18.822,
+        "carbonation_coeff_mm_sqrt_year": 2.848,
+        "service_years": 33.203,
+        "cover_thickness_mm": 35.156,
+        "crack_width_mm": 0.307,
+        "spalling_area_percent": 21.042,
+        "foundation_settlement_mm": 27.192
+      },
+      "expected_outputs": {
+        "a_mm": 58.126219930418664,
+        "phi_mn_knm": 407.97613327681745,
+        "dc_ratio": 1.0369677601095655,
+        "carbonation_depth_mm": 16.410758243055074,
+        "substantial_damage": false,
+        "damage_mode": "NONE",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 43.32136396306985,
+        "crack_width_mm": 0.307,
+        "spalling_area_percent": 21.042,
+        "foundation_settlement_mm": 27.192,
+        "inspection_interval_years": 0.5,
+        "status": "WARNING"
+      },
+      "expected_red_flags": [
+        "PHY.CIVIL_FOUNDATION_SETTLEMENT_HIGH",
+        "PHY.CIVIL_SPALLING_SEVERE"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-022",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 29.841,
+        "fy_mpa": 362.92,
+        "width_mm": 324.726,
+        "effective_depth_mm": 425.751,
+        "rebar_area_mm2": 2454.489,
+        "demand_moment_knm": 553.155,
+        "lateral_capacity_loss_percent": 52.456,
+        "affected_area_percent": 51.267,
+        "vertical_capacity_loss_percent": 40.158,
+        "carbonation_coeff_mm_sqrt_year": 4.555,
+        "service_years": 33.954,
+        "cover_thickness_mm": 35.161,
+        "crack_width_mm": 0.51,
+        "spalling_area_percent": 44.845,
+        "foundation_settlement_mm": 30.567
+      },
+      "expected_outputs": {
+        "a_mm": 108.14903061997808,
+        "phi_mn_knm": 297.9748341226266,
+        "dc_ratio": 1.8561118297945562,
+        "carbonation_depth_mm": 26.542012750543243,
+        "substantial_damage": true,
+        "damage_mode": "TYPE1_LATERAL",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 3.580434340439545,
+        "crack_width_mm": 0.51,
+        "spalling_area_percent": 44.845,
+        "foundation_settlement_mm": 30.567,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CIVIL_CRACK_WIDTH_EXCEEDED",
+        "PHY.CIVIL_FLEXURE_OVERSTRESS",
+        "PHY.CIVIL_FOUNDATION_SETTLEMENT_HIGH",
+        "PHY.CIVIL_SPALLING_SEVERE",
+        "PHY.CIVIL_SUBSTANTIAL_DAMAGE"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-023",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 26.717,
+        "fy_mpa": 448.922,
+        "width_mm": 409.377,
+        "effective_depth_mm": 518.83,
+        "rebar_area_mm2": 2429.148,
+        "demand_moment_knm": 913.397,
+        "lateral_capacity_loss_percent": 49.385,
+        "affected_area_percent": 31.197,
+        "vertical_capacity_loss_percent": 34.507,
+        "carbonation_coeff_mm_sqrt_year": 5.219,
+        "service_years": 39.572,
+        "cover_thickness_mm": 32.158,
+        "crack_width_mm": 0.628,
+        "spalling_area_percent": 25.043,
+        "foundation_settlement_mm": 25.826
+      },
+      "expected_outputs": {
+        "a_mm": 117.29913502050063,
+        "phi_mn_knm": 451.6432482195719,
+        "dc_ratio": 2.022128578482413,
+        "carbonation_depth_mm": 32.83078726884264,
+        "substantial_damage": true,
+        "damage_mode": "TYPE1_LATERAL",
+        "corrosion_initiated": true,
+        "years_to_corrosion_init": 0.0,
+        "crack_width_mm": 0.628,
+        "spalling_area_percent": 25.043,
+        "foundation_settlement_mm": 25.826,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CIVIL_CARBONATION_CORROSION_INITIATED",
+        "PHY.CIVIL_CRACK_WIDTH_EXCEEDED",
+        "PHY.CIVIL_FLEXURE_OVERSTRESS",
+        "PHY.CIVIL_FOUNDATION_SETTLEMENT_HIGH",
+        "PHY.CIVIL_SPALLING_SEVERE",
+        "PHY.CIVIL_SUBSTANTIAL_DAMAGE"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-024",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "element_type": "column",
+        "fc_mpa": 25.119,
+        "fy_mpa": 413.235,
+        "width_mm": 287.514,
+        "effective_depth_mm": 546.624,
+        "rebar_area_mm2": 2166.131,
+        "demand_moment_knm": 772.835,
+        "lateral_capacity_loss_percent": 45.219,
+        "affected_area_percent": 47.362,
+        "vertical_capacity_loss_percent": 24.985,
+        "carbonation_coeff_mm_sqrt_year": 3.98,
+        "service_years": 32.219,
+        "cover_thickness_mm": 36.225,
+        "crack_width_mm": 0.467,
+        "spalling_area_percent": 22.939,
+        "foundation_settlement_mm": 45.127
+      },
+      "expected_outputs": {
+        "a_mm": 145.8147801466914,
+        "phi_mn_knm": 381.6303783367496,
+        "dc_ratio": 2.024776426946347,
+        "carbonation_depth_mm": 22.591189601258275,
+        "substantial_damage": true,
+        "damage_mode": "TYPE1_LATERAL",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 11.734601777028235,
+        "crack_width_mm": 0.467,
+        "spalling_area_percent": 22.939,
+        "foundation_settlement_mm": 45.127,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CIVIL_CRACK_WIDTH_EXCEEDED",
+        "PHY.CIVIL_FLEXURE_OVERSTRESS",
+        "PHY.CIVIL_FOUNDATION_SETTLEMENT_HIGH",
+        "PHY.CIVIL_SPALLING_SEVERE",
+        "PHY.CIVIL_SUBSTANTIAL_DAMAGE"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    },
+    {
+      "case_id": "CIV-GOLD-025",
+      "category": "failure_mode",
+      "criticality": "critical",
+      "inputs": {
+        "element_type": "foundation",
+        "fc_mpa": 28.619,
+        "fy_mpa": 398.478,
+        "width_mm": 385.451,
+        "effective_depth_mm": 495.777,
+        "rebar_area_mm2": 2168.283,
+        "demand_moment_knm": 779.845,
+        "lateral_capacity_loss_percent": 45.311,
+        "affected_area_percent": 37.4,
+        "vertical_capacity_loss_percent": 38.792,
+        "carbonation_coeff_mm_sqrt_year": 4.819,
+        "service_years": 42.766,
+        "cover_thickness_mm": 33.924,
+        "crack_width_mm": 0.819,
+        "spalling_area_percent": 20.388,
+        "foundation_settlement_mm": 39.602
+      },
+      "expected_outputs": {
+        "a_mm": 92.14626928774777,
+        "phi_mn_knm": 349.69501689258925,
+        "dc_ratio": 2.2298435880093024,
+        "carbonation_depth_mm": 31.51419675203542,
+        "substantial_damage": true,
+        "damage_mode": "TYPE1_LATERAL",
+        "corrosion_initiated": false,
+        "years_to_corrosion_init": 0.2500629315308647,
+        "crack_width_mm": 0.819,
+        "spalling_area_percent": 20.388,
+        "foundation_settlement_mm": 39.602,
+        "inspection_interval_years": 0.1,
+        "status": "CRITICAL"
+      },
+      "expected_red_flags": [
+        "PHY.CIVIL_CRACK_WIDTH_EXCEEDED",
+        "PHY.CIVIL_FLEXURE_OVERSTRESS",
+        "PHY.CIVIL_FOUNDATION_SETTLEMENT_HIGH",
+        "PHY.CIVIL_SPALLING_SEVERE",
+        "PHY.CIVIL_SUBSTANTIAL_DAMAGE"
+      ],
+      "expected_warnings": [],
+      "validation_points": [
+        "ACI 562 substantial damage screening context",
+        "ACI 318 flexure capacity context",
+        "Carbonation and durability context"
+      ],
+      "standards_referenced": [
+        "ACI 318",
+        "ACI 562"
+      ]
+    }
+  ]
+}

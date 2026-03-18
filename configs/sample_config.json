@@ -1,0 +1,49 @@
+{
+  "system": {
+    "max_threads": 8,
+    "max_depth": 3,
+    "default_workflow": "standard_calculation",
+    "default_model": "gpt-5.3-codex"
+  },
+  "models": {
+    "default": "gpt-5.3-codex",
+    "spec_explorer": "gpt-5.3-codex-spark"
+  },
+  "timeouts": {
+    "default_agent_timeout_sec": 300,
+    "spec_lookup_timeout_sec": 120,
+    "verification_timeout_sec": 300
+  },
+  "verification": {
+    "golden_dataset_path": "./datasets/golden_standards/",
+    "maker_voting_threshold": 2,
+    "red_flag_auto_escalation": true,
+    "critical_fail_closed": true
+  },
+  "logging": {
+    "level": "INFO",
+    "audit_trail_enabled": true,
+    "trace_retention_days": 90
+  },
+  "security": {
+    "standards_version_pin": true
+  },
+  "agents": {
+    "orchestrator": {},
+    "spec_explorer": {},
+    "piping_specialist": {},
+    "static_equipment_specialist": {},
+    "rotating_specialist": {},
+    "electrical_specialist": {},
+    "instrumentation_specialist": {},
+    "steel_specialist": {},
+    "civil_specialist": {},
+    "calculator_worker": {},
+    "verification_agent": {}
+  },
+  "workflows": {
+    "standard_calculation": {},
+    "emergency_assessment": {}
+  }
+}
+

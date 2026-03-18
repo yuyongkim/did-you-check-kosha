@@ -1,0 +1,34 @@
+{
+  "dataset_id": "ELECTRICAL_CASES_SPEC_V1",
+  "discipline": "electrical",
+  "total_cases": 30,
+  "ratio_policy": {
+    "standard": 0.6,
+    "boundary": 0.25,
+    "failure_mode": 0.15
+  },
+  "source_runtime_dataset": "datasets/golden_standards/electrical_golden_dataset_v1.json",
+  "required_fields": {
+    "inputs": [
+      "system_voltage_kv",
+      "bolted_fault_current_ka",
+      "clearing_time_sec",
+      "working_distance_mm",
+      "breaker_interrupt_rating_ka",
+      "voltage_drop_percent",
+      "thd_voltage_percent",
+      "dga_score",
+      "oil_quality_score",
+      "insulation_score",
+      "load_factor_score"
+    ],
+    "expected_outputs": [
+      "transformer_health_index",
+      "arc_flash_energy_cal_cm2",
+      "ppe_category",
+      "inspection_interval_years",
+      "status"
+    ]
+  }
+}
+
