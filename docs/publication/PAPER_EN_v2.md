@@ -2,6 +2,7 @@
 
 **Yuyong Kim**  
 *Independent Researcher*  
+12 years of professional experience in petrochemical EPC and process plant engineering  
 [linkedin.com/in/yuyongkim](https://linkedin.com/in/yuyongkim)
 
 ---

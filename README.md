@@ -8,6 +8,10 @@
 
 ---
 
+Yuyong Kim is an independent researcher with 12 years of professional experience in petrochemical EPC and process plant engineering. His current work centers on AI-enabled engineering verification, regulatory knowledge integration, and reproducible evaluation for safety-critical industrial systems.
+
+---
+
 ## What is this?
 
 A multi-discipline AI verification platform for Korean process plant engineering.
@@ -191,8 +195,7 @@ See [`LICENSE`](LICENSE) for full terms including KOSHA data usage notice.
 ## Author
 
 **Yuyong Kim**  
-Senior Process Engineering Manager · 12 years in petrochemical EPC  
-LACC Ethane Cracker ($3.2B) · Lake Charles, LA  
-MSDIA Candidate · University of Wisconsin–Madison
+Independent Researcher  
+12 years of professional experience in petrochemical EPC and process plant engineering
 
 [linkedin.com/in/yuyongkim](https://www.linkedin.com/in/yuyongkim/)
