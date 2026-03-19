@@ -1,12 +1,8 @@
 from __future__ import annotations
 
 import asyncio
-from concurrent.futures import Future, ThreadPoolExecutor
-from dataclasses import dataclass
-from datetime import datetime, timezone
 from io import BytesIO
 import json
-import threading
 import time
 from typing import Any, Dict, List, Mapping, MutableMapping
 import uuid
@@ -16,268 +12,11 @@ from fastapi import Body, FastAPI, HTTPException, Query, WebSocket, WebSocketDis
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 
-from src.civil.service import CivilVerificationService
-from src.electrical.service import ElectricalVerificationService
-from src.instrumentation.service import InstrumentationVerificationService
-from src.piping.service import PipingVerificationService
-from src.rotating.service import RotatingVerificationService
-from src.steel.service import SteelVerificationService
-from src.vessel.service import VesselVerificationService
 from src.api import persistence
+from src.api import runtime_core
 
-
-@dataclass(frozen=True)
-class DisciplineRuntime:
-    default_calculation_type: str
-    service: Any
-
-
-RUNTIMES: Dict[str, DisciplineRuntime] = {
-    "piping": DisciplineRuntime(default_calculation_type="remaining_life", service=PipingVerificationService()),
-    "vessel": DisciplineRuntime(default_calculation_type="vessel_integrity", service=VesselVerificationService()),
-    "rotating": DisciplineRuntime(default_calculation_type="rotating_integrity", service=RotatingVerificationService()),
-    "electrical": DisciplineRuntime(default_calculation_type="electrical_integrity", service=ElectricalVerificationService()),
-    "instrumentation": DisciplineRuntime(
-        default_calculation_type="instrumentation_integrity",
-        service=InstrumentationVerificationService(),
-    ),
-    "steel": DisciplineRuntime(default_calculation_type="steel_integrity", service=SteelVerificationService()),
-    "civil": DisciplineRuntime(default_calculation_type="civil_integrity", service=CivilVerificationService()),
-}
-
-# ----------------------------
-# Runtime state (in-memory)
-# ----------------------------
-CACHE_TTL_SEC = 180.0
-_CACHE: Dict[str, Dict[str, Any]] = {}
-_CACHE_LOCK = threading.Lock()
-_CACHE_HITS = 0
-_CACHE_MISSES = 0
-
-_AUDIT_MAX = 5000
-_AUDIT_LOGS: List[Dict[str, Any]] = []
-_AUDIT_LOCK = threading.Lock()
-
-_JOBS: Dict[str, Dict[str, Any]] = {}
-_JOB_FUTURES: Dict[str, Future[None]] = {}
-_JOBS_LOCK = threading.Lock()
-_JOB_EXECUTOR = ThreadPoolExecutor(max_workers=6)
-
-_COLLAB_SESSIONS: Dict[str, Dict[str, Any]] = {}
-_COLLAB_LOCK = threading.Lock()
-
-persistence.init_db()
-
-
-def _utc_now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
-
-
-def _audit(event_type: str, details: Mapping[str, Any]) -> None:
-    record = {
-        "id": str(uuid.uuid4()),
-        "timestamp": _utc_now_iso(),
-        "event_type": event_type,
-        "details": dict(details),
-    }
-    with _AUDIT_LOCK:
-        _AUDIT_LOGS.append(record)
-        if len(_AUDIT_LOGS) > _AUDIT_MAX:
-            del _AUDIT_LOGS[: len(_AUDIT_LOGS) - _AUDIT_MAX]
-    persistence.persist_audit(record)
-
-
-def supported_disciplines() -> List[str]:
-    return sorted(RUNTIMES.keys())
-
-
-def _normalize_flags(payload: Mapping[str, Any]) -> Dict[str, List[str]]:
-    raw = payload.get("flags", {})
-    red = list(raw.get("red_flags", [])) if isinstance(raw, Mapping) else []
-    warnings = list(raw.get("warnings", [])) if isinstance(raw, Mapping) else []
-    return {
-        "red_flags": red,
-        "warnings": warnings,
-    }
-
-
-def _status_from_result(*, flags: Dict[str, List[str]], final_results: Mapping[str, Any]) -> str:
-    if flags["red_flags"]:
-        return "blocked"
-    if not final_results:
-        return "error"
-    return "success"
-
-
-def transform_to_frontend_response(
-    discipline: str,
-    backend_result: Mapping[str, Any],
-) -> Dict[str, Any]:
-    summary = backend_result.get("calculation_summary", {})
-    final_results = backend_result.get("final_results", {})
-    layer_results = backend_result.get("layer_results", [])
-    references = summary.get("standards_applied", [])
-    flags = _normalize_flags(backend_result)
-    confidence = summary.get("confidence", "low")
-    status = _status_from_result(flags=flags, final_results=final_results if isinstance(final_results, Mapping) else {})
-
-    details = {
-        "calculation_summary": {
-            "discipline": discipline,
-            "calculation_type": summary.get("calculation_type", f"{discipline}_integrity"),
-            "standards_applied": references if isinstance(references, list) else [],
-            "confidence": confidence,
-            "execution_time_sec": summary.get("execution_time_sec", 0),
-        },
-        "input_data": backend_result.get("input_data", {}),
-        "calculation_steps": backend_result.get("calculation_steps", []),
-        "layer_results": layer_results if isinstance(layer_results, list) else [],
-        "final_results": final_results if isinstance(final_results, Mapping) else {},
-        "recommendations": backend_result.get("recommendations", []),
-        "flags": flags,
-    }
-
-    return {
-        "status": status,
-        "discipline": discipline,
-        "results": details["final_results"],
-        "details": details,
-        "references": details["calculation_summary"]["standards_applied"],
-        "verification": {
-            "layers": details["layer_results"],
-            "confidence": confidence,
-        },
-        "flags": flags,
-    }
-
-
-def _cache_key(discipline: str, payload: Mapping[str, Any], calculation_type: str | None) -> str:
-    normalized_payload = json.dumps(payload, sort_keys=True, ensure_ascii=False, default=str)
-    return f"{discipline}::{calculation_type or ''}::{normalized_payload}"
-
-
-def dispatch_calculation(
-    discipline: str,
-    payload: Mapping[str, Any],
-    calculation_type: str | None = None,
-) -> Dict[str, Any]:
-    global _CACHE_HITS, _CACHE_MISSES
-
-    runtime = RUNTIMES.get(discipline)
-    if runtime is None:
-        raise ValueError(f"Unsupported discipline: {discipline}")
-
-    key = _cache_key(discipline, payload, calculation_type)
-    now_ts = time.time()
-
-    with _CACHE_LOCK:
-        cached = _CACHE.get(key)
-        if cached and (now_ts - cached["ts"]) <= CACHE_TTL_SEC:
-            _CACHE_HITS += 1
-            response = cached["value"]
-            _audit("calculation.cache_hit", {"discipline": discipline})
-            return response
-
-    _CACHE_MISSES += 1
-    effective_calculation_type = calculation_type or runtime.default_calculation_type
-    backend_result = runtime.service.evaluate(payload, calculation_type=effective_calculation_type)
-    response = transform_to_frontend_response(discipline, backend_result)
-
-    with _CACHE_LOCK:
-        _CACHE[key] = {"ts": now_ts, "value": response}
-
-    _audit(
-        "calculation.executed",
-        {
-            "discipline": discipline,
-            "status": response.get("status"),
-            "red_flags": len(response.get("flags", {}).get("red_flags", [])),
-            "warnings": len(response.get("flags", {}).get("warnings", [])),
-        },
-    )
-    return response
-
-
-def _execute_job(job_id: str) -> None:
-    with _JOBS_LOCK:
-        job = _JOBS.get(job_id)
-        if not job:
-            return
-        if job["status"] == "cancelled":
-            return
-        job["status"] = "running"
-        job["started_at"] = _utc_now_iso()
-        persistence.upsert_job(job)
-
-    try:
-        response = dispatch_calculation(
-            discipline=job["discipline"],
-            payload=job["payload"],
-            calculation_type=job.get("calculation_type"),
-        )
-        with _JOBS_LOCK:
-            target = _JOBS.get(job_id)
-            if not target:
-                return
-            if target["status"] != "cancelled":
-                target["status"] = "success"
-                target["result"] = response
-                target["completed_at"] = _utc_now_iso()
-                persistence.upsert_job(target)
-        _audit("job.success", {"job_id": job_id, "discipline": job["discipline"]})
-    except Exception as exc:  # noqa: BLE001
-        with _JOBS_LOCK:
-            target = _JOBS.get(job_id)
-            if not target:
-                return
-            if target["status"] != "cancelled":
-                target["status"] = "error"
-                target["error"] = str(exc)
-                target["completed_at"] = _utc_now_iso()
-                persistence.upsert_job(target)
-        _audit("job.error", {"job_id": job_id, "discipline": job["discipline"], "error": str(exc)})
-
-
-def _get_session_key(discipline: str, project_id: str, asset_id: str) -> str:
-    return f"{discipline}::{project_id}::{asset_id}"
-
-
-def _ensure_collab_session(discipline: str, project_id: str, asset_id: str) -> Dict[str, Any]:
-    key = _get_session_key(discipline, project_id, asset_id)
-    with _COLLAB_LOCK:
-        session = _COLLAB_SESSIONS.get(key)
-        if session is None:
-            session = {
-                "key": key,
-                "discipline": discipline,
-                "project_id": project_id,
-                "asset_id": asset_id,
-                "comments": [],
-                "approvals": [],
-                "updated_at": _utc_now_iso(),
-            }
-            _COLLAB_SESSIONS[key] = session
-        return session
-
-
-def _new_job_record(
-    *,
-    discipline: str,
-    payload: Mapping[str, Any],
-    calculation_type: str | None,
-) -> Dict[str, Any]:
-    return {
-        "job_id": str(uuid.uuid4()),
-        "discipline": discipline,
-        "payload": dict(payload),
-        "calculation_type": calculation_type,
-        "status": "pending",
-        "created_at": _utc_now_iso(),
-        "started_at": None,
-        "completed_at": None,
-        "result": None,
-        "error": None,
-    }
+dispatch_calculation = runtime_core.dispatch_calculation
+supported_disciplines = runtime_core.supported_disciplines
 
 
 def create_app() -> FastAPI:
@@ -297,8 +36,7 @@ def create_app() -> FastAPI:
 
     @app.get("/health")
     def health() -> Dict[str, Any]:
-        with _JOBS_LOCK:
-            pending_jobs = sum(1 for item in _JOBS.values() if item["status"] in {"pending", "running"})
+        pending_jobs = runtime_core.pending_job_count()
         return {
             "status": "ok",
             "disciplines": supported_disciplines(),
@@ -312,7 +50,7 @@ def create_app() -> FastAPI:
         payload: Dict[str, Any] = Body(default_factory=dict),
         calculation_type: str | None = Query(default=None),
     ) -> Dict[str, Any]:
-        if discipline not in RUNTIMES:
+        if discipline not in runtime_core.RUNTIMES:
             raise HTTPException(status_code=400, detail=f"Unsupported discipline: {discipline}")
         try:
             return dispatch_calculation(discipline, payload, calculation_type=calculation_type)
@@ -323,61 +61,28 @@ def create_app() -> FastAPI:
 
     @app.post("/api/jobs/cancel-all")
     def cancel_all_jobs() -> Dict[str, Any]:
-        cancelled = 0
-        with _JOBS_LOCK:
-            for key, job in _JOBS.items():
-                if job["status"] not in {"pending", "running"}:
-                    continue
-                job["status"] = "cancelled"
-                job["completed_at"] = _utc_now_iso()
-                future = _JOB_FUTURES.get(key)
-                if future:
-                    future.cancel()
-                persistence.upsert_job(job)
-                cancelled += 1
-        _audit("job.cancelled.bulk", {"count": cancelled})
+        cancelled = runtime_core.cancel_all_jobs()
+        runtime_core.audit("job.cancelled.bulk", {"count": cancelled})
         return {"status": "ok", "cancelled": cancelled}
 
     @app.post("/api/jobs/{job_id}/retry")
     def retry_job(job_id: str) -> Dict[str, Any]:
-        with _JOBS_LOCK:
-            original = _JOBS.get(job_id)
-            if not original:
-                raise HTTPException(status_code=404, detail="Job not found")
-            if original.get("discipline") not in RUNTIMES:
-                raise HTTPException(status_code=400, detail="Unsupported discipline")
-
-            cloned = _new_job_record(
-                discipline=str(original["discipline"]),
-                payload=original.get("payload", {}),
-                calculation_type=original.get("calculation_type"),
-            )
-            cloned_id = cloned["job_id"]
-            _JOBS[cloned_id] = cloned
-            _JOB_FUTURES[cloned_id] = _JOB_EXECUTOR.submit(_execute_job, cloned_id)
-            persistence.upsert_job(cloned)
-
-        _audit("job.retried", {"source_job_id": job_id, "new_job_id": cloned_id})
-        return {"job_id": cloned_id, "status": "pending"}
+        try:
+            retried = runtime_core.retry_job(job_id)
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        if retried is None:
+            raise HTTPException(status_code=404, detail="Job not found")
+        runtime_core.audit("job.retried", {"source_job_id": job_id, "new_job_id": retried["job_id"]})
+        return retried
 
     @app.post("/api/jobs/{job_id}/cancel")
     def cancel_job(job_id: str) -> Dict[str, Any]:
-        with _JOBS_LOCK:
-            job = _JOBS.get(job_id)
-            if not job:
-                raise HTTPException(status_code=404, detail="Job not found")
-            if job["status"] in {"success", "error", "cancelled"}:
-                return {"job_id": job_id, "status": job["status"]}
-
-            job["status"] = "cancelled"
-            job["completed_at"] = _utc_now_iso()
-            future = _JOB_FUTURES.get(job_id)
-            if future:
-                future.cancel()
-            persistence.upsert_job(job)
-
-        _audit("job.cancelled", {"job_id": job_id})
-        return {"job_id": job_id, "status": "cancelled"}
+        job = runtime_core.cancel_job(job_id)
+        if job is None:
+            raise HTTPException(status_code=404, detail="Job not found")
+        runtime_core.audit("job.cancelled", {"job_id": job_id})
+        return {"job_id": job_id, "status": job["status"]}
 
     @app.post("/api/jobs/{discipline}")
     def create_job(
@@ -385,18 +90,12 @@ def create_app() -> FastAPI:
         payload: Dict[str, Any] = Body(default_factory=dict),
         calculation_type: str | None = Query(default=None),
     ) -> Dict[str, Any]:
-        if discipline not in RUNTIMES:
+        if discipline not in runtime_core.RUNTIMES:
             raise HTTPException(status_code=400, detail=f"Unsupported discipline: {discipline}")
 
-        job_record = _new_job_record(discipline=discipline, payload=payload, calculation_type=calculation_type)
-        job_id = job_record["job_id"]
-
-        with _JOBS_LOCK:
-            _JOBS[job_id] = job_record
-            _JOB_FUTURES[job_id] = _JOB_EXECUTOR.submit(_execute_job, job_id)
-        persistence.upsert_job(job_record)
-
-        _audit("job.created", {"job_id": job_id, "discipline": discipline})
+        job_record = runtime_core.new_job_record(discipline=discipline, payload=payload, calculation_type=calculation_type)
+        job_id = runtime_core.create_job(job_record)
+        runtime_core.audit("job.created", {"job_id": job_id, "discipline": discipline})
         return {
             "job_id": job_id,
             "status": "pending",
@@ -404,17 +103,14 @@ def create_app() -> FastAPI:
 
     @app.get("/api/jobs/{job_id}")
     def get_job(job_id: str) -> Dict[str, Any]:
-        with _JOBS_LOCK:
-            job = _JOBS.get(job_id)
-            if not job:
-                raise HTTPException(status_code=404, detail="Job not found")
-            return dict(job)
+        job = runtime_core.get_job(job_id)
+        if not job:
+            raise HTTPException(status_code=404, detail="Job not found")
+        return job
 
     @app.get("/api/jobs")
     def list_jobs(status: str | None = Query(default=None), limit: int = Query(default=100, ge=1, le=1000)) -> Dict[str, Any]:
-        with _JOBS_LOCK:
-            jobs = list(_JOBS.values())
-        jobs.sort(key=lambda row: row["created_at"], reverse=True)
+        jobs = runtime_core.jobs_snapshot()
         if status:
             jobs = [row for row in jobs if row.get("status") == status]
         return {
@@ -427,7 +123,7 @@ def create_app() -> FastAPI:
         discipline: str,
         body: Dict[str, Any] = Body(default_factory=dict),
     ) -> Dict[str, Any]:
-        if discipline not in RUNTIMES:
+        if discipline not in runtime_core.RUNTIMES:
             raise HTTPException(status_code=400, detail=f"Unsupported discipline: {discipline}")
 
         base_input = body.get("base_input") if isinstance(body.get("base_input"), Mapping) else {}
@@ -462,7 +158,7 @@ def create_app() -> FastAPI:
                 }
             )
 
-        _audit("analysis.sensitivity", {"discipline": discipline, "variable": variable, "points": points})
+        runtime_core.audit("analysis.sensitivity", {"discipline": discipline, "variable": variable, "points": points})
         return {
             "discipline": discipline,
             "variable": variable,
@@ -476,9 +172,7 @@ def create_app() -> FastAPI:
         event_type: str | None = Query(default=None),
         limit: int = Query(default=200, ge=1, le=2000),
     ) -> Dict[str, Any]:
-        with _AUDIT_LOCK:
-            rows = list(_AUDIT_LOGS)
-        rows.sort(key=lambda row: row["timestamp"], reverse=True)
+        rows = runtime_core.recent_audit_logs()
         if event_type:
             rows = [row for row in rows if row.get("event_type") == event_type]
         return {
@@ -488,8 +182,7 @@ def create_app() -> FastAPI:
 
     @app.get("/api/audit/summary")
     def audit_summary() -> Dict[str, Any]:
-        with _AUDIT_LOCK:
-            rows = list(_AUDIT_LOGS)
+        rows = runtime_core.recent_audit_logs(limit=None)
         counts: MutableMapping[str, int] = {}
         for row in rows:
             key = str(row.get("event_type") or "unknown")
@@ -502,20 +195,12 @@ def create_app() -> FastAPI:
 
     @app.get("/api/perf/cache-stats")
     def cache_stats() -> Dict[str, Any]:
-        with _CACHE_LOCK:
-            size = len(_CACHE)
-        return {
-            "cache_size": size,
-            "cache_hits": _CACHE_HITS,
-            "cache_misses": _CACHE_MISSES,
-            "cache_ttl_sec": CACHE_TTL_SEC,
-        }
+        return runtime_core.cache_stats_snapshot()
 
     @app.post("/api/perf/cache-clear")
     def clear_cache() -> Dict[str, Any]:
-        with _CACHE_LOCK:
-            _CACHE.clear()
-        _audit("cache.cleared", {})
+        runtime_core.clear_cache()
+        runtime_core.audit("cache.cleared", {})
         return {"status": "ok"}
 
     @app.get("/api/perf/persistence-stats")
@@ -524,9 +209,9 @@ def create_app() -> FastAPI:
 
     @app.get("/api/collab/{discipline}/{project_id}/{asset_id}")
     def get_collab_session(discipline: str, project_id: str, asset_id: str) -> Dict[str, Any]:
-        if discipline not in RUNTIMES:
+        if discipline not in runtime_core.RUNTIMES:
             raise HTTPException(status_code=400, detail=f"Unsupported discipline: {discipline}")
-        session = _ensure_collab_session(discipline, project_id, asset_id)
+        session = runtime_core.ensure_collab_session(discipline, project_id, asset_id)
         return dict(session)
 
     @app.post("/api/collab/{discipline}/{project_id}/{asset_id}/comments")
@@ -536,7 +221,7 @@ def create_app() -> FastAPI:
         asset_id: str,
         body: Dict[str, Any] = Body(default_factory=dict),
     ) -> Dict[str, Any]:
-        session = _ensure_collab_session(discipline, project_id, asset_id)
+        session = runtime_core.ensure_collab_session(discipline, project_id, asset_id)
         author = str(body.get("author") or "anonymous")
         message = str(body.get("message") or "").strip()
         if not message:
@@ -546,11 +231,11 @@ def create_app() -> FastAPI:
             "id": str(uuid.uuid4()),
             "author": author,
             "message": message,
-            "created_at": _utc_now_iso(),
+            "created_at": runtime_core.utc_now_iso(),
         }
-        with _COLLAB_LOCK:
+        with runtime_core._COLLAB_LOCK:
             session["comments"].append(comment)
-            session["updated_at"] = _utc_now_iso()
+            session["updated_at"] = runtime_core.utc_now_iso()
         persistence.persist_collab_event(
             {
                 "id": comment["id"],
@@ -563,7 +248,7 @@ def create_app() -> FastAPI:
                 "payload": comment,
             }
         )
-        _audit("collab.comment", {"discipline": discipline, "project_id": project_id, "asset_id": asset_id, "author": author})
+        runtime_core.audit("collab.comment", {"discipline": discipline, "project_id": project_id, "asset_id": asset_id, "author": author})
         return {"comment": comment}
 
     @app.post("/api/collab/{discipline}/{project_id}/{asset_id}/approvals")
@@ -573,7 +258,7 @@ def create_app() -> FastAPI:
         asset_id: str,
         body: Dict[str, Any] = Body(default_factory=dict),
     ) -> Dict[str, Any]:
-        session = _ensure_collab_session(discipline, project_id, asset_id)
+        session = runtime_core.ensure_collab_session(discipline, project_id, asset_id)
         reviewer = str(body.get("reviewer") or "anonymous")
         decision = str(body.get("decision") or "review")
         note = str(body.get("note") or "")
@@ -583,11 +268,11 @@ def create_app() -> FastAPI:
             "reviewer": reviewer,
             "decision": decision,
             "note": note,
-            "created_at": _utc_now_iso(),
+            "created_at": runtime_core.utc_now_iso(),
         }
-        with _COLLAB_LOCK:
+        with runtime_core._COLLAB_LOCK:
             session["approvals"].append(approval)
-            session["updated_at"] = _utc_now_iso()
+            session["updated_at"] = runtime_core.utc_now_iso()
         persistence.persist_collab_event(
             {
                 "id": approval["id"],
@@ -600,7 +285,7 @@ def create_app() -> FastAPI:
                 "payload": approval,
             }
         )
-        _audit(
+        runtime_core.audit(
             "collab.approval",
             {
                 "discipline": discipline,
@@ -629,7 +314,7 @@ def create_app() -> FastAPI:
             "",
             f"- Project: {project_id}",
             f"- Asset: {asset_id}",
-            f"- Generated: {_utc_now_iso()}",
+            f"- Generated: {runtime_core.utc_now_iso()}",
             "",
             "## Scenario Results",
             f"- Count: {len(scenario_results)}",
@@ -640,7 +325,7 @@ def create_app() -> FastAPI:
         ]
 
         pack_json = {
-            "generated_at": _utc_now_iso(),
+            "generated_at": runtime_core.utc_now_iso(),
             "discipline": discipline,
             "project_id": project_id,
             "asset_id": asset_id,
@@ -649,8 +334,7 @@ def create_app() -> FastAPI:
             "batch_results": batch_results,
         }
 
-        with _AUDIT_LOCK:
-            logs = list(_AUDIT_LOGS)[-200:]
+        logs = runtime_core.recent_audit_logs(limit=200)
 
         stream = BytesIO()
         with zipfile.ZipFile(stream, mode="w", compression=zipfile.ZIP_DEFLATED) as archive:
@@ -660,7 +344,7 @@ def create_app() -> FastAPI:
             archive.writestr("README.txt", "Package includes summary, payload, and audit logs.")
 
         stream.seek(0)
-        _audit("report.package", {"discipline": discipline, "project_id": project_id, "asset_id": asset_id})
+        runtime_core.audit("report.package", {"discipline": discipline, "project_id": project_id, "asset_id": asset_id})
         return StreamingResponse(
             stream,
             media_type="application/zip",
@@ -672,12 +356,10 @@ def create_app() -> FastAPI:
         await websocket.accept()
         try:
             while True:
-                with _JOBS_LOCK:
-                    job = _JOBS.get(job_id)
-                    if not job:
-                        await websocket.send_json({"job_id": job_id, "status": "not_found"})
-                        break
-                    snapshot = dict(job)
+                snapshot = runtime_core.get_job(job_id)
+                if not snapshot:
+                    await websocket.send_json({"job_id": job_id, "status": "not_found"})
+                    break
                 await websocket.send_json(snapshot)
                 if snapshot.get("status") in {"success", "error", "cancelled"}:
                     break
