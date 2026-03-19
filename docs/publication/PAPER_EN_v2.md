@@ -1,8 +1,8 @@
 # A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering
 
 **Yuyong Kim**  
-*Independent Researcher*  
-12 years of professional experience in petrochemical EPC and process plant engineering  
+*University of Wisconsin–Madison*  
+M.S. Data, Insights & Analytics Candidate; B.S. Chemical & Biological Engineering; 12+ years of professional experience in petrochemical EPC and process plant engineering  
 [linkedin.com/in/yuyongkim](https://linkedin.com/in/yuyongkim)
 
 ---

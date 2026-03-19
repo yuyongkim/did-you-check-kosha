@@ -8,7 +8,7 @@
 
 ---
 
-Yuyong Kim is an independent researcher with 12 years of professional experience in petrochemical EPC and process plant engineering. His current work centers on AI-enabled engineering verification, regulatory knowledge integration, and reproducible evaluation for safety-critical industrial systems.
+Yuyong Kim is an M.S. Data, Insights & Analytics candidate at the University of Wisconsin–Madison and a University of Wisconsin–Madison B.S. Chemical & Biological Engineering alumnus with 12+ years of professional experience in petrochemical EPC and process plant engineering. His current work centers on AI-enabled engineering verification, regulatory knowledge integration, and reproducible evaluation for safety-critical industrial systems.
 
 ---
 
@@ -125,7 +125,7 @@ This system is documented in a peer-reviewed manuscript submitted to
 *Process Safety and Environmental Protection* (Elsevier, IF ~7).
 
 > *A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering*  
-> Yuyong Kim — Independent Researcher  
+> Yuyong Kim — University of Wisconsin–Madison  
 > arXiv preprint: [link coming after submission]
 
 Full manuscript: [`docs/publication/PAPER_EN_v2.md`](docs/publication/PAPER_EN_v2.md)
@@ -195,7 +195,9 @@ See [`LICENSE`](LICENSE) for full terms including KOSHA data usage notice.
 ## Author
 
 **Yuyong Kim**  
-Independent Researcher  
-12 years of professional experience in petrochemical EPC and process plant engineering
+University of Wisconsin–Madison  
+M.S. Data, Insights & Analytics Candidate  
+B.S. Chemical & Biological Engineering  
+12+ years of professional experience in petrochemical EPC and process plant engineering
 
 [linkedin.com/in/yuyongkim](https://www.linkedin.com/in/yuyongkim/)

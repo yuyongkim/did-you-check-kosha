@@ -120,7 +120,7 @@ In all three cases: KOSHA RAG identified a Korean-jurisdiction obligation the ca
 This system is documented in a peer-reviewed manuscript submitted to *Process Safety and Environmental Protection* (Elsevier, IF ~7).
 
 > *A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering*  
-> Yuyong Kim — Independent Researcher  
+> Yuyong Kim — University of Wisconsin–Madison  
 > [arXiv preprint — link coming]
 
 Full manuscript: [`docs/publication/PAPER_EN_v2.md`](docs/publication/PAPER_EN_v2.md)
@@ -181,8 +181,9 @@ For commercial use without open-sourcing your stack, contact me.
 ## Author
 
 **Yuyong Kim**  
-Senior Process Engineering Manager, 12 years in petrochemical EPC  
-LACC Ethane Cracker ($3.2B), Lake Charles LA  
-MSDIA Candidate, University of Wisconsin-Madison  
+University of Wisconsin–Madison  
+M.S. Data, Insights & Analytics Candidate  
+B.S. Chemical & Biological Engineering  
+12+ years of professional experience in petrochemical EPC and process plant engineering  
 
 [linkedin.com/in/yuyongkim](https://linkedin.com/in/yuyongkim)
