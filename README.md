@@ -18,7 +18,7 @@ Yuyong Kim is an M.S. Data, Insights & Analytics candidate at the University of 
 
 A multi-discipline AI verification platform for Korean process plant engineering.
 
-It runs seven engineering calculation engines (piping, vessel, rotating, electrical, instrumentation, steel, civil), validates them through a four-layer hybrid verification model, and then checks the results against **KOSHA's free public regulatory corpus** — 1,039 technical guidelines and 3,102 statutory provisions — using a local RAG layer.
+It runs seven engineering calculation engines (piping, vessel, rotating, electrical, instrumentation, steel, civil), validates them through a four-layer hybrid verification model, and then checks the results against **KOSHA's free public regulatory corpus** — 1,327 guide documents, 3,102 statutory provisions, and 16,174 indexed rows — using a local RAG layer.
 
 The core finding: **international code calculations can fully pass while Korean PSM regulations flag a compliance obligation**. We call this the *jurisdiction compliance gap*. This system catches it automatically.
 
@@ -59,7 +59,7 @@ ASME and API charge hundreds to thousands of dollars per document. KOSHA publish
 
 **KOSHA regulatory RAG**
 
-- 18,576 indexed rows (guides + statutory provisions)
+- 16,174 FTS-indexed rows (13,084 guide chunks + 3,090 law articles)
 - Local SQLite FTS5 — no cloud, no API key, no cost
 - Concept-aware synonym expansion for Korean/English bilingual retrieval
 - On-premises Qwen via Ollama — your data stays on your machine
