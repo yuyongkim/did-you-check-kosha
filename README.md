@@ -1,5 +1,7 @@
 # did-you-check-kosha
 
+**[한국어 README](README_KR.md)**
+
 > ASME standards: $hundreds per document.  
 > API codes: $thousands per suite.  
 > KOSHA regulatory corpus: free, public API, 18,576 provisions.  
@@ -51,7 +53,7 @@ ASME and API charge hundreds to thousands of dollars per document. KOSHA publish
 **Four-layer hybrid verification**
 
 1. Input validation — blocks garbage before calculation
-2. K-voting consensus — runs three independent paths, flags disagreement
+2. K-voting consensus — runs three numerically varied paths, flags disagreement
 3. Physics and code compliance — enforces domain-specific red flags
 4. Reverse verification — back-calculates inputs from outputs to check consistency
 
