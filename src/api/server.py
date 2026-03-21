@@ -26,12 +26,18 @@ def create_app() -> FastAPI:
         description="Seven-discipline verification API with queue/collab/audit/report extensions.",
     )
 
+    _ALLOWED_ORIGINS = [
+        "http://localhost:3000",
+        "http://localhost:3012",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:3012",
+    ]
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],
+        allow_origins=_ALLOWED_ORIGINS,
         allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
+        allow_methods=["GET", "POST"],
+        allow_headers=["Content-Type", "Authorization"],
     )
 
     @app.get("/health")
@@ -57,7 +63,9 @@ def create_app() -> FastAPI:
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except Exception as exc:  # noqa: BLE001
-            raise HTTPException(status_code=500, detail=f"Calculation failed: {exc}") from exc
+            import logging as _logging
+            _logging.getLogger(__name__).exception("Calculation failed for %s", discipline)
+            raise HTTPException(status_code=500, detail="Internal calculation error") from exc
 
     @app.post("/api/jobs/cancel-all")
     def cancel_all_jobs() -> Dict[str, Any]:

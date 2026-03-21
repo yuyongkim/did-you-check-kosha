@@ -95,7 +95,7 @@ export function DisciplineOverviewCard({
     <Link
       href={href}
       className={cn(
-        "group rounded-[8px] border border-border/85 bg-card p-4 shadow-panel transition-colors hover:border-primary/55",
+        "group rounded-2xl border bg-card/70 p-4 shadow-panel backdrop-blur-sm transition-all duration-[180ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:shadow-panel-hover hover:border-primary/40",
         token.border,
       )}
     >
@@ -107,7 +107,7 @@ export function DisciplineOverviewCard({
         <Badge variant={token.badge}>{statusLabel}</Badge>
       </div>
 
-      <div className={cn("mt-3 rounded-[6px] border border-border/75 px-3 py-2", token.panel)}>
+      <div className={cn("mt-3 rounded-lg border border-border/50 px-3 py-2", token.panel)}>
         <div className="grid grid-cols-2 gap-2 text-xs">
           <p className="text-muted-foreground">{copy.activeProjects}</p>
           <p className="font-data text-right font-semibold text-foreground">{activeProjects}</p>
@@ -127,12 +127,12 @@ export function DisciplineOverviewCard({
         <p className="line-clamp-2 text-muted-foreground">{headline}</p>
       </div>
 
-      <div className="mt-3 flex items-center justify-between border-t border-border/70 pt-2 text-xs font-semibold uppercase tracking-[0.08em] text-primary">
-        <span className="inline-flex items-center gap-1">
-          <ShieldCheck className="h-3.5 w-3.5" />
+      <div className="mt-3 flex items-center justify-between border-t border-border/40 pt-2.5 text-xs font-semibold uppercase tracking-[0.08em] text-primary">
+        <span className="inline-flex items-center gap-1.5">
+          <ShieldCheck className="h-3.5 w-3.5 transition-transform duration-150 group-hover:scale-110" />
           {copy.openWorkbench}
         </span>
-        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+        <ArrowRight className="h-3.5 w-3.5 transition-all duration-150 group-hover:translate-x-1" />
       </div>
     </Link>
   );

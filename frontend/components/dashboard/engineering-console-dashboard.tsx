@@ -247,10 +247,10 @@ export function EngineeringConsoleDashboard() {
   const lawRows: KoshaLawReference[] = latestRegulatory?.laws.slice(0, 3) ?? [];
 
   return (
-    <main className="flex-1 p-4">
+    <main className="flex-1 p-4 animate-fadeUp">
       <section className="grid gap-3 xl:grid-cols-[260px_minmax(0,1fr)_320px]">
         <aside className="space-y-3">
-          <div className="rounded-[8px] border border-border/90 bg-card p-3 shadow-panel">
+          <div className="rounded-2xl border border-border/60 bg-card/70 p-3 shadow-panel backdrop-blur-sm">
             <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">{copy.operationView}</p>
             <p className="mt-1 text-sm font-semibold text-secondary">{copy.navigator}</p>
             <p className="mt-1 text-xs text-muted-foreground">{copy.navigatorDesc}</p>
@@ -269,7 +269,7 @@ export function EngineeringConsoleDashboard() {
               <Link
                 key={item.discipline}
                 href={item.href}
-                className="block rounded-[8px] border border-border/85 bg-card p-3 shadow-panel transition-colors hover:border-primary/50"
+                className="block rounded-xl border border-border/50 bg-card/70 p-3 shadow-panel backdrop-blur-sm transition-all duration-[180ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:border-primary/40 hover:shadow-panel-hover"
               >
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex min-w-0 items-center gap-2">
@@ -304,12 +304,12 @@ export function EngineeringConsoleDashboard() {
         </aside>
 
         <section className="space-y-3">
-          <div className="rounded-[8px] border border-border/90 bg-card p-4 shadow-panel">
+          <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-card/80 to-card/60 p-5 shadow-panel-lg backdrop-blur-sm">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">{copy.console}</p>
-                <h1 className="mt-1 text-xl font-semibold tracking-tight text-secondary">{copy.title}</h1>
-                <p className="mt-1 text-xs text-muted-foreground">
+                <p className="section-kicker">{copy.console}</p>
+                <h1 className="mt-1.5 text-xl font-bold tracking-tight text-gradient-primary">{copy.title}</h1>
+                <p className="mt-1.5 max-w-lg text-xs leading-relaxed text-muted-foreground">
                   {copy.subtitle}
                 </p>
               </div>
@@ -342,24 +342,24 @@ export function EngineeringConsoleDashboard() {
               </div>
             </div>
 
-            <div className="mt-3 grid gap-2 md:grid-cols-4">
-              <div className="rounded-[8px] border border-border/80 bg-muted/45 px-3 py-2">
+            <div className="mt-4 grid gap-2.5 md:grid-cols-4">
+              <div className="rounded-xl border border-border/50 bg-gradient-to-b from-muted/40 to-muted/20 px-3 py-2.5 backdrop-blur-sm transition-ui hover:shadow-panel">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">{copy.activeAssets}</p>
-                <p className="font-data mt-1 text-lg font-semibold text-secondary">{activeProjects}</p>
+                <p className="font-data mt-1.5 text-xl font-bold text-secondary">{activeProjects}</p>
               </div>
-              <div className="rounded-[8px] border border-border/80 bg-muted/45 px-3 py-2">
+              <div className="rounded-xl border border-border/50 bg-gradient-to-b from-muted/40 to-muted/20 px-3 py-2.5 backdrop-blur-sm transition-ui hover:shadow-panel">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">{copy.todayRuns}</p>
-                <p className="font-data mt-1 text-lg font-semibold text-secondary">{todaysRuns}</p>
+                <p className="font-data mt-1.5 text-xl font-bold text-secondary">{todaysRuns}</p>
               </div>
-              <div className="rounded-[8px] border border-border/80 bg-muted/45 px-3 py-2">
+              <div className="rounded-xl border border-border/50 bg-gradient-to-b from-muted/40 to-muted/20 px-3 py-2.5 backdrop-blur-sm transition-ui hover:shadow-panel">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">{copy.compliance}</p>
-                <p className="font-data mt-1 text-lg font-semibold text-secondary">
+                <p className={cn("font-data mt-1.5 text-xl font-bold", complianceRate !== null && complianceRate >= 90 ? "text-success" : "text-secondary")}>
                   {complianceRate === null ? "-" : `${complianceRate}%`}
                 </p>
               </div>
-              <div className="rounded-[8px] border border-border/80 bg-muted/45 px-3 py-2">
+              <div className="rounded-xl border border-border/50 bg-gradient-to-b from-muted/40 to-muted/20 px-3 py-2.5 backdrop-blur-sm transition-ui hover:shadow-panel">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">{copy.avgResponse}</p>
-                <p className="font-data mt-1 text-lg font-semibold text-secondary">{avgResponseMs > 0 ? `${avgResponseMs} ms` : "-"}</p>
+                <p className="font-data mt-1.5 text-xl font-bold text-secondary">{avgResponseMs > 0 ? `${avgResponseMs} ms` : "-"}</p>
               </div>
             </div>
           </div>
@@ -383,7 +383,7 @@ export function EngineeringConsoleDashboard() {
         </section>
 
         <aside className="space-y-3 xl:sticky xl:top-[74px] xl:max-h-[calc(100vh-86px)] xl:overflow-y-auto">
-          <div className="rounded-[8px] border border-border/90 bg-card p-3 shadow-panel">
+          <div className="rounded-2xl border border-border/50 bg-card/70 p-3 shadow-panel backdrop-blur-sm">
             <p className="mb-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
               <Layers3 className="h-3.5 w-3.5" />
               {copy.aiVerification}
@@ -409,7 +409,7 @@ export function EngineeringConsoleDashboard() {
             )}
           </div>
 
-          <div className="rounded-[8px] border border-border/90 bg-card p-3 shadow-panel">
+          <div className="rounded-2xl border border-border/50 bg-card/70 p-3 shadow-panel backdrop-blur-sm">
             <p className="mb-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
               <BookText className="h-3.5 w-3.5" />
               {copy.koshaGuides}
@@ -444,7 +444,7 @@ export function EngineeringConsoleDashboard() {
             )}
           </div>
 
-          <div className="rounded-[8px] border border-border/90 bg-card p-3 shadow-panel">
+          <div className="rounded-2xl border border-border/50 bg-card/70 p-3 shadow-panel backdrop-blur-sm">
             <p className="mb-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
               <Gavel className="h-3.5 w-3.5" />
               {copy.legalCompliance}
@@ -481,7 +481,7 @@ export function EngineeringConsoleDashboard() {
             )}
           </div>
 
-          <div className="rounded-[8px] border border-border/90 bg-card p-3 shadow-panel">
+          <div className="rounded-2xl border border-border/50 bg-card/70 p-3 shadow-panel backdrop-blur-sm">
             <p className="mb-2 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
               <Clock3 className="h-3.5 w-3.5" />
               {copy.latestExecution}
@@ -511,7 +511,7 @@ export function EngineeringConsoleDashboard() {
         </aside>
       </section>
 
-      <section className="mt-3 grid gap-2 rounded-[8px] border border-border/85 bg-card px-3 py-2 shadow-panel md:grid-cols-3">
+      <section className="mt-3 grid gap-2 rounded-xl border border-border/50 bg-card/60 px-4 py-3 shadow-panel backdrop-blur-sm md:grid-cols-3">
         <div className="inline-flex items-center gap-2 text-xs text-muted-foreground">
           <Factory className="h-4 w-4 text-primary" />
           <span>

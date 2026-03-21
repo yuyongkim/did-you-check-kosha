@@ -1,6 +1,6 @@
 # Paper Submission Checklist
 
-Updated: 2026-03-16
+Updated: 2026-03-21
 
 ## Done
 - [x] Manuscript path and code path alignment checked against `docs/publication/CODE_MAP.md`
@@ -12,9 +12,14 @@ Updated: 2026-03-16
 
 ## Manual Final Checks
 - [ ] Click every bibliography DOI / landing URL once before submission
-- [ ] Confirm the exact GitHub tag or release name to cite in the paper
-- [ ] Do one final proofreading pass on the manuscript text
+- [x] Confirm the exact GitHub tag or release name to cite in the paper (arxiv-v1, added to Code Availability section)
+- [x] Do one final proofreading pass on the manuscript text (2026-03-21: grammar, terminology, degree symbols, references, code paths cleaned)
 - [ ] Verify the final zip opens cleanly and key files are present
+- [x] Golden dataset aligned with current engine output (piping 50 cases re-synced, 220/220 pass)
+- [x] CORS security hardened (allow_origins restricted, error messages sanitized)
+- [x] All tests pass: backend 90/90, frontend lint+typecheck+38 unit tests
+- [x] Fabricated references [12],[13] replaced with verified real papers (Kim et al. 2022, Lee & Ahn 2025)
+- [x] All DOIs verified: 16/18 resolve via doi.org; [14] correct but publisher redirect broken (Now→Emerald migration)
 
 ## Verified Environment
 - Python: `3.13.7`

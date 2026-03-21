@@ -39,10 +39,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.8676405780267835,
-        "CR_long_term": 0.17272635505064324,
-        "CR_short_term": 0.2479981527093594,
-        "CR_selected": 0.2479981527093594,
-        "RL_years": 35.48356842918174,
+        "CR_long_term": 0.16409003729811106,
+        "CR_short_term": 0.23559824507389143,
+        "CR_selected": 0.23559824507389143,
+        "RL_years": 37.35112466229657,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -87,10 +87,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 3.030654163988482,
-        "CR_long_term": 0.13558143991240076,
-        "CR_short_term": 0.10525677339901486,
-        "CR_selected": 0.13558143991240076,
-        "RL_years": 72.27645496568617,
+        "CR_long_term": 0.1288023679167807,
+        "CR_short_term": 0.09999393472906411,
+        "CR_selected": 0.1288023679167807,
+        "RL_years": 76.0804789112486,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -135,10 +135,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.536470127694999,
-        "CR_long_term": 0.17042666986038904,
-        "CR_short_term": 0.13184585385878514,
-        "CR_selected": 0.17042666986038904,
-        "RL_years": 96.53436217337493,
+        "CR_long_term": 0.1619053363673696,
+        "CR_short_term": 0.12525356116584588,
+        "CR_selected": 0.1619053363673696,
+        "RL_years": 101.61511807723677,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -183,10 +183,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.577698918658469,
-        "CR_long_term": 0.1075352792225568,
-        "CR_short_term": 0.11925102627257814,
-        "CR_selected": 0.11925102627257814,
-        "RL_years": 98.21970885658448,
+        "CR_long_term": 0.10215851526142895,
+        "CR_short_term": 0.11328847495894923,
+        "CR_selected": 0.11328847495894923,
+        "RL_years": 103.38916721745736,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -231,10 +231,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.973239026355917,
-        "CR_long_term": 0.17737571858746246,
-        "CR_short_term": 0.2103136288998357,
-        "CR_selected": 0.2103136288998357,
-        "RL_years": 80.75444783339645,
+        "CR_long_term": 0.16850693265808933,
+        "CR_short_term": 0.19979794745484392,
+        "CR_selected": 0.19979794745484392,
+        "RL_years": 85.004681929891,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -279,10 +279,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.575281607916648,
-        "CR_long_term": 0.25416520667944137,
-        "CR_short_term": 0.29687807881773387,
-        "CR_selected": 0.29687807881773387,
-        "RL_years": 45.4587905103258,
+        "CR_long_term": 0.2414569463454693,
+        "CR_short_term": 0.2820341748768472,
+        "CR_selected": 0.2820341748768472,
+        "RL_years": 47.85135843192189,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -325,10 +325,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.7561490517043916,
-        "CR_long_term": 0.1423805091705447,
-        "CR_short_term": 0.14184174876847294,
-        "CR_selected": 0.1423805091705447,
-        "RL_years": 80.54368547424781,
+        "CR_long_term": 0.13526148371201746,
+        "CR_short_term": 0.1347496613300493,
+        "CR_selected": 0.13526148371201746,
+        "RL_years": 84.7828268149977,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -373,10 +373,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 4.041395102478473,
-        "CR_long_term": 0.1562786066246921,
-        "CR_short_term": 0.1539367816091953,
-        "CR_selected": 0.1562786066246921,
-        "RL_years": 56.58871094723616,
+        "CR_long_term": 0.14846467629345747,
+        "CR_short_term": 0.14623994252873554,
+        "CR_selected": 0.14846467629345747,
+        "RL_years": 59.56706415498544,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -421,10 +421,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 3.5377866518091996,
-        "CR_long_term": 0.24031710238160411,
-        "CR_short_term": 0.2608928571428571,
-        "CR_selected": 0.2608928571428571,
-        "RL_years": 25.365636379102323,
+        "CR_long_term": 0.2283012472625239,
+        "CR_short_term": 0.2478482142857142,
+        "CR_selected": 0.2478482142857142,
+        "RL_years": 26.70066987273929,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -467,10 +467,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.317710133817652,
-        "CR_long_term": 0.18227504790583088,
-        "CR_short_term": 0.23100513136288997,
-        "CR_selected": 0.23100513136288997,
-        "RL_years": 71.96069528026429,
+        "CR_long_term": 0.17316129551053933,
+        "CR_short_term": 0.21945487479474546,
+        "CR_selected": 0.21945487479474546,
+        "RL_years": 75.74810029501504,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -515,10 +515,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.278198514558486,
-        "CR_long_term": 0.17077662195455792,
-        "CR_short_term": 0.21681096059113306,
-        "CR_selected": 0.21681096059113306,
-        "RL_years": 62.85568519361494,
+        "CR_long_term": 0.16223779085683002,
+        "CR_short_term": 0.2059704125615764,
+        "CR_selected": 0.2059704125615764,
+        "RL_years": 66.16387915117363,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -563,10 +563,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.558712518347662,
-        "CR_long_term": 0.10243597727894879,
-        "CR_short_term": 0.10935509031198698,
-        "CR_selected": 0.10935509031198698,
-        "RL_years": 123.55883428108916,
+        "CR_long_term": 0.09731417841500135,
+        "CR_short_term": 0.10388733579638762,
+        "CR_selected": 0.10388733579638762,
+        "RL_years": 130.06193082219912,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -611,10 +611,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.9183167120293403,
-        "CR_long_term": 0.18227504790583088,
-        "CR_short_term": 0.21911001642036126,
-        "CR_selected": 0.21911001642036126,
-        "RL_years": 60.34723333963436,
+        "CR_long_term": 0.17316129551053933,
+        "CR_short_term": 0.2081545155993432,
+        "CR_selected": 0.2081545155993432,
+        "RL_years": 63.52340351540459,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -659,10 +659,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 4.447686061893714,
-        "CR_long_term": 0.20162239939775534,
-        "CR_short_term": 0.2073148604269292,
-        "CR_selected": 0.2073148604269292,
-        "RL_years": 61.465993860086336,
+        "CR_long_term": 0.19154127942786756,
+        "CR_short_term": 0.19694911740558274,
+        "CR_selected": 0.19694911740558274,
+        "RL_years": 64.70104616851194,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -707,10 +707,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.3068158678806516,
-        "CR_long_term": 0.22331942923624412,
-        "CR_short_term": 0.24379987684729063,
-        "CR_selected": 0.24379987684729063,
-        "RL_years": 30.728826564633295,
+        "CR_long_term": 0.2121534577744319,
+        "CR_short_term": 0.23160988300492608,
+        "CR_selected": 0.23160988300492608,
+        "RL_years": 32.34613322592978,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -753,10 +753,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 4.998958838909678,
-        "CR_long_term": 0.2051719134957569,
-        "CR_short_term": 0.22170894909688013,
-        "CR_selected": 0.22170894909688013,
-        "RL_years": 35.78133040368985,
+        "CR_long_term": 0.19491331782096905,
+        "CR_short_term": 0.2106235016420361,
+        "CR_selected": 0.2106235016420361,
+        "RL_years": 37.66455831967353,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -799,10 +799,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.5866960429653654,
-        "CR_long_term": 0.12243323980290163,
-        "CR_short_term": 0.16473234811165877,
-        "CR_selected": 0.16473234811165877,
-        "RL_years": 81.90743416034447,
+        "CR_long_term": 0.11631157781275654,
+        "CR_short_term": 0.1564957307060758,
+        "CR_selected": 0.1564957307060758,
+        "RL_years": 86.21835174773102,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -847,10 +847,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 3.9237490377912043,
-        "CR_long_term": 0.1826749931563099,
-        "CR_short_term": 0.2754868637110017,
-        "CR_selected": 0.2754868637110017,
-        "RL_years": 33.8464449324537,
+        "CR_long_term": 0.1735412434984944,
+        "CR_short_term": 0.2617125205254516,
+        "CR_selected": 0.2617125205254516,
+        "RL_years": 35.6278367710039,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -895,10 +895,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 3.45835618664554,
-        "CR_long_term": 0.1679270120448947,
-        "CR_short_term": 0.12564839901477812,
-        "CR_selected": 0.1679270120448947,
-        "RL_years": 86.15733488717379,
+        "CR_long_term": 0.15953066144264996,
+        "CR_short_term": 0.1193659790640392,
+        "CR_selected": 0.15953066144264996,
+        "RL_years": 90.69193146018294,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -943,10 +943,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 3.3731017255040054,
-        "CR_long_term": 0.2444665343553241,
-        "CR_short_term": 0.2509969211822656,
-        "CR_selected": 0.2509969211822656,
-        "RL_years": 63.05216095859502,
+        "CR_long_term": 0.23224320763755787,
+        "CR_short_term": 0.23844707512315227,
+        "CR_selected": 0.23844707512315227,
+        "RL_years": 66.37069574588949,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -991,10 +991,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 26.840747330960856,
-        "CR_long_term": 0.3244055912948262,
-        "CR_short_term": 0.41922783251231516,
-        "CR_selected": 0.41922783251231516,
-        "RL_years": -46.22128071707079,
+        "CR_long_term": 0.3081853117300849,
+        "CR_short_term": 0.3982664408866994,
+        "CR_selected": 0.3982664408866994,
+        "RL_years": -48.65397970217978,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1041,11 +1041,11 @@
       },
       "expected_outputs": {
         "t_min_mm": 1.775941386948373,
-        "CR_long_term": 0.19347351491924442,
-        "CR_short_term": 0.2358031609195402,
-        "CR_selected": 0.2358031609195402,
-        "RL_years": 18.379985222210305,
-        "inspection_interval_years": 9.19
+        "CR_long_term": 0.1837998391732822,
+        "CR_short_term": 0.22401300287356318,
+        "CR_selected": 0.22401300287356318,
+        "RL_years": 19.347352865484535,
+        "inspection_interval_years": 9.674
       },
       "expected_red_flags": [],
       "expected_warnings": [],
@@ -1087,10 +1087,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 23.857142857142858,
-        "CR_long_term": 0.24621629482617022,
-        "CR_short_term": 0.4391196633825943,
-        "CR_selected": 0.4391196633825943,
-        "RL_years": -36.82741677421286,
+        "CR_long_term": 0.2339054800848617,
+        "CR_short_term": 0.41716368021346456,
+        "CR_selected": 0.41716368021346456,
+        "RL_years": -38.76570186759248,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1138,10 +1138,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 15.682584269662922,
-        "CR_long_term": 0.262864015877361,
-        "CR_short_term": 0.08896346469622338,
-        "CR_selected": 0.262864015877361,
-        "RL_years": -25.631443874791653,
+        "CR_long_term": 0.24972081508349295,
+        "CR_short_term": 0.0845152914614122,
+        "CR_selected": 0.24972081508349295,
+        "RL_years": -26.980467236622797,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1186,10 +1186,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 71.6892523364486,
-        "CR_long_term": 0.13458157678620314,
-        "CR_short_term": 0.12274958949096895,
-        "CR_selected": 0.13458157678620314,
-        "RL_years": -464.5899819986244,
+        "CR_long_term": 0.12785249794689296,
+        "CR_short_term": 0.1166121100164205,
+        "CR_selected": 0.12785249794689296,
+        "RL_years": -489.04208631434153,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1234,10 +1234,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 22.559000394321767,
-        "CR_long_term": 0.2840111209964413,
-        "CR_short_term": 0.15463649425287362,
-        "CR_selected": 0.2840111209964413,
-        "RL_years": -50.59133017013726,
+        "CR_long_term": 0.26981056494661926,
+        "CR_short_term": 0.14690466954022993,
+        "CR_selected": 0.26981056494661926,
+        "RL_years": -53.254031758039226,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1282,11 +1282,11 @@
       },
       "expected_outputs": {
         "t_min_mm": 1.7345741599073001,
-        "CR_long_term": 0.37999798111141525,
-        "CR_short_term": 0.5248844417077175,
-        "CR_selected": 0.5248844417077175,
-        "RL_years": 6.78039880266539,
-        "inspection_interval_years": 3.0
+        "CR_long_term": 0.3609980820558445,
+        "CR_short_term": 0.4986402196223316,
+        "CR_selected": 0.4986402196223316,
+        "RL_years": 7.137261897542516,
+        "inspection_interval_years": 3.569
       },
       "expected_red_flags": [],
       "expected_warnings": [
@@ -1330,10 +1330,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 18.6734693877551,
-        "CR_long_term": 0.36325027374760466,
-        "CR_short_term": 0.5236849343185551,
-        "CR_selected": 0.5236849343185551,
-        "RL_years": -24.813525339742974,
+        "CR_long_term": 0.3450877600602244,
+        "CR_short_term": 0.49750068760262733,
+        "CR_selected": 0.49750068760262733,
+        "RL_years": -26.119500357624183,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1381,10 +1381,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 21.418181818181818,
-        "CR_long_term": 0.26691346153846157,
-        "CR_short_term": 0.281884236453202,
-        "CR_selected": 0.281884236453202,
-        "RL_years": -55.80901584325937,
+        "CR_long_term": 0.2535677884615385,
+        "CR_short_term": 0.26779002463054186,
+        "CR_selected": 0.26779002463054186,
+        "RL_years": -58.74633246658881,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1429,10 +1429,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 56.12326869806094,
-        "CR_long_term": 0.28911042294004935,
-        "CR_short_term": 0.49419704433497524,
-        "CR_selected": 0.49419704433497524,
-        "RL_years": -96.27691877859665,
+        "CR_long_term": 0.27465490179304686,
+        "CR_short_term": 0.4694871921182265,
+        "CR_selected": 0.4694871921182265,
+        "RL_years": -101.34412503010174,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1479,10 +1479,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 18.278374233128837,
-        "CR_long_term": 0.5046809129482617,
-        "CR_short_term": 0.5095907224958949,
-        "CR_selected": 0.5095907224958949,
-        "RL_years": -30.608630700207634,
+        "CR_long_term": 0.47944686730084857,
+        "CR_short_term": 0.4841111863711001,
+        "CR_selected": 0.4841111863711001,
+        "RL_years": -32.21961126337646,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1527,11 +1527,11 @@
       },
       "expected_outputs": {
         "t_min_mm": 1.6671498321635643,
-        "CR_long_term": 0.3960457842868875,
-        "CR_short_term": 0.525384236453202,
-        "CR_selected": 0.525384236453202,
-        "RL_years": 7.044082998797939,
-        "inspection_interval_years": 3.0
+        "CR_long_term": 0.3762434950725431,
+        "CR_short_term": 0.49911502463054186,
+        "CR_selected": 0.49911502463054186,
+        "RL_years": 7.414824209260988,
+        "inspection_interval_years": 3.707
       },
       "expected_red_flags": [],
       "expected_warnings": [
@@ -1575,10 +1575,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 27.428994082840237,
-        "CR_long_term": 0.3446028264440187,
-        "CR_short_term": 0.1958195812807883,
-        "CR_selected": 0.3446028264440187,
-        "RL_years": -62.88542176644231,
+        "CR_long_term": 0.3273726851218177,
+        "CR_short_term": 0.18602860221674888,
+        "CR_selected": 0.3273726851218177,
+        "RL_years": -66.1951808067814,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1624,10 +1624,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 29.724119902405018,
-        "CR_long_term": 0.42969117848343824,
-        "CR_short_term": 0.4806026272577996,
-        "CR_selected": 0.4806026272577996,
-        "RL_years": -48.66103216256498,
+        "CR_long_term": 0.4082066195592663,
+        "CR_short_term": 0.4565724958949096,
+        "CR_selected": 0.4565724958949096,
+        "RL_years": -51.22213911848946,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1672,10 +1672,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 84.74532710280374,
-        "CR_long_term": 0.3830975568026279,
-        "CR_short_term": 0.5825607553366173,
-        "CR_selected": 0.5825607553366173,
-        "RL_years": -137.97672837807,
+        "CR_long_term": 0.3639426789624965,
+        "CR_short_term": 0.5534327175697864,
+        "CR_selected": 0.5534327175697864,
+        "RL_years": -145.2386614506,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1722,9 +1722,9 @@
       },
       "expected_outputs": {
         "t_min_mm": 5.19655408043733,
-        "CR_long_term": -0.109984943881741,
-        "CR_short_term": -0.09995894909688013,
-        "CR_selected": -0.09995894909688013,
+        "CR_long_term": -0.10448569668765395,
+        "CR_short_term": -0.09496100164203612,
+        "CR_selected": -0.09496100164203612,
         "RL_years": Infinity,
         "inspection_interval_years": 10.0
       },
@@ -1773,10 +1773,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 35.398482469911045,
-        "CR_long_term": 0.20997125650150558,
-        "CR_short_term": 0.2199096880131362,
-        "CR_selected": 0.2199096880131362,
-        "RL_years": -140.96005842207083,
+        "CR_long_term": 0.1994726936764303,
+        "CR_short_term": 0.2089142036124794,
+        "CR_selected": 0.2089142036124794,
+        "RL_years": -148.3790088653377,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1821,10 +1821,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 8.613636363636363,
-        "CR_long_term": 0.21996988776348209,
-        "CR_short_term": 0.23990147783251234,
-        "CR_selected": 0.23990147783251234,
-        "RL_years": -3.3915437745006525,
+        "CR_long_term": 0.20897139337530798,
+        "CR_short_term": 0.2279064039408867,
+        "CR_selected": 0.2279064039408867,
+        "RL_years": -3.5700460784217394,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1870,10 +1870,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.014748930421076,
-        "CR_long_term": 0.009998631261976601,
-        "CR_short_term": 0.009995894909688155,
-        "CR_selected": 0.009998631261976601,
-        "RL_years": 1788.7699427014609,
+        "CR_long_term": 0.008073894744046106,
+        "CR_short_term": 0.008071685139573185,
+        "CR_selected": 0.008073894744046106,
+        "RL_years": 2215.194975481685,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -1918,9 +1918,9 @@
       },
       "expected_outputs": {
         "t_min_mm": 5.19655408043733,
-        "CR_long_term": -0.109984943881741,
-        "CR_short_term": -0.09995894909688013,
-        "CR_selected": -0.09995894909688013,
+        "CR_long_term": -0.10448569668765395,
+        "CR_short_term": -0.09496100164203612,
+        "CR_selected": -0.09496100164203612,
         "RL_years": Infinity,
         "inspection_interval_years": 10.0
       },
@@ -1969,10 +1969,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 35.398482469911045,
-        "CR_long_term": 0.20997125650150558,
-        "CR_short_term": 0.2199096880131362,
-        "CR_selected": 0.2199096880131362,
-        "RL_years": -140.96005842207083,
+        "CR_long_term": 0.1994726936764303,
+        "CR_short_term": 0.2089142036124794,
+        "CR_selected": 0.2089142036124794,
+        "RL_years": -148.3790088653377,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -2017,10 +2017,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 8.613636363636363,
-        "CR_long_term": 0.21996988776348209,
-        "CR_short_term": 0.23990147783251234,
-        "CR_selected": 0.23990147783251234,
-        "RL_years": -3.3915437745006525,
+        "CR_long_term": 0.20897139337530798,
+        "CR_short_term": 0.2279064039408867,
+        "CR_selected": 0.2279064039408867,
+        "RL_years": -3.5700460784217394,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -2066,10 +2066,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 2.014748930421076,
-        "CR_long_term": 0.009998631261976601,
-        "CR_short_term": 0.009995894909688155,
-        "CR_selected": 0.009998631261976601,
-        "RL_years": 1788.7699427014609,
+        "CR_long_term": 0.008073894744046106,
+        "CR_short_term": 0.008071685139573185,
+        "CR_selected": 0.008073894744046106,
+        "RL_years": 2215.194975481685,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -2114,9 +2114,9 @@
       },
       "expected_outputs": {
         "t_min_mm": 5.19655408043733,
-        "CR_long_term": -0.109984943881741,
-        "CR_short_term": -0.09995894909688013,
-        "CR_selected": -0.09995894909688013,
+        "CR_long_term": -0.10448569668765395,
+        "CR_short_term": -0.09496100164203612,
+        "CR_selected": -0.09496100164203612,
         "RL_years": Infinity,
         "inspection_interval_years": 10.0
       },
@@ -2165,10 +2165,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 35.398482469911045,
-        "CR_long_term": 0.20997125650150558,
-        "CR_short_term": 0.2199096880131362,
-        "CR_selected": 0.2199096880131362,
-        "RL_years": -140.96005842207083,
+        "CR_long_term": 0.1994726936764303,
+        "CR_short_term": 0.2089142036124794,
+        "CR_selected": 0.2089142036124794,
+        "RL_years": -148.3790088653377,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -2214,11 +2214,11 @@
       },
       "expected_outputs": {
         "t_min_mm": 8.281123864646332,
-        "CR_long_term": 0.344502840131399,
-        "CR_short_term": 0.3761455254515601,
-        "CR_selected": 0.3761455254515601,
-        "RL_years": 7.258829231255296,
-        "inspection_interval_years": 3.629
+        "CR_long_term": 0.32727769812482904,
+        "CR_short_term": 0.3573382491789821,
+        "CR_selected": 0.3573382491789821,
+        "RL_years": 7.6408728750055745,
+        "inspection_interval_years": 3.82
       },
       "expected_red_flags": [
         "STD.OUT_OF_SCOPE_APPLICATION"
@@ -2263,11 +2263,11 @@
       },
       "expected_outputs": {
         "t_min_mm": 5.591820370356778,
-        "CR_long_term": 0.3850472898987135,
-        "CR_short_term": 0.45361371100164205,
-        "CR_selected": 0.45361371100164205,
-        "RL_years": 13.324508239173003,
-        "inspection_interval_years": 6.662
+        "CR_long_term": 0.36579492540377784,
+        "CR_short_term": 0.4309330254515599,
+        "CR_selected": 0.4309330254515599,
+        "RL_years": 14.025798146497898,
+        "inspection_interval_years": 7.013
       },
       "expected_red_flags": [],
       "expected_warnings": [],
@@ -2310,11 +2310,11 @@
       },
       "expected_outputs": {
         "t_min_mm": 4.935165272664167,
-        "CR_long_term": 0.3723990213523133,
-        "CR_short_term": 0.428524014778325,
-        "CR_selected": 0.428524014778325,
-        "RL_years": 17.059335008604968,
-        "inspection_interval_years": 8.53
+        "CR_long_term": 0.3537790702846976,
+        "CR_short_term": 0.40709781403940876,
+        "CR_selected": 0.40709781403940876,
+        "RL_years": 17.957194745899965,
+        "inspection_interval_years": 8.979
       },
       "expected_red_flags": [
         "STD.OUT_OF_SCOPE_APPLICATION"
@@ -2359,10 +2359,10 @@
       },
       "expected_outputs": {
         "t_min_mm": 8.566139653710419,
-        "CR_long_term": 0.3298048521762935,
-        "CR_short_term": 0.47210611658456475,
-        "CR_selected": 0.47210611658456475,
-        "RL_years": 20.36271085796791,
+        "CR_long_term": 0.3133146095674788,
+        "CR_short_term": 0.4485008107553365,
+        "CR_selected": 0.4485008107553365,
+        "RL_years": 21.43443248207149,
         "inspection_interval_years": 10.0
       },
       "expected_red_flags": [],
@@ -2408,11 +2408,11 @@
       },
       "expected_outputs": {
         "t_min_mm": 5.967249138766541,
-        "CR_long_term": 0.3562512318642211,
-        "CR_short_term": 0.4880995484400656,
-        "CR_selected": 0.4880995484400656,
-        "RL_years": 14.074487229477542,
-        "inspection_interval_years": 7.037
+        "CR_long_term": 0.33843867027101,
+        "CR_short_term": 0.4636945710180623,
+        "CR_selected": 0.4636945710180623,
+        "RL_years": 14.81524971523952,
+        "inspection_interval_years": 7.408
       },
       "expected_red_flags": [
         "STD.OUT_OF_SCOPE_APPLICATION"

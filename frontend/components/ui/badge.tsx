@@ -3,11 +3,12 @@ import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const styleMap = {
-  ok: "border-success/35 bg-success/12 text-success",
-  warning: "border-warning/35 bg-warning/15 text-warning",
-  blocked: "border-danger/35 bg-danger/12 text-danger",
-  error: "border-danger/35 bg-danger/12 text-danger",
-  neutral: "border-border/90 bg-muted/70 text-muted-foreground",
+  ok: "border-success/30 bg-success/10 text-success dark:border-success/40 dark:bg-success/15",
+  warning: "border-warning/30 bg-warning/10 text-warning dark:border-warning/40 dark:bg-warning/15",
+  blocked: "border-danger/30 bg-danger/10 text-danger dark:border-danger/40 dark:bg-danger/15",
+  error: "border-danger/30 bg-danger/10 text-danger dark:border-danger/40 dark:bg-danger/15",
+  neutral: "border-border/70 bg-muted/60 text-muted-foreground",
+  primary: "border-primary/30 bg-primary/10 text-primary dark:border-primary/40 dark:bg-primary/15",
 };
 
 export function Badge({
@@ -22,7 +23,7 @@ export function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-[6px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em]",
+        "inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.06em] transition-colors duration-150",
         styleMap[variant],
         className,
       )}
@@ -31,4 +32,3 @@ export function Badge({
     </span>
   );
 }
-

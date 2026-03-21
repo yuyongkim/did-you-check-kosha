@@ -50,14 +50,16 @@ export function Sidebar() {
       };
 
   return (
-    <aside className="sticky top-[60px] flex h-[calc(100vh-60px)] w-full flex-col gap-3 border-r border-border/80 bg-muted/35 p-3">
-      <div className="rounded-[8px] border border-border/90 bg-card p-3 shadow-panel">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">{copy.navigation}</p>
-        <p className="mt-1 text-sm font-semibold text-secondary">{copy.workbench}</p>
-        <p className="mt-1 text-[11px] text-muted-foreground">{copy.helper}</p>
+    <aside className="sticky top-[60px] flex h-[calc(100vh-60px)] w-full flex-col gap-3 border-r border-border/60 bg-muted/25 p-3 backdrop-blur-sm">
+      {/* Header card with glass effect */}
+      <div className="rounded-2xl border border-border/60 bg-card/70 p-4 shadow-panel backdrop-blur-sm">
+        <p className="section-kicker">{copy.navigation}</p>
+        <p className="mt-1.5 text-sm font-semibold text-secondary">{copy.workbench}</p>
+        <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">{copy.helper}</p>
       </div>
 
-      <nav className="flex flex-1 flex-col gap-2 overflow-y-auto">
+      {/* Nav items */}
+      <nav className="flex flex-1 flex-col gap-1.5 overflow-y-auto scrollbar-thin pr-0.5">
         {NAV_ITEMS.map((item) => {
           const active = basePath === item.href;
           const status = results[item.discipline]?.status;
@@ -66,55 +68,64 @@ export function Sidebar() {
               key={item.href}
               href={localizedHref(item.href)}
               className={cn(
-                "group cursor-pointer rounded-[8px] border px-3 py-2 text-sm font-medium transition-colors",
+                "group relative flex cursor-pointer items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-[180ms] ease-[cubic-bezier(0.2,0.8,0.2,1)]",
                 active
-                  ? "border-primary/90 bg-primary text-accent-foreground shadow-[inset_3px_0_0_0_rgba(255,255,255,0.4)]"
-                  : "border-border/80 bg-card/90 text-foreground hover:border-primary/45 hover:bg-primary/10",
+                  ? "border border-primary/80 bg-primary text-accent-foreground shadow-[0_2px_12px_hsl(var(--primary)/0.25)]"
+                  : "border border-transparent text-foreground hover:border-border/60 hover:bg-card/70 hover:shadow-panel",
               )}
             >
-              <div className="flex items-center justify-between gap-2">
-                <div className="flex min-w-0 items-center gap-2">
-                  <span
-                    className={cn(
-                      "inline-flex h-6 w-6 items-center justify-center rounded-[6px] border text-[10px] font-bold tracking-wide",
-                      active ? "border-white/30 bg-white/15 text-white" : "border-border bg-muted text-secondary",
-                    )}
-                  >
-                    {item.tag}
-                  </span>
-                  <span className="truncate">{language === "ko" ? (koLabelMap[item.label] ?? item.label) : item.label}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Badge variant={statusBadgeVariant(status)}>
-                    {status ? calculationStatusLabel(status, language) : copy.idle}
-                  </Badge>
-                  <ArrowRight className={cn("h-3.5 w-3.5 transition-opacity", active ? "opacity-100" : "opacity-40 group-hover:opacity-100")} />
-                </div>
+              <div className="flex min-w-0 items-center gap-2.5">
+                <span
+                  className={cn(
+                    "inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg text-[10px] font-bold tracking-wide transition-colors duration-150",
+                    active
+                      ? "bg-white/20 text-white"
+                      : "bg-muted/80 text-secondary group-hover:bg-primary/10 group-hover:text-primary",
+                  )}
+                >
+                  {item.tag}
+                </span>
+                <span className="truncate">{language === "ko" ? (koLabelMap[item.label] ?? item.label) : item.label}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Badge variant={statusBadgeVariant(status)}>
+                  {status ? calculationStatusLabel(status, language) : copy.idle}
+                </Badge>
+                <ArrowRight
+                  className={cn(
+                    "h-3.5 w-3.5 transition-all duration-150",
+                    active
+                      ? "translate-x-0 opacity-100"
+                      : "-translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-60",
+                  )}
+                />
               </div>
             </Link>
           );
         })}
       </nav>
-      <div className="space-y-2">
+
+      {/* Bottom action links */}
+      <div className="space-y-1.5">
         <Link
           href={localizedHref("/glossary")}
-          className="inline-flex w-full items-center justify-between rounded-[8px] border border-border/90 bg-card px-3 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary/60 hover:bg-primary/10"
+          className="group inline-flex w-full items-center justify-between rounded-xl border border-border/60 bg-card/60 px-3 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition-all duration-[180ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:border-primary/40 hover:bg-card/80 hover:shadow-panel"
         >
-          <span className="inline-flex items-center gap-2">
-            <BookOpenText className="h-4 w-4 text-primary" />
+          <span className="inline-flex items-center gap-2.5">
+            <BookOpenText className="h-4 w-4 text-primary transition-transform duration-150 group-hover:scale-110" />
             {copy.glossary}
           </span>
-          <ArrowRight className="h-3.5 w-3.5" />
+          <ArrowRight className="h-3.5 w-3.5 opacity-40 transition-all duration-150 group-hover:translate-x-0.5 group-hover:opacity-80" />
         </Link>
         <Link
           href={localizedHref("/calculation-guide")}
-          className="inline-flex w-full items-center justify-between rounded-[8px] border border-primary/45 bg-primary/10 px-3 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-accent-foreground"
+          className="group inline-flex w-full items-center justify-between rounded-xl border border-primary/30 bg-primary/8 px-3 py-2.5 text-sm font-semibold text-primary transition-all duration-[180ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:bg-primary hover:text-accent-foreground hover:shadow-[0_2px_12px_hsl(var(--primary)/0.2)]"
         >
-          <span className="inline-flex items-center gap-2">
-            <Info className="h-4 w-4" />
+          <span className="inline-flex items-center gap-2.5">
+            <Info className="h-4 w-4 transition-transform duration-150 group-hover:scale-110" />
             {copy.calcGuide}
           </span>
-          <ArrowRight className="h-3.5 w-3.5" />
+          <ArrowRight className="h-3.5 w-3.5 opacity-60 transition-all duration-150 group-hover:translate-x-0.5 group-hover:opacity-100" />
         </Link>
       </div>
     </aside>
