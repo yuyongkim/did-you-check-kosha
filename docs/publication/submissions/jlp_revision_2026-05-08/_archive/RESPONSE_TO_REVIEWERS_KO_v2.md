@@ -22,6 +22,8 @@
 
 **프레이밍.** Reviewer 2의 의견에 따라 약어(Acronyms) 표와 핵심 정의(Key Definitions) 절을 추가하였고, 명시적인 의무적(Mandatory) 대 권고적(Guidance) 규제 분류 라벨(§4.3, Table 5), FFS 대 EPC 소절(§7.4), Reviewer 2께서 그대로 요청하신 방법 비교 표(§7.2 Table 8), §6.4 Case 3에 제256조 verbatim 한국어 원문과 영어 working translation 병기, 그리고 Recall@3/Recall@5에서 통계적 검정력의 한계를 숨기지 않고 드러내는 §6.6의 민감도 분석 단락을 추가하였습니다. 이 모든 사항은 정본 개정판 `PAPER_JLP_REVISED_v3.md`에 반영되어 있습니다.
 
+**피어 리딩 피드백 (본 개정 패스에서 추가).** 개정 준비 과정에서 받은 피어 리딩 피드백에 따라 세 개의 추가 Limitations 문장(§8 항목 1, 3, 4)을 추가하여, implementation-verification 대 predictive 구분, piping-vessel coupling 집중, K≥3 retrieval CI-includes-zero caveat를 본문 인라인뿐 아니라 한계 수준에서도 명시적으로 만들었습니다. 동일 패스에서 §6.5에 쿼리 생성 독립성 인정을 추가하고, VES-REAL-001 프레이밍을 "이중 검증"에서 파이프라인 실행 증거로 재조정하였으며(§A.5/§A.6), 위에서 기술한 주장 다운스케일링 절을 적용하였습니다.
+
 ---
 
 ## Reviewer 1 답변
@@ -94,6 +96,8 @@ Reviewer 1께서는 주제가 흥미롭고 산업적으로 적용 가능하다�
 
 *후기 보강 (개정 이후):* Appendix B.1은 `outputs/per_discipline_accuracy.md`에서 학제별 계산 정확도를 그대로 보고합니다 — piping 50/50, vessel 30/30, rotating 30/30, electrical 30/30, instrumentation 30/30, steel 25/25, civil 25/25 — 모두 1.0000이며 red-flag precision과 recall도 모든 학제에서 1.0000입니다. 이 균일한 정확도가 외부 ground-truth fidelity가 아닌 self-consistency를 측정한다는 caveat을 §8 Limitation 8로 명시적으로 표면화하여 over-read를 방지합니다.
 
+*후기 보강 (주장 다운스케일링, 피어 리딩 피드백 반영):* Abstract, §1 contributions, §9 Conclusion은 이제 학제 간 증거가 piping-vessel 결합(26건 중 22건 검출)에 집중되며 나머지 쌍에 대해서는 탐색적이라는 점을 명시적으로 진술합니다. "7-discipline integrated framework" 프레이밍은 아키텍처적 주장으로 보존되지만, 7개 학제 전반에 걸쳐 균등하게 검증된 경험적 증거로는 더 이상 제시되지 않습니다.
+
 ### Comment R1.4: No figures; RQ2 three gaps without further discussion; basis for comparison
 
 > *"No Figures and minimal data to support conclusions. RQ2 for example lists three gaps detected, but there's no further discussion, was this expected, is it significant, were any gaps missed? There really needs to be a basis for comparison, otherwise it is difficult for me to accept the results."*
@@ -134,7 +138,7 @@ Reviewer 1께서는 주제가 흥미롭고 산업적으로 적용 가능하다�
 
 **근거**: `scripts/run_negative_case_rag.py`로 산출된 `outputs/negative_case_pip_gold_003.md`; `datasets/golden_standards/piping_golden_dataset_v1.json:PIP-GOLD-003` (검증된 명세); §6.1 구현 검증 프레이밍; §6.7 음성 사례 단락; `PAPER_JLP_REVISED_v3.md`의 §8 Limitations 1 및 5.
 
-**보충 (실플랜트 검증, 본 개정에서 추가).** 합성 데이터만에 의존한다는 우려를 프레이밍 논리뿐 아니라 양성적 증거로도 다루기 위해, 원고에 **Appendix A — Real-Plant Data-Sheet Validation (VES-REAL-001)** 을 추가하였습니다. VES-REAL-001은 가동 중인 석유화학 프로젝트에서 가져온 익명화된 저온 플레어 KO 드럼(SA-240 304/304L, 0.343 MPa(g) + 완전진공, 190 °C / -190 °C, ID 5,000 mm, T-T 20,400 mm)이며, 발주처/시공사/라이선서/인명/위치/문서 ID 식별자는 모두 사전에 제거되었습니다. 미수정 파이프라인 실행 결과 +190 °C 측에서 결정론적 UG-27 지배 두께 **7.237 mm** (엔진 신뢰도 `medium`, red flag 없음)가 산출되고, 명세 충실 쿼리에 대한 KOSHA RAG 검색은 top-10에서 **mandatory law_article 2건 + KOSHA 기술지침 8건**을 반환합니다(top-1 guidance: `M-111-2015` 압력용기의 용접설계에 관한 기술지침; rank-2 mandatory: 안전검사 고시 제9조). 좁은 한국어 용어 프로브는 추가로 **산업안전보건기준에 관한 규칙 제266조** (플레어·릴리프 라인 차단밸브 설치 금지)를 rank 5에서 표면화합니다. 전체 증거는 `scripts/run_real_case_ves001_rag.py` → `outputs/real_case_ves001_rag.{json,md}` 로 재현 가능합니다. 따라서 본 개정에서 우리는 본 프레임워크에 대해 **합성 + 실데이터 이중 검증(synthetic + real-data dual validation)** 을 주장할 수 있게 되었습니다. 실제 실패 결과에 대한 예측 검증은 여전히 미해결 향후 과제 항목으로 남습니다(§8 Limitation 1).
+**보충 (실플랜트 파이프라인 실행 증거, 본 개정에서 추가).** 합성 데이터만에 의존한다는 우려를 프레이밍 논리뿐 아니라 양성적 증거로도 다루기 위해, 원고에 **Appendix A — Real-Plant Data-Sheet Validation (VES-REAL-001)** 을 추가하였습니다. VES-REAL-001은 가동 중인 석유화학 프로젝트에서 가져온 익명화된 저온 플레어 KO 드럼(SA-240 304/304L, 0.343 MPa(g) + 완전진공, 190 °C / -190 °C, ID 5,000 mm, T-T 20,400 mm)이며, 발주처/시공사/라이선서/인명/위치/문서 ID 식별자는 모두 사전에 제거되었습니다. 미수정 파이프라인 실행 결과 +190 °C 측에서 결정론적 UG-27 지배 두께 **7.237 mm** (엔진 신뢰도 `medium`, red flag 없음)가 산출되고, 명세 충실 쿼리에 대한 KOSHA RAG 검색은 top-10에서 **mandatory law_article 2건 + KOSHA 기술지침 8건**을 반환합니다(top-1 guidance: `M-111-2015` 압력용기의 용접설계에 관한 기술지침; rank-2 mandatory: 안전검사 고시 제9조). 좁은 한국어 용어 프로브는 추가로 **산업안전보건기준에 관한 규칙 제266조** (플레어·릴리프 라인 차단밸브 설치 금지)를 rank 5에서 표면화합니다. 전체 증거는 `scripts/run_real_case_ves001_rag.py` → `outputs/real_case_ves001_rag.{json,md}` 로 재현 가능합니다. 본 개정은 이를 외부 이중 검증이 아니라 **합성 골든 케이스 + 실플랜트 파이프라인 실행 증거(synthetic golden cases + real-plant pipeline-execution evidence)** 로 위치 짓습니다: 본 부록은 엔진과 검색 파이프라인이 실제 EPC 데이터 시트에서 깨끗하게 실행되고 관할권 관련 mandatory 조항을 표면화함을 입증하지만, 독립 감사된 참조에 대한 외부 정확도 검증을 구성하지는 않습니다(데이터 시트는 설계 입력을 제공하나 독립적으로 측정된 출력은 제공하지 않음). 실제 실패 결과에 대한 예측 검증은 여전히 미해결 향후 과제 항목으로 남습니다(§8 Limitation 1).
 
 *독립 전문가 검증에 관하여:* 주 저자는 12년 이상의 석유화학 EPC 경력을 가진 공정 플랜트 엔지니어이며, 계산 엔진 규칙과 케이스 구성은 해당 도메인 실무를 인코딩한 것입니다. 이를 독립 검증으로 주장하지 않으며 — 그것은 분리된 전문가 패널을 요구합니다 — §8 Limitation 7로 명시하고 외부 KOSHA PSM 감사관 대비 전향적 향후 연구 항목으로 문서화합니다.
 
@@ -201,6 +205,8 @@ Reviewer 2께서는 본 주제를 *"highly aligned with modern challenges in dig
 **근거**: §6.1 구현 검증 프레이밍; §6.5 표본 크기 정당화 + Tables 6 및 6b; §6.6 민감도 단락; `scripts/bootstrap_ci_rag.py` (n=50, 1,000회 재표집, seed = 20260508)에서 산출된 `outputs/rag_bootstrap_ci_report.md`; §8 Limitations 1 및 3.
 
 *후기 보강 (개정 이후):* recall 분석을 K=10까지 확장했습니다 (Appendix B.2, `outputs/rag_retrieval_extended.md`). Enhanced FTS 곡선은 K=3부터 0.8621에서 포화하고, Plain FTS 곡선은 K∈{9, 10}에서 0.8012까지 계속 상승합니다; Enhanced − Plain 페어드 차이의 95% 부트스트랩 CI는 K∈{1, 2}에서만 0을 배제합니다. 또한 검색 실패 인벤토리 (Appendix B.4)를 공개하여 K=5 miss 모두를 두 진단 카테고리 중 하나로 태그합니다 — 7건 중 6건이 `paraphrase_too_loose`에 해당 — 잔존하는 약점을 숨기지 않고 검사 가능하게 만들었습니다.
+
+*후기 보강 (쿼리 생성 독립성, 피어 리딩 피드백 반영):* §6.5는 이제 50개 쿼리가 시스템 설계자와 동일인에 의해 작성되었음을 명시적으로 인정합니다. 편향 위험을 완화하기 위해 (a) 시스템 내부 동의어 목록이 아닌 KOSHA 기술지침 표제 및 확립된 한국 공학 어휘에서 도출된 그럴듯한 공학적 패러프레이징으로 쿼리 구성을 제한하였고, (b) 전체 쿼리 집합을 `datasets/kosha_rag/rag_eval_queries.json` 으로 독립 검사를 위해 공개하였으며, (c) 위의 실패 인벤토리를 보고하였습니다 — 7건 중 6건이 `paraphrase_too_loose`에 속하며, 이는 독립적으로 작성된 쿼리 집합도 노출시킬 실패 모드입니다. 분리된 어노테이터 풀에 의한 독립 쿼리 집합 작성은 향후 작업 항목으로 문서화되어 있습니다(§8 Limitation 7).
 
 ### Comment R2.4: Application scope — HAZOP clarification
 

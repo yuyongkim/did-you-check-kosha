@@ -2,6 +2,24 @@
 
 Tracks every change between the originally submitted manuscript (`MANUSCRIPT (1).docx`) and successive revision versions stored in `docs/publication/`.
 
+## v3.2 → v3.3 (peer-reading feedback integration)
+
+External peer feedback on the v3.2 draft surfaced one blind-review format
+risk and four substantive defensibility improvements. All applied:
+
+- MUST-FIX: blind-review format compliance (no in-text "reviewer N" mentions in manuscript body)
+- HIGH-1: claim downscaling — "seven-discipline integrated" framing balanced with explicit piping-vessel coupling concentration
+- HIGH-2: three new Limitations sentences (impl-verif vs predictive; coupling-family skew; R@K provisional)
+- HIGH-3: query-generation independence acknowledged and defended
+- HIGH-4: VES-REAL-001 retoned from "dual validation" to "pipeline-execution evidence"
+- OPT-1: cover letter compressed (~50%)
+- OPT-2: §6.1 synthetic-defence paragraph compressed
+- OPT-3: §6/§7 indirect VES-REAL-001 mention
+
+Title intentionally not changed (left to author judgement).
+
+Response letters EN + KO mirrored.
+
 ## v3.1 → v3.2 (Extended validation evidence + author-expertise honesty)
 
 Five medium-ROI scripts added (per-discipline accuracy, R@K extension, pipeline latency, retrieval failure inventory, end-to-end reproducibility runner) and integrated as Appendix B with corresponding response-letter supplements.
