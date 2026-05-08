@@ -75,6 +75,8 @@ Reviewer 1 found the topic interesting and applicable to industry but raised fiv
 
 **Evidence**: `outputs/rag_retrieval_report.md` (per-group R@5); `outputs/ablation_failure_mode_partition.md` (per-family decomposition); §6.1 Table 2 + §6.3 + §6.5 Table 6b in `PAPER_JLP_REVISED_v3.md`.
 
+*Supplementary (post-revision):* Appendix B.1 reports the per-discipline calculation accuracy verbatim from `outputs/per_discipline_accuracy.md`: piping 50/50, vessel 30/30, rotating 30/30, electrical 30/30, instrumentation 30/30, steel 25/25, civil 25/25 — all 1.0000 with red-flag precision and recall both 1.0000 across every discipline. We deliberately surface the caveat that this measures self-consistency rather than external ground-truth fidelity (Limitation 8, §8) so that the uniform accuracy is not over-read.
+
 ### Comment R1.4: No figures; RQ2 three gaps without further discussion; basis for comparison
 
 > *"No Figures and minimal data to support conclusions. RQ2 for example lists three gaps detected, but there's no further discussion, was this expected, is it significant, were any gaps missed? There really needs to be a basis for comparison, otherwise it is difficult for me to accept the results."*
@@ -106,6 +108,10 @@ Reviewer 1 found the topic interesting and applicable to industry but raised fiv
 > [§6.7] **Negative case (no false-positive flag).** […] Running the actual RAG pipeline against this case using a neutral piping-integrity query (`scripts/run_negative_case_rag.py`, `outputs/negative_case_pip_gold_003.md`), the system returns **0 mandatory hits and 10 guidance hits in the top-10**, with the top result being `B-M-18-2026` (KOSHA Technical Regulation for Piping Life Management, guidance class). No jurisdiction-specific mandatory obligation is triggered. This empirically demonstrates that the KOSHA RAG layer is not biased to fire on every input.
 
 **Evidence**: `outputs/negative_case_pip_gold_003.md` produced by `scripts/run_negative_case_rag.py`; `datasets/golden_standards/piping_golden_dataset_v1.json:PIP-GOLD-003` (verified spec); §6.1 implementation-verification framing; §6.7 negative-case paragraph; §8 Limitations 1 and 5 in `PAPER_JLP_REVISED_v3.md`.
+
+**Supplement (real-plant validation, added in this revision).** To address the synthetic-data-only objection with positive evidence rather than only with the framing argument above, we added **Appendix A — Real-Plant Data-Sheet Validation (VES-REAL-001)** to the manuscript. VES-REAL-001 is an anonymised cryogenic flare knockout drum (SA-240 304/304L, 0.343 MPa(g) + Full Vacuum, 190 °C / -190 °C, ID 5,000 mm, T-T 20,400 mm) drawn from an operating petrochemical project; all client/contractor/licensor/personnel/location/document-ID identifiers were stripped before inclusion. Running the unmodified pipeline produces a deterministic UG-27 controlling thickness of **7.237 mm** at the +190 °C side (engine confidence `medium`, no red flags) and a KOSHA RAG retrieval that, on the spec-faithful query, returns **2 mandatory law-article hits + 8 KOSHA technical guides** in the top-10 (top-1 guidance: `M-111-2015` Pressure Vessel Weld Design Technical Guide; rank-2 mandatory: 안전검사 고시 제9조). A narrower Korean-term probe additionally surfaces **Article 266** of the *Rules on Occupational Safety and Health Standards* (block-valve prohibition on flare and relief paths) at rank 5. The full evidence is reproducible from `scripts/run_real_case_ves001_rag.py` → `outputs/real_case_ves001_rag.{json,md}`. We can therefore now claim **synthetic + real-data dual validation** for the framework on this revision; predictive validation against real failure outcomes remains the open future-work item (§8 Limitation 1).
+
+*On the question of independent expert validation:* The principal author is a process plant engineer with 12+ years of petrochemical EPC experience; the calculation-engine rules and the case construction encode that domain practice. We deliberately do not claim that this constitutes independent validation — that requires a disjoint expert panel and is documented as Limitation 7 (§8) and as a prospective future-work item against external KOSHA PSM auditors.
 
 ---
 
@@ -155,6 +161,8 @@ Reviewer 2 endorsed the topic as *"highly aligned with modern challenges in digi
 > [§6.6 sensitivity] The Recall@3 and Recall@5 deltas of +0.12 each have paired CIs of **[−0.02, +0.26]** and are *not* statistically distinguishable from zero on a benchmark of this size. The cross-discipline ablation deltas of +1.0 on aligned boundary and aligned failure subsets are categorical (every case in those subsets is blocked under the validator and none are blocked without it), giving a deterministic separation that does not require a confidence interval.
 
 **Evidence**: §6.1 implementation-verification framing; §6.5 sample-size justification + Tables 6 and 6b; §6.6 sensitivity paragraph; `outputs/rag_bootstrap_ci_report.md` from `scripts/bootstrap_ci_rag.py` (n=50, 1000 resamples, seed = 20260508); §8 Limitations 1 and 3.
+
+*Supplementary (post-revision):* The recall analysis is now extended to K=10 (Appendix B.2, `outputs/rag_retrieval_extended.md`). The Enhanced FTS curve saturates at 0.8621 from K = 3, and the Plain FTS curve continues to climb to 0.8012 at K∈{9, 10}; the paired-bootstrap 95% CI on the Enhanced − Plain delta excludes zero only at K∈{1, 2}. We additionally publish a retrieval failure inventory (Appendix B.4) tagging every K=5 miss with one of two diagnosis categories — six of seven failures fall in `paraphrase_too_loose` — to make the residual weakness inspectable rather than hidden.
 
 ### Comment R2.4: Application scope — HAZOP clarification
 

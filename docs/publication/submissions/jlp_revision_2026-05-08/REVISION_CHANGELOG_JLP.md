@@ -2,6 +2,70 @@
 
 Tracks every change between the originally submitted manuscript (`MANUSCRIPT (1).docx`) and successive revision versions stored in `docs/publication/`.
 
+## v3.1 → v3.2 (Extended validation evidence + author-expertise honesty)
+
+Five medium-ROI scripts added (per-discipline accuracy, R@K extension, pipeline latency, retrieval failure inventory, end-to-end reproducibility runner) and integrated as Appendix B with corresponding response-letter supplements.
+
+### Added scripts
+- `scripts/dump_per_discipline_accuracy.py`
+- `scripts/extend_recall_at_k.py`
+- `scripts/measure_pipeline_latency.py`
+- `scripts/dump_retrieval_failures.py`
+- `scripts/reproduce_all.py`
+
+### Added outputs
+- `outputs/per_discipline_accuracy.{json,md}`
+- `outputs/rag_retrieval_extended.{json,md}`
+- `outputs/pipeline_latency.{json,md}`
+- `outputs/retrieval_failure_inventory.{json,md}`
+
+### Manuscript edits
+- §3: end-to-end latency sentence (P1)
+- §6.5: R@K saturation paragraph (P2)
+- New Appendix B (B.1–B.5) (P3)
+- §8 Limitation 7 (independent expert validation) and Limitation 8 (per-discipline self-consistency) (P4)
+
+### Response letter edits (EN + KO)
+- R1.3 supplementary (per-discipline accuracy + caveat) (P5/P8)
+- R2.3 supplementary (R@K saturation + failure inventory) (P6/P8)
+- R1.5 supplementary (author-expertise honesty + Limitation 7 cross-reference) (P7/P8)
+
+### Reproducibility
+`python scripts/reproduce_all.py` regenerates every figure, table, and `outputs/*.md` cited in the manuscript. Clean-checkout run: **13/13 scripts pass**.
+
+## v3 → v3.1 — 2026-05-09 (Real-plant case addition)
+
+**Trigger**: Author supplied a real EPC vessel data sheet (a cryogenic flare knockout drum from an operating petrochemical project). Goal: address Reviewer 1's R1.5 synthetic-data-only concern with a positive real-plant validation case, not only with framing language.
+
+### Hard rules applied to this addition
+
+- **Anonymisation**: all client / contractor / licensor / personnel / location / project-name / document-ID / equipment-tag identifiers were stripped from the data sheet before any value entered the version-controlled tree. The anonymous case ID `VES-REAL-001` is the only label used in the manuscript, scripts, response letters, and outputs. The source PDF stays in `docs/publication/submissions/Plant_data/` and is not redistributed; no image, watermark, page header, or layout fragment from the source PDF has been embedded in the publication bundle.
+- **Numbers come from running code, not from invention**. Every number in Appendix A is sourced from `outputs/real_case_ves001_rag.json` produced by `scripts/run_real_case_ves001_rag.py`. KOSHA reference codes are quoted only as the live SQLite FTS index returned them.
+- **Joint efficiency was not stated on the data sheet**: documented as an explicit assumption (E = 1.0, full radiography per ASME Section VIII Div.1 UW-12) in the Appendix A spec table and §A.2 footnote.
+- **Cryogenic side (-190 °C)** is outside the engine's Layer-1 temperature range (-50, 650) °C. Rather than fake the field, the script invokes the underlying UG-27 calculation function directly (`src.vessel.calculations.calculate_required_shell_thickness_mm`) using the lowest tabulated allowable stress (S at 20 °C), and reports both the engine's full red-flag response and the directly-computed cryogenic-side thickness; the controlling thickness is the hot-side number (7.237 mm), reported transparently.
+
+### Files added or modified in v3.1
+
+| File | Status |
+|---|---|
+| `scripts/run_real_case_ves001_rag.py` | new — reproducible runner; modelled on `scripts/run_negative_case_rag.py` |
+| `outputs/real_case_ves001_rag.json` | new — verbatim engine + RAG outputs (UTF-8) |
+| `outputs/real_case_ves001_rag.md` | new — human-readable report |
+| `docs/publication/submissions/jlp_revision_2026-05-08/PAPER_JLP_REVISED_v3.md` | added §1 one-clause reference to Appendix A; added **Appendix A — Real-Plant Data-Sheet Validation (VES-REAL-001)** with §A.1 anonymisation policy, §A.2 spec table, §A.3 calculation results, §A.4 RAG retrieval (both variants), §A.5 "what this confirms", §A.6 R1.5 framing update |
+| `docs/publication/submissions/jlp_revision_2026-05-08/RESPONSE_TO_REVIEWERS_v2.md` | appended a "**Supplement (real-plant validation, added in this revision)**" paragraph at the end of the R1.5 author-response, citing Appendix A and the new evidence files |
+| `docs/publication/submissions/jlp_revision_2026-05-08/RESPONSE_TO_REVIEWERS_KO_v2.md` | appended the Korean equivalent (`**보충 (실플랜트 검증, 본 개정에서 추가).**`) at the end of the R1.5 답변 |
+| `docs/publication/submissions/jlp_revision_2026-05-08/PAPER_JLP_REVISED_v3.docx` | regenerated via Pandoc 3.9 from the updated `.md` |
+| `docs/publication/submissions/jlp_revision_2026-05-08/RESPONSE_TO_REVIEWERS_v2.docx` | regenerated via Pandoc 3.9 |
+| `docs/publication/submissions/jlp_revision_2026-05-08/RESPONSE_TO_REVIEWERS_KO_v2.docx` | regenerated via Pandoc 3.9 |
+| `docs/publication/submissions/jlp_revision_2026-05-08/REVISION_CHANGELOG_JLP.md` | this update |
+
+### Headline outcome
+
+- **Calculation**: hot-side controlling UG-27 required shell thickness = **7.237 mm** (S = 118.7 MPa @ 190 °C, E = 1.0, R = 2,500 mm, P = 0.343 MPa, CA = 0); reverse pressure recovers to within 1×10⁻¹³ %; engine confidence `medium` with one warning (`DATA.VESSEL_DIMENSION_CONTEXT_MISSING` — head depth not on the data sheet, default substituted). Cold-side direct UG-27 = 6.506 mm using S @ 20 °C; engine full-run on cold side correctly rejects with `STD.OUT_OF_SCOPE_APPLICATION` as expected.
+- **RAG (Variant A — spec-faithful, vessel-discipline filter)**: top-10 = **2 mandatory + 8 guidance**; rank-1 = `M-111-2015` (Pressure Vessel Weld Design Technical Guide, guidance); first mandatory at rank 2 = `안전검사 고시 제9조`. Strongly relevant set (M-111, M-69, M-113, M-184, M-109 all returned).
+- **RAG (Variant B — narrow Korean-term probe, no discipline filter)**: top-10 = **1 mandatory + 9 guidance**; rank-1 = `C-C-86-2026` (PSM Integrated-Form Preparation); first mandatory at rank 5 = `제266조 차단밸브의 설치 금지` (block-valve prohibition for relief / flare paths — directly relevant to flare-drum service).
+- **R1.5 framing decision**: both retrievals returned coherent, jurisdiction-relevant results, so the manuscript adopts the strong **synthetic + real-data dual validation** language without hedging. The independent claim that the system *predicts a real failure outcome* remains explicitly out of scope (§8 Limitation 1) — VES-REAL-001 verifies that the system runs end-to-end on real data, not that it predicts plant outcomes.
+
 ## v3 — 2026-05-08 (post all-TODO completion + bootstrap CIs + data-drift reconciliation)
 
 **Trigger**: All v2 TODOs resolved; two parallel diagnostic agents produced (a) four new analysis scripts and (b) full KOSHA encoding diagnosis + 12-missing-articles refetch attempt. Three previously-unflagged issues surfaced and were patched in v3.

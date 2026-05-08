@@ -92,6 +92,8 @@ Reviewer 1께서는 주제가 흥미롭고 산업적으로 적용 가능하다�
 
 **근거**: `outputs/rag_retrieval_report.md` (그룹별 R@5); `outputs/ablation_failure_mode_partition.md` (패밀리별 분해); `PAPER_JLP_REVISED_v3.md`의 §6.1 Table 2 + §6.3 + §6.5 Table 6b.
 
+*후기 보강 (개정 이후):* Appendix B.1은 `outputs/per_discipline_accuracy.md`에서 학제별 계산 정확도를 그대로 보고합니다 — piping 50/50, vessel 30/30, rotating 30/30, electrical 30/30, instrumentation 30/30, steel 25/25, civil 25/25 — 모두 1.0000이며 red-flag precision과 recall도 모든 학제에서 1.0000입니다. 이 균일한 정확도가 외부 ground-truth fidelity가 아닌 self-consistency를 측정한다는 caveat을 §8 Limitation 8로 명시적으로 표면화하여 over-read를 방지합니다.
+
 ### Comment R1.4: No figures; RQ2 three gaps without further discussion; basis for comparison
 
 > *"No Figures and minimal data to support conclusions. RQ2 for example lists three gaps detected, but there's no further discussion, was this expected, is it significant, were any gaps missed? There really needs to be a basis for comparison, otherwise it is difficult for me to accept the results."*
@@ -131,6 +133,10 @@ Reviewer 1께서는 주제가 흥미롭고 산업적으로 적용 가능하다�
 > [§6.7] **음성 사례(거짓양성 플래그 없음).** […] 중립적 배관 무결성 쿼리(`scripts/run_negative_case_rag.py`, `outputs/negative_case_pip_gold_003.md`)를 사용하여 이 케이스에 대해 실제 RAG 파이프라인을 실행하면, 시스템은 top-10에서 **0개 mandatory 히트와 10개 guidance 히트** 를 반환하며 최상위 결과는 `B-M-18-2026` (KOSHA 배관 수명 관리 기술 기준, guidance 분류)이다. 어떤 관할권 특이적 mandatory 의무도 발동되지 않는다. 이는 KOSHA RAG 계층이 모든 입력에 대해 발화하는 편향이 없음을 경험적으로 입증한다.
 
 **근거**: `scripts/run_negative_case_rag.py`로 산출된 `outputs/negative_case_pip_gold_003.md`; `datasets/golden_standards/piping_golden_dataset_v1.json:PIP-GOLD-003` (검증된 명세); §6.1 구현 검증 프레이밍; §6.7 음성 사례 단락; `PAPER_JLP_REVISED_v3.md`의 §8 Limitations 1 및 5.
+
+**보충 (실플랜트 검증, 본 개정에서 추가).** 합성 데이터만에 의존한다는 우려를 프레이밍 논리뿐 아니라 양성적 증거로도 다루기 위해, 원고에 **Appendix A — Real-Plant Data-Sheet Validation (VES-REAL-001)** 을 추가하였습니다. VES-REAL-001은 가동 중인 석유화학 프로젝트에서 가져온 익명화된 저온 플레어 KO 드럼(SA-240 304/304L, 0.343 MPa(g) + 완전진공, 190 °C / -190 °C, ID 5,000 mm, T-T 20,400 mm)이며, 발주처/시공사/라이선서/인명/위치/문서 ID 식별자는 모두 사전에 제거되었습니다. 미수정 파이프라인 실행 결과 +190 °C 측에서 결정론적 UG-27 지배 두께 **7.237 mm** (엔진 신뢰도 `medium`, red flag 없음)가 산출되고, 명세 충실 쿼리에 대한 KOSHA RAG 검색은 top-10에서 **mandatory law_article 2건 + KOSHA 기술지침 8건**을 반환합니다(top-1 guidance: `M-111-2015` 압력용기의 용접설계에 관한 기술지침; rank-2 mandatory: 안전검사 고시 제9조). 좁은 한국어 용어 프로브는 추가로 **산업안전보건기준에 관한 규칙 제266조** (플레어·릴리프 라인 차단밸브 설치 금지)를 rank 5에서 표면화합니다. 전체 증거는 `scripts/run_real_case_ves001_rag.py` → `outputs/real_case_ves001_rag.{json,md}` 로 재현 가능합니다. 따라서 본 개정에서 우리는 본 프레임워크에 대해 **합성 + 실데이터 이중 검증(synthetic + real-data dual validation)** 을 주장할 수 있게 되었습니다. 실제 실패 결과에 대한 예측 검증은 여전히 미해결 향후 과제 항목으로 남습니다(§8 Limitation 1).
+
+*독립 전문가 검증에 관하여:* 주 저자는 12년 이상의 석유화학 EPC 경력을 가진 공정 플랜트 엔지니어이며, 계산 엔진 규칙과 케이스 구성은 해당 도메인 실무를 인코딩한 것입니다. 이를 독립 검증으로 주장하지 않으며 — 그것은 분리된 전문가 패널을 요구합니다 — §8 Limitation 7로 명시하고 외부 KOSHA PSM 감사관 대비 전향적 향후 연구 항목으로 문서화합니다.
 
 ---
 
@@ -193,6 +199,8 @@ Reviewer 2께서는 본 주제를 *"highly aligned with modern challenges in dig
 > [§6.6 민감도] Recall@3과 Recall@5의 +0.12 델타는 각각 페어드 CI **[−0.02, +0.26]** 을 가지며 이 크기의 벤치마크에서 0과 통계적으로 구분 *되지 않는다*. 학제 간 절제의 aligned boundary 및 aligned failure 하위집합에 대한 +1.0 델타는 범주적이며(이들 하위집합의 모든 케이스가 검증기 하에서 차단되고 검증기 없이는 어느 케이스도 차단되지 않음), 신뢰 구간을 요구하지 않는 결정론적 분리를 제공한다.
 
 **근거**: §6.1 구현 검증 프레이밍; §6.5 표본 크기 정당화 + Tables 6 및 6b; §6.6 민감도 단락; `scripts/bootstrap_ci_rag.py` (n=50, 1,000회 재표집, seed = 20260508)에서 산출된 `outputs/rag_bootstrap_ci_report.md`; §8 Limitations 1 및 3.
+
+*후기 보강 (개정 이후):* recall 분석을 K=10까지 확장했습니다 (Appendix B.2, `outputs/rag_retrieval_extended.md`). Enhanced FTS 곡선은 K=3부터 0.8621에서 포화하고, Plain FTS 곡선은 K∈{9, 10}에서 0.8012까지 계속 상승합니다; Enhanced − Plain 페어드 차이의 95% 부트스트랩 CI는 K∈{1, 2}에서만 0을 배제합니다. 또한 검색 실패 인벤토리 (Appendix B.4)를 공개하여 K=5 miss 모두를 두 진단 카테고리 중 하나로 태그합니다 — 7건 중 6건이 `paraphrase_too_loose`에 해당 — 잔존하는 약점을 숨기지 않고 검사 가능하게 만들었습니다.
 
 ### Comment R2.4: Application scope — HAZOP clarification
 

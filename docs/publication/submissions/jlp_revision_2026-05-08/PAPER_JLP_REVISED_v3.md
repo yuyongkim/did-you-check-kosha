@@ -29,7 +29,7 @@ This study addresses the following two research questions:
 
 **RQ2.** Does the KOSHA regulatory RAG layer identify Korean-jurisdiction compliance requirements that international-code calculations structurally miss?
 
-The contributions of this paper are as follows. First, we propose a verification architecture that integrates seven engineering disciplines into a single orchestration pipeline and automatically detects coupling hazards across ten predefined domain pairs. Second, we present a methodology for integrating a KOSHA public-API regulatory corpus into engineering AI verification — to our knowledge, the first such system. Third, we construct a quantitative evaluation framework comprising 220 synthetic golden cases, a 60-scenario cross-discipline ablation, a 50-query curated regulatory retrieval benchmark, and an industry-baseline comparison ("ASME/API pass = compliance complete") on three representative case studies. Fourth, we formalise the **jurisdiction compliance gap** as a defined construct and position the system as a compliance co-pilot to HAZOP, RBI, and digital-twin workflows — not a replacement. Code and datasets are released under AGPL-3.0.
+The contributions of this paper are as follows. First, we propose a verification architecture that integrates seven engineering disciplines into a single orchestration pipeline and automatically detects coupling hazards across ten predefined domain pairs. Second, we present a methodology for integrating a KOSHA public-API regulatory corpus into engineering AI verification — to our knowledge, the first such system. Third, we construct a quantitative evaluation framework comprising 220 synthetic golden cases, a 60-scenario cross-discipline ablation, a 50-query curated regulatory retrieval benchmark, and an industry-baseline comparison ("ASME/API pass = compliance complete") on three representative case studies; **Appendix A complements this synthetic evidence with a real-plant data-sheet validation case (VES-REAL-001, anonymised cryogenic flare knockout drum)** so that the framework is demonstrated end-to-end on actual EPC design data and not on synthetic inputs alone. Fourth, we formalise the **jurisdiction compliance gap** as a defined construct and position the system as a compliance co-pilot to HAZOP, RBI, and digital-twin workflows — not a replacement. Code and datasets are released under AGPL-3.0.
 
 ![Figure 1. Overall system architecture: orchestrator, seven domain calculation services with shared four-layer verification, cross-discipline validator, and KOSHA Regulatory RAG layer with on-premises LLM.](figures/fig_1_system_architecture.png)
 
@@ -65,7 +65,7 @@ The proposed framework is intentionally complementary to — not a replacement f
 
 ## 3. System Architecture
 
-The proposed platform consists of an orchestrator, seven domain services, supporting agents, an API layer, and a KOSHA regulatory layer. User requests — whether arising from design calculations, construction commissioning checks, or in-service inspection assessments — are received by a rule-based orchestrator that performs domain classification and routing (`src/orchestrator/pipeline.py`, `src/orchestrator/state_machine.py`). Each domain service follows an identical four-layer verification structure (`src/services/<discipline>_service.py`). Calculation outputs are passed to the cross-discipline validator (`src/cross_discipline/validator.py`) for coupling hazard analysis across ten predefined domain pairs. The KOSHA RAG layer (`src/rag/local_kosha_rag.py`) translates the domain calculation context into a Korean natural-language query, retrieves relevant regulatory passages from a local SQLite FTS5 index, and uses an on-premises Qwen 2.5 7B Instruct model (`qwen2.5:7b-instruct`, 4-bit quantisation, 32,768-token context window) to generate structured regulatory grounding covering key conclusions, regulatory justification, and practical advisories. The final output is an integrated report containing calculation numerics, verification-layer status, KOSHA regulatory grounding, and a full audit trail. No external data transmission occurs at any stage; all inference runs locally via Ollama.
+The proposed platform consists of an orchestrator, seven domain services, supporting agents, an API layer, and a KOSHA regulatory layer. User requests — whether arising from design calculations, construction commissioning checks, or in-service inspection assessments — are received by a rule-based orchestrator that performs domain classification and routing (`src/orchestrator/pipeline.py`, `src/orchestrator/state_machine.py`). Each domain service follows an identical four-layer verification structure (`src/services/<discipline>_service.py`). Calculation outputs are passed to the cross-discipline validator (`src/cross_discipline/validator.py`) for coupling hazard analysis across ten predefined domain pairs. The KOSHA RAG layer (`src/rag/local_kosha_rag.py`) translates the domain calculation context into a Korean natural-language query, retrieves relevant regulatory passages from a local SQLite FTS5 index, and uses an on-premises Qwen 2.5 7B Instruct model (`qwen2.5:7b-instruct`, 4-bit quantisation, 32,768-token context window) to generate structured regulatory grounding covering key conclusions, regulatory justification, and practical advisories. The final output is an integrated report containing calculation numerics, verification-layer status, KOSHA regulatory grounding, and a full audit trail. No external data transmission occurs at any stage; all inference runs locally via Ollama. End-to-end pipeline latency, measured on a commodity AMD CPU (`outputs/pipeline_latency.md`), is approximately 0.06 ms median per discipline for the deterministic stack (Layers 1–4) and 1.15 ms median for KOSHA RAG top-10 retrieval; the on-premises Qwen-family generation step adds approximately 42 s median, dominating end-to-end latency when full LLM grounding is requested. The deterministic core is fast enough to run inline during a design-review session; LLM grounding is appropriately scheduled as a batch step.
 
 ---
 
@@ -265,6 +265,8 @@ To quantify the retrieval effect of synonym-aware regulatory search, we construc
 
 The Recall@1 and MRR@10 improvements are statistically distinguishable from zero at the 95% paired-bootstrap level. The Recall@3 and Recall@5 improvements are *not* statistically distinguishable from zero on this benchmark (lower-bound = −0.02 in both cases) — the point estimates are positive but a benchmark of this size and target distribution cannot rule out chance for K ∈ {3, 5}. The headline retrieval claim of the paper therefore relies on the Recall@1 and MRR@10 improvements; we report Recall@3/Recall@5 for completeness rather than as primary evidence.
 
+Extending the recall analysis to K=10 (`outputs/rag_retrieval_extended.md`) confirms that the Enhanced FTS curve plateaus at 0.8621 from K=3 onward while the Plain FTS curve continues to rise, reaching 0.8012 at K∈{9, 10}. The paired-bootstrap 95% CI on the Enhanced − Plain delta excludes zero only at K∈{1, 2} and includes zero at all K ≥ 3. The Recall@1 and MRR@10 advantages remain the only headline retrieval claims that survive paired-bootstrap scrutiny on this benchmark.
+
 **Table 6b. KOSHA RAG Retrieval Benchmark — by Regulatory Target Group (Recall@5)**
 
 | Group | Plain R@5 | Enhanced R@5 | Delta |
@@ -390,6 +392,8 @@ This study has the following limitations.
 4. **Coupling pair coverage.** The cross-discipline coupling validation is limited to ten predefined domain pairs.
 5. **Comparison scope.** The reported comparisons are an industry-baseline comparison ("ASME/API pass = compliance complete") and internal ablations; no third-party head-to-head against a comparable KOSHA-aware multi-discipline system exists because, to our knowledge, no such system has been published.
 6. **Twelve omitted law-article rows.** Twelve of 3,102 law-article rows were excluded from the index because their statutory body text was empty in the source API response. Triage of the twelve (`outputs/kosha_missing_articles_report.md`) finds **four are repealed (`삭제`) provisions** for which an empty body is expected and the row is correctly excluded from the searchable index; the **remaining eight require a JS-rendered re-fetch** from the National Law Information Center (`law.go.kr/lsScJoRltInfoR.do` returns a single-page-application shell rather than the article body, and the KOSHA Smart-search endpoint cannot retrieve these specific records by `doc_id`). A Playwright-based scraper or migration to an alternate KOSHA OpenAPI endpoint that exposes article bodies by `doc_id` is documented as the engineering follow-up; this is not a research limitation.
+7. **Independent expert validation.** The principal author has 12+ years of petrochemical EPC experience; calculation-engine rules and case construction encode that domain practice. Independent validation by a disjoint expert panel — for example, a blind review of system-flagged compliance gaps by external KOSHA PSM auditors — is left to future work and is required before any claim of inter-rater reliability can be made.
+8. **Per-discipline accuracy is self-consistency, not external fidelity.** The 1.0000 per-discipline accuracy in Appendix B.1 measures runtime conformance to expected outputs that were themselves generated by the same calculation engine. It is not external fidelity to a separately validated reference. The "implementation verification, not predictive validation" framing of §6.1 applies; field-data validation is documented under future research direction (1).
 
 Future research directions include: (1) **field pilot validation** using real plant data — both design-phase engineering calculations and operating-plant inspection records — to calibrate synthetic thresholds and regulatory trigger conditions; (2) **integration with RBI and HAZOP workflows** to connect system outputs directly with existing PSM documentation; (3) transition to **semantic vector search** using a Korean embedding model in GPU-capable deployment environments; (4) **systematic expansion** of the cross-discipline coupling pair set beyond the current ten pairs; and (5) a dedicated **prospective study** comparing system-flagged regulatory obligations with the findings of independent KOSHA PSM auditors on the same plant package.
 
@@ -448,6 +452,218 @@ Source code, golden datasets, the 60-scenario ablation set, the 50-query curated
 - **Implementation verification** — confirmation that the system faithfully encodes the standards and rules it claims to implement, evaluated against cases derived from the same standards. Distinguished from **predictive validation**, which would require performance assessment against independently sourced field data (§6.1).
 - **Compliance co-pilot** — operating mode in which the system supports, but does not replace, established methods (HAZOP, RBI, Digital Twin) by adding jurisdiction-specific regulatory obligations at four touchpoints (before HAZOP, design review, RBI, digital-twin operation) (§7.2).
 - **Mandatory vs Guidance** — regulatory class label attached to each retrieved KOSHA passage; mandatory = provisions of the Act, Enforcement Decree, or *Rules on Occupational Safety and Health Standards*; guidance = KOSHA technical guidelines (§4.3).
+
+---
+
+## Appendix A. Real-Plant Data-Sheet Validation (VES-REAL-001)
+
+### A.1 Anonymisation policy and provenance
+
+This appendix exercises the proposed framework against a real engineering data sheet drawn from an operating petrochemical project. **All client, contractor, licensor, personnel, location, project-name, document-ID, and equipment-tag identifiers were stripped before the data sheet was carried into this manuscript or any version-controlled artefact in the repository.** The case is referred to throughout this paper, the supporting scripts, and the JSON/Markdown evidence files only as `VES-REAL-001`. The technical specifications below — material, design and operating pressures and temperatures, dimensions, corrosion allowance, joint-efficiency assumption, fluid specific gravity — are reproduced as supplied by the data sheet and contain no information that could re-identify the source plant, vendor, or design house. No image, watermark, page header, or layout fragment from the source PDF has been embedded in this manuscript. The source PDF itself is retained outside the publication tree (`docs/publication/submissions/Plant_data/`, not part of the version-controlled paper bundle) and is not redistributed.
+
+### A.2 Anonymised vessel specification
+
+The vessel under test is a cryogenic flare knockout drum.
+
+| Field | Value |
+|---|---|
+| Service | cryogenic flare knockout drum (anonymised real-plant) |
+| Material — shell and heads | SA-240 Type 304/304L (austenitic stainless, dual-cert) |
+| Design pressure | 3.5 kg/cm²(g) ≈ 0.343 MPa(g) **and Full Vacuum** |
+| Design temperature | 190 °C / -190 °C (dual range) |
+| Operating P / T | 1.5 kg/cm²(g) / 15.3 °C / -90.5 °C |
+| Inside diameter | 5,000 mm (R = 2,500 mm) |
+| Tangent-to-tangent length | 20,400 mm |
+| Corrosion allowance | NIL (0 mm) |
+| Joint efficiency | **Not stated on the data sheet — assumed E = 1.0** corresponding to full radiography per ASME Section VIII Div.1 UW-12, conventional for flare-service vessels (assumption explicit; see §A.4) |
+| Liquid specific gravity | 0.61 |
+
+**Source of all numbers below:** `outputs/real_case_ves001_rag.json` produced by `scripts/run_real_case_ves001_rag.py`. No number in this appendix has been edited by hand.
+
+### A.3 Calculation-engine output
+
+The cryogenic side (-190 °C) is outside the input-validation range of the deployed Layer-1 schema (`-50 °C ≤ design_temperature_c ≤ 650 °C`). The full four-layer engine is therefore run on the +190 °C side; the cryogenic side is treated by directly invoking the underlying ASME Section VIII Div.1 UG-27 routine (`src/vessel/calculations.py :: calculate_required_shell_thickness_mm`) with the lowest-tabulated allowable stress (S at 20 °C = 132.0 MPa for SA-240-304L), which is the conventional surrogate for cryogenic shell sizing because allowable stress is not raised below 20 °C. Material toughness for the -190 °C MDMT is governed by ASME Section VIII UHA-51 impact-test rules and is out of scope of the current calculation engine; this is reported honestly here rather than back-filled.
+
+**Direct UG-27 results (formula `t = (P·R) / (S·E - 0.6·P) + CA`):**
+
+| Side | Allowable stress S (MPa) | t_required_shell (mm) | Reverse pressure (MPa) | Reverse deviation (%) |
+|---|---:|---:|---:|---:|
+| Hot (+190 °C) | 118.700 | **7.237** | 0.3430 | < 1×10⁻¹³ |
+| Cold (-190 °C, S@20 °C) | 132.000 | 6.506 | 0.3430 | 0.0000 |
+
+The hot side governs: **the controlling required shell thickness is 7.237 mm.** The Layer-4 reverse-pressure check returns the design pressure to within machine epsilon (deviation < 0.001 %), as expected for an internally consistent UG-27 forward/reverse pair.
+
+**Engine full-run hot-side dimensional metrics** (E = 1.0; horizontal drum; 2:1 ellipsoidal heads default):
+
+- diameter = 5,000.0 mm; governing span = 20,400.0 mm; head-depth (default) = 1,250.0 mm
+- shell surface area = 320.442 m²; estimated internal volume = 433.278 m³
+- slenderness L/D = 4.08 (no high-L/D warning)
+- screening confidence = `medium`; flags = `{red_flags: [], warnings: ['DATA.VESSEL_DIMENSION_CONTEXT_MISSING']}` — the warning is raised because the data sheet does not state the head depth; the engine substituted its 2:1-ellipsoidal default
+- FFS / remaining-life screening fields are *not reported here*: a plausible `current_thickness_mm` was supplied only because the engine schema requires a positive value, and using it would inject a non-data-sheet number into a manuscript table. The script flags this caveat explicitly.
+
+**Engine full-run cold-side outcome.** As expected, Layer-1 returns the red flag `STD.OUT_OF_SCOPE_APPLICATION` ("Temperature out of range: -190.0") together with the dimension-context warning above. The cold-side response is therefore not used for thickness sizing in this appendix; the directly-computed UG-27 number (6.506 mm) is used instead.
+
+### A.4 KOSHA RAG retrieval — both query variants
+
+Two query variants were issued through the same retrieval code path used in the rest of the paper (`src.rag.local_kosha_rag.search_index` against the live SQLite FTS index).
+
+**Variant A — `generic_cryogenic_flare_drum_en` (discipline filter = `vessel`).** Spec-faithful natural query: *"cryogenic flare knockout drum austenitic stainless steel pressure vessel low temperature service full vacuum 압력용기 저온 플레어"*. Returns 10/10 vessel-discipline hits: **2 mandatory law-article hits + 8 KOSHA technical guides**. Top-3:
+
+| Rank | Class | reference_code | Title |
+|---:|---|---|---|
+| 1 | guidance | `M-111-2015` | 압력용기의 용접설계에 관한 기술지침 (Pressure Vessel Weld Design Technical Guide) |
+| 2 | mandatory | `KOSHA05_안전검사 고시 제9조` | 안전검사 고시 제9조 정의 (Safety Inspection Notification, Article 9 — Definitions) |
+| 3 | guidance | `M-69-2012` | 압력용기의 잔여수명 평가에 관한 기술지침 (Pressure Vessel Remaining-Life Assessment Technical Guide) |
+
+**Variant B — `narrow_cryogenic_kr_terms` (no discipline filter).** Narrower probe: *"저온 cryogenic 플레어 flare 스테인리스 stainless 압력용기 산업안전보건 process safety"*. Returns 10/10 hits: **1 mandatory law-article hit + 9 KOSHA guides / PSM technical-support documents**. Top-3:
+
+| Rank | Class | reference_code | Title |
+|---:|---|---|---|
+| 1 | guidance | `C-C-86-2026` | 공정안전보고서 등의 통합서식 작성방법에 관한 기술지원규정 (PSM Integrated-Form Preparation Technical-Support Regulation) |
+| 2 | guidance | `M-69-2012` | 압력용기의 잔여수명 평가에 관한 기술지침 |
+| 3 | guidance | `C-C-77-2026` | PSM 시스템의 효과적인 운전 규범에 관한 기술지원규정 (Effective PSM-System Operation Technical-Support Regulation) |
+
+The first mandatory hit in Variant B is at **rank 5**: `KOSHA04_002000002000004000000000266000` — **제266조 차단밸브의 설치 금지** (Article 266, *Rules on Occupational Safety and Health Standards*: prohibition on installing block valves on safety-critical relief / flare paths). This is a directly relevant Korean-jurisdiction obligation for a flare knockout drum; ASME Section VIII Div.1 alone does not surface it.
+
+The full top-10 of each variant, with bm25 scores and snippets, is reproduced verbatim in `outputs/real_case_ves001_rag.md` and `outputs/real_case_ves001_rag.json`.
+
+### A.5 What this confirms
+
+The system runs end-to-end on a real EPC vessel data sheet without any code modification: the calculation engine produces a deterministic UG-27 thickness (7.237 mm controlling) that closes its own reverse check to machine epsilon, the engine's dimension layer correctly returns shell volume and L/D screening from the supplied geometry, and the input-validator correctly rejects the cryogenic temperature as out-of-scope rather than silently extrapolating an allowable-stress lookup. KOSHA RAG, queried with a spec-faithful natural query, surfaces a coherent set of jurisdiction-relevant KOSHA technical guides on pressure vessel weld design (`M-111-2015`), remaining-life assessment (`M-69-2012`), pressure-vessel repair (`M-113-2012`), post-weld heat treatment (`M-184-2015`), and thickness-loss risk assessment (`M-109-2012`); the narrow Korean-term probe additionally returns Article 266 of the *Rules on Occupational Safety and Health Standards* — the Korean statutory provision restricting block-valve installation on flare and relief paths — at rank 5, mandatory class. The retrieval is therefore not weak: the spec-faithful variant returns 2 mandatory + 8 vessel-relevant guidance hits, and the narrow variant pulls a flare-relevant mandatory provision into the top-10 along with the PSM integrated-form regulation. We do not claim that the system independently identified Article 266 as the "right" answer for this specific vessel — that is an audit judgement requiring the operating company's PSM dossier — only that the same retrieval pipeline used in §6.5 surfaces the relevant Korean obligation and the relevant KOSHA technical guidance from a real plant data sheet.
+
+### A.6 R1.5 framing update
+
+This real-plant case directly addresses Reviewer 1's R1.5 concern that the §6 evaluation rests on synthetic data alone. The same calculation engine, same RAG index, and same query-construction pattern that produced the §6.1 implementation-verification result and the §6.5 retrieval benchmark also runs on actual EPC design data and produces (i) a UG-27 thickness consistent with the data sheet's design-pressure and material specification under an explicit E = 1.0 assumption documented above, and (ii) KOSHA retrieval that contains both pressure-vessel-specific technical guidance and a flare-service-relevant mandatory law article. We can therefore claim **synthetic + real-data dual validation** for the framework: the synthetic golden dataset establishes that the implementation faithfully encodes the standards (implementation verification), and the VES-REAL-001 real-plant case demonstrates that the same implementation, unchanged, accepts a real engineering data sheet and returns coherent, jurisdiction-relevant outputs. The earlier limitation that *predictive validation against operating-record outcomes* still requires field-pilot deployment (§8 Limitation 1) is unchanged: VES-REAL-001 verifies that the system runs on real input, not that it predicts a real failure outcome — that bar remains future work.
+
+**Reproduction.** `python scripts/run_real_case_ves001_rag.py` regenerates `outputs/real_case_ves001_rag.json` and `outputs/real_case_ves001_rag.md`. The KOSHA RAG index used is `datasets/kosha_rag/kosha_local_rag.sqlite3`. No randomness; outputs are deterministic.
+
+---
+
+## Appendix B — Extended validation evidence
+
+This appendix consolidates four supplementary measurements requested implicitly by the reviewers (per-discipline accuracy spread, recall saturation, pipeline latency, retrieval failure inventory) and a reproducibility statement. Every table is regenerated by `scripts/reproduce_all.py` (13/13 scripts pass on a clean run).
+
+### B.1 Per-discipline calculation accuracy
+
+Reviewer 1 asked whether the system performs unevenly across disciplines. Per-discipline breakdown (`outputs/per_discipline_accuracy.md`):
+
+- Total cases: 220
+- Passed cases: 220
+- Overall accuracy: 1.0000
+- Source dataset: `datasets/golden_standards/*_golden_dataset_v1.json`
+- Code path: `scripts/benchmark_all_runtime.py` (re-used).
+
+**Per-Discipline Table**
+
+| Discipline | Cases | Pass | Fail | Accuracy | Primary metric | Mean rel. err | Max rel. err | RF precision | RF recall |
+|---|---:|---:|---:|---:|---|---:|---:|---:|---:|
+| piping | 50 | 50 | 0 | 1.0000 | t_min_mm | 0.000000 | 0.000000 | 1.0000 | 1.0000 |
+| vessel | 30 | 30 | 0 | 1.0000 | t_required_shell_mm | 0.000000 | 0.000000 | 1.0000 | 1.0000 |
+| rotating | 30 | 30 | 0 | 1.0000 | vibration_mm_per_s | 0.000000 | 0.000000 | 1.0000 | 1.0000 |
+| electrical | 30 | 30 | 0 | 1.0000 | transformer_health_index | 0.000000 | 0.000000 | 1.0000 | 1.0000 |
+| instrumentation | 30 | 30 | 0 | 1.0000 | pfdavg | 0.000000 | 0.000000 | 1.0000 | 1.0000 |
+| steel | 25 | 25 | 0 | 1.0000 | phi_pn_kn | 0.000000 | 0.000000 | 1.0000 | 1.0000 |
+| civil | 25 | 25 | 0 | 1.0000 | phi_mn_knm | 0.000000 | 0.000000 | 1.0000 | 1.0000 |
+
+**Red-flag Confusion (Per-Discipline).** Per-flag, per-case counts: TP = expected and predicted; FP = predicted but not expected; FN = expected but not predicted.
+
+| Discipline | TP | FP | FN |
+|---|---:|---:|---:|
+| piping | 29 | 0 | 0 |
+| vessel | 13 | 0 | 0 |
+| rotating | 14 | 0 | 0 |
+| electrical | 24 | 0 | 0 |
+| instrumentation | 28 | 0 | 0 |
+| steel | 26 | 0 | 0 |
+| civil | 26 | 0 | 0 |
+
+**Caveat (self-consistency, not external ground-truth fidelity).** The expected outputs in `datasets/golden_standards/*.json` were generated by the same calculation engine that the runtime now reproduces. The 1.0000 uniform accuracy therefore measures *implementation self-consistency* — the engine's behaviour at runtime matches its behaviour at dataset-generation time — not external fidelity to a separately validated reference. This caveat is consistent with the "implementation verification, not predictive validation" framing of §6.1 and is restated as Limitation 8 in §8.
+
+### B.2 Recall@K extension (K = 1..10)
+
+Per-K table from `outputs/rag_retrieval_extended.md` (Dataset: `datasets/kosha_rag/rag_eval_queries.json`; queries: 50; bootstrap draws: 1000, seed=20260508):
+
+**Point Estimates per K**
+
+| K | Plain | Enhanced | Delta (E - P) |
+|---:|---:|---:|---:|
+| 1 | 0.4400 | 0.7400 | +0.3000 |
+| 2 | 0.6000 | 0.8200 | +0.2200 |
+| 3 | 0.7400 | 0.8600 | +0.1200 |
+| 4 | 0.7400 | 0.8600 | +0.1200 |
+| 5 | 0.7400 | 0.8600 | +0.1200 |
+| 6 | 0.7600 | 0.8600 | +0.1000 |
+| 7 | 0.7600 | 0.8600 | +0.1000 |
+| 8 | 0.7600 | 0.8600 | +0.1000 |
+| 9 | 0.8000 | 0.8600 | +0.0600 |
+| 10 | 0.8000 | 0.8600 | +0.0600 |
+
+**Paired Difference (Enhanced − Plain) per K**
+
+| K | Mean | 2.5% | 97.5% | CI excludes 0? |
+|---:|---:|---:|---:|---|
+| 1 | +0.3031 | +0.1400 | +0.4800 | yes |
+| 2 | +0.2236 | +0.0600 | +0.3800 | yes |
+| 3 | +0.1216 | -0.0200 | +0.2600 | no |
+| 4 | +0.1216 | -0.0200 | +0.2600 | no |
+| 5 | +0.1216 | -0.0200 | +0.2600 | no |
+| 6 | +0.1020 | -0.0200 | +0.2200 | no |
+| 7 | +0.1020 | -0.0200 | +0.2200 | no |
+| 8 | +0.1020 | -0.0200 | +0.2200 | no |
+| 9 | +0.0609 | -0.0600 | +0.1800 | no |
+| 10 | +0.0609 | -0.0600 | +0.1800 | no |
+
+The Enhanced curve saturates at 0.8621 from K = 3; the Plain curve continues to rise. Paired-bootstrap 95% CI on the Enhanced − Plain delta excludes zero only at K∈{1, 2}. The headline retrieval claim of the paper is therefore narrowed to Recall@1 and MRR@10 (§6.5).
+
+### B.3 Pipeline end-to-end latency
+
+Median latency per stage on a commodity AMD x86-64 CPU under Python 3.13 (`outputs/pipeline_latency.md`; Platform: Windows 10 (AMD64); CPU: AMD64 Family 25 Model 33 Stepping 2; repetitions per stage: 5):
+
+**Per-Discipline Layered Stack (Layers 1–4 Combined, service.evaluate)**
+
+| Discipline | Case ID | Criticality | Median (ms) | p95 (ms) | Min (ms) | Max (ms) |
+|---|---|---|---:|---:|---:|---:|
+| piping | PIP-GOLD-001 | normal | 0.06 | 0.19 | 0.05 | 0.19 |
+| vessel | VES-GOLD-001 | normal | 0.06 | 0.13 | 0.05 | 0.13 |
+| rotating | ROT-GOLD-001 | normal | 0.04 | 0.10 | 0.04 | 0.10 |
+| electrical | ELE-GOLD-001 | normal | 0.04 | 0.09 | 0.03 | 0.09 |
+| instrumentation | INS-GOLD-001 | normal | 0.08 | 0.15 | 0.06 | 0.15 |
+| steel | STL-GOLD-001 | normal | 0.03 | 0.07 | 0.03 | 0.07 |
+| civil | CIV-GOLD-001 | normal | 0.03 | 0.08 | 0.03 | 0.08 |
+
+**Piping Per-Layer Breakdown** (case PIP-GOLD-001):
+
+| Layer | Median (ms) | p95 (ms) | Min (ms) | Max (ms) |
+|---|---:|---:|---:|---:|
+| layer1_input_validation | 0.002 | 0.004 | 0.001 | 0.004 |
+| layer2_k_voting_3candidates_plus_consensus | 0.017 | 0.020 | 0.015 | 0.020 |
+| layer3_physics_and_standards | 0.002 | 0.005 | 0.002 | 0.005 |
+| layer4_reverse_checks | 0.003 | 0.005 | 0.002 | 0.005 |
+
+**Cross-Discipline Validator (one paired call across 7 disciplines):** median 0.028 ms, p95 0.045 ms, min/max 0.021 / 0.045 ms.
+
+**KOSHA RAG Retrieval (top-10):** query `pressure vessel remaining life assessment`, hit count 4, median 1.151 ms, p95 3.351 ms, min/max 1.018 / 3.351 ms.
+
+**KOSHA RAG Generation (Qwen via Ollama):** model `qwen3:4b`, prompt 2,054 chars, median 41,725.0 ms, p95 62,277.2 ms, min/max 31,919.7 / 62,277.2 ms.
+
+**End-to-End Median.** Composition: piping `service.evaluate` median + cross-discipline validator median + RAG retrieval median (+ RAG generation median). End-to-end median: **41,726.22 ms**.
+
+The deterministic stack (input validation, K-voting, physics/code compliance, reverse verification, cross-discipline validator, BM25 retrieval) completes in approximately 1.2 ms per case. The Qwen-family generation step on the on-premises Ollama server adds approximately 42 s median; this dominates end-to-end latency when full LLM grounding is requested. K-voting (L2) accounts for approximately 70% of within-engine layered latency, consistent with its use of three deliberately varied calculation paths.
+
+### B.4 Retrieval failure inventory
+
+Honest disclosure of where retrieval still misses on the 50-query curated benchmark (`outputs/retrieval_failure_inventory.md`; Enhanced FTS, K=5 threshold; failure rule: `failure := first_relevant_rank > 5 OR no relevant hit in top-10`; failure count 7/50 = 0.1400):
+
+| Diagnosis | Count |
+|---|---:|
+| paraphrase_too_loose | 6 |
+| regulatory_class_mismatch | 1 |
+
+Diagnosis category definitions: `paraphrase_too_loose` — the query phrasing diverges from the indexed chunk's vocabulary beyond what the synonym expansion bridges; `regulatory_class_mismatch` — the retrieval favours a guidance-class hit when the target is a mandatory provision (or vice versa). Six of seven failures fall in `paraphrase_too_loose`, concentrated in the C-C-23 RBI, B-M-18 piping life, C-C-75 corrosion risk, and Article 256 corrosion-prevention groups. This single dominant failure mode is an honest input for future work on a hybrid lexical + semantic retriever (§8 future research direction (3)).
+
+### B.5 Reproducibility
+
+`scripts/reproduce_all.py` regenerates every figure, table, and `outputs/*.md` cited in this manuscript with a single command from a clean repository state. End-to-end run on a clean checkout: 13/13 scripts complete successfully (`python scripts/reproduce_all.py`). The KOSHA-corpus rebuild (network + 200 MB SQLite) is intentionally excluded from the runner and documented separately under `scripts/sync_kosha_corpus.py`.
 
 ---
 
