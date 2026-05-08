@@ -277,7 +277,7 @@ The Recall@1 and MRR@10 improvements are statistically distinguishable from zero
 
 The Recall@3 = Recall@5 plateau in the overall numbers reflects the deliberately narrow target set (typically 1–2 relevant documents per query group in a 1,327-document corpus); in a broader evaluation, NDCG@K would differentiate further. The largest gains from the enhanced configuration come on the targets where casual Korean terminology diverges most from the formal title (Article 256, B-M-18) — exactly the cases the synonym expansion was designed for.
 
-![Figure 5. Recall and MRR per regulatory target group, Plain BM25 vs Enhanced (concept-aware synonym expansion + OR fallback). Largest gains on Article 256 and B-M-18 where casual paraphrasing diverges from formal titles.](figures/fig_5_recall_mrr_per_group.png)
+![Figure 5. Recall and MRR per regulatory target group, Plain BM25 vs Enhanced (concept-aware synonym expansion + OR fallback). Largest gains on Article 256 and B-M-18 where casual paraphrasing diverges from formal titles.](figures/fig_5_retrieval_metrics.png)
 
 ### 6.6 Industry-Baseline Comparison and Internal Ablation
 

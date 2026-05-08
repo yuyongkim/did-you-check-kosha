@@ -31,6 +31,8 @@ def create_app() -> FastAPI:
         "http://localhost:3012",
         "http://127.0.0.1:3000",
         "http://127.0.0.1:3012",
+        "https://epc.yule.pics",
+        "https://epc-api.yule.pics",
     ]
     app.add_middleware(
         CORSMiddleware,
