@@ -1894,42 +1894,41 @@
       "criticality": "critical",
       "inputs": {
         "material": "SA-106 Gr.B",
-        "nps": 6.0,
-        "design_pressure_mpa": 4.5,
-        "design_temperature_c": 220.0,
+        "nps": 10.0,
+        "design_pressure_mpa": 8.8,
+        "design_temperature_c": 260.0,
         "thickness_history": [
           {
             "date": "2015-01-01",
-            "thickness_mm": 8.0
+            "thickness_mm": 14.8
           },
           {
             "date": "2020-01-01",
-            "thickness_mm": 8.6
+            "thickness_mm": 13.7
           },
           {
             "date": "2025-01-01",
-            "thickness_mm": 9.1
+            "thickness_mm": 10.2
           }
         ],
         "corrosion_allowance_mm": 1.5,
-        "weld_type": "erw",
+        "weld_type": "smaw",
         "service_type": "general",
         "has_internal_coating": false
       },
       "expected_outputs": {
-        "t_min_mm": 5.19655408043733,
-        "CR_long_term": -0.10448569668765395,
-        "CR_short_term": -0.09496100164203612,
-        "CR_selected": -0.09496100164203612,
-        "RL_years": Infinity,
-        "inspection_interval_years": 10.0
+        "t_min_mm": 14.03928832307211,
+        "CR_long_term": 0.4369401861483714,
+        "CR_short_term": 0.6647270114942528,
+        "CR_selected": 0.6647270114942528,
+        "RL_years": -5.775736891512351,
+        "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
-        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
-        "PHY.UNREALISTIC_CORROSION_RATE"
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
       ],
       "expected_warnings": [
-        "PHY.UNREALISTIC_REMAINING_LIFE"
+        "LOG.REVERSE_CHECK_DEVIATION"
       ],
       "validation_points": [
         "ASME B31.3 Para 304.1.2",
@@ -1945,34 +1944,34 @@
       "criticality": "critical",
       "inputs": {
         "material": "SA-106 Gr.B",
-        "nps": 12.0,
-        "design_pressure_mpa": 20.0,
-        "design_temperature_c": 300.0,
+        "nps": 3.0,
+        "design_pressure_mpa": 12.5,
+        "design_temperature_c": 180.0,
         "thickness_history": [
           {
             "date": "2015-01-01",
-            "thickness_mm": 6.5
+            "thickness_mm": 6.4
           },
           {
             "date": "2020-01-01",
-            "thickness_mm": 5.5
+            "thickness_mm": 5.9
           },
           {
             "date": "2025-01-01",
-            "thickness_mm": 4.4
+            "thickness_mm": 5.1
           }
         ],
         "corrosion_allowance_mm": 1.5,
-        "weld_type": "smaw",
+        "weld_type": "erw",
         "service_type": "general",
         "has_internal_coating": false
       },
       "expected_outputs": {
-        "t_min_mm": 35.398482469911045,
-        "CR_long_term": 0.1994726936764303,
-        "CR_short_term": 0.2089142036124794,
-        "CR_selected": 0.2089142036124794,
-        "RL_years": -148.3790088653377,
+        "t_min_mm": 6.426627061535733,
+        "CR_long_term": 0.12348309608540932,
+        "CR_short_term": 0.15193760262725792,
+        "CR_selected": 0.15193760262725792,
+        "RL_years": -8.731393931430464,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
@@ -1993,21 +1992,21 @@
       "criticality": "critical",
       "inputs": {
         "material": "SA-106 Gr.B",
-        "nps": 8.0,
-        "design_pressure_mpa": 6.0,
-        "design_temperature_c": 500.0,
+        "nps": 6.0,
+        "design_pressure_mpa": 3.8,
+        "design_temperature_c": 560.0,
         "thickness_history": [
           {
             "date": "2015-01-01",
-            "thickness_mm": 10.0
+            "thickness_mm": 12.4
           },
           {
             "date": "2020-01-01",
-            "thickness_mm": 9.0
+            "thickness_mm": 11.8
           },
           {
             "date": "2025-01-01",
-            "thickness_mm": 7.8
+            "thickness_mm": 11.1
           }
         ],
         "corrosion_allowance_mm": 1.5,
@@ -2016,15 +2015,14 @@
         "has_internal_coating": false
       },
       "expected_outputs": {
-        "t_min_mm": 8.613636363636363,
-        "CR_long_term": 0.20897139337530798,
-        "CR_short_term": 0.2279064039408867,
-        "CR_selected": 0.2279064039408867,
-        "RL_years": -3.5700460784217394,
-        "inspection_interval_years": 0.0
+        "t_min_mm": 4.993990384615385,
+        "CR_long_term": 0.12348309608540932,
+        "CR_short_term": 0.13294540229885077,
+        "CR_selected": 0.13294540229885077,
+        "RL_years": 45.92870087871702,
+        "inspection_interval_years": 10.0
       },
       "expected_red_flags": [
-        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM",
         "PHY.TEMPERATURE_LIMIT_EXCEEDED"
       ],
       "expected_warnings": [],
@@ -2041,40 +2039,42 @@
       "category": "failure_mode",
       "criticality": "critical",
       "inputs": {
-        "material": "SA-312 TP316",
-        "nps": 4.0,
-        "design_pressure_mpa": 1.2,
-        "design_temperature_c": 80.0,
+        "material": "SA-312 TP304",
+        "nps": 6.0,
+        "design_pressure_mpa": 8.5,
+        "design_temperature_c": 180.0,
         "thickness_history": [
           {
             "date": "2015-01-01",
-            "thickness_mm": 20.0
+            "thickness_mm": 6.5
           },
           {
             "date": "2020-01-01",
-            "thickness_mm": 19.95
+            "thickness_mm": 6.8
           },
           {
             "date": "2025-01-01",
-            "thickness_mm": 19.9
+            "thickness_mm": 5.4
           }
         ],
         "corrosion_allowance_mm": 1.5,
-        "weld_type": "seamless",
+        "weld_type": "erw",
         "service_type": "general",
         "has_internal_coating": true
       },
       "expected_outputs": {
-        "t_min_mm": 2.014748930421076,
-        "CR_long_term": 0.008073894744046106,
-        "CR_short_term": 0.008071685139573185,
-        "CR_selected": 0.008073894744046106,
-        "RL_years": 2215.194975481685,
-        "inspection_interval_years": 10.0
+        "t_min_mm": 8.003091190108192,
+        "CR_long_term": 0.08881284218450586,
+        "CR_short_term": 0.22600718390804586,
+        "CR_selected": 0.22600718390804586,
+        "RL_years": -11.517736494461587,
+        "inspection_interval_years": 0.0
       },
-      "expected_red_flags": [],
+      "expected_red_flags": [
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
+      ],
       "expected_warnings": [
-        "PHY.UNREALISTIC_REMAINING_LIFE"
+        "LOG.REVERSE_CHECK_DEVIATION"
       ],
       "validation_points": [
         "ASME B31.3 Para 304.1.2",
@@ -2082,51 +2082,48 @@
         "API 570 remaining life and corrosion rate method [verify edition]",
         "API 570 Section 7 [verify edition]"
       ],
-      "expected_confidence": "medium"
+      "expected_confidence": "low"
     },
     {
       "case_id": "PIP-GOLD-044",
       "category": "failure_mode",
       "criticality": "critical",
       "inputs": {
-        "material": "SA-106 Gr.B",
-        "nps": 6.0,
-        "design_pressure_mpa": 4.5,
-        "design_temperature_c": 220.0,
+        "material": "SA-53 Gr.B",
+        "nps": 8.0,
+        "design_pressure_mpa": 9.4,
+        "design_temperature_c": 240.0,
         "thickness_history": [
           {
             "date": "2015-01-01",
-            "thickness_mm": 8.0
+            "thickness_mm": 11.6
           },
           {
             "date": "2020-01-01",
-            "thickness_mm": 8.6
+            "thickness_mm": 10.1
           },
           {
             "date": "2025-01-01",
-            "thickness_mm": 9.1
+            "thickness_mm": 8.7
           }
         ],
-        "corrosion_allowance_mm": 1.5,
+        "corrosion_allowance_mm": 2.0,
         "weld_type": "erw",
         "service_type": "general",
         "has_internal_coating": false
       },
       "expected_outputs": {
-        "t_min_mm": 5.19655408043733,
-        "CR_long_term": -0.10448569668765395,
-        "CR_short_term": -0.09496100164203612,
-        "CR_selected": -0.09496100164203612,
-        "RL_years": Infinity,
-        "inspection_interval_years": 10.0
+        "t_min_mm": 12.991247731881737,
+        "CR_long_term": 0.2754622912674514,
+        "CR_short_term": 0.2658908045977012,
+        "CR_selected": 0.2754622912674514,
+        "RL_years": -15.578349080510938,
+        "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
-        "LOG.NO_CONSENSUS_AFTER_TIEBREAKER",
-        "PHY.UNREALISTIC_CORROSION_RATE"
+        "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
       ],
-      "expected_warnings": [
-        "PHY.UNREALISTIC_REMAINING_LIFE"
-      ],
+      "expected_warnings": [],
       "validation_points": [
         "ASME B31.3 Para 304.1.2",
         "API 570 remaining life and corrosion rate method [verify edition]",
@@ -2140,41 +2137,43 @@
       "category": "failure_mode",
       "criticality": "critical",
       "inputs": {
-        "material": "SA-106 Gr.B",
-        "nps": 12.0,
-        "design_pressure_mpa": 20.0,
-        "design_temperature_c": 300.0,
+        "material": "SA-312 TP304",
+        "nps": 4.0,
+        "design_pressure_mpa": 7.6,
+        "design_temperature_c": 210.0,
         "thickness_history": [
           {
             "date": "2015-01-01",
-            "thickness_mm": 6.5
+            "thickness_mm": 6.2
           },
           {
             "date": "2020-01-01",
-            "thickness_mm": 5.5
+            "thickness_mm": 6.0
           },
           {
             "date": "2025-01-01",
-            "thickness_mm": 4.4
+            "thickness_mm": 5.1
           }
         ],
         "corrosion_allowance_mm": 1.5,
-        "weld_type": "smaw",
+        "weld_type": "erw",
         "service_type": "general",
         "has_internal_coating": false
       },
       "expected_outputs": {
-        "t_min_mm": 35.398482469911045,
-        "CR_long_term": 0.1994726936764303,
-        "CR_short_term": 0.2089142036124794,
-        "CR_selected": 0.2089142036124794,
-        "RL_years": -148.3790088653377,
+        "t_min_mm": 5.54979020979021,
+        "CR_long_term": 0.10448569668765403,
+        "CR_short_term": 0.17092980295566507,
+        "CR_selected": 0.17092980295566507,
+        "RL_years": -2.631432330773087,
         "inspection_interval_years": 0.0
       },
       "expected_red_flags": [
         "PHY.CURRENT_THICKNESS_BELOW_MINIMUM"
       ],
-      "expected_warnings": [],
+      "expected_warnings": [
+        "LOG.REVERSE_CHECK_DEVIATION"
+      ],
       "validation_points": [
         "ASME B31.3 Para 304.1.2",
         "API 570 remaining life and corrosion rate method [verify edition]",

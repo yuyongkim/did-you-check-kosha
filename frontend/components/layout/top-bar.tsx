@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { BookOpenText, Download, Eye, Factory, FileDown, Info, MonitorCog, Moon, Settings, Sun, X } from "lucide-react";
+import { BookOpenText, Download, Eye, Factory, FileDown, FileText, Info, Loader2, Menu, MonitorCog, Moon, Settings, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { MobileDrawer } from "@/components/layout/mobile-drawer";
+import { usePdfExport } from "@/hooks/usePdfExport";
 import { useUiLanguage } from "@/hooks/useUiLanguage";
 import { Select } from "@/components/ui/select";
 import { ThemePalette, useThemePalette } from "@/hooks/useThemePalette";
@@ -20,6 +22,7 @@ export function TopBar() {
   const router = useRouter();
   const [showSettings, setShowSettings] = useState(false);
   const [showReportPreview, setShowReportPreview] = useState(false);
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const { mode, resolvedMode, setMode, toggleMode } = useThemeMode();
   const { palette, setPalette } = useThemePalette();
   const { language, isKorean, basePath, localizedHref, switchPath } = useUiLanguage();
@@ -36,6 +39,8 @@ export function TopBar() {
             apiBackend: "백엔드",
             exportJson: "JSON",
             exportMd: "보고서",
+            exportPdf: "PDF",
+            exportPdfGenerating: "생성 중…",
             preview: "미리보기",
             reportPreviewTitle: "보고서 미리보기",
             close: "닫기",
@@ -61,6 +66,7 @@ export function TopBar() {
             activeTheme: "현재",
             localRoute: "로컬 라우트",
             externalRoute: "외부 연동",
+            menu: "메뉴",
           }
         : {
             console: "Engineering Console",
@@ -71,6 +77,8 @@ export function TopBar() {
             apiBackend: "Backend",
             exportJson: "JSON",
             exportMd: "MD",
+            exportPdf: "PDF",
+            exportPdfGenerating: "Generating…",
             preview: "Preview",
             reportPreviewTitle: "Report Preview",
             close: "Close",
@@ -96,6 +104,7 @@ export function TopBar() {
             activeTheme: "active",
             localRoute: "local route",
             externalRoute: "external",
+            menu: "Menu",
           },
     [language],
   );
@@ -122,6 +131,8 @@ export function TopBar() {
   const setApiMode = useWorkbenchStore((state) => state.setApiMode);
   const setBackendApiPrefix = useWorkbenchStore((state) => state.setBackendApiPrefix);
   const setWorkbenchMode = useWorkbenchStore((state) => state.setWorkbenchMode);
+
+  const { exportPdf, generating: pdfGenerating } = usePdfExport();
 
   const activeResult = resultByDiscipline[activeDiscipline];
   const apiBadge = apiMode === "mock" ? labels.apiMock : labels.apiBackend;
@@ -154,6 +165,14 @@ export function TopBar() {
     exportResultMarkdown(activeResult, { projectId, assetId, discipline: activeDiscipline });
   }
 
+  function handlePdfExport(): void {
+    if (!activeResult) {
+      openReportPreview();
+      return;
+    }
+    void exportPdf({ result: activeResult, projectId, assetId });
+  }
+
   const selectedPath = useMemo(() => {
     const match = NAV_ITEMS.find((item) => item.href === basePath);
     return match?.href ?? "/piping";
@@ -167,6 +186,15 @@ export function TopBar() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/90 bg-background/95 backdrop-blur-sm">
       <div className="relative flex h-[60px] items-center gap-2 px-4">
+        <Button
+          variant="outline"
+          className="h-8 px-2 text-xs lg:hidden"
+          aria-label={labels.menu}
+          title={labels.menu}
+          onClick={() => setMobileDrawerOpen(true)}
+        >
+          <Menu className="h-3.5 w-3.5" />
+        </Button>
         <Link href={localizedHref("/")} className="mr-1 flex min-w-0 items-center gap-2">
           <span className="inline-flex h-7 w-7 items-center justify-center rounded-[6px] border border-primary/35 bg-primary/10 text-primary">
             <Factory className="h-4 w-4" />
@@ -247,6 +275,17 @@ export function TopBar() {
           >
             <FileDown className="h-3.5 w-3.5" />
             <span className="hidden xl:inline">{labels.exportMd}</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="h-8 gap-1.5 px-2 text-xs"
+            aria-label={labels.exportPdf}
+            title={pdfGenerating ? labels.exportPdfGenerating : labels.exportPdf}
+            disabled={pdfGenerating}
+            onClick={handlePdfExport}
+          >
+            {pdfGenerating ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <FileText className="h-3.5 w-3.5" />}
+            <span className="hidden xl:inline">{pdfGenerating ? labels.exportPdfGenerating : labels.exportPdf}</span>
           </Button>
           <Button
             variant="outline"
@@ -349,6 +388,8 @@ export function TopBar() {
           </section>
         )}
       </div>
+
+      <MobileDrawer open={mobileDrawerOpen} onClose={() => setMobileDrawerOpen(false)} />
 
       {showReportPreview && (
         <section
