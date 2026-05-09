@@ -2,6 +2,28 @@
 
 Tracks every change between the originally submitted manuscript (`MANUSCRIPT (1).docx`) and successive revision versions stored in `docs/publication/`.
 
+## v3.5 final-submission-package (2026-05-09)
+
+Three Editorial-Manager-required items produced:
+
+- HIGHLIGHTS.docx — five JLP-format highlight bullets, each ≤85 chars,
+  v3.5 numbers (26/60 ablation, Recall@1 0.74, MRR@10 0.7933)
+- DECLARATION_OF_INTERESTS.docx — single-paragraph competing-interests
+  statement; user must additionally complete the Elsevier-provided form
+  on Editorial Manager
+- PAPER_JLP_REVISED_v3_MARKED.docx — section-level highlighting
+  (NEW / REVISED markers on headings + first-paragraph blockquote
+  prefix); produced by classifying v3.5 sections against the originally
+  submitted MANUSCRIPT (1).docx structure
+
+Final upload package on Editorial Manager:
+1. PAPER_JLP_REVISED_v3.docx (clean, unmarked)
+2. PAPER_JLP_REVISED_v3_MARKED.docx (marked up)
+3. RESPONSE_TO_REVIEWERS_v2.docx
+4. COVER_LETTER_JLP_RESUBMISSION_v2.docx
+5. HIGHLIGHTS.docx
+6. DECLARATION_OF_INTERESTS.docx
+
 ## v3.3 → v3.4 (second-round peer feedback integration)
 
 Second-round peer-feedback pass applied:
