@@ -17,22 +17,17 @@ Elsevier
 
 Dear Professor Amyotte,
 
-Thank you for the opportunity to revise our manuscript JLP-D-26-00414, and please convey our gratitude to the three anonymous reviewers, whose detailed comments substantially strengthened the work. We are pleased to resubmit the revised manuscript together with a point-by-point Response to Reviewers letter.
+Thank you for the opportunity to revise JLP-D-26-00414; please convey our gratitude to the three anonymous reviewers, whose detailed comments substantially strengthened the work.
 
-The revision addresses the structural concerns raised at review:
+- Reviewer concerns on the absence of a comparison axis are addressed via an industry-baseline comparison and an internal four-layer ablation (§6.6, Tables 7 / 7b).
+- Synthetic-only validation is reframed as implementation verification and supplemented by an anonymised real-plant pipeline-execution case (§6.1, Appendix A).
+- Statistical claims are narrowed to those that survive a paired-bootstrap 95% CI (§6.5, Table 6); honest weakness disclosure is reported in §8.
 
-- Reviewer concerns on comparison framing addressed via industry-baseline + internal layer ablation (§6.6).
-- Synthetic-data positioning made honest via implementation-verification framing and a real-plant pipeline-execution case (§6.1, Appendix A).
-- Statistical claims narrowed to those that survive paired-bootstrap 95% CI (§6.5, Table 6).
-
-The full revision is reproducible end-to-end via `scripts/reproduce_all.py` (13/13 scripts pass on a clean checkout). All source code, golden datasets, the 60-scenario ablation set, the 50-query curated retrieval benchmark, and the SQLite FTS5 index manifest are publicly released under the AGPL-3.0 license. The manuscript remains exclusive to *Journal of Loss Prevention in the Process Industries*; it has not been published or submitted elsewhere, and there are no conflicts of interest to declare.
-
-We look forward to your decision and to any further comments from the reviewers.
+The full revision is reproducible via `scripts/reproduce_all.py` (13/13 scripts pass) with all code, datasets, and the FTS5 index manifest released under AGPL-3.0. The manuscript is exclusive to *JLP*, has not been submitted elsewhere, and we declare no conflicts of interest.
 
 Sincerely,
 
 **Yuyong Kim**
 University of Wisconsin–Madison
-M.S. Data, Insights & Analytics Candidate; B.S. Chemical & Biological Engineering
-12+ years of professional experience in petrochemical EPC and process plant engineering
+M.S. Data, Insights & Analytics; B.S. Chemical & Biological Engineering; 12+ yr petrochemical EPC.
 [linkedin.com/in/yuyongkim](https://linkedin.com/in/yuyongkim)

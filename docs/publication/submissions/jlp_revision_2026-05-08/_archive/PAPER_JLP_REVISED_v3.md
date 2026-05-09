@@ -31,6 +31,8 @@ This study addresses the following two research questions:
 
 The contributions of this paper are as follows. First, we propose a verification architecture that integrates seven engineering disciplines into a single orchestration pipeline and automatically detects coupling hazards across ten predefined domain pairs, with empirical validation strongest in piping-vessel coupling and exploratory in the remaining pairs. Second, we present a methodology for integrating a KOSHA public-API regulatory corpus into engineering AI verification — to our knowledge, the first such system. Third, we construct a quantitative evaluation framework comprising 220 synthetic golden cases, a 60-scenario cross-discipline ablation, a 50-query curated regulatory retrieval benchmark, and an industry-baseline comparison ("ASME/API pass = compliance complete") on three representative case studies; **Appendix A complements this synthetic evidence with a real-plant data-sheet validation case (VES-REAL-001, anonymised cryogenic flare knockout drum)** so that the framework is demonstrated end-to-end on actual EPC design data and not on synthetic inputs alone. Fourth, we formalise the **jurisdiction compliance gap** as a defined construct and position the system as a compliance co-pilot to HAZOP, RBI, and digital-twin workflows — not a replacement. Code and datasets are released under AGPL-3.0.
 
+**Scope statement.** The architecture described in §3 spans seven engineering disciplines and four verification layers; this is the *framework* scope. The empirical evidence presented in §6 covers a subset: piping-vessel coupling is the most densely validated cross-discipline interaction (22 of 26 ablation detections), while electrical-rotating, civil-rotating, instrumentation, and structural pairs are exercised at a more exploratory level. We deliberately separate these two scopes throughout the paper to avoid the impression that empirical validation has covered the full architecture uniformly.
+
 ![Figure 1. Overall system architecture: orchestrator, seven domain calculation services with shared four-layer verification, cross-discipline validator, and KOSHA Regulatory RAG layer with on-premises LLM.](figures/fig_1_system_architecture.png)
 
 ---
@@ -142,7 +144,7 @@ Three K-voting design choices warrant explicit justification: the **number of pa
 
 *Tolerance.* The 1% relative-deviation threshold is calibrated against the tightest acceptance tolerance in the golden dataset (±1% for critical cases; §6.1). A tolerance smaller than this would generate false-positive consensus failures arising from legitimate floating-point rounding differences between the three paths; a larger tolerance would mask real coding errors. Sensitivity analysis on this choice is reported as part of §6.6.
 
-*Scope of independence.* Full N-version programming requires independently authored implementations to defeat correlated bugs. We do not claim that level of independence; the three paths share the same author and the same standard-citation tables. K-voting here therefore protects primarily against numerical-precision and ordering bugs, not against systematic conceptual errors in the standard interpretation. We make this limitation explicit so the layer can be correctly positioned.
+*Scope of independence.* Full N-version programming requires independently authored implementations to defeat correlated bugs. We do not claim that level of independence; the three paths share the same author and the same standard-citation tables. K-voting here therefore protects primarily against numerical-precision and ordering bugs, not against systematic conceptual errors in the standard interpretation. We make this limitation explicit so that the layer's scope and intent are unambiguous in the broader context of N-version programming [11].
 
 ---
 
@@ -158,7 +160,7 @@ We deliberately frame these results as **implementation verification, not predic
 
 **Table 2. Golden Dataset Composition by Discipline**
 
-| Discipline | Standard | Boundary | Failure | Composite | Total |
+| Discipline | Standard cases | Boundary cases | Failure cases | Composite cases | Total |
 |---|---:|---:|---:|---:|---:|
 | Piping | 20 | 15 | 10 | 5 | 50 |
 | Vessel | 18 | 7 | 5 | — | 30 |
@@ -171,9 +173,11 @@ We deliberately frame these results as **implementation verification, not predic
 
 **Synthetic data — defence and precedent.** A synthetic-data evaluation invites the concern that the evaluator finds what the system was designed to find. Three properties limit that concern in this study. The test cases are *inverted* from the regulatory and standards text — each KOSHA RAG target was selected by reading the actual KOSHA clause first and then constructing a calculation context that should trigger it, so the detection grounds in real regulatory obligations even though the calc inputs are constructed. This construction pattern is established practice in safety-critical AI evaluation, including medical-AI synthetic patient cohorts with known ground-truth labels and simulated-scenario validation of autonomous-vehicle systems prior to public-road deployment. The evaluation is positioned as a **feasibility study** for the integration of calc + cross-discipline + KOSHA RAG; field validation against plant data is explicit future work.
 
+**Benchmark construction independence — known limitation.** All synthetic case datasets in this paper (220 golden cases per §6.1, 60 cross-discipline scenarios per §6.3, 50 retrieval queries per §6.5) were constructed by the system author. We do not claim independent field generalization; the benchmarks were designed to exercise architectural coverage and are released in full so that any reader can construct an independent benchmark and rerun. Independent third-party benchmark construction is documented as future work (§8 Limitation 7).
+
 ### 6.2 Seven-Discipline Pipeline Evaluation
 
-Across 43 pipeline scenarios run end-to-end through the orchestrator, the platform recorded a completion rate of 0.6512 and a blocking rate of 0.3488. Nominal and standard-aligned cases achieved a completion rate of 1.0000; boundary-aligned and failure-mode-aligned cases were blocked at a rate of 1.0000, confirming correct hazard identification by the integrated stack.
+Across 43 pipeline scenarios run end-to-end through the orchestrator, the platform recorded a completion rate of 0.6512 and a blocking rate of 0.3488. Nominal and standard-aligned cases achieved a completion rate of 1.0000; boundary-aligned and failure-mode-aligned cases were blocked at a rate of 1.0000, confirming correct hazard identification by the integrated stack. (Source: `outputs/seven_pipeline_report.md`, generated by `scripts/benchmark_seven_pipeline.py` over the seven `datasets/golden_standards/*_golden_dataset_v1.json` files; this 43-scenario set measures end-to-end pipeline behaviour and is **distinct from** the 60-scenario cross-discipline ablation set of §6.3, which is constructed by `scripts/benchmark_cross_discipline_ablation.py` via the `aligned_*` and `mixed_*` index builders against the same underlying golden datasets.)
 
 ### 6.3 Cross-Discipline Validator Ablation (RQ1)
 
@@ -206,7 +210,7 @@ Detections concentrate in the **piping-vessel nozzle margin mismatch** family (2
 
 ### 6.4 KOSHA RAG Regulatory Grounding — Three Cases (RQ2)
 
-Three representative cases demonstrate the incremental regulatory value of the KOSHA RAG layer. Results are summarised in Table 4; KOSHA citation quality and regulatory class (mandatory vs guidance) are detailed in Table 5.
+Three representative cases demonstrate the incremental regulatory value of the KOSHA RAG layer. The three cases were selected from the vessel and piping disciplines because these are the two most common service envelopes in petrochemical EPC packages and because the KOSHA technical guideline coverage in the indexed corpus is densest for pressure-bearing equipment; cross-discipline coverage in case studies is documented as future work (§8 Limitation 4). Results are summarised in Table 4; KOSHA citation quality and regulatory class (mandatory vs guidance) are detailed in Table 5.
 
 #### Case 1 — Vessel Remaining Life (VES-GOLD-001)
 
@@ -315,6 +319,10 @@ All four rows of Table 7b are computed by `scripts/run_layer_ablation.py` (`outp
 
 **Sensitivity analysis and uncertainty.** The headline numbers in §6.3 and §6.5 inherit two principal sources of uncertainty: (i) the synthetic golden cases are bounded by the reference examples used as their seeds — a wider seed set could move blocking ratios; (ii) the curated retrieval benchmark of 50 queries is small relative to the 1,327-document corpus and is targeted by construction. We compute the standard error on overall Recall@1 (Enhanced) as **0.062** from the binomial form (`sqrt(p(1-p)/n)`, n=50, p=0.7400), and the paired-bootstrap 95% CI on the +0.30 Recall@1 delta is **[+0.14, +0.48]** (excludes zero; see Table 6). The MRR@10 delta of +0.2189 has CI **[+0.09, +0.35]** (also excludes zero). The Recall@3 and Recall@5 deltas of +0.12 each have paired CIs of **[−0.02, +0.26]** and are *not* statistically distinguishable from zero on a benchmark of this size. The cross-discipline ablation deltas of +1.0 on aligned boundary and aligned failure subsets are categorical (every case in those subsets is blocked under the validator and none are blocked without it), giving a deterministic separation that does not require a confidence interval.
 
+#### 6.6.3 Real-plant pipeline-execution evidence
+
+To make the real-plant evidence visible at the body level — and not only as an appendix forward-reference — we summarise the VES-REAL-001 outcome here. VES-REAL-001 is an anonymised cryogenic flare knockout drum (SA-240 Type 304/304L, 0.343 MPa(g) plus full vacuum, 190 °C / -190 °C, ID 5,000 mm, T-T 20,400 mm) drawn from an operating petrochemical project; all client, contractor, licensor, personnel, location, and document-ID identifiers were stripped before inclusion. Running the unmodified pipeline produces a deterministic ASME Section VIII Div.1 UG-27 controlling shell thickness of **7.237 mm** at the +190 °C side, with the Layer-4 reverse-pressure check closing to within machine epsilon. KOSHA RAG retrieval, executed through the same code path used in §6.5, returns on the spec-faithful Variant A query **2 mandatory law-article hits + 8 KOSHA technical guides** in the top-10, and on the narrower Variant B Korean-term probe **1 mandatory + 9 guidance hits**, with **Article 266** (block-valve prohibition on flare and relief paths under the *Rules on Occupational Safety and Health Standards*) surfacing at **rank 5** in Variant B. The full evidence — inputs, calculation outputs, retrieval top-10 with BM25 scores and snippets, and the explicit framing as pipeline-execution evidence rather than predictive validation — is reproduced verbatim in Appendix A from `outputs/real_case_ves001_rag.{json,md}` (regenerated by `scripts/run_real_case_ves001_rag.py`).
+
 ### 6.7 Citation Traceability and Negative-Case Evidence
 
 **Citation-traceability precision.** Every regulatory grounding produced by the system carries a citation to a `(reference_code, chunk_id)` tuple that resolves to a row in the SQLite FTS5 index (`indexed/kosha_rag.db`). The grounding generator (`src/rag/local_kosha_rag.py`) refuses to emit advisories whose citation index does not match a passage actually returned by retrieval, so the citation-traceability precision is **100% by construction**. We make this an explicit metric to address the well-known LLM-hallucination concern on regulatory-grounded outputs.
@@ -326,6 +334,8 @@ The same evidence file records a *second* probe variant labelled `mirrored_pip04
 ---
 
 ## 7. Discussion
+
+The discussion below interprets the empirical evidence of §6 in light of the framework-vs-validated-scope distinction made explicit in §1: the seven-discipline architecture is the framework scope, while the empirical signal is densest in piping-vessel coupling and remains exploratory in the other discipline pairs.
 
 ### 7.1 The jurisdiction compliance gap
 

@@ -2,6 +2,28 @@
 
 Tracks every change between the originally submitted manuscript (`MANUSCRIPT (1).docx`) and successive revision versions stored in `docs/publication/`.
 
+## v3.3 → v3.4 (second-round peer feedback integration)
+
+Second-round peer-feedback pass applied:
+
+MUST-fixes (3):
+- Response letter R2.3 quoted-text synced to current manuscript wording
+- Table 2 column headers expanded ("Standard" → "Standard cases" etc.)
+- §5.4 grammar fix on K-voting limitation sentence
+
+Optional clarifications (2):
+- §6.4 case-selection rationale (1 sentence on why vessel+piping)
+- §6.2 dataset-path note distinguishing 43-scenario set from 60-scenario set
+
+Strategic defensibility (4):
+- STRAT-1: explicit framework-scope vs validated-scope separation in §1 + §7
+- STRAT-2: real-plant evidence promoted with §6.6.3 summary subsection (Appendix A retained)
+- STRAT-3: benchmark-construction independence acknowledged in §6.1
+- STRAT-4: cover letter compressed to ~1,500 bytes (3 single-sentence bullets)
+
+Response letters EN + KO mirrored at R2.3 / R1.3 / R1.5.
+Pandoc regenerated 3 upload docx + KO archive docx.
+
 ## v3.2 → v3.3 (peer-reading feedback integration)
 
 External peer feedback on the v3.2 draft surfaced one blind-review format
