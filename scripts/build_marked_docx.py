@@ -1,20 +1,37 @@
-"""Build PAPER_JLP_REVISED_v3_MARKED.docx via python-docx text diff.
+"""Build PAPER_JLP_REVISED_v3_MARKED.docx with NATIVE Word track-changes.
+
+This produces real <w:ins> and <w:del> elements that Word recognises as
+tracked changes (with the side panel, accept/reject buttons, author/date
+attribution). NOT just visual styling — the actual OOXML revision marks.
 
 Approach:
-  - Read original .docx paragraphs (text)
-  - Walk revised .docx paragraphs (preserves figures, tables, headings, styles)
-  - For each revised paragraph, find best original match by SequenceMatcher ratio
-  - Matched (>= 0.40): clear runs and replace with word-level diff runs
-      insertion = green underline, deletion = red strikethrough
-  - Unmatched: whole paragraph green underline
-  - Append "Deleted from original" block at end with strikethrough of all
-    original paragraphs that were never matched
+  1. Read original .docx paragraphs (text, including table cells).
+  2. Walk revised .docx paragraphs.
+  3. For each revised paragraph that does have a matching original paragraph
+     (SequenceMatcher ratio >= 0.40), replace its runs with a native diff
+     using <w:ins> for inserted words and <w:del>/<w:delText> for deleted
+     words. Equal segments stay as plain runs.
+  4. For revised paragraphs with no original match, wrap the entire text
+     content in a single <w:ins> (Word treats this as a wholly inserted
+     paragraph).
+  5. Append a "DELETED FROM ORIGINAL" page-break section: each unmatched
+     original paragraph becomes a new paragraph whose entire content is
+     wrapped in <w:del>.
+
+Notes:
+  - Heading paragraphs are skipped from diff to keep the structure readable.
+  - Tables are skipped from diff for the same reason (table content was
+    largely added in revision; word-level diff inside tables is unreadable).
+  - All <w:ins>/<w:del> elements use a single author "Yuyong Kim" and a
+    single fixed date so accept/reject groups them sensibly in Word.
 """
 import os, sys, difflib, time
+from datetime import datetime
 sys.stdout.reconfigure(encoding='utf-8')
 
 from docx import Document
-from docx.shared import RGBColor
+from docx.oxml.ns import qn, nsmap
+from docx.oxml import OxmlElement
 
 ROOT = os.path.join(os.path.dirname(__file__), '..',
                     'docs', 'publication', 'submissions')
@@ -24,8 +41,155 @@ ORIG_DOCX = os.path.join(ROOT, 'jlp_initial_2026-03-31',  'MANUSCRIPT (1).docx')
 REV_DOCX  = os.path.join(ROOT, 'jlp_revision_2026-05-08', 'PAPER_JLP_REVISED_v3.docx')
 OUT_DOCX  = os.path.join(ROOT, 'jlp_revision_2026-05-08', 'PAPER_JLP_REVISED_v3_MARKED.docx')
 
-INS = (0, 112, 0)   # green
-DEL = (192, 0, 0)   # red
+AUTHOR = 'Yuyong Kim'
+DATE_ISO = '2026-05-10T00:00:00Z'
+
+# Counter for w:id (must be unique within document)
+_next_id = 1
+def next_id():
+    global _next_id
+    _next_id += 1
+    return _next_id
+
+
+def make_run(text, *, run_props_template=None):
+    """Create <w:r><w:t>text</w:t></w:r>; optionally clone rPr from a template run."""
+    r = OxmlElement('w:r')
+    if run_props_template is not None:
+        rPr_src = run_props_template.find(qn('w:rPr'))
+        if rPr_src is not None:
+            from copy import deepcopy
+            r.append(deepcopy(rPr_src))
+    t = OxmlElement('w:t')
+    t.set(qn('xml:space'), 'preserve')
+    t.text = text
+    r.append(t)
+    return r
+
+
+def make_del_run(text, *, run_props_template=None):
+    """Create <w:r><w:delText>text</w:delText></w:r> for use inside <w:del>."""
+    r = OxmlElement('w:r')
+    if run_props_template is not None:
+        rPr_src = run_props_template.find(qn('w:rPr'))
+        if rPr_src is not None:
+            from copy import deepcopy
+            r.append(deepcopy(rPr_src))
+    dt = OxmlElement('w:delText')
+    dt.set(qn('xml:space'), 'preserve')
+    dt.text = text
+    r.append(dt)
+    return r
+
+
+def make_ins(child_run):
+    """Wrap a run inside <w:ins> with author/date attributes."""
+    ins = OxmlElement('w:ins')
+    ins.set(qn('w:id'), str(next_id()))
+    ins.set(qn('w:author'), AUTHOR)
+    ins.set(qn('w:date'), DATE_ISO)
+    ins.append(child_run)
+    return ins
+
+
+def make_del(child_run):
+    """Wrap a run inside <w:del> with author/date attributes."""
+    d = OxmlElement('w:del')
+    d.set(qn('w:id'), str(next_id()))
+    d.set(qn('w:author'), AUTHOR)
+    d.set(qn('w:date'), DATE_ISO)
+    d.append(child_run)
+    return d
+
+
+def get_first_run_template(para):
+    """Return the first <w:r> in a paragraph, used as formatting template."""
+    p = para._element
+    for child in p:
+        if child.tag == qn('w:r'):
+            return child
+    return None
+
+
+def clear_runs(para):
+    """Remove all <w:r>, <w:ins>, <w:del>, <w:hyperlink> from a paragraph,
+       leaving <w:pPr> intact."""
+    p = para._element
+    for child in list(p):
+        if child.tag in (qn('w:pPr'),):
+            continue
+        p.remove(child)
+
+
+def replace_with_diff(para, orig_text, new_text):
+    """Clear paragraph runs and rebuild as a native diff (<w:ins>/<w:del>/normal runs)."""
+    template = get_first_run_template(para)
+    a = orig_text.split()
+    b = new_text.split()
+    sm = difflib.SequenceMatcher(None, a, b)
+    clear_runs(para)
+    for op, i1, i2, j1, j2 in sm.get_opcodes():
+        if op == 'equal':
+            txt = ' '.join(b[j1:j2])
+            if txt:
+                para._element.append(make_run(' ' + txt if para._element.findall(qn('w:r')) else txt,
+                                              run_props_template=template))
+        elif op == 'insert':
+            txt = ' '.join(b[j1:j2])
+            if txt:
+                prefix = ' ' if has_visible_content(para) else ''
+                para._element.append(make_ins(make_run(prefix + txt,
+                                                       run_props_template=template)))
+        elif op == 'delete':
+            txt = ' '.join(a[i1:i2])
+            if txt:
+                prefix = ' ' if has_visible_content(para) else ''
+                para._element.append(make_del(make_del_run(prefix + txt,
+                                                           run_props_template=template)))
+        elif op == 'replace':
+            d_txt = ' '.join(a[i1:i2])
+            i_txt = ' '.join(b[j1:j2])
+            if d_txt:
+                prefix = ' ' if has_visible_content(para) else ''
+                para._element.append(make_del(make_del_run(prefix + d_txt,
+                                                           run_props_template=template)))
+            if i_txt:
+                para._element.append(make_ins(make_run(' ' + i_txt,
+                                                       run_props_template=template)))
+
+
+def has_visible_content(para):
+    """Check whether paragraph already has any non-pPr child."""
+    for child in para._element:
+        if child.tag != qn('w:pPr'):
+            return True
+    return False
+
+
+def mark_whole_paragraph_as_inserted(para):
+    """Wrap the paragraph text in a single <w:ins> and mark the paragraph mark
+       as inserted too (this is how Word represents 'whole new paragraph')."""
+    template = get_first_run_template(para)
+    text = para.text
+    clear_runs(para)
+    if text:
+        para._element.append(make_ins(make_run(text, run_props_template=template)))
+    # Mark the paragraph mark itself as inserted: pPr/rPr/ins
+    pPr = para._element.find(qn('w:pPr'))
+    if pPr is None:
+        pPr = OxmlElement('w:pPr')
+        para._element.insert(0, pPr)
+    rPr = pPr.find(qn('w:rPr'))
+    if rPr is None:
+        rPr = OxmlElement('w:rPr')
+        pPr.append(rPr)
+    if rPr.find(qn('w:ins')) is None:
+        ins_mark = OxmlElement('w:ins')
+        ins_mark.set(qn('w:id'), str(next_id()))
+        ins_mark.set(qn('w:author'), AUTHOR)
+        ins_mark.set(qn('w:date'), DATE_ISO)
+        rPr.append(ins_mark)
+
 
 def best_match(text, candidates, used, threshold=0.40):
     if len(text) < 20:
@@ -46,50 +210,6 @@ def best_match(text, candidates, used, threshold=0.40):
                                    text.lower()).ratio()
     return (best_idx, real) if real >= threshold else (-1, real)
 
-def clear_runs(para):
-    p = para._element
-    for child in list(p):
-        if child.tag.endswith('}pPr'):
-            continue
-        p.remove(child)
-
-def add_run(para, text, *, color=None, strike=False, underline=False, bold=False):
-    if not text:
-        return
-    run = para.add_run(text)
-    if color:
-        run.font.color.rgb = RGBColor(*color)
-    if strike:
-        run.font.strike = True
-    if underline:
-        run.font.underline = True
-    if bold:
-        run.font.bold = True
-
-def diff_into_para(para, orig_text, new_text):
-    a = orig_text.split()
-    b = new_text.split()
-    sm = difflib.SequenceMatcher(None, a, b)
-    clear_runs(para)
-    parts = []
-    for op, i1, i2, j1, j2 in sm.get_opcodes():
-        if op == 'equal':
-            parts.append(('eq', ' '.join(b[j1:j2])))
-        elif op == 'insert':
-            parts.append(('ins', ' '.join(b[j1:j2])))
-        elif op == 'delete':
-            parts.append(('del', ' '.join(a[i1:i2])))
-        elif op == 'replace':
-            parts.append(('del', ' '.join(a[i1:i2])))
-            parts.append(('ins', ' '.join(b[j1:j2])))
-    for k, (kind, txt) in enumerate(parts):
-        prefix = '' if k == 0 else ' '
-        if kind == 'eq':
-            add_run(para, prefix + txt)
-        elif kind == 'ins':
-            add_run(para, prefix + txt, color=INS, underline=True)
-        elif kind == 'del':
-            add_run(para, prefix + txt, color=DEL, strike=True)
 
 def main():
     t0 = time.time()
@@ -123,21 +243,34 @@ def main():
             continue
         if idx >= 0:
             used.add(idx)
-            diff_into_para(para, orig_paras[idx], text)
+            replace_with_diff(para, orig_paras[idx], text)
             n_partial += 1
         else:
-            clear_runs(para)
-            add_run(para, text, color=INS, underline=True)
+            mark_whole_paragraph_as_inserted(para)
             n_new += 1
 
-    deleted = [(i, p) for i, p in enumerate(orig_paras) if i not in used]
+    # Append "Deleted from original" block: each orphan original paragraph
+    # becomes a new paragraph whose entire content is wrapped in <w:del>.
+    deleted = [p for i, p in enumerate(orig_paras) if i not in used]
     if deleted:
         rev_doc.add_page_break()
-        h = rev_doc.add_paragraph()
-        add_run(h, 'Deleted content from original manuscript', bold=True, color=DEL)
-        for _, p in deleted:
-            para = rev_doc.add_paragraph()
-            add_run(para, p, color=DEL, strike=True)
+        title_p = rev_doc.add_paragraph()
+        bold_run = title_p.add_run('Deleted content from original manuscript')
+        bold_run.bold = True
+        for orig_text in deleted:
+            new_para = rev_doc.add_paragraph()
+            del_run = make_del_run(orig_text)
+            new_para._element.append(make_del(del_run))
+            # Mark paragraph mark itself as deleted
+            pPr = OxmlElement('w:pPr')
+            rPr = OxmlElement('w:rPr')
+            del_mark = OxmlElement('w:del')
+            del_mark.set(qn('w:id'), str(next_id()))
+            del_mark.set(qn('w:author'), AUTHOR)
+            del_mark.set(qn('w:date'), DATE_ISO)
+            rPr.append(del_mark)
+            pPr.append(rPr)
+            new_para._element.insert(0, pPr)
 
     if os.path.exists(OUT_DOCX):
         os.remove(OUT_DOCX)
@@ -145,16 +278,19 @@ def main():
     size = os.path.getsize(OUT_DOCX)
     print(f'\n  Saved: {size:,} B in {time.time() - t0:.1f}s')
     print(f'  Paragraphs: equal={n_eq}  partial-diff={n_partial}  fully-new={n_new}')
-    print(f'  Original paragraphs marked deleted: {len(deleted)} of {len(orig_paras)}')
+    print(f'  Original paragraphs in deleted-block: {len(deleted)} of {len(orig_paras)}')
 
-    import zipfile
+    # Verify native track-changes XML
+    import zipfile, re
     z = zipfile.ZipFile(OUT_DOCX)
-    media = [n for n in z.namelist() if 'media' in n and n.endswith('.png')]
     body = z.read('word/document.xml').decode('utf-8', errors='ignore')
-    print(f'  PNGs preserved:    {len(media)}')
-    print(f'  Strikethrough runs: {body.count("<w:strike")}')
-    print(f'  Color runs:         {body.count("<w:color")}')
-    print(f'  Underline runs:     {body.count("<w:u ")}')
+    media = [n for n in z.namelist() if 'media' in n and n.endswith('.png')]
+    ins_count = len(re.findall(r'<w:ins[\s>]', body))
+    del_count = len(re.findall(r'<w:del[\s>]', body))
+    print(f'  PNGs preserved:           {len(media)}')
+    print(f'  <w:ins> elements (TRUE):  {ins_count:,}')
+    print(f'  <w:del> elements (TRUE):  {del_count:,}')
+
 
 if __name__ == '__main__':
     main()

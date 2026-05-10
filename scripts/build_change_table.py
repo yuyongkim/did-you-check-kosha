@@ -1,11 +1,28 @@
-"""Build CHANGE_SUMMARY_TABLE.md/docx for the JLP revision package."""
+"""Build CHANGE_SUMMARY_TABLE.md / .docx for the JLP revision package.
+
+Outputs include a quantitative scope header (computed from the original
+and revised .docx files) and a fixed-width-column section change table.
+The pandoc output is post-processed via python-docx so the table columns
+are not equal-width (the default is unreadable when row 1 is "1" and
+row 5 is a 30-word description).
+"""
 import os, sys, re, subprocess
 sys.stdout.reconfigure(encoding='utf-8')
 
+from docx import Document
+from docx.shared import Inches, Pt, RGBColor
+from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
+
 ROOT = os.path.join(os.path.dirname(__file__), '..',
-                    'docs', 'publication', 'submissions',
-                    'jlp_revision_2026-05-08')
+                    'docs', 'publication', 'submissions')
 ROOT = os.path.abspath(ROOT)
+
+ORIG_DOCX = os.path.join(ROOT, 'jlp_initial_2026-03-31',  'MANUSCRIPT (1).docx')
+REV_DOCX  = os.path.join(ROOT, 'jlp_revision_2026-05-08', 'PAPER_JLP_REVISED_v3.docx')
+ARCHIVE   = os.path.join(ROOT, 'jlp_revision_2026-05-08', '_archive')
+OUT_MD    = os.path.join(ARCHIVE, 'CHANGE_SUMMARY_TABLE.md')
+OUT_DOCX  = os.path.join(ROOT, 'jlp_revision_2026-05-08', 'CHANGE_SUMMARY_TABLE.docx')
 
 CHANGES = [
     ("Abstract", "REVISED", "R1.4, R2.1",
@@ -88,53 +105,151 @@ CHANGES = [
      "New appendix: per-discipline accuracy, Recall@K (K = 1..10), pipeline latency, retrieval failure inventory, full reproducibility manifest."),
 ]
 
-md_lines = [
-    "# Change Summary Table — JLP-D-26-00414 (revision 2026-05-10)",
-    "",
-    "*Maps every revised or newly added section of the manuscript to (a) its change type and (b) the reviewer comment that triggered it. See RESPONSE_TO_REVIEWERS_v2 for the full per-comment author response and PAPER_JLP_REVISED_v3_MARKED.docx for the word-level visual diff.*",
-    "",
-    "| # | Section | Type | Triggered by | What changed |",
-    "|---:|---|:--:|---|---|",
-]
-for i, (sec, typ, trig, desc) in enumerate(CHANGES, 1):
-    md_lines.append(f"| {i} | {sec} | **{typ}** | {trig} | {desc} |")
 
-n_new = sum(1 for c in CHANGES if c[1] == "NEW")
-n_rev = sum(1 for c in CHANGES if c[1] == "REVISED")
-all_trig = " ".join(c[2] for c in CHANGES)
-r1 = len(re.findall(r"\bR1\b", all_trig))
-r2 = len(re.findall(r"\bR2\b", all_trig))
-r3 = len(re.findall(r"\bR3\b", all_trig))
+def docx_stats(path):
+    d = Document(path)
+    body_paras = [p.text for p in d.paragraphs if p.text.strip()]
+    table_paras = []
+    for t in d.tables:
+        for row in t.rows:
+            for cell in row.cells:
+                for p in cell.paragraphs:
+                    if p.text.strip():
+                        table_paras.append(p.text)
+    all_text = ' '.join(body_paras + table_paras)
+    import zipfile
+    z = zipfile.ZipFile(path)
+    xml = z.read('word/document.xml').decode('utf-8', errors='ignore')
+    return {
+        'words':    len(re.findall(r'\b[\w-]+\b', all_text)),
+        'paras':    len(body_paras),
+        'tables':   len(d.tables),
+        'figures':  len(re.findall(r'<pic:pic[\s>]', xml)),
+        'headings': sum(1 for p in d.paragraphs
+                        if p.style and p.style.name and
+                        p.style.name.lower().startswith('heading')),
+    }
 
-md_lines.extend([
-    "",
-    "---",
-    "",
-    "**Summary**",
-    "",
-    f"- Total marked sections: **{len(CHANGES)}**",
-    f"- NEW: **{n_new}**",
-    f"- REVISED: **{n_rev}**",
-    "",
-    "**Reviewer-comment coverage**",
-    "",
-    f"- Reviewer 1 cited in ~{r1} section rows",
-    f"- Reviewer 2 cited in ~{r2} section rows",
-    f"- Reviewer 3 cited in ~{r3} section rows",
-    "",
-    "*The 'R*x*' suffix references the reviewer comment numbering in the original peer-review report; full mapping in RESPONSE_TO_REVIEWERS_v2.*",
-])
 
-md_text = "\n".join(md_lines) + "\n"
-md_path = os.path.join(ROOT, "_archive", "CHANGE_SUMMARY_TABLE.md")
-docx_path = os.path.join(ROOT, "CHANGE_SUMMARY_TABLE.docx")
+def fmt_delta(before, after):
+    delta = after - before
+    pct = (delta / before * 100) if before else float('inf')
+    sign = '+' if delta >= 0 else ''
+    if before == 0:
+        return f"{after:,} (new)"
+    return f"{before:,} -> {after:,}  ({sign}{delta:,}, {sign}{pct:.0f}%)"
 
-with open(md_path, "w", encoding="utf-8") as f:
-    f.write(md_text)
-print(f"Wrote {md_path} ({len(md_text):,} chars, {len(CHANGES)} rows)")
 
-r = subprocess.run(["pandoc", md_path, "-o", docx_path], capture_output=True, text=True)
-if r.returncode != 0:
-    print("pandoc stderr:", r.stderr[:500])
-    sys.exit(1)
-print(f"Saved {docx_path} ({os.path.getsize(docx_path):,} B)")
+def main():
+    s1 = docx_stats(ORIG_DOCX)
+    s2 = docx_stats(REV_DOCX)
+    n_new = sum(1 for c in CHANGES if c[1] == 'NEW')
+    n_rev = sum(1 for c in CHANGES if c[1] == 'REVISED')
+    all_trig = ' '.join(c[2] for c in CHANGES)
+    r1 = len(re.findall(r'\bR1\b', all_trig))
+    r2 = len(re.findall(r'\bR2\b', all_trig))
+    r3 = len(re.findall(r'\bR3\b', all_trig))
+
+    md = [
+        '# Change Summary — JLP-D-26-00414 (revision 2026-05-10)',
+        '',
+        '## Quantitative scope of revision',
+        '',
+        '| Metric | Initial submission (2026-03-31) | Revised submission (this) | Change |',
+        '|---|---:|---:|---|',
+        f'| Word count | {s1["words"]:,} | {s2["words"]:,} | {fmt_delta(s1["words"], s2["words"])} |',
+        f'| Sections (headings) | {s1["headings"]:,} | {s2["headings"]:,} | {fmt_delta(s1["headings"], s2["headings"])} |',
+        f'| Body paragraphs | {s1["paras"]:,} | {s2["paras"]:,} | {fmt_delta(s1["paras"], s2["paras"])} |',
+        f'| Tables | {s1["tables"]:,} | {s2["tables"]:,} | {fmt_delta(s1["tables"], s2["tables"])} |',
+        f'| Figures | {s1["figures"]:,} | {s2["figures"]:,} | {fmt_delta(s1["figures"], s2["figures"])} |',
+        '',
+        f'**TL;DR.** The revised manuscript is **{s2["words"]/s1["words"]:.1f}x** the original word count, '
+        f'adds **{s2["tables"]-s1["tables"]} new tables**, **{s2["figures"]-s1["figures"]} new figures**, '
+        f'and **{s2["headings"]-s1["headings"]} new sections**. This is a major rewrite, not a typo pass.',
+        '',
+        '## Per-section change list',
+        '',
+        f'**{len(CHANGES)} sections changed: {n_new} NEW + {n_rev} REVISED.** '
+        f'Reviewer coverage in this list: R1 in ~{r1} rows, R2 in ~{r2} rows, R3 in ~{r3} rows.',
+        '',
+        '| # | Section | Type | Triggered by | What changed |',
+        '|---:|---|:--:|---|---|',
+    ]
+    for i, (sec, typ, trig, desc) in enumerate(CHANGES, 1):
+        md.append(f'| {i} | {sec} | **{typ}** | {trig} | {desc} |')
+
+    md.extend([
+        '',
+        '*See `RESPONSE_TO_REVIEWERS_v2.docx` for the full per-comment author response, '
+        'and `PAPER_JLP_REVISED_v3_MARKED.docx` for the word-level visual diff.*',
+    ])
+
+    md_text = '\n'.join(md) + '\n'
+    with open(OUT_MD, 'w', encoding='utf-8') as f:
+        f.write(md_text)
+    print(f'Wrote markdown: {OUT_MD} ({len(md_text):,} chars)')
+
+    # Render via pandoc
+    r = subprocess.run(['pandoc', OUT_MD, '-o', OUT_DOCX],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        print('pandoc error:', r.stderr[:500])
+        sys.exit(1)
+    print(f'Pandoc render: {OUT_DOCX} ({os.path.getsize(OUT_DOCX):,} B)')
+
+    # Post-process: set explicit column widths so the table is readable
+    # Total page width landscape ~10in or portrait ~6.5in. Use portrait widths.
+    PORTRAIT_TABLE_INCHES = 6.4
+
+    # Two tables in the doc:
+    #   Table 0: 4-column quantitative-scope table
+    #   Table 1: 5-column change-list table
+    SCOPE_RATIOS  = [0.18, 0.22, 0.22, 0.38]                # 4 cols
+    CHANGE_RATIOS = [0.04, 0.30, 0.07, 0.12, 0.47]          # 5 cols (#, Section, Type, Trig, What)
+
+    def set_widths(table, ratios):
+        # Set tblLayout to "fixed" so word respects our widths
+        tblPr = table._element.find(qn('w:tblPr'))
+        if tblPr is None:
+            tblPr = OxmlElement('w:tblPr')
+            table._element.insert(0, tblPr)
+        layout = tblPr.find(qn('w:tblLayout'))
+        if layout is None:
+            layout = OxmlElement('w:tblLayout')
+            tblPr.append(layout)
+        layout.set(qn('w:type'), 'fixed')
+        # Build/replace tblGrid
+        for tg in table._element.findall(qn('w:tblGrid')):
+            table._element.remove(tg)
+        tblGrid = OxmlElement('w:tblGrid')
+        for ratio in ratios:
+            gc = OxmlElement('w:gridCol')
+            gc.set(qn('w:w'), str(int(ratio * PORTRAIT_TABLE_INCHES * 1440)))
+            tblGrid.append(gc)
+        table._element.insert(list(table._element).index(tblPr) + 1, tblGrid)
+        # Set per-cell widths
+        for row in table.rows:
+            for cell, ratio in zip(row.cells, ratios):
+                cell.width = Inches(ratio * PORTRAIT_TABLE_INCHES)
+                tcPr = cell._tc.get_or_add_tcPr()
+                tcW = tcPr.find(qn('w:tcW'))
+                if tcW is None:
+                    tcW = OxmlElement('w:tcW')
+                    tcPr.append(tcW)
+                tcW.set(qn('w:w'), str(int(ratio * PORTRAIT_TABLE_INCHES * 1440)))
+                tcW.set(qn('w:type'), 'dxa')
+
+    doc = Document(OUT_DOCX)
+    if len(doc.tables) >= 2:
+        set_widths(doc.tables[0], SCOPE_RATIOS)
+        set_widths(doc.tables[1], CHANGE_RATIOS)
+        print(f'Fixed column widths on table 0 ({len(SCOPE_RATIOS)} cols) '
+              f'and table 1 ({len(CHANGE_RATIOS)} cols).')
+    else:
+        print(f'WARN: expected 2 tables, got {len(doc.tables)} - skipping width fix')
+    doc.save(OUT_DOCX)
+    print(f'Final: {OUT_DOCX} ({os.path.getsize(OUT_DOCX):,} B)')
+
+
+if __name__ == '__main__':
+    main()

@@ -1,6 +1,20 @@
-# Change Summary Table — JLP-D-26-00414 (revision 2026-05-10)
+# Change Summary — JLP-D-26-00414 (revision 2026-05-10)
 
-*Maps every revised or newly added section of the manuscript to (a) its change type and (b) the reviewer comment that triggered it. See RESPONSE_TO_REVIEWERS_v2 for the full per-comment author response and PAPER_JLP_REVISED_v3_MARKED.docx for the word-level visual diff.*
+## Quantitative scope of revision
+
+| Metric | Initial submission (2026-03-31) | Revised submission (this) | Change |
+|---|---:|---:|---|
+| Word count | 4,928 | 12,932 | 4,928 -> 12,932  (+8,004, +162%) |
+| Sections (headings) | 50 | 60 | 50 -> 60  (+10, +20%) |
+| Body paragraphs | 160 | 248 | 160 -> 248  (+88, +55%) |
+| Tables | 7 | 24 | 7 -> 24  (+17, +243%) |
+| Figures | 0 | 5 | 5 (new) |
+
+**TL;DR.** The revised manuscript is **2.6x** the original word count, adds **17 new tables**, **5 new figures**, and **10 new sections**. This is a major rewrite, not a typo pass.
+
+## Per-section change list
+
+**39 sections changed: 16 NEW + 23 REVISED.** Reviewer coverage in this list: R1 in ~21 rows, R2 in ~20 rows, R3 in ~3 rows.
 
 | # | Section | Type | Triggered by | What changed |
 |---:|---|:--:|---|---|
@@ -44,18 +58,4 @@
 | 38 | Appendix A. Real-Plant Data-Sheet Validation (VES-REAL-001) | **NEW** | R1.5 | New appendix: anonymised real-plant cryogenic flare-drum case with UG-27 calculation + KOSHA RAG retrieval (both probe variants). |
 | 39 | Appendix B — Extended validation evidence | **NEW** | R1.x, R2.x | New appendix: per-discipline accuracy, Recall@K (K = 1..10), pipeline latency, retrieval failure inventory, full reproducibility manifest. |
 
----
-
-**Summary**
-
-- Total marked sections: **39**
-- NEW: **16**
-- REVISED: **23**
-
-**Reviewer-comment coverage**
-
-- Reviewer 1 cited in ~21 section rows
-- Reviewer 2 cited in ~20 section rows
-- Reviewer 3 cited in ~3 section rows
-
-*The 'R*x*' suffix references the reviewer comment numbering in the original peer-review report; full mapping in RESPONSE_TO_REVIEWERS_v2.*
+*See `RESPONSE_TO_REVIEWERS_v2.docx` for the full per-comment author response, and `PAPER_JLP_REVISED_v3_MARKED.docx` for the word-level visual diff.*
