@@ -4,9 +4,9 @@
 
 | Metric | Initial submission (2026-03-31) | Revised submission (this) | Change |
 |---|---:|---:|---|
-| Word count | 4,928 | 12,932 | 4,928 -> 12,932  (+8,004, +162%) |
+| Word count | 4,928 | 12,984 | 4,928 -> 12,984  (+8,056, +163%) |
 | Sections (headings) | 50 | 60 | 50 -> 60  (+10, +20%) |
-| Body paragraphs | 160 | 248 | 160 -> 248  (+88, +55%) |
+| Body paragraphs | 160 | 249 | 160 -> 249  (+89, +56%) |
 | Tables | 7 | 24 | 7 -> 24  (+17, +243%) |
 | Figures | 0 | 5 | 5 (new) |
 

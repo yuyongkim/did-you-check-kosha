@@ -129,6 +129,35 @@ def main():
         if len(bare) >= 50 and bare not in paper_clean:
             warns.append(f'Response quote may not match current paper: "{bare[:60]}…"')
 
+    # 11b. Cross-document count consistency:
+    # COVER must not cite numbers that contradict its source documents
+    # (CHANGE_SUMMARY for section-level, BEFORE_AFTER for row-level).
+    chsum_path = os.path.join(ARCH, 'CHANGE_SUMMARY_TABLE.md')
+    if os.path.exists(chsum_path):
+        chsum = open(chsum_path, encoding='utf-8').read()
+        cs_match = re.search(r'(\d+)\s+sections changed.*?(\d+)\s+NEW\s*\+\s*(\d+)\s+REVISED', chsum)
+        if cs_match:
+            cs_total, cs_new, cs_rev = (int(g) for g in cs_match.groups())
+            m = re.search(r'(\d+)\s+section-level changes', cover)
+            if m and int(m.group(1)) != cs_total:
+                issues.append(f'COVER cites {m.group(1)} section-level changes but CHANGE_SUMMARY has {cs_total}')
+            m = re.search(r'\*\*(\d+)\s+new sections\*\*', cover)
+            if m and int(m.group(1)) != cs_new:
+                issues.append(f'COVER cites {m.group(1)} new sections but CHANGE_SUMMARY has {cs_new} (granularity collision)')
+            m = re.search(r'\*\*(\d+)\s+rewritten sections\*\*', cover)
+            if m and int(m.group(1)) != cs_rev:
+                issues.append(f'COVER cites {m.group(1)} rewritten sections but CHANGE_SUMMARY has {cs_rev} (granularity collision)')
+
+    ba_path = os.path.join(ROOT, 'BEFORE_AFTER_COMPARISON.docx')
+    if os.path.exists(ba_path):
+        ba_text = doc_text(ba_path)
+        m = re.search(r'(\d+)\s+changed rows.*?(\d+)\s+NEW.*?(\d+)\s+REVISED.*?(\d+)\s+DELETED', ba_text)
+        if m:
+            ba_total = int(m.group(1))
+            cm = re.search(r'\*\*(\d+)\s+sub-heading-level rows\*\*', cover)
+            if cm and int(cm.group(1)) != ba_total:
+                issues.append(f'COVER cites {cm.group(1)} sub-heading rows but BEFORE_AFTER has {ba_total}')
+
     # 11. MARKED-ACCEPTED sync probe: simulate Word "Accept All Changes"
     #     and verify the resulting text matches PAPER_v3.docx on key probes.
     #     This catches the case where MARKED.docx is stale wrt clean.
