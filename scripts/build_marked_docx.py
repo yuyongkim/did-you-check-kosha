@@ -122,40 +122,32 @@ def clear_runs(para):
 
 
 def replace_with_diff(para, orig_text, new_text):
-    """Clear paragraph runs and rebuild as a native diff (<w:ins>/<w:del>/normal runs)."""
+    """Character-level diff so accept(marked) reproduces new_text byte-for-byte.
+    Word-level split/join lost original whitespace and broke references like
+    "[9] Hector" -> "[9]Hector" after Accept All Changes."""
     template = get_first_run_template(para)
-    a = orig_text.split()
-    b = new_text.split()
-    sm = difflib.SequenceMatcher(None, a, b)
+    sm = difflib.SequenceMatcher(None, orig_text, new_text, autojunk=False)
     clear_runs(para)
     for op, i1, i2, j1, j2 in sm.get_opcodes():
         if op == 'equal':
-            txt = ' '.join(b[j1:j2])
-            if txt:
-                para._element.append(make_run(' ' + txt if para._element.findall(qn('w:r')) else txt,
-                                              run_props_template=template))
+            chunk = new_text[j1:j2]
+            if chunk:
+                para._element.append(make_run(chunk, run_props_template=template))
         elif op == 'insert':
-            txt = ' '.join(b[j1:j2])
-            if txt:
-                prefix = ' ' if has_visible_content(para) else ''
-                para._element.append(make_ins(make_run(prefix + txt,
-                                                       run_props_template=template)))
+            chunk = new_text[j1:j2]
+            if chunk:
+                para._element.append(make_ins(make_run(chunk, run_props_template=template)))
         elif op == 'delete':
-            txt = ' '.join(a[i1:i2])
-            if txt:
-                prefix = ' ' if has_visible_content(para) else ''
-                para._element.append(make_del(make_del_run(prefix + txt,
-                                                           run_props_template=template)))
+            chunk = orig_text[i1:i2]
+            if chunk:
+                para._element.append(make_del(make_del_run(chunk, run_props_template=template)))
         elif op == 'replace':
-            d_txt = ' '.join(a[i1:i2])
-            i_txt = ' '.join(b[j1:j2])
-            if d_txt:
-                prefix = ' ' if has_visible_content(para) else ''
-                para._element.append(make_del(make_del_run(prefix + d_txt,
-                                                           run_props_template=template)))
-            if i_txt:
-                para._element.append(make_ins(make_run(' ' + i_txt,
-                                                       run_props_template=template)))
+            d_chunk = orig_text[i1:i2]
+            i_chunk = new_text[j1:j2]
+            if d_chunk:
+                para._element.append(make_del(make_del_run(d_chunk, run_props_template=template)))
+            if i_chunk:
+                para._element.append(make_ins(make_run(i_chunk, run_props_template=template)))
 
 
 def has_visible_content(para):
@@ -250,13 +242,13 @@ def main():
             n_new += 1
 
     # Append "Deleted from original" block: each orphan original paragraph
-    # becomes a new paragraph whose entire content is wrapped in <w:del>.
+    # becomes a new paragraph whose entire content + paragraph mark is
+    # wrapped in <w:del>. After Accept All Changes the entire block vanishes,
+    # so accept(marked) == clean exactly.
+    # NOTE: no plain-text heading or page break — those would survive Accept
+    # and produce drift between accept(marked) and clean.
     deleted = [p for i, p in enumerate(orig_paras) if i not in used]
     if deleted:
-        rev_doc.add_page_break()
-        title_p = rev_doc.add_paragraph()
-        bold_run = title_p.add_run('Deleted content from original manuscript')
-        bold_run.bold = True
         for orig_text in deleted:
             new_para = rev_doc.add_paragraph()
             del_run = make_del_run(orig_text)

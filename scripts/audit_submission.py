@@ -205,6 +205,73 @@ def main():
                         issues.append(f'CLEAN regression — "{label}" needle still present in clean')
                     elif in_marked:
                         issues.append(f'MARKED out of sync — clean drops "{label[:40]}" but marked-accepted still has it')
+
+            # Strict paragraph-level diff between accept(marked) and clean.
+            # Anchor probes only catch named regressions; this catches any
+            # silent drift (e.g. lost whitespace, leftover plain headings).
+            import difflib
+            def split_paras(t):
+                return [p.strip() for p in re.split(r'\s{2,}|\n', t) if p.strip()]
+            def doc_paras(path):
+                z = zipfile.ZipFile(path)
+                root = etree.fromstring(z.read('word/document.xml'))
+                paras = []
+                for p in root.findall('.//w:p', NS):
+                    txt = ''.join(t.text or '' for t in p.findall('.//w:t', NS)).strip()
+                    if txt:
+                        paras.append(txt)
+                return paras
+            def accept_paras(path):
+                z = zipfile.ZipFile(path)
+                root = etree.fromstring(z.read('word/document.xml'))
+                # Drop paragraphs whose paragraph mark is in <w:del>
+                for p in root.findall('.//w:p', NS):
+                    pPr = p.find('w:pPr', NS)
+                    if pPr is not None:
+                        rPr = pPr.find('w:rPr', NS)
+                        if rPr is not None and rPr.find('w:del', NS) is not None:
+                            p.getparent().remove(p)
+                            continue
+                # Drop <w:del> blocks
+                for d in root.findall('.//w:del', NS):
+                    d.getparent().remove(d)
+                # Unwrap <w:ins>
+                for ins in root.findall('.//w:ins', NS):
+                    parent = ins.getparent()
+                    idx = list(parent).index(ins)
+                    for child in reversed(list(ins)):
+                        parent.insert(idx, child)
+                    parent.remove(ins)
+                paras = []
+                for p in root.findall('.//w:p', NS):
+                    txt = ''.join(t.text or '' for t in p.findall('.//w:t', NS)).strip()
+                    if txt:
+                        paras.append(txt)
+                return paras
+
+            acc = accept_paras(marked_path)
+            cln = doc_paras(os.path.join(ROOT, 'PAPER_JLP_REVISED_v3.docx'))
+            sm = difflib.SequenceMatcher(None, cln, acc)
+            ratio = sm.ratio()
+            n_diff = sum(1 for op, *_ in sm.get_opcodes() if op != 'equal')
+            if ratio < 1.0 or n_diff > 0:
+                first_diffs = []
+                for op, i1, i2, j1, j2 in sm.get_opcodes():
+                    if op == 'equal':
+                        continue
+                    if op in ('insert', 'replace'):
+                        for j in range(j1, min(j2, j1 + 3)):
+                            first_diffs.append(f'+ACCEPT[{j}]: {acc[j][:80]}')
+                    if op in ('delete', 'replace'):
+                        for i in range(i1, min(i2, i1 + 3)):
+                            first_diffs.append(f'-CLEAN [{i}]: {cln[i][:80]}')
+                    if len(first_diffs) >= 6:
+                        break
+                issues.append(
+                    f'STRICT accept(marked) != clean: {ratio*100:.2f}% paragraph match, '
+                    f'{n_diff} differing opcode group(s). First diffs:\n        ' +
+                    '\n        '.join(first_diffs)
+                )
         except ImportError:
             warns.append('lxml not installed; skipping marked-vs-clean sync check')
 
