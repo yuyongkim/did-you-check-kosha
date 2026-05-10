@@ -4,7 +4,7 @@
 
 **To:** Professor Paul Amyotte, Receiving Editor, *Journal of Loss Prevention in the Process Industries*
 
-**Re:** Resubmission of "A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering" (title revised from "Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG" per Reviewer #2's framing concerns)
+**Re:** Resubmission of "Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG" (title preserved from initial submission)
 
 ---
 

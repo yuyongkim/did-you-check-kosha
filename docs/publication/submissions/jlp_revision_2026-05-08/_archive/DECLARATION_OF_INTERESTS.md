@@ -2,7 +2,7 @@
 
 **Manuscript number:** JLP-D-26-00414 (revised)
 
-**Title:** A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering
+**Title:** Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG
 
 **Author:** Yuyong Kim
 *University of Wisconsin–Madison*

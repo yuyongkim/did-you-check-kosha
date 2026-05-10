@@ -1,6 +1,6 @@
 # 리뷰어 답변서 — JLP-D-26-00414 (개정판)
 
-**원고 제목:** Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG (개정 제목: *A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering*)
+**원고 제목:** Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG (개정 제목: *Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG*)
 
 **수신:** Prof. Paul Amyotte, Receiving Editor
 **저널:** *Journal of Loss Prevention in the Process Industries*

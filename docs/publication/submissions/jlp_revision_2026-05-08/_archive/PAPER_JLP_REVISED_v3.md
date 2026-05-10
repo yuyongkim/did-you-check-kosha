@@ -1,4 +1,4 @@
-# A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering
+# Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG
 
 **Yuyong Kim**
 *University of Wisconsin–Madison*

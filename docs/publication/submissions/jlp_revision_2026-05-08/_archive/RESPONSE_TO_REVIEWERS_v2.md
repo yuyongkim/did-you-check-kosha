@@ -1,6 +1,6 @@
 # Response to Reviewers — JLP-D-26-00414
 
-**Manuscript title:** Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG (revised title: *A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering*)
+**Manuscript title:** Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG (revised title: *Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG*)
 
 **To:** Prof. Paul Amyotte, Receiving Editor
 **Journal:** *Journal of Loss Prevention in the Process Industries*

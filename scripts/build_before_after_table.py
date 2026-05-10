@@ -138,6 +138,7 @@ def main():
     # Match
     used = set()
     rows = []  # (label, type, before, after)
+    n_unchanged_dropped = 0
     for rs in rev_secs:
         idx, score = best_section_match(rs, orig_secs, used)
         label = (f'{rs["num"]} {rs["title"]}'.strip()) if rs['num'] else rs['title']
@@ -145,10 +146,13 @@ def main():
             used.add(idx)
             os_ = orig_secs[idx]
             old_label = (f'{os_["num"]} {os_["title"]}'.strip()) if os_['num'] else os_['title']
+            sim = difflib.SequenceMatcher(None, os_['body'], rs['body']).ratio()
+            if sim >= 0.95:
+                n_unchanged_dropped += 1
+                continue  # drop UNCHANGED rows per user request
             before = (f'(was: {old_label})\n\n' + os_['body']) if os_['title'] != rs['title'] else os_['body']
             after  = rs['body']
-            chg = 'UNCHANGED' if difflib.SequenceMatcher(None, os_['body'], rs['body']).ratio() >= 0.95 else 'REVISED'
-            rows.append((label, chg, before, after))
+            rows.append((label, 'REVISED', before, after))
         else:
             rows.append((label, 'NEW', '— (new section, no equivalent in original)', rs['body']))
     # Original sections that were never matched -> deleted
@@ -157,7 +161,8 @@ def main():
         if not os_['body'] and not os_['title']: continue
         old_label = (f'{os_["num"]} {os_["title"]}'.strip()) if os_['num'] else os_['title']
         rows.append((old_label, 'DELETED', os_['body'],
-                     '— (removed in revision; content typically folded into another section, see the change summary table)'))
+                     '— (removed in revision; content typically folded into another section)'))
+    print(f'  Dropped {n_unchanged_dropped} UNCHANGED rows (>=0.95 similarity, no useful before/after to show)')
 
     # Build docx
     doc = Document()
@@ -180,9 +185,9 @@ def main():
     n_new = sum(1 for r in rows if r[1] == 'NEW')
     n_rev = sum(1 for r in rows if r[1] == 'REVISED')
     n_del = sum(1 for r in rows if r[1] == 'DELETED')
-    n_unc = sum(1 for r in rows if r[1] == 'UNCHANGED')
     sub.add_run(
-        f'{len(rows)} rows: {n_new} NEW, {n_rev} REVISED, {n_unc} UNCHANGED, {n_del} DELETED. '
+        f'{len(rows)} changed rows: {n_new} NEW, {n_rev} REVISED, {n_del} DELETED. '
+        f'(Sections >=95% identical between versions are not shown.) '
         f'Excerpts truncated to {EXCERPT_CHARS} chars per cell. '
         f'See PAPER_JLP_REVISED_v3.docx for the full revised manuscript.'
     ).italic = True
@@ -225,7 +230,7 @@ def main():
     if os.path.exists(OUT): os.remove(OUT)
     doc.save(OUT)
     print(f'\nSaved: {OUT} ({os.path.getsize(OUT):,} B)')
-    print(f'  Rows: {len(rows)} (NEW={n_new}, REVISED={n_rev}, UNCHANGED={n_unc}, DELETED={n_del})')
+    print(f'  Rows: {len(rows)} (NEW={n_new}, REVISED={n_rev}, DELETED={n_del})')
 
 
 if __name__ == '__main__':
