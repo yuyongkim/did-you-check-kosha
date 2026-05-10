@@ -422,7 +422,7 @@ The framework is positioned as a **compliance co-pilot** for HAZOP, RBI, and dig
 
 ## Acknowledgements
 
-The author thanks the JLP editorial team for handling this submission, and is grateful for the detailed and structured peer-review feedback that substantially improved the manuscript — in particular the reframing of the synthetic-data results as implementation verification, the Auditor-vs-Advisor positioning, the FFS-vs-EPC-standards subsection, the K-voting design rationale, and the per-case significance analysis. The author also thanks the Korea Occupational Safety and Health Agency for maintaining open access to the KOSHA Smart-search and KOSHA Guide APIs, without which the regulatory corpus could not have been assembled.
+The author thanks the Korea Occupational Safety and Health Agency for maintaining open access to the KOSHA Smart-search and KOSHA Guide APIs, without which the regulatory corpus could not have been assembled.
 
 ---
 
