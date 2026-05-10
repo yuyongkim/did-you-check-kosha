@@ -2,8 +2,7 @@
 
 **Yuyong Kim**
 *University of Wisconsin–Madison*
-M.S. Data, Insights & Analytics Candidate; B.S. Chemical & Biological Engineering; 12+ years of professional experience in petrochemical EPC and process plant engineering.
-[linkedin.com/in/yuyongkim](https://linkedin.com/in/yuyongkim)
+ykim288@wisc.edu
 
 Manuscript number: JLP-D-26-00414 (revised)
 
