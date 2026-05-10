@@ -22,13 +22,16 @@ REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 ROOT = os.path.join(REPO, 'docs', 'publication', 'submissions', 'jlp_revision_2026-05-08')
 ARCH = os.path.join(ROOT, '_archive')
 
+# (src_md, dst_relpath) where dst_relpath is relative to the submission folder.
+# EM-bound files go to top level; internal-only files (Korean response) go
+# to _archive/ so the top-level folder stays at the 8-file submission state.
 PANDOC_PAIRS = [
-    ('PAPER_JLP_REVISED_v3.md',           'PAPER_JLP_REVISED_v3.docx'),
+    ('PAPER_JLP_REVISED_v3.md',             'PAPER_JLP_REVISED_v3.docx'),
     ('COVER_LETTER_JLP_RESUBMISSION_v2.md', 'COVER_LETTER_JLP_RESUBMISSION_v2.docx'),
-    ('RESPONSE_TO_REVIEWERS_v2.md',       'RESPONSE_TO_REVIEWERS_v2.docx'),
-    ('RESPONSE_TO_REVIEWERS_KO_v2.md',    'RESPONSE_TO_REVIEWERS_KO_v2.docx'),
-    ('DECLARATION_OF_INTERESTS.md',       'DECLARATION_OF_INTERESTS.docx'),
-    ('HIGHLIGHTS.md',                     'HIGHLIGHTS.docx'),
+    ('RESPONSE_TO_REVIEWERS_v2.md',         'RESPONSE_TO_REVIEWERS_v2.docx'),
+    ('RESPONSE_TO_REVIEWERS_KO_v2.md',      '_archive/RESPONSE_TO_REVIEWERS_KO_v2.docx'),
+    ('DECLARATION_OF_INTERESTS.md',         'DECLARATION_OF_INTERESTS.docx'),
+    ('HIGHLIGHTS.md',                       'HIGHLIGHTS.docx'),
 ]
 
 
