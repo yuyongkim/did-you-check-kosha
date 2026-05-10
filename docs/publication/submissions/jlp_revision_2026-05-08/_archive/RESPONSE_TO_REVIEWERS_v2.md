@@ -4,7 +4,7 @@
 
 **To:** Prof. Paul Amyotte, Receiving Editor
 **Journal:** *Journal of Loss Prevention in the Process Industries*
-**Date:** 2026-05-08
+**Date:** 2026-05-10
 
 Dear Prof. Amyotte,
 
