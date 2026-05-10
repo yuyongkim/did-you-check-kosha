@@ -129,6 +129,56 @@ def main():
         if len(bare) >= 50 and bare not in paper_clean:
             warns.append(f'Response quote may not match current paper: "{bare[:60]}…"')
 
+    # 11. MARKED-ACCEPTED sync probe: simulate Word "Accept All Changes"
+    #     and verify the resulting text matches PAPER_v3.docx on key probes.
+    #     This catches the case where MARKED.docx is stale wrt clean.
+    marked_path = os.path.join(ROOT, 'PAPER_JLP_REVISED_v3_MARKED.docx')
+    if os.path.exists(marked_path):
+        try:
+            from lxml import etree
+            z = zipfile.ZipFile(marked_path)
+            NS = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+            root = etree.fromstring(z.read('word/document.xml'))
+            # Drop <w:del> blocks (deletions are gone after Accept)
+            for d in root.findall('.//w:del', NS):
+                d.getparent().remove(d)
+            # Unwrap <w:ins> elements (insertions become regular text after Accept)
+            for ins in root.findall('.//w:ins', NS):
+                parent = ins.getparent()
+                idx = list(parent).index(ins)
+                for child in reversed(list(ins)):
+                    parent.insert(idx, child)
+                parent.remove(ins)
+            marked_acc = re.sub(r'\s+', ' ',
+                                re.sub(r'<[^>]+>', ' ',
+                                       etree.tostring(root, encoding='unicode'))).strip()
+            clean_txt  = re.sub(r'\s+', ' ',
+                                doc_text(os.path.join(ROOT, 'PAPER_JLP_REVISED_v3.docx'))).strip()
+
+            # Probes — anchor strings that must (or must NOT) appear in both
+            sync_probes = [
+                ('Title in clean and marked',                 'Detecting Jurisdiction Compliance Gaps', True),
+                ('OLD-revision NEW-title must NOT leak',      'A KOSHA Regulatory Knowledge-Grounded Multi-Discipline', False),
+                ('K-voting future-work wording',              'formal threshold-sensitivity sweep', True),
+                ('§6.6 human-expert paragraph',               'industry baseline is not a human-expert', True),
+                ('Acks must NOT have JLP editorial team',     'JLP editorial team', False),
+            ]
+            for label, needle, must_present in sync_probes:
+                in_clean  = needle in clean_txt
+                in_marked = needle in marked_acc
+                if must_present:
+                    if not in_clean:
+                        warns.append(f'sync probe "{label}": needle missing from clean (probe stale?)')
+                    elif not in_marked:
+                        issues.append(f'MARKED out of sync — clean has "{label[:40]}" but marked-accepted does not')
+                else:
+                    if in_clean:
+                        issues.append(f'CLEAN regression — "{label}" needle still present in clean')
+                    elif in_marked:
+                        issues.append(f'MARKED out of sync — clean drops "{label[:40]}" but marked-accepted still has it')
+        except ImportError:
+            warns.append('lxml not installed; skipping marked-vs-clean sync check')
+
     # Report
     print('=' * 70)
     print('FINAL PRE-SUBMISSION AUDIT')
