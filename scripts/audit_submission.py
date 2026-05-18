@@ -18,7 +18,7 @@ import os, re, sys, zipfile
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-ROOT_REL = os.path.join('docs', 'publication', 'submissions', 'jlp_revision_2026-05-08')
+ROOT_REL = os.path.join('docs', 'publication', 'submissions_EPC', 'jlp_revision_2026-05-08')
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', ROOT_REL))
 ARCH = os.path.join(ROOT, '_archive')
 
@@ -115,7 +115,7 @@ def main():
                 issues.append(f'reproduce_all.py references missing scripts/{s}')
 
     # 9. Numeric consistency cover vs paper (informational)
-    for n in ['26/60', '+0.4333', '0.7400', '0.7933', '12,932', '4,928']:
+    for n in ['26/60', '+0.4333', '0.7400', '0.7933', '12,937', '4,928']:
         if n in paper and n not in cover:
             warns.append(f'Number {n} in PAPER but not in COVER (probably fine; FYI)')
 

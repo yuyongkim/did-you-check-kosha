@@ -92,7 +92,7 @@ civil:           accuracy=1.0000, red_flag_detection=1.0000
 
 ```
 Validator OFF: 0/60 blocked
-Validator ON:  25/60 blocked  (+0.4167 blocking ratio)
+Validator ON:  26/60 blocked  (+0.4333 blocking ratio)
 Aligned boundary cases: 0.0 → 1.0
 Aligned failure cases:  0.0 → 1.0
 ```
@@ -123,14 +123,18 @@ In all three cases: KOSHA RAG identified a Korean-jurisdiction obligation the ca
 
 ## The paper
 
-This system is documented in a peer-reviewed manuscript submitted to  
-*Process Safety and Environmental Protection* (Elsevier, IF ~7).
+This repository underpins the revised submission package for  
+*Journal of Loss Prevention in the Process Industries* (Elsevier).
 
-> *A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering*  
+> *Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG*  
 > Yuyong Kim — University of Wisconsin–Madison  
-> arXiv preprint: [link coming after submission]
+> Revision tag: `jlp-revised-v2`
 
-Full manuscript: [`docs/publication/PAPER_EN_v2.md`](docs/publication/PAPER_EN_v2.md)
+Current JLP manuscript source: [`docs/publication/submissions_EPC/jlp_revision_2026-05-08/_archive/PAPER_JLP_REVISED_v3.md`](docs/publication/submissions_EPC/jlp_revision_2026-05-08/_archive/PAPER_JLP_REVISED_v3.md)
+
+Submission package folder: [`docs/publication/submissions_EPC/jlp_revision_2026-05-08/`](docs/publication/submissions_EPC/jlp_revision_2026-05-08/)
+
+Code-to-paper map: [`docs/publication/CODE_MAP.md`](docs/publication/CODE_MAP.md)
 
 ---
 
@@ -156,7 +160,7 @@ python scripts/benchmark_rag_retrieval.py
 ```
 
 > Qwen runs locally via [Ollama](https://ollama.ai). No GPU required for retrieval.  
-> For generation: `ollama pull qwen2.5:7b-instruct` (or your preferred Qwen variant).
+> The latency benchmark in the paper was recorded with `qwen3:4b`; pull that model for like-for-like reproduction.
 
 ---
 

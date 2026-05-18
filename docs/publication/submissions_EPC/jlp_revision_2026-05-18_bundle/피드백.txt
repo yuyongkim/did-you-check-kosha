@@ -1,0 +1,134 @@
+봤습니다. 결론부터 말하면 **이번 버전은 논문 내용 자체는 제출 직전 수준까지 올라왔습니다.** 이전에 지적했던 큰 문제들, 즉 초록 길이, Qwen 모델명 충돌, synthetic-data 한계 인정, HAZOP/RBI/Digital Twin 포지셔닝, CRediT/Funding/AI disclosure, 26/60 결과 정리 등은 상당히 잘 반영됐습니다. 다만 **그대로 제출하기에는 아직 “논문 내용”보다 “투고 패키지/표현/레이아웃” 쪽 리스크가 남아 있습니다.** 큰 틀을 다시 갈아엎을 필요는 없고, 제출 전 QC 작업이 필요합니다.
+
+## 1. 좋아진 점
+
+가장 큰 개선은 **주장 범위가 훨씬 정직해졌다는 점**입니다. 본문은 이제 seven-discipline architecture를 “framework scope”로 두고, 실제 empirical validation은 piping-vessel coupling에 가장 강하고 나머지는 exploratory라고 명확히 분리합니다. 이건 리뷰어가 “7개 분야 전체를 다 검증한 것처럼 보인다”고 공격할 가능성을 크게 줄입니다. 현재 introduction에서도 RQ1/RQ2와 scope statement가 분명히 잡혀 있습니다. 
+
+초록도 많이 좋아졌습니다. 현재 clean manuscript의 abstract는 16,174 indexed entries, qwen3:4b, 220 synthetic cases, 26/60 validator result, Recall@1/MRR@10, Recall@3/@5 한계까지 한 번에 담고 있습니다. 제가 별도로 세어보면 약 **219 words**라서 JLP의 250 words 제한에는 들어갑니다. JLP guide도 abstract는 250 words 이하, 독립적으로 읽힐 수 있어야 하며, 비표준 약어는 첫 언급에서 정의하라고 되어 있습니다.  ([ScienceDirect][1])
+
+Reviewer response도 방향은 좋습니다. 특히 R1에 대해 26/60 failure-mode partition, R2에 대해 mandatory vs guidance, FFS-vs-EPC, HAZOP scope, R3에 대해 K-voting rationale을 붙인 것은 설득력이 큽니다. response letter는 “무엇을 어디서 고쳤는지”를 잘 따라가게 되어 있습니다.  
+
+Title page, funding, competing interests, generative AI disclosure도 이제 거의 맞습니다. Title page에는 title, short title, author/corresponding author, CRediT, funding, competing interests, GenAI disclosure 위치 설명이 들어가 있고, 별도 Declaration of Interests 파일도 준비되어 있습니다.   Elsevier/JLP guide도 no-funding sentence와 generative AI disclosure를 요구하거나 권장하는 구조라서 이 방향은 맞습니다. ([ScienceDirect][2])
+
+Highlights도 현재 5개 bullet이고, 내용상 16,174 rows, 26/60, Recall@1/MRR@10, 220 synthetic golden cases를 잘 요약합니다. JLP guide상 highlights는 별도 editable file, 3–5 bullets, 각 85자 이하가 기준입니다. 현재 문장들은 거의 그 안에 들어갑니다.  ([ScienceDirect][1])
+
+## 2. 아직 제출 전 반드시 고쳐야 할 것
+
+### A. GitHub/repository mismatch는 아직 치명적입니다
+
+본문의 Code and Data Availability는 `revision tag: jlp-revised-v2`라고 되어 있습니다.  그런데 현재 GitHub tags page에는 여전히 `arxiv-v1`만 보이고 `jlp-revised-v2`는 없습니다. ([GitHub][3]) README도 아직 `Validator ON: 25/60 blocked`, 그리고 논문 대상 저널을 **Process Safety and Environmental Protection**으로 설명하는 구버전 내용이 남아 있습니다. ([GitHub][4])
+
+이건 가장 먼저 고쳐야 합니다. Reviewer가 repository를 열었을 때 원고는 26/60, JLP, revised title을 말하는데 GitHub는 25/60, PSEP, old manuscript를 보여주면 재현성 신뢰가 바로 깨집니다.
+
+수정 방향은 둘 중 하나입니다.
+
+1. GitHub를 즉시 업데이트하고 `jlp-revised-v2` tag를 실제로 생성한다.
+2. 지금 당장 repo 업데이트가 어렵다면 본문 Code Availability를 “revision tag will be made available upon acceptance” 식으로 낮춘다.
+
+저라면 1번을 권합니다. 지금 논문은 reproducibility를 강하게 주장하므로, repository mismatch는 남기면 안 됩니다.
+
+### B. marked manuscript는 PDF 변환 시 너무 지저분하게 보일 수 있습니다
+
+Clean manuscript는 제가 구조 확인했을 때 tracked-change element가 없어서 괜찮습니다. 문제는 marked version입니다. 현재 marked manuscript는 Word track changes 자체는 들어가 있지만, 렌더링된 모습에서는 `Cross-dDiscipline vValidator aAblation`, `Writing –- review &and editing` 같은 혼합 텍스트가 보입니다.  
+
+이건 “marked manuscript”라서 어느 정도는 자연스럽지만, Editorial Manager가 이를 PDF로 변환해서 reviewer에게 보여주면 **오타가 남은 원고처럼 보일 위험**이 큽니다. Cover letter에서는 marked manuscript가 native Word track changes라고 설명하고 있으니 의도는 좋습니다.  다만 제출 시에는 clean manuscript를 main article로, marked manuscript는 “marked-up manuscript / response support only”로 올리고, 가능하면 Word에서 최종 PDF preview를 한 번 확인하세요.
+
+### C. “mandatory vs guidance” 표현에서 아직 작은 법적 불일치가 있습니다
+
+본문은 §4.3에서 mandatory는 법/시행령/산안규칙 조항이고, KOSHA technical guideline은 guidance라고 명확히 분리합니다. Article 256은 mandatory이고, M-69, C-C-23, B-M-18, C-C-75는 guidance로 정리됩니다.  
+
+그런데 Case 2에서는 C-C-23-2026과 B-M-18-2026을 retrieve한 뒤 “mandatory RBI review must be initiated”라고 표현합니다.  이 문장은 reviewer 2가 다시 물고 늘어질 수 있습니다. C-C-23/B-M-18이 guidance라면 “mandatory RBI review”라고 쓰면 안 됩니다. 법 조항으로 mandatory trigger가 따로 있다면 그 조항을 함께 제시해야 하고, 없다면 문장을 낮춰야 합니다.
+
+추천 수정:
+
+> identifying PSM-relevant RBI review conditions under Korean practice
+
+또는
+
+> identifying guidance-derived RBI review triggers routinely used in Korean PSM submissions
+
+Case 1의 “documentation requirements”도 M-69-2012가 guidance라면 “guidance-derived documentation expectations” 정도로 낮추는 게 안전합니다.
+
+### D. Appendix A 제목의 “Validation”은 조금 과합니다
+
+본문은 VES-REAL-001을 “real-plant pipeline-execution evidence, not external accuracy validation”이라고 아주 잘 낮춰 잡고 있습니다.  그런데 Appendix 제목은 여전히 **Real-Plant Data-Sheet Validation**입니다. 이건 내부 메시지가 충돌합니다. Reviewer가 “validation이라고 해놓고 왜 validation이 아니라고 하느냐”라고 지적할 수 있습니다.
+
+추천 제목:
+
+> Appendix A. Real-Plant Pipeline-Execution Evidence (VES-REAL-001)
+
+본문의 “real-plant data-sheet validation case”도 “real-plant data-sheet execution case” 또는 “pipeline-execution case”로 통일하세요. 내용은 그대로 두면 됩니다.
+
+### E. Figure 파일 별도 제출이 필요합니다
+
+Response to Reviewers에는 Figure 1–5가 `docs/publication/figures/`에 있다고 되어 있습니다.  하지만 현재 업로드 패키지에는 별도 Figure_1.png, Figure_2.png 같은 이미지 파일이 보이지 않습니다. JLP/Elsevier guide는 figures/images/artwork를 manuscript와 함께 separate files로 공급하고, Figure_1, Figure_2 같은 논리적 파일명을 쓰라고 안내합니다. ([ScienceDirect][2])
+
+또 Figure 2와 Figure 5는 본문 embedded 상태에서 글자가 작고 흐릿합니다. Reviewer가 내용은 이해하겠지만, publication-quality figure로는 약합니다. figure 안의 텍스트를 키우고, 300 dpi 이상 PNG/TIFF 또는 PDF/EPS로 별도 제출하세요.
+
+### F. Appendix B 표 레이아웃은 아직 못생겼습니다
+
+Clean manuscript에서도 Appendix B의 per-discipline table과 latency table이 너무 좁게 잘립니다. `layer2_k_voting_3candidates_plus_consensus` 같은 값이 세로로 쪼개지고, 페이지 중간에서 표가 어색하게 이어집니다. 
+
+이건 내용 문제가 아니라 인상 문제입니다. Appendix라서 논문이 reject될 문제는 아니지만, “저자가 제출 전 layout QA를 충분히 안 했다”는 인상을 줄 수 있습니다. 추천은 Appendix B의 큰 표들을 supplementary로 이동하거나, landscape page로 바꾸는 것입니다. 최소한 latency table과 per-discipline accuracy table은 font 8–9 pt + landscape가 낫습니다.
+
+### G. Cover letter의 word count 숫자가 서로 다릅니다
+
+Cover letter에는 word count가 **12,932**라고 되어 있고, Change Summary에는 **12,936**이라고 되어 있습니다.   작은 숫자 차이지만 제출 패키지에서는 이런 게 불필요하게 눈에 띕니다. 하나로 통일하세요.
+
+그리고 Cover letter에서 “+162%, 2.6x, 72 rows”를 너무 강조하면 editor가 “revision이 아니라 new manuscript 아닌가?”라고 느낄 수 있습니다. 지금은 change summary에 충분히 들어 있으므로 cover letter에서는 더 짧게 가는 게 낫습니다.
+
+추천 문장:
+
+> The manuscript has been substantially revised in response to the reviewers’ comments. The enclosed change summary and marked manuscript provide navigation aids for the major additions, including the industry baseline, layer ablation, real-plant pipeline-execution case, and expanded limitations.
+
+## 3. 바로 고칠 수 있는 문장 수정
+
+초록에서 RAG와 PSM을 첫 언급에 정의하세요. 현재 abstract는 word count가 충분히 여유 있으므로 문제 없습니다. JLP guide도 uncommon abbreviation은 첫 언급에서 정의하라고 되어 있습니다. ([ScienceDirect][1])
+
+현재:
+
+> local KOSHA regulatory RAG layer
+
+수정:
+
+> local KOSHA Retrieval-Augmented Generation (RAG) layer
+
+현재:
+
+> Korean PSM regulatory fulfilment
+
+수정:
+
+> Korean Process Safety Management (PSM) regulatory fulfilment
+
+Highlights의 arrow도 Editorial Manager 변환에서 깨질 수 있으니 더 안전하게 바꾸는 게 좋습니다.
+
+현재:
+
+> Enhanced regulatory retrieval lifts Recall@1 0.44 → 0.74 and MRR@10 0.5744 → 0.7933.
+
+수정:
+
+> Recall@1 rises 0.44-0.74; MRR@10 rises 0.5744-0.7933.
+
+## 4. 최종 판단
+
+**논문 내용은 이제 충분히 강합니다.** 이전 버전에서 가장 약했던 “비교축 없음”, “synthetic-only”, “KOSHA 법적 강제성 불명확”, “HAZOP/RBI와의 관계 모호”, “K-voting 근거 부족”은 대부분 해결됐습니다. 특히 26/60 ablation, 22/3/1 failure-mode partition, Recall@1/MRR@10만 headline claim으로 낮춘 점, 그리고 VES-REAL-001을 external validation이 아니라 pipeline-execution evidence로 낮춘 점은 좋습니다.  
+
+하지만 제출 직전 체크리스트는 아직 남아 있습니다.
+
+1. GitHub README와 tag를 원고와 일치시킬 것.
+2. `jlp-revised-v2` tag를 실제 생성하거나 본문 tag claim을 낮출 것.
+3. Case 1/2에서 guidance를 mandatory처럼 보이게 하는 표현을 낮출 것.
+4. Appendix A의 “Validation” 제목을 “Pipeline-Execution Evidence”로 바꿀 것.
+5. Figure 1–5를 별도 고해상도 파일로 첨부할 것.
+6. Appendix B 표 레이아웃을 landscape/supplementary로 정리할 것.
+7. Cover letter와 change summary의 word count를 통일할 것.
+8. Abstract에서 RAG/PSM 약어를 첫 언급에 정의할 것.
+
+이 8개만 고치면, 저는 **제출해도 되는 버전**이라고 봅니다. 지금은 논문을 더 갈아엎을 단계가 아니라, reviewer가 신뢰를 잃지 않도록 submission package를 닫는 단계입니다.
+
+[1]: https://www.sciencedirect.com/journal/journal-of-loss-prevention-in-the-process-industries/publish/guide-for-authors "Guide for authors - Journal of Loss Prevention in the Process Industries - ISSN 0950-4230 | ScienceDirect.com by Elsevier"
+[2]: https://www.sciencedirect.com/journal/journal-of-loss-prevention-in-the-process-industries/publish/guide-for-authors?utm_source=chatgpt.com "Guide for authors - Journal of Loss Prevention in the Process Industries - ISSN 0950-4230 | ScienceDirect.com by Elsevier"
+[3]: https://github.com/yuyongkim/did-you-check-kosha/tags?utm_source=chatgpt.com "Tags · yuyongkim/did-you-check-kosha · GitHub"
+[4]: https://github.com/yuyongkim/did-you-check-kosha "GitHub - yuyongkim/did-you-check-kosha: ASME/API costs thousands. KOSHA is free. Nobody put it in an AI yet. · GitHub"

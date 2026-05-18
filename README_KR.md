@@ -92,7 +92,7 @@ civil:           accuracy=1.0000, red_flag_detection=1.0000
 
 ```
 검증기 OFF: 0/60 차단
-검증기 ON:  25/60 차단  (+0.4167 차단 비율)
+검증기 ON:  26/60 차단  (+0.4333 차단 비율)
 경계 케이스: 0.0 → 1.0
 고장 케이스: 0.0 → 1.0
 ```
@@ -122,11 +122,17 @@ PIP-GOLD-047    0              1 (제256조)           1
 
 ## 논문
 
-> *A KOSHA Regulatory Knowledge-Grounded Multi-Discipline AI Verification Framework for Process Plant Engineering*
-> Yuyong Kim — University of Wisconsin-Madison
-> arXiv preprint: [제출 후 링크 추가 예정]
+이 저장소는 *Journal of Loss Prevention in the Process Industries* 재수정 제출본의 근거 저장소입니다.
 
-전문: [`docs/publication/PAPER_EN_v2.md`](docs/publication/PAPER_EN_v2.md)
+> *Detecting Jurisdiction Compliance Gaps in Process Plant Engineering with Regulatory RAG*
+> Yuyong Kim — University of Wisconsin-Madison
+> Revision tag: `jlp-revised-v2`
+
+현재 JLP 원고 소스: [`docs/publication/submissions_EPC/jlp_revision_2026-05-08/_archive/PAPER_JLP_REVISED_v3.md`](docs/publication/submissions_EPC/jlp_revision_2026-05-08/_archive/PAPER_JLP_REVISED_v3.md)
+
+제출 패키지 폴더: [`docs/publication/submissions_EPC/jlp_revision_2026-05-08/`](docs/publication/submissions_EPC/jlp_revision_2026-05-08/)
+
+코드-논문 매핑: [`docs/publication/CODE_MAP.md`](docs/publication/CODE_MAP.md)
 
 ---
 
@@ -152,7 +158,7 @@ python scripts/benchmark_rag_retrieval.py
 ```
 
 > Qwen은 [Ollama](https://ollama.ai)로 로컬 실행됩니다. 검색에는 GPU가 필요 없습니다.
-> 생성 기능: `ollama pull qwen2.5:7b-instruct` (또는 원하는 Qwen 변형)
+> 논문 latency benchmark는 `qwen3:4b` 기준으로 측정되었습니다. 동일 재현을 원하면 해당 모델을 pull 하시면 됩니다.
 
 ---
 

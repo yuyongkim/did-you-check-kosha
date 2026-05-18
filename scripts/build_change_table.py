@@ -15,7 +15,7 @@ from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
 ROOT = os.path.join(os.path.dirname(__file__), '..',
-                    'docs', 'publication', 'submissions')
+                    'docs', 'publication', 'submissions_EPC')
 ROOT = os.path.abspath(ROOT)
 
 ORIG_DOCX = os.path.join(ROOT, 'jlp_initial_2026-03-31',  'MANUSCRIPT (1).docx')
@@ -99,7 +99,7 @@ CHANGES = [
      "New acronym glossary (JLP house style)."),
     ("Key Definitions", "NEW", "JLP-style",
      "New key-term definitions for clarity."),
-    ("Appendix A. Real-Plant Data-Sheet Validation (VES-REAL-001)", "NEW", "R1.5",
+    ("Appendix A. Real-Plant Pipeline-Execution Evidence (VES-REAL-001)", "NEW", "R1.5",
      "New appendix: anonymised real-plant cryogenic flare-drum case with UG-27 calculation + KOSHA RAG retrieval (both probe variants)."),
     ("Appendix B — Extended validation evidence", "NEW", "R1.x, R2.x",
      "New appendix: per-discipline accuracy, Recall@K (K = 1..10), pipeline latency, retrieval failure inventory, full reproducibility manifest."),
